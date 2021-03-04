@@ -1,276 +1,1119 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/png" href="assets/img/quae_logo_square.png">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <title>Quae</title>
-        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-        <meta name="viewport" content="width=device-width" />
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Quae</title>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0,user-scalable=no"
+		/>
+		<meta name="authors" content="Brendan Probst & Sam Schmitt" />
+		<meta
+			name="description"
+			content="quae is a platform that makes participating in your local politics as easy as pulling out your phone"
+		/>
+		<meta
+			name="keywords"
+			content="Politics, Local Politics, Voting, Hoboken, Hoboken Politics, City Council, Poll, Voting, "
+		/>
+		<link rel="icon" href="assets/img/quae_logo_square.png" />
+		<link href="/assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/styles.css" />
+		<link rel="stylesheet" href="assets/css/animations.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="assets/js/animations.js"></script>
+	</head>
+	<body>
+		<nav id="myNavbar" class="nav custom-purple">
+			<div id="nav-image-container" class="nav-link">
+				<span
+					onClick="openNav()"
+					class="mobile-nav-open-icon mobile-only navbar-brand"
+				>
+					<div class="logo-image">
+						<img src="assets/svg/menu.svg" class="img-fluid" />
+					</div>
+				</span>
+				<div class="backdrop-container" id="backdrop"></div>
 
-        <link href="assets/css/bootstrap.css" rel="stylesheet" />
-        <link href="assets/css/landing-page.css" rel="stylesheet"/>
-        <link href="assets/css/custom.scss" rel="stylesheet"/>
+				<div id="mySidenav" class="sidenav-container">
+					<span class="drawer-close-button">
+						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+							>&times;</a
+						>
+					</span>
 
-        <!--     Fonts and icons     -->
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <!--<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">-->
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
-        <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
-        
-    </head>
-    <body class = "landing-page landing-page1">
-        <nav class = "navbar navbar-transparent navbar-top" role="navigation" style="position:fixed; background-color: #5B2A82">
-            <div class = "container" style="padding: 5px 20px;">
-                <div class= "navbar-container">
-                    <div class = "navbar-header">
-                        <div class="logo-container" style="padding: 10px 10px 15px 25px">
-                            <div class="logo">
-                                <a href="#">
-                                    <img src="assets/img/icons/teamwork.png" alt="MyPolitics logo" style="margin-top: -5px;">
-                                </a> 
-                            </div>
-                            <div class="navbar-text-container" style="font-size: 35px;">
-                                Quae
-                            </div>
-                        </div>
-                    </div>
-                    <div >
-                        <div class="navbar-header" style="padding-right: 25px">
-                            <div class="navbar-text-container" style="align-items: center;">
-                                <a href = "#section-sign-up-form" id = "sign-up-nav-link">
-                                    <div class="brand">Sign Up </div> 
-                                </a>
-                            </div>      
-                        </div>
-                    </div>
-                
-                </div>
-            </div>
-        </nav>
+					<a href="./pages/about_us.html" onclick="closeNav()" id="about-link"
+						>About Us</a
+					>
+					<a href="./pages/pricing.html" onclick="closeNav()" id="about-link"
+						>Pricing</a
+					>
+					<!-- <a href="./pages/product.html" onclick="closeNav()" id="about-link"
+						>Product</a
+					> -->
+				</div>
+				<a class="navbar-brand" href="/">
+					<div class="logo-image">
+						<img
+							src="assets/svg/quae_logo_white_no_background.svg"
+							class="img-fluid"
+						/>
+					</div>
+				</a>
+			</div>
+			<div class="float-right vertical-text-center">
+				<a class="nav-link float-right hover-grow" href="#get-now"
+					><div
+						id="get-now-link-nav"
+						class="comfortaa-bold white-text float-right vertical-text-center"
+					>
+						Get Now
+					</div>
+				</a>
 
-        <div class="wrapper">
-<!--Logo and title section-->
-            <div class="parallax section section-custom-purple" data-color="custom-purple" style = "height: 800px">
-                <div class="parallax-background">
-                    <div class = "container justify-content-center align-items-center">
-                        <div class="row">
-                                <div class = "title-container">
-                                    <div class="text-center">
-                                        <h1 class="white-text-shadow" style="font-weight: bold;">Vote Every Day</h1><br><br>
-                                        <h3 class= "white-subtext" style="margin-top: 20px;"><span style="color:white">Take charge</span> of every decision in <br><span style="color:white">your city.</span></h3>
-                                    </div>
-                                    <div class="wrapper sign-up-btn-wrapper">
-                                        <div class="button btn-sign-up">
-                                            <a href="#section-sign-up-form"><button class="btn btn-fill btn-neutral btn-lg btn-sign-up btn-shadow-purple" style="color: #8441BA"><b>Sign Up Now!</b></button></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-<!--What you do-->
-            <div class = "section section-features section-white" data-color="white">
-                <div class = "container align-content-center text-center" style="padding-bottom: 80px;">
-                    <h2><b>What You Do</b></h2>
-                    <div class="row equal">
-                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                            <div class="card"> 
-                                <div class="text">
-                                    <h4>Build a Political Fingerprint</h4>                                
-                                </div>
-                                <div class="dropdown">
-                                    <div class="icon dropbtn img-dropdown">
-                                        <img src="assets/img/icons/fingerprint.png" alt="fingerprint">
-                                    </div> 
-                                    <div class="dropdown-content">
-                                        <p>Your interactions build a unique political profile just for you.</p>
-                                    </div>
-                                </div>                               
-                            </div>                            
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                            <div class="card">
-                                <div class="text">
-                                    <h4>Team Up With Your Community</h4>                                
-                                </div>
-                                <div class="dropdown">
-                                    <div class="icon dropbtn img-dropdown">
-                                        <img src="assets/img/icons/community.png" alt="community">
-                                    </div>
-                                    <div class="dropdown-content">
-                                        <p>Your community’s political profiles  will reveal a trend in your area.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                            <div class="card" >
-                                <div class="text card-text">
-                                    <h4>Influence Your Representatives</h4>
-                                </div>
-                                <div class="dropdown">
-                                    <div class="icon dropbtn img-dropdown">
-                                        <img src="assets/img/icons/politician.png" alt="politician">
-                                    </div>                                
-                                    <div class="dropdown-content">
-                                        <p>Politicians won’t be able to ignore what your community believes.</p>
-                                    </div>
-                                </div>                               
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+				<a class="nav-link float-right hover-grow" href="./pages/about_us.html">
+					<div
+						id="get-now-link-nav"
+						class="comfortaa-bold white-text float-right desktop-only"
+						style="text-transform: none"
+					>
+						About Us
+					</div>
+				</a>
+				<a class="nav-link float-right hover-grow" href="./pages/pricing.html">
+					<div
+						id="get-now-link-nav"
+						class="comfortaa-bold white-text float-right desktop-only"
+						style="text-transform: none"
+					>
+						Pricing
+					</div>
+				</a>
+				<!-- <a class="nav-link float-right hover-grow" href="./pages/product.html">
+					<div
+						id="get-now-link-nav"
+						class="comfortaa-bold white-text float-right desktop-only"
+						style="text-transform: none"
+					>
+						Product
+					</div>
+				</a> -->
+			</div>
+		</nav>
+		<!--View 1-->
+		<div id="view-1-container" class="container-fluid">
+			<div class="row-wrap" style="align-items: flex-start">
+				<div id="title-content-container" class="col-md-8">
+					<!-- <div id="VED-title-container">
+					<h2 id="VED-title">Vote Every Day</h2>
+				</div> -->
 
-<!--remove 
-Politics Sucks Section         
-            <div class="section section-white" data-color="white">
-                <div class="container justify-content-center align-content-center ">
-                    <div class="description text-center">
-                        <h2 class="black-text-shadow">Politics Sucks</h2>
-                        <h3 class="subtext">But it doesn't have to</h3>
-                    </div>
-                </div>
-            </div>
-        -->
-<!--You Shouldn't be ignored-->
+					<h2 id="VED-title">Vote&nbspEvery Day</h2>
 
-            <div class = "section section-custom-purple" data-color="custom-purple">
-                <div class = "container align-content-center">
-                    <div class="description text-center">
-                        <h2>You Shouldn't Be Ignored</h2>
-                        <h3 class= "white-subtext">Your Voice<br>=<br>Your Power</h3>
-                    </div>
-                </div>
-            </div>
-  
-<!--What we do -->
-            <div class = "section section-features section-white" data-color="white">
-                <div class = "container align-content-center text-center" style="padding-bottom: 80px;">
-                    <h2><b>What We Are</b></h2>
-                    <div class="row equal">
-                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                            <div class="card">
-                                <div class="text card-text">
-                                    <h4 class="card-title" style="margin-bottom:-35px;">Virtual Town Hall</h4>                                 
-                                </div>
-                                <div class="dropdown">
-                                    <div class="icon dropbtn img-dropdown">
-                                        <img src="assets/img/icons/corkboard.png" alt="corkboard">
-                                    </div> 
-                                    <div class="dropdown-content">
-                                        <p>See what your community has to say.</p>
-                                    </div>
-                                </div>                              
-                            </div>                            
-                        </div>        
-                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                            <div class="card dropdown-container">
-                                <div class="text card-text">
-                                    <h4 class="card-title" style="margin-bottom:-35px;">Political Database</h4>                                
-                                </div>
-                                <div class="dropdown">
-                                    <div class="icon dropbtn img-dropdown">
-                                        <img src="assets/img/icons/network.png" alt="network">
-                                    </div> 
-                                    <div class="dropdown-content">
-                                        <p>Easily see what your representatives believe.</p>
-                                    </div>
-                                </div>  
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                            <div class="card" style="border-width: 2px">
-                                <div class="text card-text">
-                                    <h4 class="card-title" style="margin-bottom:-35px;">Election Tool</h4>
-                                </div>
-                                <div class="dropdown">
-                                    <div class="icon dropbtn img-dropdown">
-                                        <img src="assets/img/icons/ballot.png" alt="ballot">
-                                    </div> 
-                                    <div class="dropdown-content">
-                                        <p>See all of the information about your election.</p>
-                                    </div>
-                                </div>  
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section section-custom-purple" data-color="custom-purple">
-                <div class="container justify-content-center align-content-center ">
-                    <div class="description text-center">
-                        <h2>"Be the change that you wish to see in the world"</h2>
-                        <h3 class="white-subtext">-Mahatma Ghandi</h3>
-                    </div>
-                </div>
-            </div>
-<!--Sign up--> 
-            <div class="section section-white" id="section-sign-up-form" data-color="white">
-                
-                <div class="parallax " >
-                        <div class="text-center">
-                            <h2>Join The Waiting List!</h2>
-                        </div>
-                        <form action="https://formspree.io/f/myybwloo" method="POST" style=" max-width: 800px; margin: auto ">
-                            <div class="input-group input-group-lg">
-                                <span class="input-group-addon form-label">Name</span>
-                                <input type="text" class="form-control" name="name" placeholder="">
-                            </div><br>
-                            <div class="input-group input-group-lg">
-                                <span class="input-group-addon form-label">Email</span>
-                                <input type="text" class="form-control" name="_replyto" placeholder="">
-                            </div><br>
-                            <div class="input-group input-group-lg">
-                                <span class="input-group-addon form-label">City</span>
-                                <input type="text" class="form-control" name="City" placeholder="">
-                            </div><br>
-                            <div class="input-group input-group-lg">
-                                <span class="input-group-addon form-label">State</span>
-                                <input type="text" class="form-control" name="State" placeholder="">
-                            </div><br>
-                            <div class = "sign-up-btn-wrapper">
-                                <input type="submit" value = "Sign Up" class="btn btn-drk btn-lg btn-fill btn-sign-up btn-shadow-black" id="submit-button" style="background-color: #8441BA;border:none">
-                            </div>
-                        </form>
-                   
-                </div>
-           
-            </div>
-            <footer class="footer" style ="background-color: #5B2A82;">
-                <div class="container" >
-                    <nav class="pull-left">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                Home
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="social-area pull-right">
-                        <!--<a href="#">
-                            <i class="fa fa-facebook-square"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-twitter"></i> 
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-pinterest"></i>
-                        </a>-->
-                    </div>
-                    <div class="copyright">
-                        &copy; 2020 Quae
-                    </div>
-                </div>
-            </footer>
-        </div><!--end of wrapper class-->
-    </body>
-        <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-        <script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
-        <script src="assets/js/bootstrap.js" type="text/javascript"></script>
-        <script src="assets/js/awesome-landing-page.js" type="text/javascript"></script>
+					<h3 class="white-text title-large" id="make-difference-subtitle">
+						Exclusive To Hoboken Residents!
+					</h3>
+
+					<h5
+						class="white-text title-small"
+						style="padding-bottom: 0px; margin-bottom: 0px; text-align: left"
+					>
+						Apply For Beta
+					</h5>
+					<div id="sign-up-form-container" class="card">
+						<form
+							action="https://formspree.io/f/myybwloo"
+							method="POST"
+							id="sign-up-form"
+							class="black-text"
+						>
+							<!-- <h5 class="center">
+								Live in Hoboken? <strong>Become a Beta Tester!</strong>
+							</h5> -->
+
+							<div
+								class="input-group"
+								style="align-items: flex-end; justify-content: center"
+							>
+								<div class="input-group-prepend">
+									<span class="input-group-text">
+										<img src="assets/svg/email.svg" id="text-logo" />
+									</span>
+								</div>
+
+								<input
+									id="form-email"
+									name="form-email"
+									class="form-control"
+									placeholder="email"
+								/>
+
+								<button
+									type="submit"
+									class="btn center"
+									style="margin: 2px 5px"
+								>
+									Let Me Have It
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div
+					class="col-md-4 phone-wrapper"
+					style="align-items: center; justify-content: center"
+				>
+					<div class="phone-container">
+						<img src="assets/img/homefeed.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--View 2-->
+		<!--Your City: At your fingertips-->
+		<div class="desktop-only fade">
+			<div
+				class="float-left"
+				style="
+					position: absolute;
+					padding: 0px;
+					left: 0;
+					z-index: 0;
+					transform: translate(0%, -20%);
+				"
+			>
+				<svg
+					width="273"
+					height="610"
+					viewBox="0 0 273 610"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M269.491 147.086C248.078 83.4695 5.09228 142.699 -36.8032 154.216V609.954C48.6501 538.479 96.3284 482.72 150.791 416.362C205.253 350.003 290.903 210.703 269.491 147.086Z"
+						fill="#8441BA"
+						fill-opacity="0.35"
+					/>
+					<path
+						d="M-5.01919 77.7017C43.6778 49.8556 101.374 37.198 127.085 64.4296C152.796 91.6611 119.052 222.263 100.061 255.91C86.869 279.282 -47.523 205.847 -86.2885 177.747C-133.737 143.353 -50.14 103.503 -5.01919 77.7017Z"
+						fill="#317EC6"
+						fill-opacity="0.51"
+					/>
+					<path
+						d="M204.371 179.07C206.871 214.672 183.713 215.38 154.925 205.476C126.136 195.572 78.4362 180.757 60.8794 153.368C50.7506 137.567 104.18 91.6166 149.341 73.7678C194.503 55.9191 201.871 143.468 204.371 179.07Z"
+						fill="#F24646"
+						fill-opacity="0.65"
+					/>
+				</svg>
+			</div>
+			<div
+				class="float-right"
+				style="
+					position: absolute;
+					padding: 0px;
+					left: 100%;
+					transform: translate(-100%, 0%);
+
+					z-index: 0;
+				"
+			>
+				<svg
+					width="191"
+					height="614"
+					viewBox="0 0 191 614"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M73.8448 347.976C101.995 414.443 134.056 525.873 195.832 551.288V0C138.357 17.5943 33.0003 124.5 6.50017 183C-20 241.5 45.6941 281.509 73.8448 347.976Z"
+						fill="#8441BA"
+						fill-opacity="0.35"
+					/>
+					<path
+						d="M57.1128 598.295C32.3899 598.326 68.874 464.594 109.077 458.77C149.28 452.945 211.574 524.58 209.579 543.466C207.584 562.353 81.8357 598.263 57.1128 598.295Z"
+						fill="#317EC6"
+						fill-opacity="0.51"
+					/>
+					<path
+						d="M223.046 341.139C258.516 354.005 235.968 519.941 178.238 521.573C120.507 523.204 40.9442 405.118 52.3697 378.278C66.6516 344.729 178.708 325.058 223.046 341.139Z"
+						fill="#F24646"
+						fill-opacity="0.65"
+					/>
+				</svg>
+			</div>
+		</div>
+		<div id="your-city-container">
+			<div class="fade">
+				<h3 class="title-section">Quae is Active in Hoboken</h3>
+				<h3 class="title-medium padding-sm">
+					real people, real voices, real votes
+				</h3>
+				<div class="fade row-wrap" style="padding: 0px 10vw">
+					<div class="col-lg-6 list-wrapper vertical-text-center center">
+						<ul id="city-list" class="list">
+							<li>
+								<img src="assets/svg/team.svg" />
+								<div class="text-container row-wrap" style="padding: 5px">
+									<h4 class="title-small">Connect&nbsp</h4>
+									<h4 class="title-small">with&nbspyour&nbsp</h4>
+									<h4 class="title-small" id="connect-suffix">community</h4>
+								</div>
+							</li>
+							<!-- <script>
+								var observer = new IntersectionObserver(
+									function (entries) {
+										if (entries[0].isIntersecting === true) {
+											window.setInterval(changeText(), 2000);
+										}
+										console.log("Element is fully visible in screen");
+										let state = 0;
+										while (1 == 2) {
+											const connectArray = [
+												"community",
+												"neighbors",
+												"representatives",
+											];
+
+											var text = document.getElementById("connect-suffix");
+											console.log("changing state");
+											console.log(state);
+											text.innerHTML = connectArray[state];
+											console.log("state changed");
+											state++;
+											if (state == 3) state = 0;
+											setTimeout(2000);
+										}
+									},
+									{ threshold: [1] }
+								);
+
+								observer.observe(document.querySelector("#connect-suffix"));
+							</script> -->
+							<li>
+								<img src="assets/svg/noise.svg" />
+								<div class="text-container row-wrap" style="padding: 5px">
+									<h4 class="title-small">Voice&nbsp</h4>
+									<h4 class="title-small">your&nbsp</h4>
+									<h4 class="title-small" id="voice-suffix">concerns</h4>
+								</div>
+							</li>
+
+							<li>
+								<img src="assets/svg/government.svg" />
+								<div class="text-container row-wrap" style="padding: 5px">
+									<h4 class="title-small">Impact&nbsp</h4>
+									<h4 class="title-small">your&nbsp</h4>
+									<h4 class="title-small" id="impact-suffix">government</h4>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-4 center fade">
+						<div>
+							<img
+								src="assets/svg/hoboken_H.svg"
+								id="hoboken-img"
+								style="padding-bottom: 30px; margin-bottom: 10px"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ID Secure -->
+		<div style="transform: translate(0%, 40%); margin-top: -150px">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 1440 320"
+				style="transform: scale(1, 0.35)"
+			>
+				<path
+					fill="#7026ab"
+					fill-opacity="1"
+					d="M0,128L30,138.7C60,149,120,171,180,192C240,213,300,235,360,213.3C420,192,480,128,540,96C600,64,660,64,720,101.3C780,139,840,213,900,202.7C960,192,1020,96,1080,101.3C1140,107,1200,213,1260,240C1320,267,1380,213,1410,186.7L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+				></path>
+			</svg>
+		</div>
+		<div id="id-secure-container">
+			<div class="sub-container fade">
+				<div class="row-wrap">
+					<div class="col-6 center">
+						<div
+							class="card fade"
+							style="margin-top: auto; margin-bottom: auto"
+						>
+							<div class="card-header">
+								<h3 class="card-title comfortaa" style="text-align: start">
+									Every Vote is Real
+								</h3>
+								<h5 class="category title-sub" style="text-align: start">
+									Quae ID verifies its users
+								</h5>
+							</div>
+							<div class="card-body" style="font-size: 17px">
+								Security is very important to us, that’s why every user is ID
+								verified. With Quae you never have to worry about bots or
+								trolls. <br />
+								<!-- <a href="#" style="color: blue">Learn more...</a> -->
+							</div>
+						</div>
+					</div>
+					<div class="col-6 center fade">
+						<div id="id-svg-wrapper" class="center">
+							<img src="assets/svg/security_SVG.svg" id="id-svg" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="transform: translate(0%, -33%); margin-bottom: -10%">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 1440 320"
+				style="transform: scale(1, 0.35)"
+			>
+				<path
+					fill="#7026ab"
+					fill-opacity="1"
+					d="M0,64L34.3,101.3C68.6,139,137,213,206,202.7C274.3,192,343,96,411,58.7C480,21,549,43,617,74.7C685.7,107,754,149,823,154.7C891.4,160,960,128,1029,101.3C1097.1,75,1166,53,1234,64C1302.9,75,1371,117,1406,138.7L1440,160L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"
+				></path>
+			</svg>
+		</div>
+		<!-- How it works -->
+		<div class="desktop-only fade">
+			<div
+				class="float-left"
+				style="
+					position: absolute;
+					padding: 0px;
+					left: 0;
+					z-index: 0;
+					transform: translate(-30%, -15%);
+				"
+			>
+				<svg
+					width="515"
+					height="886"
+					viewBox="0 0 515 886"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M127 246C127 246 114.501 135 202 166C289.499 197 524.995 253.457 482.495 365.956C451.14 448.956 205.074 519.935 155.5 484C141.669 473.974 132.663 456.154 127 434.613L127 246Z"
+						fill="#317EC6"
+						fill-opacity="0.51"
+					/>
+					<path
+						d="M289 298.285C233 246.785 127 187 127 187V769.809C236.28 678.405 340.353 713.147 410 628.285C479.648 543.424 345 349.785 289 298.285Z"
+						fill="#8441BA"
+						fill-opacity="0.35"
+					/>
+					<path
+						d="M227.5 622C302.136 630.046 357.097 640.728 355.031 687.666C352.965 734.605 261.5 853 125.5 861.5L125.5 574C125.5 574 158.345 614.545 227.5 622Z"
+						fill="#317EC6"
+						fill-opacity="0.51"
+					/>
+					<path
+						d="M326.999 60.4999C362.661 76.034 337.058 180.8 297.999 238C258.94 295.2 221.5 363 126.999 370.5L126.999 146C195.5 67 291.337 44.9659 326.999 60.4999Z"
+						fill="#F24646"
+						fill-opacity="0.65"
+					/>
+				</svg>
+			</div>
+			<div
+				class="float-right"
+				style="
+					position: absolute;
+					padding: 0px;
+					left: 100%;
+					transform: translate(-75%, -20%);
+
+					z-index: 0;
+				"
+			>
+				<svg
+					width="459"
+					height="1015"
+					viewBox="0 0 459 1015"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M178.504 798.495C219.504 856.495 306.504 858.995 376.503 858.995V153.995C213.504 138.494 181.004 412.494 95.504 475.994C48.3193 511.038 -6.45148 622.223 1.50426 693.495C7.96449 751.369 137.504 740.495 178.504 798.495Z"
+						fill="#8441BA"
+						fill-opacity="0.35"
+					/>
+					<path
+						d="M79.5027 511.495C27.3511 511.431 117.003 258.495 178.506 246.624C228.317 237.011 339.493 332.265 377.778 389.495L377.778 433.495C344.003 524.495 131.654 511.559 79.5027 511.495Z"
+						fill="#317EC6"
+						fill-opacity="0.51"
+					/>
+					<path
+						d="M379.846 743.477C379.846 571.022 43.3637 731.864 20.8637 761.364C-1.63627 790.864 16.1193 857.022 91.8154 937.862C167.511 1018.7 266.862 987.524 379.846 978.024C379.846 978.024 379.846 848.524 379.846 787.477L379.846 743.477Z"
+						fill="#317EC6"
+						fill-opacity="0.51"
+					/>
+					<path
+						d="M379.69 837.489L379.69 606.989C209.191 594.489 1.95427 744.341 52.6908 815.489C96.1909 876.489 274 904 297.5 904C321 904 371 886.5 379.69 837.489Z"
+						fill="#F24646"
+						fill-opacity="0.65"
+					/>
+					<path
+						d="M257.003 305.505C202.604 256.832 121.121 321.304 99.003 269.505C76.8852 217.706 215.883 115.715 274.003 81.005C310.003 59.5051 345.503 40.5053 370.532 66.0409C422.647 119.211 314.003 356.505 257.003 305.505Z"
+						fill="#F24646"
+						fill-opacity="0.65"
+					/>
+				</svg>
+			</div>
+		</div>
+		<div id="how-it-works-container center" class="fade">
+			<h3 class="title-section">How It Works</h3>
+			<div class="col">
+				<div class="how-it-works center">
+					<div class="fade how-it-works">
+						<div class="how-it-works-content col-md-6">
+							<div class="explain-number-2">
+								<img
+									src="../assets/svg/numbers/number-one.svg"
+									alt="1"
+									class="product-number"
+								/>
+								<h3
+									class="comfortaa-regular"
+									style="text-align: left; font-size: 1.25em"
+								>
+									Get&nbspVerified
+								</h3>
+							</div>
+							<p style="font-size: 0.9em">
+								We verify users so that you can use our platform with the peace
+								of mind that you're talking to real people in your community
+							</p>
+						</div>
+						<div class="col-md-6 center">
+							<img src="assets/img/id_card.png" class="how-it-works-img alt="id"
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="how-it-works center">
+					<div class="fade how-it-works">
+						<div class="how-it-works-content col-md-6">
+							<div class="explain-number-2">
+								<img
+									src="../assets/svg/numbers/number-2.svg"
+									alt="2"
+									class="product-number"
+								/>
+								<h3
+									class="comfortaa-regular"
+									style="text-align: left; font-size: 1.25em"
+								>
+									Vote
+								</h3>
+							</div>
+							<p style="font-size: 0.9em">
+								Your opinion matters - use it. Everyday you can vote on issues
+								your city board is considering as well as proposals submitted by
+								other users.
+							</p>
+						</div>
+						<div class="col-md-6 center">
+							<img src="assets/img/confirm_vote.png" class="how-it-works-img
+							alt="id" />
+						</div>
+					</div>
+				</div>
+				<div class="how-it-works center">
+					<div class="fade how-it-works">
+						<div class="how-it-works-content col-6">
+							<div class="explain-number-3">
+								<img
+									src="../assets/svg/numbers/number-3.svg"
+									alt="3"
+									class="product-number"
+								/>
+								<h3
+									class="comfortaa-regular"
+									style="text-align: left; font-size: 1.25em"
+								>
+									Create&nbspChange
+								</h3>
+							</div>
+							<p style="font-size: 0.9em">
+								Quae Poll's that attract enough attention will be brought to
+								your city's town hall meeting to be presented and voted on. You
+								have the power to control what your reps enact.
+							</p>
+						</div>
+						<div class="col-md-6 center">
+							<img src="assets/img/post_example.PNG" class="how-it-works-img
+							alt="id" style="border-radius: 15px;"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- why quae -->
+		<div id="why-quae-container" class="fade">
+			<div id="why-quae-sub-gradient">
+				<div class="container">
+					<div>
+						<h2 class="title-section">Why Choose Quae?</h2>
+					</div>
+					<div class="card-container">
+						<div class="col-md-4">
+							<div class="card">
+								<div
+									class="card-header card-header-icon"
+									style="
+										background: rgb(235, 211, 255);
+										background: linear-gradient(
+											121deg,
+											rgba(235, 211, 255, 1) 0%,
+											rgba(112, 38, 171, 1) 68%
+										);
+									"
+								>
+									<div class="card-icon">
+										<img
+											src="assets/svg/lock.svg"
+											style="width: 50%; height: 50%"
+										/>
+									</div>
+								</div>
+								<div class="card-body">
+									<h3 class="card-title">We Keep It Secure</h3>
+									<h5>
+										Quae votes are real. Each user’s experience is protected<br /><br />
+									</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="card">
+								<div
+									class="card-header card-header-icon"
+									style="
+										background: rgb(255, 214, 214);
+										background: linear-gradient(
+											121deg,
+											rgba(255, 214, 214, 1) 0%,
+											rgba(217, 89, 89, 1) 68%
+										);
+									"
+								>
+									<div class="card-icon">
+										<img
+											src="assets/svg/team (3).svg"
+											style="
+												width: 60%;
+												height: 60%;
+												transform: translate(-10%, 0%);
+											"
+										/>
+									</div>
+								</div>
+								<div class="card-body">
+									<h3 class="card-title">Increase Turn Out</h3>
+									<h5>
+										Get connected with everyone in your city, school, or
+										organization<br />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="card">
+								<div
+									class="card-header card-header-icon"
+									style="
+										background: rgb(199, 228, 255);
+										background: linear-gradient(
+											121deg,
+											rgba(199, 228, 255, 1) 0%,
+											rgba(75, 145, 210, 1) 68%
+										);
+									"
+								>
+									<div class="card-icon">
+										<img
+											src="assets/svg/smartphone.svg"
+											style="width: 50%; height: 50%"
+										/>
+									</div>
+								</div>
+								<div class="card-body">
+									<h3 class="card-title">Fast&nbspand Easy</h3>
+									<h5>
+										Getting accurate and secure election results is as easy
+										as&nbsptaking out your phone
+										<br />
+									</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Vote for what you care about-->
+		<div id="post-example-container" class="col-12">
+			<div class="fade">
+				<div>
+					<h3 class="white-text title-section padding-sm">Vote for what you believe&nbspin</h3>
+					<h5 class="white-text title-small paddding-sm" style="opacity: 0.6">
+						Discuss issues that are important to you and your city with Quae
+					</h5>
+					<div
+						style="
+							padding-left: 0vw;
+							padding-right: 0vw;
+							margin-left: 10vw;
+							margin-right: 10vw;
+						"
+					>
+						<div
+							id="carouselExampleIndicators"
+							class="carousel slide"
+							data-ride="carousel"
+						>
+							<ol class="carousel-indicators">
+								<li
+									data-target="#carouselExampleIndicators"
+									data-slide-to="0"
+									class="active"
+								></li>
+								<li
+									data-target="#carouselExampleIndicators"
+									data-slide-to="1"
+								></li>
+								<li
+									data-target="#carouselExampleIndicators"
+									data-slide-to="2"
+								></li>
+								<li
+									data-target="#carouselExampleIndicators"
+									data-slide-to="3"
+								></li>
+								<li
+									data-target="#carouselExampleIndicators"
+									data-slide-to="4"
+								></li>
+								<li
+									data-target="#carouselExampleIndicators"
+									data-slide-to="5"
+								></li>
+								<li
+									data-target="#carouselExampleIndicators"
+									data-slide-to="6"
+								></li>
+								<li
+									data-target="#carouselExampleIndicators"
+									data-slide-to="7"
+								></li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<div class="carousel-card">
+										<div class="carousel-card-content">
+											<img
+												src="assets/svg/topic_icons/train.svg"
+												alt="icon"
+												class="carousel-img"
+											/>
+											<h4 class="title-small">Transportation</h4>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="carousel-card">
+										<div class="carousel-card-content">
+											<img
+												src="assets/svg/topic_icons/road-with-broken-line.svg"
+												alt="icon"
+												class="carousel-img"
+											/>
+											<h4 class="title-small">Infrastructure</h4>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="carousel-card">
+										<div class="carousel-card-content">
+											<img
+												src="assets/svg/topic_icons/heart-rate.svg"
+												alt="icon"
+												class="carousel-img"
+											/>
+											<h4 class="title-small">Healthcare</h4>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="carousel-card">
+										<div class="carousel-card-content">
+											<img
+												src="assets/svg/topic_icons/shopping-bag.svg"
+												alt="icon"
+												class="carousel-img"
+											/>
+											<h4 class="title-small">Small Business</h4>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="carousel-card">
+										<div class="carousel-card-content">
+											<img
+												src="assets/svg/topic_icons/cash.svg"
+												alt="icon"
+												class="carousel-img"
+											/>
+											<h4 class="title-small">Finance</h4>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="carousel-card">
+										<div class="carousel-card-content">
+											<img
+												src="assets/svg/topic_icons/shield.svg"
+												alt="icon"
+												class="carousel-img"
+											/>
+											<h4 class="title-small">Public Safety</h4>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="carousel-card">
+										<div class="carousel-card-content">
+											<img
+												src="assets/svg/topic_icons/herbal-spa-treatment-leaves.svg"
+												alt="icon"
+												class="carousel-img"
+											/>
+											<h4 class="title-small">Environment</h4>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="carousel-card">
+										<div class="carousel-card-content">
+											<img
+												src="assets/svg/topic_icons/paw.svg"
+												alt="icon"
+												class="carousel-img"
+											/>
+											<h4 class="title-small">Animals and Wildlife</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a
+								class="carousel-control-prev"
+								href="#carouselExampleIndicators"
+								role="button"
+								data-slide="prev"
+							>
+								<span
+									class="carousel-control-prev-icon"
+									aria-hidden="true"
+								></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a
+								class="carousel-control-next"
+								href="#carouselExampleIndicators"
+								role="button"
+								data-slide="next"
+							>
+								<span
+									class="carousel-control-next-icon"
+									aria-hidden="true"
+								></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- your city in your hands -->
+		<div id="city-in-your-hands-container">
+			<div class="fade">
+				<h2 class="title-medium padding-md">Your City Is In Your Hands</h2>
+			</div>
+		</div>
+		<!--sign up-->
+		<div class="center">
+			<div
+				id="city-sunset"
+				style="
+					width: 2000px;
+					height: 100%;
+
+					position: absolute;
+					padding: 0px;
+
+					left: 100%;
+
+					transform: translate(-100%, 0%);
+
+					z-index: -3;
+					background: rgb(217, 89, 89);
+					background: linear-gradient(
+						0deg,
+						rgba(217, 89, 89, 0.9) 30%,
+						rgba(112, 38, 171, 0.5) 50%,
+						rgba(245, 245, 245, 0.8) 60%,
+						rgba(245, 245, 245, 1) 100%
+					);
+				"
+			></div>
+			<div class="row" style="padding: 0px; margin-bottom: -10px">
+				<img src="assets/svg/city_skyline_2.svg" class="skyline" />
+				<img src="assets/svg/city_skyline_2.svg" class="skyline" />
+				<img src="assets/svg/city_skyline_2.svg" class="skyline" />
+				<img src="assets/svg/city_skyline_2.svg" class="skyline" />
+				<img src="assets/svg/city_skyline_2.svg" class="skyline" />
+				<img src="assets/svg/city_skyline_2.svg" class="skyline" />
+			</div>
+		</div>
+		<div id="get-now">
+			<div id="get-now-content" class="fade center">
+				<div class="col-md-6">
+					<div class="center">
+						<!-- <h2 class="title-section white-text">Join Now!</h2>
+						<div id="appstore-download-container">
+							<div class="appstore-download">
+								<a>
+									<img
+										class="hover-grow"
+										src="assets/svg/google-play-badge.svg"
+										alt="download on the google play store"
+									/>
+								</a>
+							</div>
+							<div class="appstore-download">
+								<a
+									><img
+										class="hover-grow"
+										src="assets/svg/app-store-badge.svg"
+										alt="download on the apple app store"
+								/></a>
+							</div>
+						</div> -->
+						<div class="fade">
+							<h4
+								class="white-text title-medium"
+								style="padding-bottom: 0px; margin-bottom: 0px"
+							>
+								Apply For Beta
+							</h4>
+							<div id="sign-up-form-container" class="card">
+								<form
+									action="https://formspree.io/f/myybwloo"
+									method="POST"
+									id="sign-up-form"
+									class="black-text"
+								>
+									<!-- <h5 class="center">
+								Live in Hoboken? <strong>Become a Beta Tester!</strong>
+							</h5> -->
+
+									<div
+										class="input-group"
+										style="align-items: flex-end; justify-content: center"
+									>
+										<div class="input-group-prepend">
+											<span class="input-group-text">
+												<img src="assets/svg/email.svg" id="text-logo" />
+											</span>
+										</div>
+
+										<input
+											id="form-email"
+											name="form-email"
+											class="form-control"
+											placeholder="Email"
+										/>
+
+										<button
+											type="submit"
+											class="btn center"
+											style="margin: 2px 5px"
+										>
+											Let Me Have It
+										</button>
+										<!-- onclick="sendText(document.getElementById('phone-number').value)" -->
+									</div>
+								</form>
+							</div>
+							<!-- <div id="sign-up-form-container" class="card">
+								<form
+									action="https://formspree.io/f/myybwloo"
+									method="POST"
+									id="sign-up-form"
+									class="black-text"
+								>
+									 <h5 class="center">
+									Live in Hoboken? <strong>Become a Beta Tester!</strong>
+								</h5> 
+
+									<div
+										class="input-group"
+										style="align-items: flex-end; justify-content: center"
+									>
+										<div class="input-group-prepend">
+											<span class="input-group-text">
+												<img src="assets/svg/dial.svg" id="text-logo" />
+												
+											</span>
+										</div>
+										<input
+											id="phone-input"
+											type="tel"
+											class="form-control"
+											value=""
+											name="PhoneNumber"
+											aria-label="Please enter your phone number"
+											placeholder="ex. (111)-111-1111"
+										/>
+
+										<button
+											type="submit"
+											class="btn center"
+											style="margin: 2px 5px"
+										>
+											Let Me Have It
+										</button>
+									</div>
+								</form>
+								<script>
+									function phoneMask() {
+										var num = $(this).val().replace(/\D/g, "");
+										$(this).val(
+											"(" +
+												num.substring(0, 3) +
+												")-" +
+												num.substring(3, 6) +
+												"-" +
+												num.substring(6, 10)
+										);
+									}
+									$('[type="tel"]').keyup(phoneMask);
+								</script>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 fade">
+					<img
+						src="assets/svg/undraw_App_wireframe_re_d467.svg"
+						style="
+							width: 30vw;
+							min-width: 350px;
+							align-self: baseline;
+							margin-left: 5vw;
+							margin-top: 5vh;
+						"
+					/>
+				</div>
+			</div>
+		</div>
+
+		<!--footer-->
+		<footer>
+			<div class="white-text">
+				<h5 class="comfortaa-light text-center">Find Us Online</h5>
+				<ul class="social-icons">
+					<li>
+						<a
+							class="facebook"
+							href="https://www.facebook.com/quaeapp"
+							target="_blank"
+							><i class="fa fa-facebook"></i
+						></a>
+					</li>
+					<li>
+						<a
+							class="twitter"
+							href="https://twitter.com/Quae_App"
+							target="_blank"
+							><i class="fa fa-twitter"></i
+						></a>
+					</li>
+					<li>
+						<a
+							class="instagram"
+							href="https://www.instagram.com/quaeapp/"
+							target="_blank"
+							><i class="fa fa-instagram"></i
+						></a>
+					</li>
+				</ul>
+
+				<div class="white-text">
+					<div>Quae &copy; 2021 All Rights Reserved</div>
+				</div>
+				<div class="white-text row">
+					<i class="material-icons">mail</i>
+					<div style="padding: 3px 5px">info@quae.app</div>
+				</div>
+			</div>
+			<div class="white-text">
+				<div class="row-center">
+					<a href="/"> <p class="comfortaa-light padding-sm">Home</p></a>
+					<a href="/pages/about_us.html">
+						<p class="comfortaa-light padding-sm">About Us</p></a
+					>
+					<a href="./pages/pricing.html">
+						<p class="comfortaa-light padding-sm">Pricing</p></a
+					>
+					<!-- <a href="./pages/product.html">
+						<p class="comfortaa-light padding-sm">Product</p></a
+					> -->
+				</div>
+			</div>
+		</footer>
+
+		<script
+			src="https://apis.google.com/js/platform.js?onload=renderButton"
+			async
+			defer
+		></script>
+		<script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
+		<script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+		<script
+			src="assets/js/core/bootstrap-material-design.min.js"
+			type="text/javascript"
+		></script>
+		<script src="assets/js/plugins/moment.min.js"></script>
+		<!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+		<!-- <script
+			src="assets/js/plugins/bootstrap-datetimepicker.js"
+			type="text/javascript"
+		></script> -->
+		<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+		<!-- <script
+			src="assets/js/plugins/nouislider.min.js"
+			type="text/javascript"
+		></script> -->
+		<!-- Place this tag in your head or just before your close body tag. -->
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+		<!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+		<script
+			src="assets/js/material-kit.js?v=2.0.7"
+			type="text/javascript"
+		></script>
+	</body>
 </html>
