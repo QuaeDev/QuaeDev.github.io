@@ -136,6 +136,7 @@
 /* root components */
 html {
 	box-sizing: border-box;
+	overflow-x: hidden;
 }
 *,
 *:before,
@@ -881,7 +882,7 @@ footer a:hover{
   -o-transition:all .2s linear;
   transition:all .2s linear
 }
-.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+.social-icons a:active,.social-icons a:focus,.social-icons a
 {
   color:#fff;
   background-color:#29aafe
@@ -893,19 +894,19 @@ footer a:hover{
   width:34px;
   font-size:14px
 }
-.social-icons a.facebook:hover
+.social-icons a.facebook
 {
   background-color:#3b5998
 }
-.social-icons a.twitter:hover
+.social-icons a.twitter
 {
   background-color:#00aced
 }
-.social-icons a.linkedin:hover
+.social-icons a.linkedin
 {
   background-color:#007bb6
 }
-.social-icons a.instagram:hover
+.social-icons a.instagram
 {
 	background: #d6249f;
 	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
