@@ -4,12 +4,13 @@
 		<title>Quae</title>
 		<!-- Required meta tags -->
 		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"
-		/>
 
+		<meta
+			content="width=device-width, initial-scale=1.0,user-scalable=no"
+			name="viewport"
+		/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="authors" content="Brendan Probst & Sam Schmitt" />
 		<meta
 			name="description"
 			content="quae is a platform that makes participating in your local politics as easy as pulling out your phone"
@@ -18,6 +19,7 @@
 			name="keywords"
 			content="Politics, Local Politics, Voting, Hoboken, Hoboken Politics, City Council, Poll, Voting, "
 		/>
+		<link rel="icon" href="../assets/img/quae_logo_square.png" />
 		<!--  Fonts and icons  -->
 		<!-- Fonts and icons -->
 		<link
@@ -29,7 +31,7 @@
 			rel="stylesheet"
 			href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
 		/>
-		<link rel="icon" href="../assets/img/quae_logo_square.png" />
+
 		<link href="../assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
 		<link rel="stylesheet" href="../assets/css/styles.css" />
 		<!-- <link rel="stylesheet" href="assets/css/splide.min.css" /> -->
@@ -88,10 +90,12 @@
 					<a href="about_us.html" onclick="closeNav()" id="about-link"
 						>About Us</a
 					>
-					<a href="#" onclick="closeNav()" id="about-link" style="opacity: 0.5"
+					<a href="pricing.html" onclick="closeNav()" id="about-link"
 						>Pricing</a
 					>
-					<a href="blog.html" onclick="closeNav()" id="about-link">Blog</a>
+					<a href="#" onclick="closeNav()" id="about-link" style="opacity: 0.5"
+						>Blog</a
+					>
 				</div>
 				<a class="navbar-brand" href="/">
 					<div class="logo-image">
@@ -121,199 +125,73 @@
 						About Us
 					</div>
 				</a>
+				<a class="nav-link float-right" href="pricing.html">
+					<div
+						id="get-now-link-nav"
+						class="comfortaa-bold white-text float-right desktop-only"
+						style="text-transform: none"
+					>
+						Pricing
+					</div>
+				</a>
 				<a class="nav-link float-right" href="#">
 					<div
 						id="get-now-link-nav"
 						class="comfortaa-bold white-text float-right desktop-only"
 						style="text-transform: none; opacity: 0.5"
 					>
-						Pricing
-					</div>
-				</a>
-				<a class="nav-link float-right" href="blog.html">
-					<div
-						id="get-now-link-nav"
-						class="comfortaa-bold white-text float-right desktop-only"
-						style="text-transform: none"
-					>
 						Blog
 					</div>
 				</a>
 			</div>
 		</nav>
-		<div>
-			<div class="page-header" id="pricing-header" style="height: 70vh">
-				<div class="container">
-					<div>
-						<div class="text-center">
-							<h1 class="title-section">Create Your Own Quae</h1>
-							<!-- <h1>Build Your Own Community</h1> -->
-							<h3>
-								Make your company, organization, or school more democratic
-							</h3>
-						</div>
-					</div>
+		<div id="blog-background" class="container-fluid">
+			<div class="container-fluid" id="blog-title-view">
+				<div class="white-text">
+					<h1 class="title-section">Title</h1>
+					<h3>Make your company, organization, or school more democratic</h3>
 				</div>
 			</div>
 
-			<div
-				class="main main-raised"
-				style="margin-top: -15vh; margin-bottom: 15vh; padding: 0"
-			>
-				<div class="container" style="padding: 10px 30px">
-					<h3 class="title-medium">Pricing Plans</h3>
-					<div
-						class="row-wrap"
-						style="
-							flex-wrap: wrap;
-							flex-direction: row;
-							padding: 10px 0px;
-							align-items: flex-end;
-						"
-					>
-						<div class="col-md-4">
-							<div class="card pricing-card">
-								<div
-									class="card-header"
-									style="
-										background: rgb(255, 214, 214);
-										background: linear-gradient(
-											121deg,
-											rgba(255, 214, 214, 1) 0%,
-											rgba(217, 89, 89, 1) 68%
-										);
-									"
-								>
-									<div class="card-title">
-										<h3 class="title-small white-text">Free</h3>
-									</div>
-								</div>
-								<div class="card-body center">
-									<h3 class="title-sub">Seriously, its free</h3>
-
-									<ul class="pricing-card-list">
-										<li>Connect up to 20 voters</li>
-										<li>1 admin</li>
-										<li>ID Verification for all voters</li>
-										<li>Control who gets to vote</li>
-										<li>Unlimited # of polls</li>
-										<li>Fully Custom Ballots</li>
-									</ul>
-									<!-- <button
-										type="button"
-										class="btn"
-										data-toggle="modal"
-										data-target="#exampleModal"
-									>
-										Launch demo modal
-									</button> -->
-								</div>
+			<div class="container-fluid">
+				<div class="col-md-10">
+					<div class="card">
+						<div class="blog-header-container">
+							<div style="padding: 10px; height: 30%">
+								<img src="../assets/img/brendan.jpg" class="blog-img" />
+							</div>
+							<div class="blog-title-container">
+								<h4 class="blog-title" style="text-align: left">
+									This is a title, it describes what the blog is about
+								</h4>
+								<p>3 March 2021</p>
+								<p>Category subtitle</p>
 							</div>
 						</div>
-						<div class="col-md-4">
-							<div class="card pricing-card">
-								<div
-									class="card-header"
-									style="
-										background: rgb(235, 211, 255);
-										background: linear-gradient(
-											121deg,
-											rgba(235, 211, 255, 1) 0%,
-											rgba(112, 38, 171, 1) 68%
-										);
-									"
-								>
-									<div class="card-title">
-										<h3 class="title-small white-text">Standard</h3>
-									</div>
-								</div>
-								<div class="card-body center">
-									<div class="center">
-										<h4><del>$10/election</del></h4>
-										<h4 style="align-self: center">
-											<del>Membership $25/month</del>
-										</h4>
-									</div>
-									<h3
-										class="title-small"
-										style="padding: 0px; margin-top: 0px; color: red"
-									>
-										75% discount
-									</h3>
-									<div class="center" style="font-size: 18px; padding-top: 0px">
-										<h4>for first 10 who apply</h4>
-									</div>
-									<ul class="pricing-card-list">
-										<li>Connect up to 300 voters</li>
-										<li>Designate up to 10 admins</li>
-										<li>ID Verification for all voters</li>
-										<li>Control who votes</li>
-										<li>Fully Custom Ballots</li>
-									</ul>
-									<!-- <button
-										type="button"
-										class="btn"
-										data-toggle="modal"
-										data-target="#exampleModal"
-									>
-										Launch demo modal
-									</button> -->
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="card pricing-card">
-								<div
-									class="card-header"
-									style="
-										background: rgb(199, 228, 255);
-										background: linear-gradient(
-											121deg,
-											rgba(199, 228, 255, 1) 0%,
-											rgba(75, 145, 210, 1) 68%
-										);
-									"
-								>
-									<div class="card-title">
-										<h3 class="title-small white-text">Enterprise</h3>
-									</div>
-								</div>
-								<div class="card-body center">
-									<h4>Contact us for pricing info</h4>
-									<ul class="pricing-card-list">
-										<li>Unlimited voters</li>
-										<li>Unlimited admins</li>
-										<li>Custom built to suit your needs</li>
-										<li>Voters able to suggest their own polls</li>
-										<li
-											style="margin-inline-start: 25px; list-style-type: square"
-										>
-											Create your own Quae
-										</li>
-									</ul>
-									<!-- <button
-										type="button"
-										class="btn"
-										data-toggle="modal"
-										data-target="#exampleModal"
-									>
-										Launch demo modal
-									</button> -->
-								</div>
-							</div>
+						<div class="card-body">
+							The place is close to Barceloneta Beach and bus stop just 2 min by
+							walk and near to "Naviglio" where you can enjoy the main night
+							life in Barcelona... The place is close to Barceloneta Beach and
+							bus stop just 2 min by walk and near to "Naviglio" where you can
+							enjoy the main night life in Barcelona... The
 						</div>
 					</div>
 				</div>
-				<div class="col-12 center padding-sm">
-					<div>
-						<h3 style="text-align: center">
-							email info@quae.com to reserve your spot!
-						</h3>
+				<div class="col-md-10">
+					<div class="card">
+						<div>
+							<h4 class="card-title">Regular header</h4>
+							<p class="category">Category subtitle</p>
+						</div>
+						<div class="card-body">
+							The place is close to Barceloneta Beach and bus stop just 2 min by
+							walk and near to "Naviglio" where you can enjoy the main night
+							life in Barcelona... The place is close to Barceloneta Beach and
+							bus stop just 2 min by walk and near to "Naviglio" where you can
+							enjoy the main night life in Barcelona... The
+						</div>
 					</div>
 				</div>
-				<!-- <div>
-					<h2 class="title-section">How You Can Create Your Own Quae</h2>
-				</div> -->
 			</div>
 		</div>
 		<footer>
