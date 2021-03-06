@@ -990,8 +990,8 @@ footer a:hover{
 .blog-header-container{
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
-	padding: 8px;
+	flex-wrap: wrap;
+	
 }
 .blog-title-container{
 	color: black;
@@ -999,18 +999,29 @@ footer a:hover{
 	text-align: left;
 }
 .blog-img{
-	height: 10vw;
-	align-items: center;
+	width: 100%;
+	/* height: 10vw;
+	min-height: 200px; */
 	border-radius: 10px;
-
+	margin: auto;
 }
 .blog-title{
-	font-size: 1.25em;
+	font-size: 1.5em;
 	font-weight: 400;
+}
+.blog-subtitle-container{
+	display: flex; flex-direction: row; flex-wrap: nowrap	
+}
+.blog-subtitle-container p{
+	padding: 5px;
 }
 .blog-title-container p{
 	font-size: 1em;
 	font-weight: 200;
+}
+.blog-preview{
+	padding: 10px 15px;
+	
 }
 
 
