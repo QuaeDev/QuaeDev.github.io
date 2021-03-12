@@ -842,6 +842,10 @@ footer a{
 	color: white;
 }
 footer a:hover{
+	color: white;
+	opacity: 0.8;
+}
+.social-icons a:hover{
 	transform: scale(1.1);
 	color: white;
 	opacity: 0.8;
@@ -896,7 +900,8 @@ footer a:hover{
 }
 .social-icons a.facebook
 {
-  background-color:#3b5998
+  background-color:#3b5998;
+  align-items: flex-end;
 }
 .social-icons a.twitter
 {
