@@ -29,16 +29,14 @@ app.use("/assets", express.static(__dirname + "/public/css"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", async (req, res) => {
+app.get("/", (req, res) => {
 	// const posts = await Post.find({});
 	res.render("home");
 	// , { posts }
 });
-
 app.get("/about_us", (req, res) => {
 	res.render("about_us");
 });
-
 app.get("/pricing", (req, res) => {
 	res.render("pricing");
 });
@@ -46,7 +44,7 @@ app.get("/blog", blogController);
 // app.get("/blogposts/new", createBlogPostController);
 app.post("/blogposts/store", storeBlogPostController);
 
-app.get("/blogpost/:id", getBlogPostController);
+app.get("/blogpost_:id", getBlogPostController);
 app.listen(PORT, () => {
 	console.log(`App listening on port ${PORT}`);
 });
