@@ -27,6 +27,8 @@
 		/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="assets/js/animations.js"></script>
+		<!-- components -->
+		<script src="components/header.js" type="text/javascript" defer></script>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script
 			async
@@ -62,13 +64,20 @@
 						>
 					</span>
 
-					<a href="./pages/about_us.html" onclick="closeNav()" id="about-link"
+					<a href="/" onclick="closeNav()" id="home-drawer-link">Home</a>
+					<a
+						href="./pages/about_us.html"
+						onclick="closeNav()"
+						id="about-us-drawer-link"
 						>About Us</a
 					>
-					<a href="./pages/pricing.html" onclick="closeNav()" id="about-link"
+					<a
+						href="./pages/pricing.html"
+						onclick="closeNav()"
+						id="pricing-drawer-link"
 						>Pricing</a
 					>
-					<a href="./pages/blog.html" onclick="closeNav()" id="about-link"
+					<a href="./pages/blog.html" onclick="closeNav()" id="blog-drawer-link"
 						>Blog</a
 					>
 				</div>
@@ -93,7 +102,7 @@
 
 				<a class="nav-link float-right hover-grow" href="./pages/about_us.html">
 					<div
-						id="get-now-link-nav"
+						id="about-us-link-nav"
 						class="comfortaa-bold white-text float-right desktop-only"
 						style="text-transform: none"
 					>
@@ -102,7 +111,7 @@
 				</a>
 				<a class="nav-link float-right hover-grow" href="./pages/pricing.html">
 					<div
-						id="get-now-link-nav"
+						id="pricing-link-nav"
 						class="comfortaa-bold white-text float-right desktop-only"
 						style="text-transform: none"
 					>
@@ -111,7 +120,7 @@
 				</a>
 				<a class="nav-link float-right hover-grow" href="./pages/blog.html">
 					<div
-						id="get-now-link-nav"
+						id="blog-link-nav"
 						class="comfortaa-bold white-text float-right desktop-only"
 						style="text-transform: none"
 					>
@@ -119,6 +128,24 @@
 					</div>
 				</a>
 			</div>
+			<script>
+				let URL = window.location.href;
+				console.log(URL);
+				if (URL.includes("about_us")) {
+					document.getElementById("about-us-drawer-link").style.opacity = "0.5";
+					document.getElementById("about-us-link-nav").style.opacity = "0.5";
+				}
+				if (URL.includes("pricing")) {
+					document.getElementById("pricing-drawer-link").style.opacity = "0.5";
+					document.getElementById("pricing-link-nav").style.opacity = "0.5";
+				}
+				if (URL.includes("blog")) {
+					document.getElementById("blog-drawer-link").style.opacity = "0.5";
+					document.getElementById("blog-link-nav").style.opacity = "0.5";
+				} else {
+					document.getElementById("home-drawer-link").style.display = "none";
+				}
+			</script>
 		</nav>
 		<!--View 1-->
 		<div id="view-1-container" class="container-fluid">
