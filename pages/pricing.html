@@ -1,6 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!-- Google Tag Manager -->
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != "dataLayer" ? "&l=" + l : "";
+				j.async = true;
+				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, "script", "dataLayer", "GTM-P3NMDD5");
+		</script>
+		<!-- End Google Tag Manager -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-4CS6KQ279Q"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-4CS6KQ279Q");
+		</script>
 		<title>Quae</title>
 		<!-- Required meta tags -->
 		<meta charset="utf-8" />
@@ -10,10 +38,7 @@
 		/>
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<meta
-			name="description"
-			content="quae is a platform that makes participating in your local politics as easy as pulling out your phone"
-		/>
+		<meta name="description" content="" />
 		<meta
 			name="keywords"
 			content="Politics, Local Politics, Voting, Hoboken, Hoboken Politics, City Council, Poll, Voting, "
@@ -49,22 +74,18 @@
 		/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="../assets/js/animations.js"></script>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=G-4CS6KQ279Q"
-		></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
-
-			gtag("config", "G-4CS6KQ279Q");
-		</script>
 	</head>
 	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-P3NMDD5"
+				height="0"
+				width="0"
+				style="display: none; visibility: hidden"
+			></iframe
+		></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 		<nav id="myNavbar" class="nav custom-purple">
 			<div id="nav-image-container" class="nav-link">
 				<span
@@ -72,7 +93,7 @@
 					class="mobile-nav-open-icon mobile-only navbar-brand"
 				>
 					<div class="logo-image">
-						<img src="{{menuPath}}" class="img-fluid" />
+						<img src="../assets/svg/menu.svg" class="img-fluid" />
 					</div>
 				</span>
 				<div class="backdrop-container" id="backdrop"></div>
@@ -84,31 +105,28 @@
 						>
 					</span>
 
-					<a href="/" onclick="closeNav()" id="home-drawer-link">Home</a>
-					<a
-						href="./pages/about_us.html"
-						onclick="closeNav()"
-						id="about-us-drawer-link"
+					<a href="/" onclick="closeNav()" id="about-link">Home</a>
+					<a href="about_us.html" onclick="closeNav()" id="about-link"
 						>About Us</a
 					>
-					<a
-						href="./pages/pricing.html"
-						onclick="closeNav()"
-						id="pricing-drawer-link"
+					<a href="#" onclick="closeNav()" id="about-link" style="opacity: 0.5"
 						>Pricing</a
 					>
-					<a href="./pages/blog.html" onclick="closeNav()" id="blog-drawer-link"
-						>Blog</a
-					>
+					<!-- <a href="product.html" onclick="closeNav()" id="about-link"
+						>Product</a
+					> -->
 				</div>
 				<a class="navbar-brand" href="/">
 					<div class="logo-image">
-						<img src="{{logoPath}}" class="img-fluid" />
+						<img
+							src="../assets/svg/quae_logo_white_no_background.svg"
+							class="img-fluid"
+						/>
 					</div>
 				</a>
 			</div>
 			<div class="float-right vertical-text-center">
-				<a class="nav-link float-right hover-grow" href="#get-now"
+				<a class="nav-link float-right" href="../index.html#get-now"
 					><div
 						id="get-now-link-nav"
 						class="comfortaa-bold white-text float-right vertical-text-center"
@@ -117,56 +135,34 @@
 					</div>
 				</a>
 
-				<a class="nav-link float-right hover-grow" href="./pages/about_us.html">
+				<a class="nav-link float-right" href="about_us.html">
 					<div
-						id="about-us-link-nav"
+						id="get-now-link-nav"
 						class="comfortaa-bold white-text float-right desktop-only"
 						style="text-transform: none"
 					>
 						About Us
 					</div>
 				</a>
-				<a class="nav-link float-right hover-grow" href="./pages/pricing.html">
+				<a class="nav-link float-right" href="#">
 					<div
-						id="pricing-link-nav"
+						id="get-now-link-nav"
 						class="comfortaa-bold white-text float-right desktop-only"
-						style="text-transform: none"
+						style="text-transform: none; opacity: 0.5"
 					>
 						Pricing
 					</div>
 				</a>
-				<a class="nav-link float-right hover-grow" href="./pages/blog.html">
+				<!-- <a class="nav-link float-right" href="product.html">
 					<div
-						id="blog-link-nav"
+						id="get-now-link-nav"
 						class="comfortaa-bold white-text float-right desktop-only"
 						style="text-transform: none"
 					>
-						Blog
+						Product
 					</div>
-				</a>
+				</a> -->
 			</div>
-			<script>
-				let URL = window.location.href;
-				let menuPath = "assets/svg/menu.svg";
-				let logoPath = "assets/svg/quae_logo_white_no_background.svg";
-				console.log(URL);
-				if (URL.includes("about_us")) {
-					document.getElementById("about-us-drawer-link").style.opacity = "0.5";
-					document.getElementById("about-us-link-nav").style.opacity = "0.5";
-				}
-				if (URL.includes("pricing")) {
-					document.getElementById("pricing-drawer-link").style.opacity = "0.5";
-					document.getElementById("pricing-link-nav").style.opacity = "0.5";
-					menuPath = "../" + menuPath;
-					logoPath = "../" + logoPath;
-				}
-				if (URL.includes("blog")) {
-					document.getElementById("blog-drawer-link").style.opacity = "0.5";
-					document.getElementById("blog-link-nav").style.opacity = "0.5";
-				} else {
-					document.getElementById("home-drawer-link").style.display = "none";
-				}
-			</script>
 		</nav>
 		<div>
 			<div class="page-header" id="pricing-header" style="height: 70vh">
@@ -343,11 +339,46 @@
 				</div> -->
 			</div>
 		</div>
+		<div
+			class="modal fade"
+			id="exampleModal"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">...</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-secondary"
+							data-dismiss="modal"
+						>
+							Close
+						</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<footer>
 			<div>
 				<!-- <hr style="background-color: white" /> -->
 				<div class="white-text">
-					<!-- <h5 class="comfortaa-light text-center">Find Us Online</h5>
+					<h5 class="comfortaa-light text-center">Find Us Online</h5>
 					<ul class="social-icons">
 						<li>
 							<a
@@ -372,11 +403,12 @@
 								target="_blank"
 								><i class="fa fa-instagram"></i
 							></a>
-						</li> 
-						 <li>
+						</li>
+
+						<!-- <li>
 							<a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-						</li> 
-					</ul>-->
+						</li> -->
+					</ul>
 				</div>
 				<div class="white-text">
 					<div>Quae &copy; 2021 All Rights Reserved</div>
