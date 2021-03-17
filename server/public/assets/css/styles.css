@@ -830,6 +830,21 @@ justify-content: center;
 	min-width: 10vw;
 }
 
+#sign-up-container{
+	background-image: url("../../assets/img/Hoboken_NJ_photo_D_Ramey_Logan.jpg");
+	background-repeat: no-repeat;
+	/* background-attachment: fixed; */
+	background-size: auto;
+	
+	height: 95vh;
+}
+#hoboken-ariel{
+
+}
+
+
+
+
 footer {
 	padding: 3vh;
 	background-color: var(--dark_purple);

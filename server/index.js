@@ -22,13 +22,15 @@ config({ cache: process.env.NODE_ENV === "production" });
 const app = new express();
 InitiateMongoServer();
 app.use(fileUpload());
-app.use(express.static("public"));
 app.use(engine);
+// app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 app.set("views", __dirname + "/views");
 app.use("/assets", express.static(__dirname + "/public/css"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+const storeBlogPost = require("./middleware/storeBlogPost");
+app.use("/blogposts/store", storeBlogPost);
 app.get("/", (req, res) => {
 	// const posts = await Post.find({});
 	res.render("home");
