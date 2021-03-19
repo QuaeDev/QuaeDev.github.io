@@ -25,7 +25,7 @@ app.use(fileUpload());
 app.use(engine);
 // app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "public")));
-app.set("views", __dirname + "/views");
+app.set("pages", __dirname + "/pages");
 app.use("/assets", express.static(__dirname + "/public/css"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

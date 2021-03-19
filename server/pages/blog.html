@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Quae</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+
+		<meta
+			content="width=device-width, initial-scale=1.0,user-scalable=no"
+			name="viewport"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="authors" content="Brendan Probst & Sam Schmitt" />
+		<meta
+			name="description"
+			content="quae is a platform that makes participating in your local politics as easy as pulling out your phone"
+		/>
+		<meta
+			name="keywords"
+			content="Politics, Local Politics, Voting, Hoboken, Hoboken Politics, City Council, Poll, Voting, "
+		/>
+		<link rel="icon" href="../assets/img/quae_logo_square.png" />
+		<!--  Fonts and icons  -->
+		<!-- Fonts and icons -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
+		/>
+
+		<link href="../assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
+		<link rel="stylesheet" href="../assets/css/styles.css" />
+		<!-- <link rel="stylesheet" href="assets/css/splide.min.css" /> -->
+		<link rel="stylesheet" href="../assets/css/animations.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="../assets/js/animations.js"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-4CS6KQ279Q"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-4CS6KQ279Q");
+		</script>
+	</head>
+	<body>
+		<nav id="myNavbar" class="nav custom-purple">
+			<div id="nav-image-container" class="nav-link">
+				<span
+					onClick="openNav()"
+					class="mobile-nav-open-icon mobile-only navbar-brand"
+				>
+					<div class="logo-image">
+						<img src="../assets/svg/menu.svg" class="img-fluid" />
+					</div>
+				</span>
+				<div class="backdrop-container" id="backdrop"></div>
+
+				<div id="mySidenav" class="sidenav-container">
+					<span class="drawer-close-button">
+						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+							>&times;</a
+						>
+					</span>
+
+					<a href="/" onclick="closeNav()" id="about-link">Home</a>
+					<a href="about_us.html" onclick="closeNav()" id="about-link"
+						>About Us</a
+					>
+					<a href="pricing.html" onclick="closeNav()" id="about-link"
+						>Pricing</a
+					>
+					<a href="#" onclick="closeNav()" id="about-link" style="opacity: 0.5"
+						>Blog</a
+					>
+				</div>
+				<a class="navbar-brand" href="/">
+					<div class="logo-image">
+						<img
+							src="../assets/svg/quae_logo_white_no_background.svg"
+							class="img-fluid"
+						/>
+					</div>
+				</a>
+			</div>
+			<div class="float-right vertical-text-center">
+				<a class="nav-link float-right" href="../index.html#get-now"
+					><div
+						id="get-now-link-nav"
+						class="comfortaa-bold white-text float-right vertical-text-center"
+					>
+						Get Now
+					</div>
+				</a>
+
+				<a class="nav-link float-right" href="about_us.html">
+					<div
+						id="get-now-link-nav"
+						class="comfortaa-bold white-text float-right desktop-only"
+						style="text-transform: none"
+					>
+						About Us
+					</div>
+				</a>
+				<a class="nav-link float-right" href="pricing.html">
+					<div
+						id="get-now-link-nav"
+						class="comfortaa-bold white-text float-right desktop-only"
+						style="text-transform: none"
+					>
+						Pricing
+					</div>
+				</a>
+				<a class="nav-link float-right" href="#">
+					<div
+						id="get-now-link-nav"
+						class="comfortaa-bold white-text float-right desktop-only"
+						style="text-transform: none; opacity: 0.5"
+					>
+						Blog
+					</div>
+				</a>
+			</div>
+		</nav>
+		<div id="blog-background" class="container-fluid">
+			<div class="container-fluid" id="blog-title-view">
+				<div class="white-text">
+					<h1 class="title-section">Blog Posts From Quae</h1>
+				</div>
+			</div>
+
+			<div class="main main-raised center">
+				<div class="col-md-10">
+					<div class="row-wrap" style="padding: 15px 10px">
+						<div
+							class="col-sm-3"
+							style="padding: 10px; height: 30%; justify-content: flex-start"
+						>
+							<img
+								id="highlight-img"
+								src="../assets/img/brendan.jpg"
+								class="blog-img img-raised"
+							/>
+						</div>
+						<div class="blog-content-container col-sm-9">
+							<div class="blog-title-container">
+								<h4
+									id="highlight-title"
+									class="blog-title"
+									style="text-align: left"
+								>
+									This is a title, it describes what the blog is about. This is
+									the most recent post
+								</h4>
+								<div class="blog-subtitle-container">
+									<p id="highlight-date">3 March 2021</p>
+									<p id="highlight-read-time">5 minute read</p>
+								</div>
+								<hr />
+							</div>
+							<div class="highlight-blog-preview">
+								<p>
+									The place is close to Barceloneta Beach and bus stop just 2
+									min by walk and near to "Naviglio" where you can enjoy the
+									main night life in Barcelona... The place is close to
+									Barceloneta Beach and bus stop just 2 min by walk and near to
+									"Naviglio" where you can enjoy the main night life in
+									Barcelona... The
+								</p>
+								<a href="#"><p>Read More...</p></a>
+							</div>
+						</div>
+					</div>
+					<hr />
+				</div>
+
+				<div class="col-md-12 row">
+					<div class="col-8">
+						<ul id="blog-list">
+							<li style="list-style-type: none">
+								<div class="row-wrap" style="padding: 15px 10px">
+									<div
+										class="col-sm-3 center"
+										style="padding: 10px; height: 30%"
+									>
+										<img
+											src="../assets/img/brendan.jpg"
+											class="blog-img img-raised"
+										/>
+									</div>
+									<div class="blog-content-container col-sm-9">
+										<div class="blog-title-container">
+											<h4 class="blog-title" style="text-align: left">
+												This is a title, it describes what the blog is about.
+												This is the most recent post
+											</h4>
+											<div class="blog-subtitle-container">
+												<p>3 March 2021</p>
+												<p>5 minute read</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<hr />
+							</li>
+						</ul>
+					</div>
+					<!-- <div class="col-4 float-right">
+						<h5>More Stuff</h5>
+					</div> -->
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div>
+				<!-- <hr style="background-color: white" /> -->
+				<div class="white-text">
+					<!-- <h5 class="comfortaa-light text-center">Find Us Online</h5>
+					<ul class="social-icons">
+						<li>
+							<a
+								class="facebook"
+								href="https://www.facebook.com/quaeapp"
+								target="_blank"
+								><i class="fa fa-facebook"></i
+							></a>
+						</li>
+						<li>
+							<a
+								class="twitter"
+								href="https://twitter.com/Quae_App"
+								target="_blank"
+								><i class="fa fa-twitter"></i
+							></a>
+						</li>
+						<li>
+							<a
+								class="instagram"
+								href="https://www.instagram.com/quaeapp/"
+								target="_blank"
+								><i class="fa fa-instagram"></i
+							></a>
+						</li> 
+						 <li>
+							<a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+						</li> 
+					</ul>-->
+				</div>
+				<div class="white-text">
+					<div>Quae &copy; 2021 All Rights Reserved</div>
+				</div>
+				<div class="white-text row">
+					<div style="padding: 3px 5px">Contact us at info@quae.app</div>
+				</div>
+			</div>
+			<div class="white-text">
+				<div class="row-center">
+					<a href="/"> <p class="comfortaa-light padding-sm">Home</p></a>
+					<a href="about_us.html">
+						<p class="comfortaa-light padding-sm">About Us</p></a
+					>
+					<a href="#"> <p class="comfortaa-light padding-sm">Pricing</p></a>
+					<!-- <a href="product.html">
+						<p class="comfortaa-light padding-sm">Product</p></a
+					> -->
+				</div>
+			</div>
+		</footer>
+		<!--   Core JS Files   -->
+		<script???
+			src="assets/js/core/jquery.min.js"
+			type="text/javascript"
+		></script???>
+		<script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+		<script
+			src="assets/js/core/bootstrap-material-design.min.js"
+			type="text/javascript"
+		></script>
+		<script src="assets/js/plugins/moment.min.js"></script>
+		<!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+		<script
+			src="assets/js/plugins/bootstrap-datetimepicker.js"
+			type="text/javascript"
+		></script>
+		<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+		<script
+			src="assets/js/plugins/nouislider.min.js"
+			type="text/javascript"
+		></script>
+		<!--  Google Maps Plugin  -->
+		<script
+			type="text/javascript"
+			src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
+		></script>
+		<!-- Place this tag in your head or just before your close body tag. -->
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+		<!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+		<script
+			src="assets/js/material-kit.js?v=2.0.7"
+			type="text/javascript"
+		></script>
+	</body>
+</html>
