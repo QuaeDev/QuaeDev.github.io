@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Quae</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="authors" content="Brendan Probst & Sam Schmitt" />
+		<link rel="icon" href="assets/img/quae_logo_square.png" />
+		<meta
+			name="description"
+			content="A platform that makes participating in your local politics as easy as pulling out your phone. Vote every day on issues that matter to you."
+		/>
+		<meta
+			name="keywords"
+			content="Politics, Local Politics, Voting, Hoboken, Hoboken Politics, City Council, Poll, Voting, "
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+
+		<link rel="stylesheet" href="./assets//css/tailwind.css" />
+		<link rel="stylesheet" href="./assets/css/customTailwind.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<link rel="stylesheet" href="./assets/css/animation.css" />
+
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+		<script src="./assets/js/jquery-1.10.2.js"></script>
+		<script src="./assets/js/componentRendering.js"></script>
+	</head>
+
+	<body class="bg-offwhite">
+		<div id="nav-placeholder"></div>
+
+		<div
+			class="pt-24 pb-16 px-3 text-center from-purple-dark to-purple-light bg-gradient-to-br"
+		>
+			<h2 class="text-montserrat-600 text-white text-4xl py-6">
+				Democratize Your&nbsp
+				<a
+					href=""
+					class="typewrite"
+					data-period="3000"
+					data-type='[ "Club", "Organization", "Union", "Business" ]'
+				>
+					<span class="wrap"></span>
+				</a>
+			</h2>
+		</div>
+		<div class="py-12 px-0 md:py-16">
+			<div class="mx-auto">
+				<h3 class="text-center px-4 text-montserrat text-3xl">Pricing Plans</h3>
+				<div
+					class="mx-auto px-4 md:flex md:flex-row md:flex-no-wrap md:align-center md:justify-evenly"
+				>
+					<div
+						class="mx-auto bg-white rounded-xl shadow-md my-8 min-w-min w-4/5 md:mx-1 md:flex-1"
+					>
+						<div
+							class="px-3 py-3 bg-red bg-opacity-70"
+							style="
+								border-top-right-radius: 0.8em;
+								border-top-left-radius: 0.8em;
+							"
+						></div>
+						<div class="py-4 px-6 text-left">
+							<div>
+								<h3 class="text-montserrat-400 text-3xl">Free</h3>
+
+								<h3 class="py-1 text-md"><b>Seriously, its free</b></h3>
+							</div>
+							<hr />
+							<ul class="py-4 ml-3 text-left list-disc">
+								<li>Connect 30 voters</li>
+								<li>Designate 2 admins</li>
+								<li>Unlimited Polls/Elections</li>
+								<li>AES Encryption</li>
+							</ul>
+						</div>
+					</div>
+					<div
+						class="mx-auto bg-white rounded-xl shadow-md my-8 min-w-min w-4/5 md:mx-0.5 md:flex-1"
+					>
+						<div
+							class="px-3 py-3"
+							style="
+								background-color: rgba(25, 117, 37, 0.7);
+
+								border-top-right-radius: 0.8em;
+								border-top-left-radius: 0.8em;
+							"
+						></div>
+						<div class="py-4 px-6 text-left">
+							<div>
+								<h3 class="text-montserrat-400 text-3xl">Standard</h3>
+								<div
+									class="flex flex-row flex-wrap justify-start align-bottom pb-0.5"
+								>
+									<h3 class="text-md mr-2"><b>$19.99/month</b></h3>
+									<h3 class="text-md text-gray-dark">$199.99/year</h3>
+								</div>
+							</div>
+							<hr />
+
+							<ul class="py-4 ml-3 text-left list-disc">
+								<li>Up to 300 voters</li>
+								<li>Up to 5 admins</li>
+								<li>Assign up to 3 voter roles</li>
+							</ul>
+						</div>
+					</div>
+					<div
+						class="mx-auto bg-white rounded-xl shadow-md my-8 min-w-min w-4/5 md:mx-0.5 md:flex-1"
+					>
+						<div
+							class="px-3 py-3 bg-blue bg-opacity-70"
+							style="
+								border-top-right-radius: 0.8em;
+								border-top-left-radius: 0.8em;
+							"
+						></div>
+						<div class="py-4 px-6 text-left">
+							<div>
+								<h3 class="text-montserrat-400 text-3xl">Premium</h3>
+								<div
+									class="flex flex-row flex-wrap justify-start align-bottom pb-0.5"
+								>
+									<h3 class="text-md mr-2"><b>$99.99/month</b></h3>
+									<h3 class="text-md text-gray-dark">$999.99/year</h3>
+								</div>
+							</div>
+							<hr />
+
+							<ul class="py-4 ml-3 text-left list-disc">
+								<li>Up to 1000 voters</li>
+								<li>Up to 20 admins</li>
+								<li>Up to 10 roles</li>
+							</ul>
+						</div>
+					</div>
+					<div
+						class="mx-auto bg-white rounded-xl shadow-md my-8 min-w-min w-4/5 md:mx-0.5 md:flex-1"
+					>
+						<div
+							class="px-3 py-3 bg-purple bg-opacity-70"
+							style="
+								border-top-right-radius: 0.8em;
+								border-top-left-radius: 0.8em;
+							"
+						></div>
+						<div class="py-4 px-6 text-left">
+							<div>
+								<h3 class="text-montserrat-400 text-3xl">Enterprise</h3>
+
+								<h3 class="text-md"><b>Contact us for pricing</b></h3>
+							</div>
+							<hr />
+
+							<ul class="py-4 ml-3 text-left list-disc">
+								<li>Unlimited voters</li>
+								<li>Unlimited admins</li>
+								<li>Unlimited roles</li>
+								<li>Blockchain encryption</li>
+								<li>Custom built for you</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mx-auto max-w-3xl">
+			<h3 class="mx-6 text-center text-montserrat text-3xl">
+				50% off for 1 Year For First 30 Who Sign Up
+			</h3>
+			<div class="mx-6 mt-6 mb-24 bg-gray-light rounded-xl shadow-xl">
+				<h4 class="text-center text-montserrat-400 text-2xl pt-12">
+					Reserve Your Spot Today!
+				</h4>
+				<div class="mx-auto sm:w-4/5 sm:min-w-80 sm:max-w-xl md:w-11/12">
+					<form
+						id="pricing-form"
+						method="POST"
+						action="https://formspree.io/f/myybwloo"
+						class="mx-auto align-middle pt-4 pb-6"
+					>
+						<div class="md:flex md:flex-row md:flex-nowrap md:justify-center">
+							<div
+								class="flex flex-row flex-wrap align-middle justify-start md:flex-col md:flex-nowrap md:align-middle"
+							>
+								<div class="mx-3 my-4 md:my-1 w-full md:w-auto">
+									<label for="name">Name*</label>
+									<input
+										type="text"
+										required
+										id="name"
+										name="name"
+										placeholder="John Doe"
+										class="px-3 py-2 rounded-lg shadow-md w-full"
+									/>
+								</div>
+								<div class="mx-3 my-4 md:my-1 w-full md:w-auto">
+									<label for="email" class="mx-2">Email*</label
+									><input
+										type="email"
+										required
+										id="email"
+										name="email"
+										placeholder="jdoe@mail.com"
+										class="px-3 py-2 rounded-lg shadow-md w-full"
+									/>
+								</div>
+								<div class="mx-3 my-4 md:my-1 w-full md:w-auto">
+									<label for="price" class="mx-2">Price*</label
+									><select
+										id="price"
+										name="price"
+										class="px-3 py-2 rounded-lg shadow-md w-full drop-down drop-down-minimal"
+										required
+									>
+										<option value="" disabled selected hidden>
+											Price Plan
+										</option>
+										<option value="standard">Standard</option>
+										<option value="premium">Premium</option>
+										<option value="enterprise">Enterprise</option>
+									</select>
+								</div>
+							</div>
+							<div class="mx-3">
+								<label for="message" class="text-montserrat-500 text-md"
+									>Message</label
+								>
+								<textarea
+									id="about"
+									name="about"
+									class="px-1 py-2 rounded-lg shadow-md w-full md:h-4/5"
+									placeholder="How do you plan on using our product?"
+								></textarea>
+							</div>
+						</div>
+						<div class="w-full flex justify-items-center">
+							<button
+								type="submit"
+								class="mx-auto my-6 px-12 py-3 bg-purple text-montserrat-700 text-white rounded-lg shadow-lg"
+							>
+								Send!
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer-placeholder"></div>
+
+		<script src="./assets/js/animations.js"></script>
+	</body>
+</html>

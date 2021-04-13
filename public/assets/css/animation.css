@@ -1,0 +1,83 @@
+#lock {
+	animation: hover-lock 4s infinite alternate-reverse;
+}
+#lock-shadow {
+	animation: scale-lock-shadow 4s infinite alternate-reverse;
+	transform-origin: center;
+	transform-box: fill-box;
+}
+#phone {
+	animation: hover-phone 5s infinite alternate-reverse;
+}
+#phone-shadow {
+	animation: scale-phone-shadow 5s infinite alternate-reverse;
+	transform-origin: center;
+	transform-box: fill-box;
+}
+
+@keyframes hover-lock {
+	from {
+		transform: translateY(-20px);
+	}
+	to {
+		transform: translateY(0px);
+	}
+}
+@keyframes scale-lock-shadow {
+	from {
+		transform: scale(0.8);
+		-webkit-transform: scale(0.8);
+	}
+	to {
+		transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+	}
+}
+
+@keyframes hover-phone {
+	from {
+		transform: translateY(-20px);
+	}
+	to {
+		transform: translateY(0px);
+	}
+}
+@keyframes scale-phone-shadow {
+	from {
+		transform: scale(0.8);
+		-webkit-transform: scale(0.8);
+	}
+	to {
+		transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+	}
+}
+
+/* 
+.auto-scroll-card {
+	animation: auto-scroll-card 10s linear infinite;
+}
+.auto-scroll-card:hover,
+.auto-scroll-card:focus {
+	animation-play-state: paused;
+}
+@keyframes auto-scroll-card {
+	from {
+		transform: translateX(-250%);
+	}
+	to {
+		transform: translateX(250%);
+	}
+} */
+
+/* #navbar-component {
+	animation: nav-bar 2s ease-in-out;
+}
+@keyframes nav-bar {
+	from {
+		background-color: transparent;
+	}
+	to {
+		background-color: #7026ab;
+	}
+} */
