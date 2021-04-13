@@ -45,6 +45,20 @@
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 		<script src="assets/js/jquery-1.10.2.js"></script>
 		<script src="assets/js/componentRendering.js"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-4CS6KQ279Q"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-4CS6KQ279Q");
+		</script>
 	</head>
 	<body class="bg-offwhite">
 		<!-- <div class="intro">
@@ -58,7 +72,7 @@
 			</div>
 		</div> -->
 
-		<div id="nav-placeholder"></div>
+		<!-- <div id="nav-placeholder"></div> -->
 		<!-- <div class="hidden"></div>
 			<div id="backdrop"></div>
 			<div id="mySideNav">
@@ -71,6 +85,125 @@
 				<a href="./security.html" onclick="closeNav()" id="about-link">Security</a>
 			</div>
 		</div> -->
+		<header
+			id="navbar-component"
+			class="w-full bg-black max-h-min"
+			style="position: fixed; z-index: 100"
+		>
+			<div class="mx-auto py-2 display-block">
+				<div class="max-w-7xl mx-auto px-4 sm:px-6">
+					<div class="flex justify-between items-center">
+						<a href="/">
+							<div class="flex justify-start">
+								<img
+									src="./assets/svg/quae_logo_white_no_background.svg"
+									class="w-8 m-2"
+									alt="quae logo"
+								/></div
+						></a>
+						<div class="flex justify-end">
+							<div class="block">
+								<!-- <a class="mx-2 hidden md:inline" href="./security.html">
+								<span class="text-montserrat-400 text-white text-md">
+									Security
+								</span>
+							</a> -->
+								<a
+									class="mx-2 hidden md:inline"
+									target="_blank"
+									href="https://medium.com/quae-app"
+								>
+									<span class="text-montserrat-400 text-white text-md">
+										Blog
+									</span>
+								</a>
+								<a class="mx-2 hidden md:inline" href="./pricing.html">
+									<span
+										class="pricing-link-nav text-montserrat-400 text-white text-md"
+									>
+										Pricing
+									</span>
+								</a>
+								<a class="mx-2 hidden md:inline" href="./about_us.html">
+									<span
+										class="about-us-link-nav text-montserrat-400 text-white text-md"
+									>
+										About Us
+									</span>
+								</a>
+								<a class="mx-2 navlink" href="./index.html#sign-up">
+									<span
+										class="bg-white text-md text-montserrat-600 px-3 py-2 rounded-md"
+									>
+										Sign Up
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<button id="drawer-open-btn" class="z-100" onclick="openNav()">
+			<div
+				class="fixed w-16 h-16 bottom-0 right-0 m-2 shadow-xl bg-black border-2 border-purple-light md:hidden"
+				style="border-radius: 100%"
+			>
+				<div class="flex flex-col h-full place-content-center">
+					<img src="assets/svg/menu.svg" class="w-1/2 mx-auto" />
+				</div>
+			</div>
+		</button>
+
+		<div class="md:hidden">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+				<div class="backdrop-container" id="backdrop"></div>
+			</a>
+			<div id="mySidenav" class="sidenav-container">
+				<div class="side-nav-content">
+					<a href="./index.html" onclick="closeNav()" id="about-link">Home</a>
+					<a
+						href="./about_us.html"
+						onclick="closeNav()"
+						id="about-us-drawer-link"
+						>About Us</a
+					>
+					<a href="./pricing.html" onclick="closeNav()" id="pricing-drawer-link"
+						>Pricing</a
+					>
+					<a
+						target="_blank"
+						href="https://medium.com/quae-app"
+						onclick="closeNav()"
+						id="blog-drawer-link"
+						>Blog</a
+					><span class="drawer-close-button">
+						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+							>&times;</a
+						>
+					</span>
+				</div>
+			</div>
+		</div>
+		<script>
+			let URL = window.location.href;
+			console.log(URL);
+			if (URL.includes("about_us")) {
+				document.getElementById("about-us-drawer-link").style.opacity = "0.5";
+				document.getElementById("about-us-link-nav").style.opacity = "0.5";
+			}
+			if (URL.includes("pricing")) {
+				document.getElementById("pricing-drawer-link").style.opacity = "0.5";
+				document.getElementById("pricing-link-nav").style.opacity = "0.5";
+			}
+			// if (URL.includes("blog")) {
+			// 	document.getElementById("blog-drawer-link").style.opacity = "0.5";
+			// 	document.getElementById("blog-link-nav").style.opacity = "0.5";
+			// }
+			else {
+				document.getElementById("home-drawer-link").style.display = "none";
+			}
+		</script>
 
 		<!-- VIEW 1 -->
 		<div
