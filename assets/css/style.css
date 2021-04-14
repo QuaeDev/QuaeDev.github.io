@@ -238,6 +238,21 @@
 	}
 }
 
+.parallax-background {
+	background-size: cover;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100%;
+	overflow: hidden;
+}
+@media only screen and (min-width: 760px) {
+	.parallax-background {
+		background-attachment: fixed;
+	}
+}
 .social-icons a:hover {
 	transform: scale(1.1);
 	color: white;
