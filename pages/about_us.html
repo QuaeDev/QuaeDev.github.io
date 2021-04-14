@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="authors" content="Brendan Probst & Sam Schmitt" />
-		<link rel="icon" href="assets/img/quae_logo_square.png" />
+		<link rel="icon" href="../assets/img/quae_logo_square.png" />
 		<meta
 			name="description"
 			content="A platform that makes participating in your local politics as easy as pulling out your phone. Vote every day on issues that matter to you."
@@ -33,10 +33,10 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
 
-		<link rel="stylesheet" href="./assets//css/tailwind.css" />
-		<link rel="stylesheet" href="./assets/css/customTailwind.css" />
-		<link rel="stylesheet" href="./assets/css/style.css" />
-		<link rel="stylesheet" href="./assets/css/animation.css" />
+		<link rel="stylesheet" href="../assets//css/tailwind.css" />
+		<link rel="stylesheet" href="../assets/css/customTailwind.css" />
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<link rel="stylesheet" href="../assets/css/animation.css" />
 
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 		<script src="./assets/js/jquery-1.10.2.js"></script>
@@ -69,7 +69,7 @@
 						<a href="/">
 							<div class="flex flex-col justify-start content-start">
 								<img
-									src="./assets/svg/quae_logo_white_no_background.svg"
+									src="../assets/svg/quae_logo_white_no_background.svg"
 									class="w-8 md:m-2"
 									alt="quae logo"
 								/>
@@ -124,7 +124,7 @@
 				style="border-radius: 100%"
 			>
 				<div class="flex flex-col h-full place-content-center">
-					<img src="assets/svg/menu.svg" class="w-1/2 mx-auto" />
+					<img src="../assets/svg/menu.svg" class="w-1/2 mx-auto" />
 				</div>
 			</div>
 		</button>
@@ -135,7 +135,7 @@
 			</a>
 			<div id="mySidenav" class="sidenav-container">
 				<div class="side-nav-content">
-					<a href="./index.html" onclick="closeNav()" id="about-link">Home</a>
+					<a href="../" onclick="closeNav()" id="about-link">Home</a>
 					<a
 						href="./about_us.html"
 						onclick="closeNav()"
@@ -230,7 +230,10 @@
 						<div class="grid place-content-center w-md">
 							<div class="p-4">
 								<div class="pb-4">
-									<img class="mx-auto w-1/2" src="./assets/img/launchpad.png" />
+									<img
+										class="mx-auto w-1/2"
+										src="../assets/img/launchpad.png"
+									/>
 								</div>
 								<div class="mx-auto text-center max-w-sm">
 									Launchpad helps participants convert science projects into
@@ -243,7 +246,7 @@
 								<div class="pb-4">
 									<img
 										class="mx-auto w-4/5"
-										src="./assets/img/Stevens-Official-PMSColor-R.png"
+										src="../assets/img/Stevens-Official-PMSColor-R.png"
 									/>
 								</div>
 								<div class="text-center">Stevens Institute of Technology</div>
@@ -262,8 +265,8 @@
 							<div class="mx-auto w-4/5 max-w-lg px-3 mb-24 md:mb-3">
 								<div class="bg-white mx-auto pt-6 p-4 rounded-3xl shadow-xl">
 									<img class="mx-auto rounded-xl w-4/5 max-w-md shadow-2xl"
-									src="./assets/img/brendan.jpg"" rel="nofollow" alt="Card image
-									cap">
+									src="../assets/img/brendan.jpg"" rel="nofollow" alt="Card
+									image cap">
 									<div class="mx-auto py-6 w-4/5">
 										<div class="flex flex-row flex-nowrap justify-items-start">
 											<h3 class="text-montserrat-400 text-md mr-2">
@@ -292,7 +295,7 @@
 								<div class="bg-white mx-auto pt-6 p-4 rounded-3xl shadow-xl">
 									<img
 										class="mx-auto rounded-xl w-4/5 max-w-md shadow-2xl"
-										src="./assets/img/sam.jpg"
+										src="../assets/img/sam.jpg"
 										rel="nofollow"
 										alt="Card image
 								cap"
@@ -392,8 +395,101 @@
 				</div>
 			</div>
 		</div>
-		<div id="footer-placeholder"></div>
+		<!-- <div id="footer-placeholder"></div> -->
+		<footer class="bg-black">
+			<div
+				class="mx-auto text-center pt-8 pb-16 md:flex md:flex-row md:justify-around md:max-w-5xl md:align-middle"
+			>
+				<div>
+					<div class="">
+						<h5 class="text-white text-montserrat text-lg py-6">
+							Find Us Online
+						</h5>
+						<ul class="social-icons">
+							<li>
+								<a
+									class="facebook"
+									href="https://www.facebook.com/quaeapp"
+									target="_blank"
+									><i class="fa fa-facebook"></i
+								></a>
+							</li>
+							<li>
+								<a
+									class="linkedin"
+									href="https://www.linkedin.com/company/quae/ "
+									target="_blank"
+									><i class="fa fa-linkedin"></i
+								></a>
+							</li>
+							<li>
+								<a
+									class="twitter"
+									href="https://twitter.com/Quae_App"
+									target="_blank"
+									><i class="fa fa-twitter"></i
+								></a>
+							</li>
+							<li>
+								<a
+									class="instagram"
+									href="https://www.instagram.com/quaeapp/"
+									target="_blank"
+									><i class="fa fa-instagram"></i
+								></a>
+							</li>
+							<li>
+								<a
+									class="youtube"
+									href="https://www.youtube.com/channel/UC8Mkk0uEYtbCs0TPk1ix94g"
+									target="_blank"
+									><i class="fa fa-youtube"></i
+								></a>
+							</li>
+						</ul>
+					</div>
+					<div class="text-white text-montserrat text-sm py-4">
+						<div>Quae &copy; 2021 All Rights Reserved</div>
+					</div>
+					<div class="text-white text-montserrat text-sm">
+						<div>
+							Contact us at
+							<span class="text-blue"
+								><a href="mailto:info@quae.app">info@quae.app</a></span
+							>
+						</div>
+					</div>
+				</div>
+				<hr
+					class="mx-12 my-6 md:hidden"
+					style="height: 1px; background-color: #ccc; border: none"
+				/>
+				<div
+					class="md:flex md:flex-row md:flex-nowrap md:align-middle md:my-auto"
+				>
+					<a href="../">
+						<p class="text-white text-montserrat text-lg md:px-10">Home</p></a
+					>
+					<a href="./about_us.html">
+						<p class="text-white text-montserrat text-lg md:px-10">
+							About Us
+						</p></a
+					>
+					<a href="./pricing.html">
+						<p class="text-white text-montserrat text-lg md:px-10">
+							Pricing
+						</p></a
+					>
+					<a href="https://medium.com/quae-app">
+						<p class="text-white text-montserrat text-lg md:px-10">Blog</p></a
+					>
+					<!-- <a href="./security.html">
+						<p class="text-white text-montserrat text-lg md:px-10">Security</p></a
+					> -->
+				</div>
+			</div>
+		</footer>
 
-		<script src="./assets/js/animations.js"></script>
+		<script src="../assets/js/animations.js"></script>
 	</body>
 </html>

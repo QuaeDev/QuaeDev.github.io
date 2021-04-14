@@ -118,14 +118,14 @@
 										Blog
 									</span>
 								</a>
-								<a class="mx-2 hidden md:inline" href="./pricing.html">
+								<a class="mx-2 hidden md:inline" href="./pages/pricing.html">
 									<span
 										class="pricing-link-nav text-montserrat-400 text-white text-md"
 									>
 										Pricing
 									</span>
 								</a>
-								<a class="mx-2 hidden md:inline" href="./about_us.html">
+								<a class="mx-2 hidden md:inline" href="./pages/about_us.html">
 									<span
 										class="about-us-link-nav text-montserrat-400 text-white text-md"
 									>
@@ -164,12 +164,15 @@
 				<div class="side-nav-content">
 					<a href="./index.html" onclick="closeNav()" id="about-link">Home</a>
 					<a
-						href="./about_us.html"
+						href="./pages/about_us.html"
 						onclick="closeNav()"
 						id="about-us-drawer-link"
 						>About Us</a
 					>
-					<a href="./pricing.html" onclick="closeNav()" id="pricing-drawer-link"
+					<a
+						href="./pages/pricing.html"
+						onclick="closeNav()"
+						id="pricing-drawer-link"
 						>Pricing</a
 					>
 					<a
@@ -703,9 +706,9 @@
 				<div
 					class="bg-white mx-auto my-8 p-6 md:flex md:flex-row md:flex-nowrap md:justify-center rounded-2xl shadow-md"
 				>
-					<div class="md:flex-1 md:my-auto">
+					<div class="md:flex-1 my-auto">
 						<div class="inline-flex flex-row flex-nowrap justify-center">
-							<div class="text-left">
+							<div class="text-left max-h-min">
 								<div class="inline-flex flex-row flex-nowrap justify-start">
 									<img
 										src="./assets/svg/numbers/number-one.svg"
@@ -741,7 +744,7 @@
 				<div
 					class="bg-white mx-auto my-8 p-6 align-middle md:flex md:flex-row-reverse md:flex-nowrap md:justify-center rounded-2xl shadow-md"
 				>
-					<div class="md:flex-1 md:my-auto">
+					<div class="md:flex-1 my-auto">
 						<div class="flex flex-row flex-nowrap justify-center">
 							<div>
 								<div class="flex flex-row flex-nowrap">
@@ -779,7 +782,7 @@
 				<div
 					class="bg-white mx-auto my-8 p-6 align-middle md:flex md:flex-row md:flex-nowrap md:justify-center rounded-2xl shadow-md"
 				>
-					<div class="md:flex-1 md:my-auto">
+					<div class="md:flex-1 my-auto">
 						<div class="flex flex-row flex-nowrap justify-center">
 							<div>
 								<div class="flex flex-row flex-nowrap">
@@ -1041,7 +1044,100 @@
 			</div>
 		</div>
 		<!--footer-->
-		<div id="footer-placeholder"></div>
+		<!-- <div id="footer-placeholder"></div> -->
+		<footer class="bg-black">
+			<div
+				class="mx-auto text-center pt-8 pb-16 md:flex md:flex-row md:justify-around md:max-w-5xl md:align-middle"
+			>
+				<div>
+					<div class="">
+						<h5 class="text-white text-montserrat text-lg py-6">
+							Find Us Online
+						</h5>
+						<ul class="social-icons">
+							<li>
+								<a
+									class="facebook"
+									href="https://www.facebook.com/quaeapp"
+									target="_blank"
+									><i class="fa fa-facebook"></i
+								></a>
+							</li>
+							<li>
+								<a
+									class="linkedin"
+									href="https://www.linkedin.com/company/quae/ "
+									target="_blank"
+									><i class="fa fa-linkedin"></i
+								></a>
+							</li>
+							<li>
+								<a
+									class="twitter"
+									href="https://twitter.com/Quae_App"
+									target="_blank"
+									><i class="fa fa-twitter"></i
+								></a>
+							</li>
+							<li>
+								<a
+									class="instagram"
+									href="https://www.instagram.com/quaeapp/"
+									target="_blank"
+									><i class="fa fa-instagram"></i
+								></a>
+							</li>
+							<li>
+								<a
+									class="youtube"
+									href="https://www.youtube.com/channel/UC8Mkk0uEYtbCs0TPk1ix94g"
+									target="_blank"
+									><i class="fa fa-youtube"></i
+								></a>
+							</li>
+						</ul>
+					</div>
+					<div class="text-white text-montserrat text-sm py-4">
+						<div>Quae &copy; 2021 All Rights Reserved</div>
+					</div>
+					<div class="text-white text-montserrat text-sm">
+						<div>
+							Contact us at
+							<span class="text-blue"
+								><a href="mailto:info@quae.app">info@quae.app</a></span
+							>
+						</div>
+					</div>
+				</div>
+				<hr
+					class="mx-12 my-6 md:hidden"
+					style="height: 1px; background-color: #ccc; border: none"
+				/>
+				<div
+					class="md:flex md:flex-row md:flex-nowrap md:align-middle md:my-auto"
+				>
+					<a href="/">
+						<p class="text-white text-montserrat text-lg md:px-10">Home</p></a
+					>
+					<a href="./pages/about_us.html">
+						<p class="text-white text-montserrat text-lg md:px-10">
+							About Us
+						</p></a
+					>
+					<a href="./pages/pricing.html">
+						<p class="text-white text-montserrat text-lg md:px-10">
+							Pricing
+						</p></a
+					>
+					<a href="https://medium.com/quae-app">
+						<p class="text-white text-montserrat text-lg md:px-10">Blog</p></a
+					>
+					<!-- <a href="./security.html">
+						<p class="text-white text-montserrat text-lg md:px-10">Security</p></a
+					> -->
+				</div>
+			</div>
+		</footer>
 
 		<script src="assets/js/animations.js"></script>
 	</body>
