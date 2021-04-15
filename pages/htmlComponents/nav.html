@@ -1,26 +1,27 @@
 <header
 	id="navbar-component"
-	class="w-full bg-black max-h-min"
+	class="w-full bg-black"
 	style="position: fixed; z-index: 100"
 >
-	<div class="mx-auto py-2 display-block">
+	<div class="mx-auto py-2">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6">
 			<div class="flex justify-between items-center">
 				<a href="/">
-					<div class="flex justify-start">
+					<div class="flex flex-col justify-start content-start">
 						<img
-							src="./assets/svg/quae_logo_white_no_background.svg"
-							class="w-8 m-2"
+							src="../assets/svg/quae_logo_white_no_background.svg"
+							class="w-8 h-8 md:m-2"
 							alt="quae logo"
-						/></div
-				></a>
+						/>
+					</div>
+				</a>
 				<div class="flex justify-end">
 					<div class="block">
 						<!-- <a class="mx-2 hidden md:inline" href="./security.html">
-							<span class="text-montserrat-400 text-white text-md">
-								Security
-							</span>
-						</a> -->
+								<span class="text-montserrat-400 text-white text-md">
+									Security
+								</span>
+							</a> -->
 						<a
 							class="mx-2 hidden md:inline"
 							target="_blank"
@@ -61,7 +62,7 @@
 		style="border-radius: 100%"
 	>
 		<div class="flex flex-col h-full place-content-center">
-			<img src="assets/svg/menu.svg" class="w-1/2 mx-auto" />
+			<img src="../assets/svg/menu.svg" class="w-1/2 mx-auto" />
 		</div>
 	</div>
 </button>
@@ -72,7 +73,7 @@
 	</a>
 	<div id="mySidenav" class="sidenav-container">
 		<div class="side-nav-content">
-			<a href="./index.html" onclick="closeNav()" id="about-link">Home</a>
+			<a href="../" onclick="closeNav()" id="about-link">Home</a>
 			<a href="./about_us.html" onclick="closeNav()" id="about-us-drawer-link"
 				>About Us</a
 			>

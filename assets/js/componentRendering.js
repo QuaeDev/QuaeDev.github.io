@@ -1,6 +1,6 @@
 $(function () {
-	$("#nav-placeholder").load("./htmlComponents/nav.html");
+	$("#nav-placeholder").load("../../pages/htmlComponents/nav.html");
 });
 $(function () {
-	$("#footer-placeholder").load("./htmlComponents/footer.html");
+	$("#footer-placeholder").load("../../pages/htmlComponents/footer.html");
 });
