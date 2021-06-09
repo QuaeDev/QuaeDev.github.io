@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Quae - Security</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="authors" content="Brendan Probst & Sam Schmitt" />
+		<link rel="icon" href="assets/img/quae_logo_square.png" />
+		<meta
+			name="description"
+			content="Our Mission us to make participating in local politics as easy as pulling out your phone. Vote every day on issues that matter to you."
+		/>
+		<meta
+			name="keywords"
+			content="Politics, Local Politics, Voting, Hoboken, Hoboken Politics, City Council, Poll, Voting, "
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+
+		<link rel="stylesheet" href="../assets//css/tailwind.css" />
+		<link rel="stylesheet" href="../assets/css/customTailwind.css" />
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<link rel="stylesheet" href="../assets/css/animation.css" />
+
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+		<script src="../assets/js/jquery-1.10.2.js"></script>
+		<script src="../assets/js/componentRendering.js"></script>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-4CS6KQ279Q"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-4CS6KQ279Q");
+		</script>
+	</head>
+	<body>
+		<!-- <div id="nav-placeholder"></div> -->
+		<header
+			id="navbar-component"
+			class="w-full bg-black"
+			style="position: fixed; z-index: 100"
+		>
+			<div class="mx-auto py-2">
+				<div class="max-w-7xl mx-auto px-4 sm:px-6">
+					<div class="flex justify-between items-center">
+						<a href="/">
+							<div class="flex flex-col justify-start content-start">
+								<img
+									src="./assets/svg/quae_logo_white_no_background.svg"
+									class="w-8 h-8 md:m-2"
+									alt="quae logo"
+								/>
+							</div>
+						</a>
+						<div class="flex justify-end">
+							<div class="block">
+								<!-- <a class="mx-2 hidden md:inline" href="./security.html">
+								<span class="text-montserrat-400 text-white text-md">
+									Security
+								</span>
+							</a> -->
+								<a
+									class="mx-2 hidden md:inline"
+									target="_blank"
+									href="https://medium.com/quae-app"
+								>
+									<span class="text-montserrat-400 text-white text-md">
+										Blog
+									</span>
+								</a>
+								<a class="mx-2 hidden md:inline" href="./pricing.html">
+									<span
+										class="pricing-link-nav text-montserrat-400 text-white text-md"
+									>
+										Pricing
+									</span>
+								</a>
+								<a class="mx-2 hidden md:inline" href="./about_us.html">
+									<span
+										class="about-us-link-nav text-montserrat-400 text-white text-md"
+									>
+										About Us
+									</span>
+								</a>
+								<a class="mx-2 navlink" href="../index.html#sign-up">
+									<span
+										class="bg-white text-md text-montserrat-600 px-3 py-2 rounded-md"
+									>
+										Sign Up
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<button id="drawer-open-btn" class="z-100" onclick="openNav()">
+			<div
+				class="fixed w-16 h-16 bottom-0 right-0 m-2 shadow-xl bg-black border-2 border-purple-light md:hidden"
+				style="border-radius: 100%"
+			>
+				<div class="flex flex-col h-full place-content-center">
+					<img src="assets/svg/menu.svg" class="w-1/2 mx-auto" />
+				</div>
+			</div>
+		</button>
+
+		<div class="md:hidden">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+				<div class="backdrop-container" id="backdrop"></div>
+			</a>
+			<div id="mySidenav" class="sidenav-container">
+				<div class="side-nav-content">
+					<a href="../" onclick="closeNav()" id="about-link">Home</a>
+					<a
+						href="./about_us.html"
+						onclick="closeNav()"
+						id="about-us-drawer-link"
+						>About Us</a
+					>
+					<a href="./pricing.html" onclick="closeNav()" id="pricing-drawer-link"
+						>Pricing</a
+					>
+					<a
+						target="_blank"
+						href="https://medium.com/quae-app"
+						onclick="closeNav()"
+						id="blog-drawer-link"
+						>Blog</a
+					><span class="drawer-close-button">
+						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+							>&times;</a
+						>
+					</span>
+				</div>
+			</div>
+		</div>
+		<script>
+			let URL = window.location.href;
+			console.log(URL);
+			if (URL.includes("about_us")) {
+				document.getElementById("about-us-drawer-link").style.opacity = "0.5";
+				document.getElementById("about-us-link-nav").style.opacity = "0.5";
+			}
+			if (URL.includes("pricing")) {
+				document.getElementById("pricing-drawer-link").style.opacity = "0.5";
+				document.getElementById("pricing-link-nav").style.opacity = "0.5";
+			}
+			// if (URL.includes("blog")) {
+			// 	document.getElementById("blog-drawer-link").style.opacity = "0.5";
+			// 	document.getElementById("blog-link-nav").style.opacity = "0.5";
+			// }
+			else {
+				document.getElementById("home-drawer-link").style.display = "none";
+			}
+		</script>
+
+		<div
+			class="pt-24 pb-16 px-3 text-center from-purple-dark to-purple-light bg-gradient-to-br"
+		>
+			<div>
+				<div>
+					<div class="text-center">
+						<h2 class="text-montserrat-600 text-5xl text-white">FAQ's</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bg-white">
+			<div class="mx-auto min-w-64 max-w-5xl text-center">
+				<div class="max-w-xl mx-auto py-6">
+					<h3 class="text-montserrat text-4xl text-center pt-12 pb-6">
+						Security
+					</h3>
+					<div class="px-4">
+						<div class="text-left max-w-max mx-6 py-3">
+							<h4 class="text-montserrat-500 text-xl pb-3">
+								Why is security our number 1 priority?
+							</h4>
+
+							<p class="max-w-lg">
+								Our mission is to put the power back into people's voices. We
+								all have a right to participate in politics and voice our
+								opinions. Unfortunately, this is a right that many of us have
+								given up on. In its current state, politics is exhausting and
+								divisive, and it is hard to know if your voice is being listened
+								to. Quae will change that.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div id="footer-placeholder"></div> -->
+		<footer class="bg-black">
+			<div
+				class="mx-auto text-center pt-8 pb-16 md:flex md:flex-row md:justify-around md:max-w-5xl md:align-middle"
+			>
+				<div>
+					<div class="">
+						<h5 class="text-white text-montserrat text-lg py-6">
+							Find Us Online
+						</h5>
+						<ul class="social-icons">
+							<li>
+								<a
+									class="facebook"
+									href="https://www.facebook.com/quaeapp"
+									target="_blank"
+									><i class="fa fa-facebook"></i
+								></a>
+							</li>
+							<li>
+								<a
+									class="linkedin"
+									href="https://www.linkedin.com/company/quae/ "
+									target="_blank"
+									><i class="fa fa-linkedin"></i
+								></a>
+							</li>
+							<li>
+								<a
+									class="twitter"
+									href="https://twitter.com/Quae_App"
+									target="_blank"
+									><i class="fa fa-twitter"></i
+								></a>
+							</li>
+							<li>
+								<a
+									class="instagram"
+									href="https://www.instagram.com/quaeapp/"
+									target="_blank"
+									><i class="fa fa-instagram"></i
+								></a>
+							</li>
+							<li>
+								<a
+									class="youtube"
+									href="https://www.youtube.com/channel/UC8Mkk0uEYtbCs0TPk1ix94g"
+									target="_blank"
+									><i class="fa fa-youtube"></i
+								></a>
+							</li>
+						</ul>
+					</div>
+					<div class="text-white text-montserrat text-sm py-4">
+						<div>Quae &copy; 2021 All Rights Reserved</div>
+					</div>
+					<div class="text-white text-montserrat text-sm">
+						<div>
+							Contact us at
+							<span class="text-blue"
+								><a href="mailto:info@quae.app">info@quae.app</a></span
+							>
+						</div>
+					</div>
+				</div>
+				<hr
+					class="mx-12 my-6 md:hidden"
+					style="height: 1px; background-color: #ccc; border: none"
+				/>
+				<div
+					class="md:flex md:flex-row md:flex-nowrap md:align-middle md:my-auto"
+				>
+					<a href="../">
+						<p class="text-white text-montserrat text-lg md:px-10">Home</p></a
+					>
+					<a href="./about_us.html">
+						<p class="text-white text-montserrat text-lg md:px-10">
+							About Us
+						</p></a
+					>
+					<a href="./pricing.html">
+						<p class="text-white text-montserrat text-lg md:px-10">
+							Pricing
+						</p></a
+					>
+					<a href="https://medium.com/quae-app">
+						<p class="text-white text-montserrat text-lg md:px-10">Blog</p></a
+					>
+					<!-- <a href="./security.html">
+						<p class="text-white text-montserrat text-lg md:px-10">Security</p></a
+					> -->
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

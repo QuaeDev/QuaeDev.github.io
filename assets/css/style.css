@@ -1,0 +1,351 @@
+.navLink:hover {
+	transform: scale(2);
+}
+
+.text-montserrat {
+	font-family: "Montserrat", sans-serif;
+}
+.text-montserrat-400 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+}
+.text-montserrat-500 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+}
+.text-montserrat-600 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
+}
+.text-montserrat-700 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+}
+
+.navlink {
+	font-family: "Comfortaa", sans-serif;
+	font-weight: white;
+}
+.navlink:hover,
+.navlink:focus {
+	transform: scale(1.3);
+}
+
+.intro {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: #161616;
+	transition: 1s;
+}
+.load-logo {
+	position: absolute;
+	top: 33%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+}
+.load-header {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+}
+.load {
+	position: relative;
+	display: inline-block;
+	bottom: -20px;
+	opacity: 0;
+}
+
+.load.active {
+	bottom: 0;
+	opacity: 1;
+	transition: ease-in-out 0.75s;
+}
+.load.fade {
+	bottom: 150px;
+	opacity: 0;
+	transition: ease-in-out 0.75s;
+}
+
+.beta-signup {
+	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+	border-radius: 12px;
+	position: relative;
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+}
+
+.beta-signup:before {
+	z-index: -1;
+	background: inherit;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+	filter: blur(40px);
+}
+.backdrop-container {
+	display: none;
+	position: fixed;
+	z-index: 7;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+	-webkit-animation: fadeIn 1.2s ease-in-out;
+	animation: fadeIn 1.2s ease-in-out;
+}
+
+.sidenav-container {
+	height: 100%;
+
+	width: 0;
+	position: fixed;
+	z-index: 8;
+	top: 0;
+	right: 0;
+	background-color: #2f2f2f;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.side-nav-content {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+.sidenav-container a {
+	text-decoration: none;
+	font-size: 1.25rem;
+	color: #fcfcfc;
+	display: block;
+	transition: 0.3s;
+	margin: 10px 15px;
+}
+
+.sidenav-container a:hover {
+	color: #fff;
+	transform: scale(1.1);
+}
+
+.sidenav-container .closebtn {
+	font-size: 3rem;
+	font-weight: 700;
+	color: #fcfcfc;
+	padding-top: 1rem;
+}
+
+.sidenav-container .drawer-close-button {
+	height: 3rem;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	margin-top: 3rem;
+}
+/* Slideshow container */
+.slideshow-container {
+	position: relative;
+	margin: auto;
+}
+
+/* Hide the images by default */
+.slide-show-card {
+	display: none;
+	/* animation: slide-fade; */
+}
+
+.prev,
+.next {
+	cursor: pointer;
+
+	user-select: none;
+	transition: 0.6s ease;
+	color: white;
+	font-weight: bold;
+	font-size: 25px;
+	margin: 0px 10px;
+	transition: color 0.6s ease;
+}
+
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: white;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+	opacity: 0.5;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+	opacity: 0.5;
+}
+
+/* Fading animation */
+.slide-fade {
+	-webkit-animation-name: slide-fade;
+	-webkit-animation-duration: 1.55s;
+	animation-name: slide-fade;
+	animation-duration: 1.55s;
+}
+
+@-webkit-keyframes slide-fade {
+	from {
+		opacity: 0;
+		transform: translateY(-50%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+@keyframes slide-fade {
+	from {
+		opacity: 0;
+		transform: translateY(-50%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+.parallax-background {
+	background-size: cover;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100%;
+	overflow: hidden;
+}
+@media only screen and (min-width: 760px) {
+	.parallax-background {
+		background-attachment: fixed;
+	}
+}
+.social-icons a:hover {
+	transform: scale(1.1);
+	color: white;
+	opacity: 0.8;
+}
+.social-icons {
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+}
+.social-icons li {
+	display: inline-block;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 4px;
+}
+.social-icons li.title {
+	margin-right: 15px;
+	text-transform: uppercase;
+	color: #96a2b2;
+	font-weight: 700;
+	font-size: 13px;
+}
+.social-icons a {
+	background-color: #eceeef;
+	color: #818a91;
+	font-size: 16px;
+	display: inline-block;
+	line-height: 44px;
+	width: 44px;
+	height: 44px;
+	text-align: center;
+	margin-right: 8px;
+	border-radius: 100%;
+	-webkit-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a {
+	color: #fff;
+	background-color: #29aafe;
+}
+.social-icons.size-sm a {
+	line-height: 34px;
+	height: 34px;
+	width: 34px;
+	font-size: 14px;
+}
+.social-icons a.facebook {
+	background-color: #3b5998;
+	align-items: flex-end;
+}
+.social-icons a.twitter {
+	background-color: #00aced;
+}
+.social-icons a.linkedin {
+	background-color: #007bb6;
+}
+.social-icons a.instagram {
+	background: #d6249f;
+	background: radial-gradient(
+		circle at 30% 107%,
+		#fdf497 0%,
+		#fdf497 5%,
+		#fd5949 45%,
+		#d6249f 60%,
+		#285aeb 90%
+	);
+}
+.social-icons a.youtube {
+	background-color: #ff0000;
+}
+
+select {
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+select.drop-down-minimal {
+	background-image: url("../img/down-arrow.png");
+	background-position: calc(100% - 15px);
+	background-size: 15px;
+	background-repeat: no-repeat;
+}
+
+select.drop-down-minimal:focus {
+	background-image: url("../img/up-arrow.png");
+	background-position: calc(100% - 15px);
+	background-size: 15px;
+	outline: 0;
+}

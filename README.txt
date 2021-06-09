@@ -1,5 +1,4 @@
-Quae Landing Page v3
-Published 3/4/21
-
+Quae landing page v3
+published before final pitch of semester
 
 -Brendan Probst & Samuel Schmitt 
