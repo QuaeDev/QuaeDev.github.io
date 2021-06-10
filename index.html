@@ -42,7 +42,7 @@
 		<link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
 		<link rel="stylesheet" href="./assets/css/animation.css" type="text/css" />
 
-		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="assets/js/jquery-1.10.2.js"></script>
 		<script src="assets/js/componentRendering.js"></script>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -191,7 +191,7 @@
 						href="./pages/about_us.html"
 						onclick="closeNav()"
 						id="about-us-drawer-link"
-						>About Us</a
+						>About&nbspUs</a
 					>
 					<a
 						href="./pages/pricing.html"
@@ -235,7 +235,7 @@
 
 		<!-- VIEW 1 -->
 		<div
-			class="py-10 px-6 md:pt-24"
+			class="py-10 px-6"
 			style="
 				background: linear-gradient(
 						180deg,
@@ -258,13 +258,13 @@
 			<div
 				id="hobokenButtonContainer"
 				class="
-					flex flex-row
+					flex flex-wrap flex-row
 					justify-center
 					align-middle
 					px-6
-					pt-5
-					pb-4
-					md:my-8
+					py-4
+					md:pt-6
+					my-8
 					rounded-b-lg
 				"
 				style="
@@ -286,14 +286,20 @@
 						);
 				"
 			>
-				<h3 class="text-montserrat-600 text-xl text-white">
+				<h3
+					class="
+						text-montserrat-600 text-xl text-white text-center
+						my-auto
+						mx-4
+					"
+				>
 					Live In Hoboken, NJ?
 				</h3>
-				<h4 class="text-montserrat-400 text-lg text-black ml-4">
+				<h4 class="text-montserrat-400 text-lg text-black mt-3 mb-2 md:ml-4">
 					<a
 						href="./pages/hoboken.html"
 						class="bg-white text-md text-montserrat-600 px-3 py-2 rounded-md"
-						>Click Here</a
+						>Click&nbspHere</a
 					>
 				</h4>
 			</div>
@@ -314,16 +320,22 @@
 						>
 							Vote Every&nbspDay
 						</h1>
-						<h2
-							class="
-								my-4
-								md:my-8
-								text-black text-montserrat-500 text-2xl
-								md:text-3xl
-							"
-						>
-							Democratize Your Company
-						</h2>
+						<div class="flex flex-row flex-wrap justify-start my-4 md:my-8">
+							<h2 class="text-black text-montserrat-500 text-2xl md:text-3xl">
+								Democratize Your&nbsp
+							</h2>
+
+							<h2 class="text-black text-montserrat-500 text-2xl md:text-3xl">
+								<a
+									href=""
+									class="typewrite pointer-events-none cursor-default"
+									data-period="3000"
+									data-type='[ "Club", "Organization", "Union", "Business", "Company", "School" ]'
+								>
+									<span class="wrap"></span>
+								</a>
+							</h2>
+						</div>
 					</div>
 					<div class="beta-signup m-6 mb-0 px-6 pt-3 pb-6 md:my-8 rounded-2xl">
 						<h5
@@ -406,7 +418,7 @@
 						Legendary Groups Act as One
 					</h2>
 					<h3 class="text-montserrat text-xl">
-						Get Member Feedback like never before
+						Empower Your Members Like Never Before
 					</h3>
 				</div>
 				<div
@@ -1453,6 +1465,6 @@
 			</div>
 		</footer>
 
-		<script src="assets/js/animations.js"></script>
+		<script src="./assets/js/animations.js"></script>
 	</body>
 </html>
