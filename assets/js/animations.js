@@ -55,6 +55,21 @@ function closeNav() {
 	//removes overlay display
 	document.getElementById("backdrop").style.display = "none";
 }
+function showMore() {
+	//opens side navbar by 70 percent
+
+	// document.getElementById("more-drop-down").style.width = "175px";
+
+	//opens overlay display
+	document.getElementById("more-drop-down").classList.remove = "hidden";
+}
+function hideMore() {
+	//closes side navbar totally
+	// document.getElementById("more-drop-down").style.width = "0";
+
+	//removes overlay display
+	document.getElementById("more-drop-down").classList.add = "hidden";
+}
 
 // SPLASH SCREEN
 
