@@ -78,10 +78,26 @@
 						<div class="flex justify-end">
 							<div class="block">
 								<!-- <a class="mx-2 hidden md:inline" href="./security.html">
-									<span class="text-montserrat-400 text-white text-md">
-										Security
+							<span class="text-montserrat-400 text-white text-md">
+								Security
+							</span>
+						</a> -->
+								<a class="mx-2 hidden md:inline" href="../">
+									<span
+										class="text-montserrat-400 text-white text-md"
+										id="hoboken-link-nav"
+									>
+										Politics
+									</span> </a
+								><a class="mx-2 hidden md:inline" href="./groups.html">
+									<span
+										class="text-montserrat-400 text-white text-md"
+										id="groups-link-nav"
+									>
+										Groups
 									</span>
-								</a> -->
+								</a>
+
 								<a
 									class="mx-2 hidden md:inline"
 									target="_blank"
@@ -91,18 +107,9 @@
 										Blog
 									</span>
 								</a>
-								<a class="mx-2 hidden md:inline" href="./pricing.html">
-									<span
-										class="
-											pricing-link-nav
-											text-montserrat-400 text-white text-md
-										"
-									>
-										Pricing
-									</span>
-								</a>
 								<a class="mx-2 hidden md:inline" href="./about_us.html">
 									<span
+										id="about-us-link-nav"
 										class="
 											about-us-link-nav
 											text-montserrat-400 text-white text-md
@@ -111,7 +118,8 @@
 										About Us
 									</span>
 								</a>
-								<a class="mx-2 navlink" href="./index.html#sign-up">
+
+								<a class="mx-2 navlink" href="#sign-up">
 									<span
 										class="
 											bg-white
@@ -158,22 +166,37 @@
 			</a>
 			<div id="mySidenav" class="sidenav-container">
 				<div class="side-nav-content">
-					<a href="../" onclick="closeNav()" id="about-link">Home</a>
+					<a href="../" onclick="closeNav()" id="hoboken-drawer-link"
+						>Politics</a
+					><a href="./groups.html" onclick="closeNav()" id="groups-drawer-link"
+						>Private&nbspGroups</a
+					>
+
 					<a
 						href="./about_us.html"
 						onclick="closeNav()"
 						id="about-us-drawer-link"
 						>About&nbspUs</a
 					>
-					<a href="./pricing.html" onclick="closeNav()" id="pricing-drawer-link"
-						>Pricing</a
-					>
+
 					<a
 						target="_blank"
 						href="https://medium.com/quae-app"
 						onclick="closeNav()"
 						id="blog-drawer-link"
 						>Blog</a
+					><a class="mx-2 navlink" onClick="closeNav()" href="#sign-up">
+						<span
+							class="
+								bg-white
+								text-md text-black text-montserrat-600
+								px-3
+								py-2
+								rounded-md
+							"
+						>
+							Sign&nbspUp
+						</span> </a
 					><span class="drawer-close-button">
 						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
 							>&times;</a
@@ -185,21 +208,28 @@
 		<script>
 			let URL = window.location.href;
 			console.log(URL);
-			if (URL.includes("about_us")) {
-				document.getElementById("about-us-drawer-link").style.opacity = "0.5";
-				document.getElementById("about-us-link-nav").style.opacity = "0.5";
+			if (URL.includes("groups")) {
+				document.getElementById("groups-drawer-link").style.opacity = "0.5";
+				document.getElementById("groups-link-nav").style.opacity = "0.5";
 			}
 			if (URL.includes("pricing")) {
 				document.getElementById("pricing-drawer-link").style.opacity = "0.5";
 				document.getElementById("pricing-link-nav").style.opacity = "0.5";
 			}
+			if (URL.includes("about_us")) {
+				document.getElementById("about-us-drawer-link").style.opacity = "0.5";
+				document.getElementById("about-us-link-nav").style.opacity = "0.5";
+			} else {
+				document.getElementById("politics-drawer-link").style.opacity = "0.5";
+				document.getElementById("politics-link-nav").style.opacity = "0.5";
+			}
 			// if (URL.includes("blog")) {
 			// 	document.getElementById("blog-drawer-link").style.opacity = "0.5";
 			// 	document.getElementById("blog-link-nav").style.opacity = "0.5";
 			// }
-			else {
-				document.getElementById("home-drawer-link").style.display = "none";
-			}
+			// else {
+			// 	document.getElementById("home-drawer-link").style.display = "none";
+			// }
 		</script>
 
 		<div class="bg-white">

@@ -112,19 +112,19 @@
 								<a class="mx-2 hidden md:inline" href="../">
 									<span
 										class="text-montserrat-400 text-white text-md"
-										id="groups-link-nav"
-									>
-										Private Groups
-									</span>
-								</a>
-								<a class="mx-2 hidden md:inline" href="./hoboken.html">
-									<span
-										class="text-montserrat-400 text-white text-md"
 										id="hoboken-link-nav"
 									>
 										Politics
+									</span> </a
+								><a class="mx-2 hidden md:inline" href="./groups.html">
+									<span
+										class="text-montserrat-400 text-white text-md"
+										id="groups-link-nav"
+									>
+										Groups
 									</span>
 								</a>
+
 								<a
 									class="mx-2 hidden md:inline"
 									target="_blank"
@@ -134,48 +134,15 @@
 										Blog
 									</span>
 								</a>
-								<a class="mx-2 hidden md:inline">
-									<!-- <span
-										class="
-											flex flex-row flex-nowrap
-											justify-center
-											align-middle
-										"
-									> -->
+								<a class="mx-2 hidden md:inline" href="./about_us.html">
 									<span
-										class="text-montserrat-400 text-white text-md"
-										id="more-link-nav"
+										class="
+											about-us-link-nav
+											text-montserrat-400 text-white text-md
+										"
 									>
-										More
-										<div class="hidden" id="more-drop-down">
-											<a
-												class="mx-2 hidden md:inline"
-												href="./pages/pricing.html"
-											>
-												<span
-													class="text-montserrat-400 text-white text-md"
-													id="pricing-link-nav"
-												>
-													Pricing
-												</span>
-											</a>
-											<a
-												class="mx-2 hidden md:inline"
-												href="../pages/about_us.html"
-											>
-												<span
-													class="
-														about-us-link-nav
-														text-montserrat-400 text-white text-md
-													"
-												>
-													About Us
-												</span>
-											</a>
-										</div>
+										About Us
 									</span>
-									<!-- <img src="down_arrow" class="w-6 h-6" /> -->
-									<!-- </span> -->
 								</a>
 
 								<a class="mx-2 navlink" href="#sign-up">
@@ -215,7 +182,7 @@
 				style="border-radius: 100%"
 			>
 				<div class="flex flex-col h-full place-content-center">
-					<img src="assets/svg/menu.svg" class="w-1/2 mx-auto" />
+					<img src="../assets/svg/menu.svg" class="w-1/2 mx-auto" />
 				</div>
 			</div>
 		</button>
@@ -226,27 +193,37 @@
 			</a>
 			<div id="mySidenav" class="sidenav-container">
 				<div class="side-nav-content">
-					<a href="../index.html" onclick="closeNav()" id="groups-drawer-link"
+					<a href="../" onclick="closeNav()" id="hoboken-drawer-link"
+						>Politics</a
+					><a href="./groups.html" onclick="closeNav()" id="groups-drawer-link"
 						>Private&nbspGroups</a
 					>
-					<a href="./hoboken.html" onclick="closeNav()" id="hoboken-drawer-link"
-						>Politics</a
-					>
+
 					<a
 						href="./about_us.html"
 						onclick="closeNav()"
 						id="about-us-drawer-link"
 						>About&nbspUs</a
 					>
-					<a href="./pricing.html" onclick="closeNav()" id="pricing-drawer-link"
-						>Pricing</a
-					>
+
 					<a
 						target="_blank"
 						href="https://medium.com/quae-app"
 						onclick="closeNav()"
 						id="blog-drawer-link"
 						>Blog</a
+					><a class="mx-2 navlink" onClick="closeNav()" href="#sign-up">
+						<span
+							class="
+								bg-white
+								text-md text-black text-montserrat-600
+								px-3
+								py-2
+								rounded-md
+							"
+						>
+							Sign&nbspUp
+						</span> </a
 					><span class="drawer-close-button">
 						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
 							>&times;</a
@@ -258,9 +235,9 @@
 		<script>
 			let URL = window.location.href;
 			console.log(URL);
-			if (URL.includes("hoboken")) {
-				document.getElementById("hoboken-drawer-link").style.opacity = "0.5";
-				document.getElementById("hoboken-link-nav").style.opacity = "0.5";
+			if (URL.includes("groups")) {
+				document.getElementById("groups-drawer-link").style.opacity = "0.5";
+				document.getElementById("groups-link-nav").style.opacity = "0.5";
 			}
 			if (URL.includes("pricing")) {
 				document.getElementById("pricing-drawer-link").style.opacity = "0.5";
@@ -270,8 +247,8 @@
 				document.getElementById("about-us-drawer-link").style.opacity = "0.5";
 				document.getElementById("about-us-link-nav").style.opacity = "0.5";
 			} else {
-				document.getElementById("groups-drawer-link").style.opacity = "0.5";
-				document.getElementById("groups-link-nav").style.opacity = "0.5";
+				document.getElementById("politics-drawer-link").style.opacity = "0.5";
+				document.getElementById("politics-link-nav").style.opacity = "0.5";
 			}
 			// if (URL.includes("blog")) {
 			// 	document.getElementById("blog-drawer-link").style.opacity = "0.5";
@@ -280,18 +257,6 @@
 			// else {
 			// 	document.getElementById("home-drawer-link").style.display = "none";
 			// }
-		</script>
-		<script>
-			const isHover = (e) => e.parentElement.querySelector(":hover") === e;
-
-			const moreButton = document.getElementById("more-link-nav");
-			document.addEventListener("mousemove", function checkHover() {
-				const hovered = isHover(moreButton);
-				if (hovered !== checkHover.hovered) {
-					hovered ? showMore() : hideMore();
-					checkHover.hovered = hovered;
-				}
-			});
 		</script>
 
 		<!-- VIEW 1 -->
@@ -358,7 +323,7 @@
 				</h3>
 				<h4 class="text-montserrat-400 text-lg text-black mt-3 mb-2 md:ml-4">
 					<a
-						href="./hoboken.html"
+						href="../"
 						class="bg-white text-md text-montserrat-600 px-3 py-2 rounded-md"
 						>Click&nbspHere</a
 					>
@@ -453,7 +418,7 @@
 				</div>
 				<div class="p-5">
 					<img
-						src="../assets/img/iphone_home_screenV2.png"
+						src="../assets/img/homefeed_groups.png"
 						alt="home screen of app"
 						class="w-4/5 mx-auto md:flex-grow-1"
 					/>
@@ -462,18 +427,7 @@
 		</div>
 		<!-- VIEW 2 -->
 		<div class="px-6 py-12 md:px-6 mx-auto">
-			<div
-				class="
-					bg-white
-					rounded-2xl
-					shadow-2xl
-					py-12
-					px-12
-					md:p-24
-					mx-auto
-					w-auto
-				"
-			>
+			<div class="bg-white rounded-2xl shadow-2xl p-8 md:p-16 mx-auto w-auto">
 				<div class="text-center mx-auto">
 					<h2 class="text-montserrat font-bold text-3xl">
 						Legendary Groups Act as One
@@ -494,7 +448,9 @@
 					<div
 						class="
 							mx-auto
-							pt-16
+							pt-12
+							md:py-16
+							md:pr-8
 							md:my-10
 							md:flex-1
 							md:w-6/12
@@ -511,13 +467,22 @@
 								mx-auto
 							"
 						>
-							<div class="flex flex-row flex-nowrap justify-end content-center">
+							<div
+								class="
+									flex flex-row-reverse
+									lg:flex-row
+									flex-nowrap
+									justify-end
+									content-center
+								"
+							>
 								<h4
 									class="
 										text-montserrat-500 text-lg
 										inline
 										self-center
-										text-right
+										text-left
+										lg:text-right
 									"
 								>
 									A voting forum for any size group
@@ -528,65 +493,87 @@
 									class="w-16 h-16 my-6 mx-3 float-right"
 								/>
 							</div>
-							<div class="flex flex-row flex-nowrap justify-end content-center">
+							<div
+								class="
+									flex flex-row-reverse
+									lg:flex-row
+									flex-nowrap
+									justify-end
+									content-center
+								"
+							>
 								<h4
 									class="
 										text-montserrat-500 text-lg text-start
 										inline
 										self-center
-										text-right
+										text-left
+										lg:text-right
 									"
 								>
 									Members Share Concerns and Ideas
 								</h4>
 								<img
-									src="../assets/svg/noise.svg"
+									src="../assets/svg/share_ideas.svg"
 									alt="megaphone icon"
 									class="w-16 h-16 my-6 mx-3 float-right"
 								/>
 							</div>
-							<div class="flex flex-row flex-nowrap justify-end content-center">
+							<div
+								class="
+									flex flex-row-reverse
+									lg:flex-row
+									flex-nowrap
+									justify-end
+									content-center
+								"
+							>
 								<h4
 									class="
 										text-montserrat-500 text-lg text-start
 										inline
 										self-center
-										text-right
+										text-left
+										lg:text-right
 									"
 								>
 									Lead Democratically
 								</h4>
 								<img
-									src="../assets/svg/government.svg"
+									src="../assets/svg/lead_democratically.svg"
 									alt="city hall icon"
 									class="w-16 h-16 my-6 mx-3 float-right"
 								/>
 							</div>
 						</div>
 					</div>
-					<div
+					<!-- <div
 						class="
-							p-8
+							py-3
+							md:p-8
+							max-w-max
 							md:flex md:flex-col
 							md:justify-center
 							md:align-items-bottom
 						"
-					>
-						<img
-							src="../assets/img/hoboken_H.jpg"
-							alt="Hoboken, New Jersey Logo"
-							class="
-								h-100
-								mx-auto
-								my-auto
-								flex-1 flex-grow
-								justify-self-center
-								md:justify-self-start
-								md:flex-grow-0
-								md:align-middle
-							"
-						/>
-					</div>
+					> -->
+					<img
+						src="../assets/img/company_meeting.jfif"
+						alt="Group meeting"
+						class="
+							w-full
+							md:w-3/5
+							min-w-32
+							md:min-w-48
+							max-w-7xl
+							rounded-md
+							md:rounded-2xl
+							mx-auto
+							my-auto
+							flex-1 flex-grow
+						"
+					/>
+					<!-- </div> -->
 				</div>
 			</div>
 		</div>
@@ -597,7 +584,7 @@
 				<div
 					class="
 						mx-auto
-						md:flex md:flex-row md:flex-nowrap
+						md:flex md:flex-row md:flex-wrap
 						md:align-center
 						max-w-5xl
 					"
@@ -612,7 +599,7 @@
 						"
 					>
 						<div class="text-center mx-auto">
-							<h2 class="text-montserrat text-3xl text-white font-bold py-3">
+							<h2 class="text-montserrat text-3xl text-white font-bold pt-3">
 								Make Your Members Feel Valued
 							</h2>
 							<!-- <h3 class="text-montserrat text-xl text-white py-3">
@@ -620,10 +607,10 @@
 							</h3> -->
 						</div>
 
-						<div class="mx-auto max-w-max my-6 p-6 max-full">
-							<div class="mx-auto md:my-10 flex-1">
-								<h3 class="text-montserrat text-2xl text-black text-center">
-									Valued Members Are
+						<div class="mx-auto max-w-max p-6 max-full">
+							<div class="mx-auto flex-1">
+								<h3 class="text-montserrat-500 text-2xl text-white text-center">
+									Valued Members Are:
 								</h3>
 								<div
 									class="
@@ -646,8 +633,8 @@
 											More&nbspProductive
 										</h4>
 										<img
-											src="../assets/img/productive.png"
-											alt="community icon"
+											src="../assets/svg/productive.svg"
+											alt="productive icon"
 											class="w-16 h-16 my-6 mx-auto"
 										/>
 									</div>
@@ -663,8 +650,8 @@
 											More&nbspLoyal
 										</h4>
 										<img
-											src="../assets/img/loyal.png"
-											alt="megaphone icon"
+											src="../assets/svg/loyal.svg"
+											alt="loyalty icon"
 											class="w-16 h-16 my-6 mx-auto"
 										/>
 									</div>
@@ -680,8 +667,8 @@
 											Happier
 										</h4>
 										<img
-											src="../assets/img/happy.png"
-											alt="city hall icon"
+											src="../assets/svg/happy.svg"
+											alt="happy icon"
 											class="w-16 h-16 my-6 mx-auto"
 										/>
 									</div>
@@ -739,13 +726,13 @@
 					</div>
 					<div class="mx-auto md:flex-1">
 						<img
-							src="../assets/img/id_cardV2.png"
+							src="../assets/img/create_group.png"
 							alt="quae id card"
-							class="min-w-md w-full mx-auto m-4"
+							class="min-w-md w-full mx-auto m-4 p-12"
 							style="
 								-webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.2));
 								filter: drop-shadow(0px 5px 5px 15px rgba(34, 34, 34, 0.2));
-								border-radius: 30px;
+								border-radius: 50px;
 							"
 						/>
 					</div>
@@ -790,12 +777,12 @@
 					</div>
 					<div class="mx-auto md:flex-1">
 						<img
-							src="../assets/img/confirm_voteV2.png"
+							src="../assets/img/groups_post_example.png"
 							alt="vote confirmation"
 							style="
 								-webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.2));
 								filter: drop-shadow(0px 5px 5px 15px rgba(34, 34, 34, 0.2));
-								border-radius: 42px;
+								border-radius: 20px;
 							"
 							class="min-w-72 w-4/5 max-w-lg mx-auto p-4"
 						/>
@@ -843,7 +830,7 @@
 
 					<div class="mx-auto md:flex-1">
 						<img
-							src="../assets/img/post_example_2.png"
+							src="../assets/img/latest_update.png"
 							alt="sample post"
 							class="
 								min-w-72
@@ -860,6 +847,104 @@
 								border-radius: 30px;
 							"
 						/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="py-12 px-0 md:py-16 bg-purple-light">
+			<div class="mx-auto">
+				<h3 class="text-center text-white px-4 text-montserrat-600 text-3xl">
+					Pricing Plans
+				</h3>
+				<div
+					class="
+						mx-auto
+						px-4
+						md:flex md:flex-row md:flex-no-wrap
+						md:align-center
+						md:justify-evenly
+						md:max-w-7xl
+						md:w-4/5
+						md:min-w-max
+					"
+				>
+					<div
+						class="
+							mx-auto
+							bg-white
+							rounded-xl
+							shadow-md
+							my-8
+							min-w-min
+							w-4/5
+							md:mx-1
+							md:flex-1
+						"
+					>
+						<div
+							class="px-3 py-3 bg-red bg-opacity-70"
+							style="
+								border-top-right-radius: 0.8em;
+								border-top-left-radius: 0.8em;
+							"
+						></div>
+						<div class="py-4 px-6 text-left">
+							<div>
+								<h3 class="text-montserrat-400 text-3xl pb-4">Free</h3>
+
+								<!-- <h3 class="py-1 text-md"><b>Seriously, its free</b></h3> -->
+							</div>
+							<hr />
+							<ul class="py-4 ml-3 text-left list-disc">
+								<li>Connect <b>150 voters</b></li>
+								<li>Designate 5 admins</li>
+								<li>Unlimited Polls/Elections</li>
+								<li>AES Encryption</li>
+							</ul>
+						</div>
+					</div>
+
+					<div
+						class="
+							mx-auto
+							bg-white
+							rounded-xl
+							shadow-md
+							my-8
+							min-w-min
+							w-4/5
+							md:mx-0.5
+							md:flex-1
+						"
+					>
+						<div
+							class="px-3 py-3 bg-blue bg-opacity-70"
+							style="
+								border-top-right-radius: 0.8em;
+								border-top-left-radius: 0.8em;
+							"
+						></div>
+						<div class="py-4 px-6 text-left">
+							<div>
+								<h3 class="text-montserrat-400 text-3xl pb-4">Enterprise</h3>
+
+								<!-- <h3 class="text-md"><b>Contact us for pricing</b></h3> -->
+							</div>
+							<hr />
+
+							<ul class="py-4 ml-3 text-left list-disc">
+								<li>Unlimited voters</li>
+								<li>Unlimited admins</li>
+								<li>Custom built for you</li>
+							</ul>
+							<h3>
+								email
+								<span class="text-blue"
+									><a href="mailto:info@quae.app">info@quae.app</a></span
+								>
+								to reserve your spot
+							</h3>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -1080,7 +1165,7 @@
 			</div>
 		</div> -->
 
-		<div
+		<!-- <div
 			class="parallax-background"
 			style="background-image: url('../assets/img/crowd_of_people.png')"
 		>
@@ -1103,7 +1188,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- SIGN UP  -->
 		<div
 			id="sign-up"
