@@ -1,4 +1,4 @@
-Quae landing page v3
-published before final pitch of semester
+Quae landing page v4
+published before CVN pitch
 
 -Brendan Probst & Samuel Schmitt 
