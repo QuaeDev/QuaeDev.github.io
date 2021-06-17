@@ -5,10 +5,10 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="authors" content="Brendan Probst & Sam Schmitt" />
-		<link rel="icon" href="assets/img/quae_logo_square.png" />
+		<link rel="icon" href="./assets/img/quae_logo_square.png" />
 		<meta
 			name="description"
-			content="Our Mission us to make participating in local politics as easy as pulling out your phone. Vote every day on issues that matter to you."
+			content="Quae gives you the power to represent yourself. Vote everyday on issues you care about and take action in your community"
 		/>
 		<meta
 			name="keywords"
@@ -33,18 +33,15 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
 
-		<link rel="stylesheet" href="./assets/css/tailwind.css" type="text/css" />
-		<link
-			rel="stylesheet"
-			href="./assets/css/customTailwind.css"
-			type="text/css"
-		/>
-		<link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
-		<link rel="stylesheet" href="./assets/css/animation.css" type="text/css" />
+		<link rel="stylesheet" href="./assets/css/tailwind.css" />
+		<link rel="stylesheet" href="./assets/css/customTailwind.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<link rel="stylesheet" href="./assets/css/animation.css" />
+		<script src="./assets/js/animations.js"></script>
 
-		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-		<script src="assets/js/jquery-1.10.2.js"></script>
-		<script src="assets/js/componentRendering.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="./assets/js/jquery-1.10.2.js"></script>
+		<script src="./assets/js/componentRendering.js"></script>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script
 			async
@@ -57,7 +54,7 @@
 			}
 			gtag("js", new Date());
 
-			gtag("config", "G-4CS6KQ279Q");
+			gtag("config", "G-4CS6KQ279Q", { cookie_flags: "SameSite=None;Secure" });
 		</script>
 	</head>
 	<body class="bg-offwhite">
@@ -104,11 +101,29 @@
 						</a>
 						<div class="flex justify-end">
 							<div class="block">
-								<!-- <a class="mx-2 hidden md:inline" href="./security.html">
-								<span class="text-montserrat-400 text-white text-md">
-									Security
-								</span>
-							</a> -->
+								<a class="mx-2 hidden md:inline" href="../">
+									<span
+										class="
+											hoboken-link-nav
+											text-montserrat-400 text-white text-md
+										"
+										id="politics-link-nav"
+									>
+										Politics
+									</span>
+								</a>
+								<a class="mx-2 hidden md:inline" href="./pages/groups.html">
+									<span
+										class="
+											pricing-link-nav
+											text-montserrat-400 text-white text-md
+										"
+										id="groups-link-nav"
+									>
+										Groups
+									</span>
+								</a>
+
 								<a
 									class="mx-2 hidden md:inline"
 									target="_blank"
@@ -118,7 +133,7 @@
 										Blog
 									</span>
 								</a>
-								<a class="mx-2 hidden md:inline" href="./pages/pricing.html">
+								<!-- <a class="mx-2 hidden md:inline" href="./pages/pricing.html">
 									<span
 										class="
 											pricing-link-nav
@@ -127,7 +142,7 @@
 									>
 										Pricing
 									</span>
-								</a>
+								</a> -->
 								<a class="mx-2 hidden md:inline" href="./pages/about_us.html">
 									<span
 										class="
@@ -138,7 +153,7 @@
 										About Us
 									</span>
 								</a>
-								<a class="mx-2 navlink" href="./index.html#sign-up">
+								<a class="mx-2 navlink" href="#sign-up">
 									<span
 										class="
 											bg-white
@@ -174,7 +189,7 @@
 				style="border-radius: 100%"
 			>
 				<div class="flex flex-col h-full place-content-center">
-					<img src="assets/svg/menu.svg" class="w-1/2 mx-auto" />
+					<img src="./assets/svg/menu.svg" class="w-1/2 mx-auto" />
 				</div>
 			</div>
 		</button>
@@ -185,26 +200,49 @@
 			</a>
 			<div id="mySidenav" class="sidenav-container">
 				<div class="side-nav-content">
-					<a href="./index.html" onclick="closeNav()" id="about-link">Home</a>
-					<a
-						href="./pages/about_us.html"
-						onclick="closeNav()"
-						id="about-us-drawer-link"
-						>About Us</a
+					<a href="../" onclick="closeNav()" id="politics-drawer-link"
+						>Politics</a
 					>
 					<a
+						href="./pages/groups.html"
+						onclick="closeNav()"
+						id="groups-drawer-link"
+						>Private&nbspGroups</a
+					>
+					<!-- <a
 						href="./pages/pricing.html"
 						onclick="closeNav()"
 						id="pricing-drawer-link"
 						>Pricing</a
+					> -->
+					<a
+						href="./pages/about_us.html"
+						onclick="closeNav()"
+						id="about-us-drawer-link"
+						>About&nbspUs</a
 					>
+
 					<a
 						target="_blank"
 						href="https://medium.com/quae-app"
 						onclick="closeNav()"
 						id="blog-drawer-link"
 						>Blog</a
-					><span class="drawer-close-button">
+					>
+					<a class="mx-2 navlink" onClick="closeNav()" href="#sign-up">
+						<span
+							class="
+								bg-white
+								text-md text-black text-montserrat-600
+								px-3
+								py-2
+								rounded-md
+							"
+						>
+							Sign&nbspUp
+						</span>
+					</a>
+					<span class="drawer-close-button">
 						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
 							>&times;</a
 						>
@@ -215,21 +253,28 @@
 		<script>
 			let URL = window.location.href;
 			console.log(URL);
-			if (URL.includes("about_us")) {
-				document.getElementById("about-us-drawer-link").style.opacity = "0.5";
-				document.getElementById("about-us-link-nav").style.opacity = "0.5";
+			if (URL.includes("groups")) {
+				document.getElementById("groups-drawer-link").style.opacity = "0.5";
+				document.getElementById("groups-link-nav").style.opacity = "0.5";
 			}
 			if (URL.includes("pricing")) {
 				document.getElementById("pricing-drawer-link").style.opacity = "0.5";
 				document.getElementById("pricing-link-nav").style.opacity = "0.5";
 			}
+			if (URL.includes("about_us")) {
+				document.getElementById("about-us-drawer-link").style.opacity = "0.5";
+				document.getElementById("about-us-link-nav").style.opacity = "0.5";
+			} else {
+				document.getElementById("politics-drawer-link").style.opacity = "0.5";
+				document.getElementById("politics-link-nav").style.opacity = "0.5";
+			}
 			// if (URL.includes("blog")) {
 			// 	document.getElementById("blog-drawer-link").style.opacity = "0.5";
 			// 	document.getElementById("blog-link-nav").style.opacity = "0.5";
 			// }
-			else {
-				document.getElementById("home-drawer-link").style.display = "none";
-			}
+			// else {
+			// 	document.getElementById("home-drawer-link").style.display = "none";
+			// }
 		</script>
 
 		<!-- VIEW 1 -->
@@ -261,8 +306,8 @@
 					<div class="px-6">
 						<h1
 							class="
-								my-4
-								md:my-8
+								mt-4
+								md:mt-8
 								text-black text-montserrat-600 text-5xl
 								md:text-6xl
 							"
@@ -271,10 +316,10 @@
 						</h1>
 						<h2
 							class="
-								my-4
-								md:my-8
+								mb-4
+								md:mb-8
 								text-black text-montserrat-500 text-2xl
-								md:text-3xl
+								md:text-2xl
 							"
 						>
 							Exclusive To Hoboken
@@ -289,7 +334,7 @@
 								mb-2
 							"
 						>
-							Apply For Beta
+							Sign Up For Beta!
 						</h5>
 						<form
 							action="https://formspree.io/f/myybwloo"
@@ -405,7 +450,7 @@
 									Connect With Your Community
 								</h4>
 								<img
-									src="assets/svg/team.svg"
+									src="./assets/svg/team.svg"
 									alt="community icon"
 									class="w-16 h-16 my-6 mx-3 float-right"
 								/>
@@ -422,7 +467,7 @@
 									Voice Your Concerns
 								</h4>
 								<img
-									src="assets/svg/noise.svg"
+									src="./assets/svg/noise.svg"
 									alt="megaphone icon"
 									class="w-16 h-16 my-6 mx-3 float-right"
 								/>
@@ -439,7 +484,7 @@
 									Impact Your Government
 								</h4>
 								<img
-									src="assets/svg/government.svg"
+									src="./assets/svg/government.svg"
 									alt="city hall icon"
 									class="w-16 h-16 my-6 mx-3 float-right"
 								/>
@@ -862,13 +907,13 @@
 					</div>
 					<div class="mx-auto md:flex-1">
 						<img
-							src="assets/img/id_cardV2.png"
+							src="./assets/img/id_cardV2.png"
 							alt="quae id card"
 							class="min-w-md w-full mx-auto m-4"
 							style="
 								-webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.2));
 								filter: drop-shadow(0px 5px 5px 15px rgba(34, 34, 34, 0.2));
-								border-radius: 30px;
+								border-radius: 36px;
 							"
 						/>
 					</div>
@@ -915,12 +960,12 @@
 					</div>
 					<div class="mx-auto md:flex-1">
 						<img
-							src="assets/img/confirm_voteV2.png"
+							src="./assets/img/confirm_voteV2.png"
 							alt="vote confirmation"
 							style="
 								-webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.2));
 								filter: drop-shadow(0px 5px 5px 15px rgba(34, 34, 34, 0.2));
-								border-radius: 42px;
+								border-radius: 48px;
 							"
 							class="min-w-72 w-4/5 max-w-lg mx-auto p-4"
 						/>
@@ -969,7 +1014,7 @@
 
 					<div class="mx-auto md:flex-1">
 						<img
-							src="assets/img/post_example_2.png"
+							src="./assets/img/post_example_2.png"
 							alt="sample post"
 							class="
 								min-w-72
@@ -1017,7 +1062,7 @@
 						"
 					>
 						<img
-							src="assets/svg/topic_icons/road-with-broken-line.svg"
+							src="./assets/svg/topic_icons/road-with-broken-line.svg"
 							alt="road"
 							class="w-16 h-16"
 						/>
@@ -1041,7 +1086,7 @@
 						"
 					>
 						<img
-							src="assets/svg/topic_icons/heart-rate.svg"
+							src="./assets/svg/topic_icons/heart-rate.svg"
 							alt="heartbeat "
 							class="w-16 h-16"
 						/>
@@ -1065,7 +1110,7 @@
 						"
 					>
 						<img
-							src="assets/svg/topic_icons/herbal-spa-treatment-leaves.svg"
+							src="./assets/svg/topic_icons/herbal-spa-treatment-leaves.svg"
 							alt="leaves"
 							class="w-16 h-16"
 						/>
@@ -1089,7 +1134,7 @@
 						"
 					>
 						<img
-							src="assets/svg/topic_icons/shield.svg"
+							src="./assets/svg/topic_icons/shield.svg"
 							alt="shield"
 							class="w-16 h-16"
 						/>
@@ -1113,7 +1158,7 @@
 						"
 					>
 						<img
-							src="assets/svg/topic_icons/shopping-bag.svg"
+							src="./assets/svg/topic_icons/shopping-bag.svg"
 							alt="shopping bag"
 							class="w-16 h-16"
 						/>
@@ -1137,7 +1182,7 @@
 						"
 					>
 						<img
-							src="assets/svg/topic_icons/money-bag.svg"
+							src="./assets/svg/topic_icons/money-bag.svg"
 							alt="money"
 							class="w-16 h-16"
 						/>
@@ -1159,7 +1204,7 @@
 						"
 					>
 						<img
-							src="assets/svg/topic_icons/police-badge.svg"
+							src="./assets/svg/topic_icons/police-badge.svg"
 							alt="police badge"
 							class="w-16 h-16"
 						/>
@@ -1183,7 +1228,7 @@
 						"
 					>
 						<img
-							src="assets/svg/topic_icons/book.svg"
+							src="./assets/svg/topic_icons/book.svg"
 							alt="book"
 							class="w-16 h-16"
 						/>
@@ -1261,7 +1306,7 @@
 				>
 					<div class="text-center my-auto max-w-2xl flex-1">
 						<h4 class="text-white text-montserrat font-bold text-3xl pb-3">
-							Apply For Beta
+							Sign Up For Beta
 						</h4>
 						<div class="beta-signup m-3 px-6 py-6 md:my-8 rounded-2xl">
 							<form
@@ -1298,7 +1343,7 @@
 						</div>
 					</div>
 					<div class="flex-1">
-						<img src="assets/svg/signup_section_phone_guy.svg" alt="" />
+						<img src="./assets/svg/signup_section_phone_guy.svg" alt="" />
 					</div>
 				</div>
 			</div>
@@ -1386,21 +1431,20 @@
 					class="md:flex md:flex-row md:flex-nowrap md:align-middle md:my-auto"
 				>
 					<a href="/">
-						<p class="text-white text-montserrat text-lg md:px-10">Home</p></a
-					>
-					<a href="./pages/about_us.html">
+						<p class="text-white text-montserrat text-lg md:px-10">Politics</p>
+					</a>
+					<a href="./pages/groups.html">
 						<p class="text-white text-montserrat text-lg md:px-10">
-							About Us
-						</p></a
-					>
-					<a href="./pages/pricing.html">
-						<p class="text-white text-montserrat text-lg md:px-10">
-							Pricing
-						</p></a
-					>
+							Private Groups
+						</p>
+					</a>
 					<a href="https://medium.com/quae-app">
-						<p class="text-white text-montserrat text-lg md:px-10">Blog</p></a
-					>
+						<p class="text-white text-montserrat text-lg md:px-10">Blog</p>
+					</a>
+					<a href="./pages/about_us.html">
+						<p class="text-white text-montserrat text-lg md:px-10">About Us</p>
+					</a>
+
 					<!-- <a href="./security.html">
 						<p class="text-white text-montserrat text-lg md:px-10">Security</p></a
 					> -->
@@ -1408,6 +1452,6 @@
 			</div>
 		</footer>
 
-		<script src="assets/js/animations.js"></script>
+		<script src="./assets/js/animations.js"></script>
 	</body>
 </html>

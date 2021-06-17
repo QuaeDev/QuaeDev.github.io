@@ -33,12 +33,12 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
 
-		<link rel="stylesheet" href="../assets//css/tailwind.css" />
+		<link rel="stylesheet" href="../assets/css/tailwind.css" />
 		<link rel="stylesheet" href="../assets/css/customTailwind.css" />
 		<link rel="stylesheet" href="../assets/css/style.css" />
 		<link rel="stylesheet" href="../assets/css/animation.css" />
 
-		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="../assets/js/jquery-1.10.2.js"></script>
 		<script src="../assets/js/componentRendering.js"></script>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -53,7 +53,7 @@
 			}
 			gtag("js", new Date());
 
-			gtag("config", "G-4CS6KQ279Q");
+			gtag("config", "G-4CS6KQ279Q", { cookie_flags: "SameSite=None;Secure" });
 		</script>
 	</head>
 
@@ -98,6 +98,7 @@
 											pricing-link-nav
 											text-montserrat-400 text-white text-md
 										"
+										id="pricing-link-nav"
 									>
 										Pricing
 									</span>
@@ -164,7 +165,7 @@
 						href="./about_us.html"
 						onclick="closeNav()"
 						id="about-us-drawer-link"
-						>About Us</a
+						>About&nbspUs</a
 					>
 					<a href="./pricing.html" onclick="closeNav()" id="pricing-drawer-link"
 						>Pricing</a

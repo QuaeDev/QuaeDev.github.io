@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Quae</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="authors" content="Brendan Probst & Sam Schmitt" />
+		<link rel="icon" href="../assets/img/quae_logo_square.png" />
+		<meta
+			name="description"
+			content="Democratically your group. Encourage member feedback and vote on issues that matter to members."
+		/>
+		<meta
+			name="keywords"
+			content="Politics, Local Politics, Voting, Hoboken, Hoboken Politics, City Council, Poll, Voting, "
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+
+		<link rel="stylesheet" href="../assets/css/tailwind.css" type="text/css" />
+		<link
+			rel="stylesheet"
+			href="../assets/css/customTailwind.css"
+			type="text/css"
+		/>
+		<link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
+		<link rel="stylesheet" href="../assets/css/animation.css" type="text/css" />
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="../assets/js/jquery-1.10.2.js"></script>
+		<script src="../assets/js/componentRendering.js"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-4CS6KQ279Q"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-4CS6KQ279Q", { cookie_flags: "SameSite=None;Secure" });
+		</script>
+	</head>
+	<body class="bg-offwhite">
+		<!-- <div class="intro">
+			<div class="load-logo">
+				<img src="./assets/img/quae_logo_transparent.svg" class="w-16 load" />
+			</div>
+			<div class="load-header">
+				<div>
+					<span class="load text-5xl text-montserrat-400">Quae</span>
+				</div>
+			</div>
+		</div> -->
+
+		<!-- <div id="nav-placeholder"></div> -->
+		<!-- <div class="hidden"></div>
+			<div id="backdrop"></div>
+			<div id="mySideNav">
+				<button href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+					<i class="material-icons">close</i>
+				</button>
+		
+				<a href="./about_us.html" onclick="closeNav()" id="about-link">About Us</a>
+				<a href="./pricing.html" onclick="closeNav()" id="about-link">Pricing</a>
+				<a href="./security.html" onclick="closeNav()" id="about-link">Security</a>
+			</div>
+		</div> -->
+		<header
+			id="navbar-component"
+			class="w-full bg-black"
+			style="position: fixed; z-index: 100"
+		>
+			<div class="mx-auto py-2">
+				<div class="max-w-7xl mx-auto px-4 sm:px-6">
+					<div class="flex justify-between items-center">
+						<a href="/">
+							<div class="flex flex-col justify-start content-start">
+								<img
+									src="../assets/svg/quae_logo_white_no_background.svg"
+									class="w-8 h-8 md:m-2"
+									alt="quae logo"
+								/>
+							</div>
+						</a>
+						<div class="flex justify-end">
+							<div class="block">
+								<!-- <a class="mx-2 hidden md:inline" href="./security.html">
+								<span class="text-montserrat-400 text-white text-md">
+									Security
+								</span>
+							</a> -->
+								<a class="mx-2 hidden md:inline" href="../">
+									<span
+										class="text-montserrat-400 text-white text-md"
+										id="hoboken-link-nav"
+									>
+										Politics
+									</span> </a
+								><a class="mx-2 hidden md:inline" href="./groups.html">
+									<span
+										class="text-montserrat-400 text-white text-md"
+										id="groups-link-nav"
+									>
+										Groups
+									</span>
+								</a>
+
+								<a
+									class="mx-2 hidden md:inline"
+									target="_blank"
+									href="https://medium.com/quae-app"
+								>
+									<span class="text-montserrat-400 text-white text-md">
+										Blog
+									</span>
+								</a>
+								<a class="mx-2 hidden md:inline" href="./about_us.html">
+									<span
+										class="
+											about-us-link-nav
+											text-montserrat-400 text-white text-md
+										"
+									>
+										About Us
+									</span>
+								</a>
+
+								<a class="mx-2 navlink" href="#sign-up">
+									<span
+										class="
+											bg-white
+											text-md text-montserrat-600
+											px-3
+											py-2
+											rounded-md
+										"
+									>
+										Sign Up
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<button id="drawer-open-btn" class="z-100" onclick="openNav()">
+			<div
+				class="
+					fixed
+					w-16
+					h-16
+					bottom-0
+					right-0
+					m-2
+					shadow-xl
+					bg-black
+					border-2 border-purple-light
+					md:hidden
+				"
+				style="border-radius: 100%"
+			>
+				<div class="flex flex-col h-full place-content-center">
+					<img src="../assets/svg/menu.svg" class="w-1/2 mx-auto" />
+				</div>
+			</div>
+		</button>
+
+		<div class="md:hidden">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+				<div class="backdrop-container" id="backdrop"></div>
+			</a>
+			<div id="mySidenav" class="sidenav-container">
+				<div class="side-nav-content">
+					<a href="../" onclick="closeNav()" id="hoboken-drawer-link"
+						>Politics</a
+					><a href="./groups.html" onclick="closeNav()" id="groups-drawer-link"
+						>Private&nbspGroups</a
+					>
+
+					<a
+						href="./about_us.html"
+						onclick="closeNav()"
+						id="about-us-drawer-link"
+						>About&nbspUs</a
+					>
+
+					<a
+						target="_blank"
+						href="https://medium.com/quae-app"
+						onclick="closeNav()"
+						id="blog-drawer-link"
+						>Blog</a
+					><a class="mx-2 navlink" onClick="closeNav()" href="#sign-up">
+						<span
+							class="
+								bg-white
+								text-md text-black text-montserrat-600
+								px-3
+								py-2
+								rounded-md
+							"
+						>
+							Sign&nbspUp
+						</span> </a
+					><span class="drawer-close-button">
+						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+							>&times;</a
+						>
+					</span>
+				</div>
+			</div>
+		</div>
+		<script>
+			let URL = window.location.href;
+			console.log(URL);
+			if (URL.includes("groups")) {
+				document.getElementById("groups-drawer-link").style.opacity = "0.5";
+				document.getElementById("groups-link-nav").style.opacity = "0.5";
+			}
+			if (URL.includes("pricing")) {
+				document.getElementById("pricing-drawer-link").style.opacity = "0.5";
+				document.getElementById("pricing-link-nav").style.opacity = "0.5";
+			}
+			if (URL.includes("about_us")) {
+				document.getElementById("about-us-drawer-link").style.opacity = "0.5";
+				document.getElementById("about-us-link-nav").style.opacity = "0.5";
+			} else {
+				document.getElementById("politics-drawer-link").style.opacity = "0.5";
+				document.getElementById("politics-link-nav").style.opacity = "0.5";
+			}
+			// if (URL.includes("blog")) {
+			// 	document.getElementById("blog-drawer-link").style.opacity = "0.5";
+			// 	document.getElementById("blog-link-nav").style.opacity = "0.5";
+			// }
+			// else {
+			// 	document.getElementById("home-drawer-link").style.display = "none";
+			// }
+		</script>
+
+		<!-- VIEW 1 -->
+		<div
+			class="py-10 px-6"
+			style="
+				background: linear-gradient(
+						180deg,
+						rgba(255, 255, 255, 0) 0%,
+						rgb(141, 0, 255, 0.66) 100%
+					),
+					linear-gradient(
+						230deg,
+						rgba(255, 255, 255, 0) 0%,
+						rgba(96, 167, 234, 1) 80%
+					),
+					linear-gradient(
+						60deg,
+						rgba(255, 255, 255, 0) 0%,
+						rgba(248, 105, 139, 1) 80%
+					);
+			"
+		>
+			<!-- <a href="./pages/hoboken.html"> -->
+			<div
+				id="hobokenButtonContainer"
+				class="
+					flex flex-wrap flex-row
+					justify-center
+					align-middle
+					px-6
+					py-4
+					md:pt-6
+					my-8
+					rounded-b-lg
+				"
+				style="
+					margin-top: -20px;
+					background: linear-gradient(
+							180deg,
+							rgba(255, 255, 255, 0) 0%,
+							rgb(141, 0, 255, 0.66) 100%
+						),
+						linear-gradient(
+							60deg,
+							rgba(255, 255, 255, 0) 0%,
+							rgba(96, 167, 234, 1) 80%
+						),
+						linear-gradient(
+							230deg,
+							rgba(255, 255, 255, 0) 0%,
+							rgba(248, 105, 139, 1) 80%
+						);
+				"
+			>
+				<h3
+					class="
+						text-montserrat-600 text-xl text-white text-center
+						my-auto
+						mx-4
+					"
+				>
+					Live In Hoboken, NJ?
+				</h3>
+				<h4 class="text-montserrat-400 text-lg text-black mt-3 mb-2 md:ml-4">
+					<a
+						href="../"
+						class="bg-white text-md text-montserrat-600 px-3 py-2 rounded-md"
+						>Click&nbspHere</a
+					>
+				</h4>
+			</div>
+			<!-- </a> -->
+			<div
+				class="flex flex-row-reverse flex-wrap justify-center"
+				style="filter: none"
+			>
+				<div class="mt-2 text-left">
+					<div class="px-6">
+						<h1
+							class="
+								my-4
+								md:my-8
+								text-black text-montserrat-600 text-5xl
+								md:text-6xl
+							"
+						>
+							Vote Every&nbspDay
+						</h1>
+						<div class="flex flex-row flex-wrap justify-start my-4 md:my-8">
+							<h2 class="text-black text-montserrat-500 text-2xl md:text-3xl">
+								Democratize Your&nbsp
+							</h2>
+
+							<h2 class="text-black text-montserrat-500 text-2xl md:text-3xl">
+								<a
+									href=""
+									class="typewrite pointer-events-none cursor-default"
+									data-period="3000"
+									data-type='[ "Club", "Organization", "Union", "Business", "Company", "School" ]'
+								>
+									<span class="wrap"></span>
+								</a>
+							</h2>
+						</div>
+					</div>
+					<div class="beta-signup m-6 mb-0 px-6 pt-3 pb-6 md:my-8 rounded-2xl">
+						<h5
+							class="
+								text-left
+								md:text-left
+								text-black text-montserrat-500 text-2xl
+								mb-2
+							"
+						>
+							Sign Up For Beta!
+						</h5>
+						<form
+							action="https://formspree.io/f/myybwloo"
+							method="POST"
+							id="sign-up-form"
+							class="black-text"
+						>
+							<div
+								class="
+									md:flex md:flex-row md:flex-nowrap
+									md:justify-center
+									md:align-middle
+								"
+							>
+								<input
+									id="form-email"
+									name="form-email"
+									class="bg-white px-2 py-3 rounded-md w-full md:w-2/3"
+									placeholder="email"
+								/>
+
+								<button
+									type="submit"
+									class="
+										bg-white
+										text-montserrat-500 text-md
+										md:text-lg
+										px-6
+										py-3
+										md:mx-2
+										my-2
+										md:my-0
+										rounded-md
+										w-full
+										md:w-1/3
+									"
+								>
+									Let's Go!
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="p-5">
+					<img
+						src="../assets/img/homefeed_groups.png"
+						alt="home screen of app"
+						class="w-4/5 mx-auto md:flex-grow-1"
+					/>
+				</div>
+			</div>
+		</div>
+		<!-- VIEW 2 -->
+		<div class="px-6 py-12 md:px-6 mx-auto">
+			<div class="bg-white rounded-2xl shadow-2xl p-8 md:p-16 mx-auto w-auto">
+				<div class="text-center mx-auto">
+					<h2 class="text-montserrat font-bold text-3xl">
+						Legendary Groups Act as One
+					</h2>
+					<h3 class="text-montserrat text-xl">
+						Empower Your Members Like Never Before
+					</h3>
+				</div>
+				<div
+					class="
+						mx-auto
+						md:flex md:flex-row md:flex-wrap
+						md:align-center
+						md:justify-center
+						md:max-w-max
+					"
+				>
+					<div
+						class="
+							mx-auto
+							pt-12
+							md:py-16
+							md:pr-8
+							md:my-10
+							md:flex-1
+							md:w-6/12
+							md:text-right
+							md:align-middle
+						"
+					>
+						<div
+							class="
+								flex flex-col flex-grow-0
+								justify-end
+								md:align-right
+								max-w-max
+								mx-auto
+							"
+						>
+							<div
+								class="
+									flex flex-row-reverse
+									lg:flex-row
+									flex-nowrap
+									justify-end
+									content-center
+								"
+							>
+								<h4
+									class="
+										text-montserrat-500 text-lg
+										inline
+										self-center
+										text-left
+										lg:text-right
+									"
+								>
+									Increase Communication
+								</h4>
+								<img
+									src="../assets/svg/team.svg"
+									alt="community icon"
+									class="w-16 h-16 my-6 mx-3 float-right"
+								/>
+							</div>
+							<div
+								class="
+									flex flex-row-reverse
+									lg:flex-row
+									flex-nowrap
+									justify-end
+									content-center
+								"
+							>
+								<h4
+									class="
+										text-montserrat-500 text-lg text-start
+										inline
+										self-center
+										text-left
+										lg:text-right
+									"
+								>
+									Members Share Concerns and Ideas
+								</h4>
+								<img
+									src="../assets/svg/share_ideas.svg"
+									alt="megaphone icon"
+									class="w-16 h-16 my-6 mx-3 float-right"
+								/>
+							</div>
+							<div
+								class="
+									flex flex-row-reverse
+									lg:flex-row
+									flex-nowrap
+									justify-end
+									content-center
+								"
+							>
+								<h4
+									class="
+										text-montserrat-500 text-lg text-start
+										inline
+										self-center
+										text-left
+										lg:text-right
+									"
+								>
+									Lead Democratically
+								</h4>
+								<img
+									src="../assets/svg/lead_democratically.svg"
+									alt="city hall icon"
+									class="w-16 h-16 my-6 mx-3 float-right"
+								/>
+							</div>
+						</div>
+					</div>
+					<!-- <div
+						class="
+							py-3
+							md:p-8
+							max-w-max
+							md:flex md:flex-col
+							md:justify-center
+							md:align-items-bottom
+						"
+					> -->
+					<img
+						src="../assets/img/company_meeting.jfif"
+						alt="Group meeting"
+						class="
+							w-full
+							md:w-3/5
+							min-w-32
+							md:min-w-48
+							max-w-7xl
+							rounded-md
+							md:rounded-2xl
+							mx-auto
+							my-auto
+							flex-1 flex-grow
+						"
+					/>
+					<!-- </div> -->
+				</div>
+			</div>
+		</div>
+
+		<!-- VIEW 3 -->
+		<div class="from-blue-light to-purple-light bg-gradient-to-bl">
+			<div class="max-w-5xl py-12 md:py-24 px-6 mx-auto">
+				<div
+					class="
+						mx-auto
+						md:flex md:flex-row md:flex-wrap
+						md:align-center
+						max-w-5xl
+					"
+				>
+					<div
+						class="
+							px-4
+							md:px-12
+							md:flex md:flex-col
+							md:justify-center
+							md:flex-1
+						"
+					>
+						<div class="text-center mx-auto">
+							<h2 class="text-montserrat text-3xl text-white font-bold pt-3">
+								Make Your Members Feel Valued
+							</h2>
+							<!-- <h3 class="text-montserrat text-xl text-white py-3">
+								All users are Quae ID verified
+							</h3> -->
+						</div>
+
+						<div class="mx-auto max-w-max p-6 max-full">
+							<div class="mx-auto flex-1">
+								<h3 class="text-montserrat-500 text-2xl text-white text-center">
+									Valued Members Are:
+								</h3>
+								<div
+									class="
+										flex flex-row flex-wrap
+										justify-center
+										max-w-max
+										mx-auto
+										py-12
+									"
+								>
+									<div
+										class="
+											flex flex-col flex-nowrap
+											justify-center
+											align-middle
+											mx-6
+										"
+									>
+										<h4 class="text-montserrat-700 text-white text-lg">
+											More&nbspProductive
+										</h4>
+										<img
+											src="../assets/svg/productive.svg"
+											alt="productive icon"
+											class="w-16 h-16 my-6 mx-auto"
+										/>
+									</div>
+									<div
+										class="
+											flex flex-col flex-nowrap
+											justify-center
+											align-middle
+											mx-6
+										"
+									>
+										<h4 class="text-montserrat-700 text-white text-lg">
+											More&nbspLoyal
+										</h4>
+										<img
+											src="../assets/svg/loyal.svg"
+											alt="loyalty icon"
+											class="w-16 h-16 my-6 mx-auto"
+										/>
+									</div>
+									<div
+										class="
+											flex flex-col flex-nowrap
+											justify-center
+											align-middle
+											mx-6
+										"
+									>
+										<h4 class="text-montserrat-700 text-white text-lg">
+											Happier
+										</h4>
+										<img
+											src="../assets/svg/happy.svg"
+											alt="happy icon"
+											class="w-16 h-16 my-6 mx-auto"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- VIEW 4 -->
+		<div class="px-6 py-12 md:px-6 md:py-24 mx-auto max-w-5xl text-center">
+			<div class="text-center mx-auto">
+				<div class="pb-6 md:pb-12">
+					<h2 class="text-montserrat font-bold text-3xl">How It Works</h2>
+				</div>
+			</div>
+			<div class="mx-auto max-w-5xl">
+				<div
+					class="
+						bg-white
+						mx-auto
+						my-8
+						p-6
+						md:flex md:flex-row md:flex-nowrap
+						md:justify-center
+						rounded-2xl
+						shadow-md
+					"
+				>
+					<div class="md:flex-1 my-auto">
+						<div class="inline-flex flex-row flex-nowrap justify-center">
+							<div class="text-left max-h-min">
+								<div class="inline-flex flex-row flex-nowrap justify-start">
+									<img
+										src="../assets/svg/numbers/number-one.svg"
+										alt="1"
+										class="w-12 h-12 p-3"
+									/>
+									<h3
+										class="
+											text-montserrat-500 text-left text-2xl
+											md:text-3xl
+											my-auto
+										"
+									>
+										Create Group
+									</h3>
+								</div>
+								<p class="px-6 max-w-md w-full text-left">
+									Set up a group and invite members to join.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="mx-auto md:flex-1">
+						<img
+							src="../assets/img/create_group.png"
+							alt="quae id card"
+							class="min-w-md w-full mx-auto m-4 p-12"
+							style="
+								-webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.2));
+								filter: drop-shadow(0px 5px 5px 15px rgba(34, 34, 34, 0.2));
+								border-radius: 80px;
+							"
+						/>
+					</div>
+				</div>
+				<div
+					class="
+						bg-white
+						mx-auto
+						my-8
+						p-6
+						align-middle
+						md:flex md:flex-row-reverse md:flex-nowrap
+						md:justify-center
+						rounded-2xl
+						shadow-md
+					"
+				>
+					<div class="md:flex-1 my-auto">
+						<div class="flex flex-row flex-nowrap justify-center">
+							<div>
+								<div class="flex flex-row flex-nowrap">
+									<img
+										src="../assets/svg/numbers/number-2.svg"
+										alt="2"
+										class="w-12 h-12 p-3"
+									/>
+									<h3
+										class="
+											text-montserrat-500 text-left text-2xl
+											md:text-3xl
+											my-auto
+										"
+									>
+										Members Share Ideas
+									</h3>
+								</div>
+								<p class="px-6 max-w-md w-full text-left">
+									See what people care about
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="mx-auto md:flex-1">
+						<img
+							src="../assets/img/groups_post_example.png"
+							alt="vote confirmation"
+							style="
+								-webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.2));
+								filter: drop-shadow(0px 5px 5px 15px rgba(34, 34, 34, 0.2));
+								border-radius: 20px;
+							"
+							class="min-w-72 w-4/5 max-w-lg mx-auto p-4"
+						/>
+					</div>
+				</div>
+				<div
+					class="
+						bg-white
+						mx-auto
+						my-8
+						p-6
+						align-middle
+						md:flex md:flex-row md:flex-nowrap
+						md:justify-center
+						rounded-2xl
+						shadow-md
+					"
+				>
+					<div class="md:flex-1 my-auto">
+						<div class="flex flex-row flex-nowrap justify-center">
+							<div>
+								<div class="flex flex-row flex-nowrap">
+									<img
+										src="../assets/svg/numbers/number-3.svg"
+										alt="3"
+										class="w-12 h-12 p-3"
+									/>
+									<h3
+										class="
+											text-montserrat-500 text-left text-2xl
+											md:text-3xl
+											my-auto
+										"
+									>
+										Act
+									</h3>
+								</div>
+								<p class="px-6 max-w-md w-full text-left">
+									With data showing you how your group feels, you can make
+									better decisions.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mx-auto md:flex-1">
+						<img
+							src="../assets/img/latest_update.png"
+							alt="sample post"
+							class="
+								min-w-72
+								w-4/5
+								max-w-lg
+								mx-auto
+								p-4
+								rounded-lg
+								border-black
+							"
+							style="
+								-webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.2));
+								filter: drop-shadow(0px 5px 5px 15px rgba(34, 34, 34, 0.2));
+								border-radius: 30px;
+							"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="py-12 px-0 md:py-16 bg-purple-light">
+			<div class="mx-auto">
+				<h3 class="text-center text-white px-4 text-montserrat-600 text-3xl">
+					Pricing Plans
+				</h3>
+				<div
+					class="
+						mx-auto
+						px-4
+						md:flex md:flex-row md:flex-no-wrap
+						md:align-center
+						md:justify-evenly
+						md:max-w-7xl
+						md:w-4/5
+						md:min-w-max
+					"
+				>
+					<div
+						class="
+							mx-auto
+							bg-white
+							rounded-xl
+							shadow-md
+							my-8
+							min-w-min
+							w-4/5
+							md:mx-1
+							md:flex-1
+						"
+					>
+						<div
+							class="px-3 py-3 bg-red bg-opacity-70"
+							style="
+								border-top-right-radius: 0.8em;
+								border-top-left-radius: 0.8em;
+							"
+						></div>
+						<div class="py-4 px-6 text-left">
+							<div>
+								<h3 class="text-montserrat-400 text-3xl pb-4">Free</h3>
+
+								<!-- <h3 class="py-1 text-md"><b>Seriously, its free</b></h3> -->
+							</div>
+							<hr />
+							<ul class="py-4 ml-3 text-left list-disc">
+								<li>Connect <b>150 voters</b></li>
+								<li>Designate 5 admins</li>
+								<li>Unlimited Polls/Elections</li>
+								<li>AES Encryption</li>
+							</ul>
+						</div>
+					</div>
+
+					<div
+						class="
+							mx-auto
+							bg-white
+							rounded-xl
+							shadow-md
+							my-8
+							min-w-min
+							w-4/5
+							md:mx-0.5
+							md:flex-1
+						"
+					>
+						<div
+							class="px-3 py-3 bg-blue bg-opacity-70"
+							style="
+								border-top-right-radius: 0.8em;
+								border-top-left-radius: 0.8em;
+							"
+						></div>
+						<div class="py-4 px-6 text-left">
+							<div>
+								<h3 class="text-montserrat-400 text-3xl pb-4">Enterprise</h3>
+
+								<!-- <h3 class="text-md"><b>Contact us for pricing</b></h3> -->
+							</div>
+							<hr />
+
+							<ul class="py-4 ml-3 text-left list-disc">
+								<li>Unlimited voters</li>
+								<li>Unlimited admins</li>
+								<li>Custom built for you</li>
+							</ul>
+							<h3>
+								email
+								<span class="text-blue"
+									><a href="mailto:info@quae.app">info@quae.app</a></span
+								>
+								to reserve your spot
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- VIEW 5 -->
+		<!-- <div class="from-red-light to-purple-light bg-gradient-to-bl py-16 mx-auto">
+			<div class="text-center mx-auto py-16">
+				<h2
+					class="text-montserrat text-white text-3xl font-bold mx-8"
+					id="slide-show-container-title"
+				>
+					Vote On Things That Matter To You
+				</h2>
+			</div>
+			<div id="slide-show" class="slide-show-container min-w-max py-12">
+				<div class="slide-show-card slide-fade">
+					<div
+						id="infrastructure"
+						class="
+							mx-auto
+							max-w-max
+							bg-white
+							flex flex-row flex-nowrap
+							justify-center
+							align-content-center
+							py-3
+							px-6
+							rounded-3xl
+						"
+					>
+						<img
+							src="assets/svg/topic_icons/road-with-broken-line.svg"
+							alt="road"
+							class="w-16 h-16"
+						/>
+						<h4 class="mx-4 text-montserrat-500 text-2xl my-auto">
+							Infrastructure
+						</h4>
+					</div>
+				</div>
+				<div class="slide-show-card slide-fade">
+					<div
+						id="healthcare"
+						class="
+							mx-auto
+							max-w-max
+							bg-white
+							flex flex-row flex-nowrap
+							justify-center
+							py-3
+							px-6
+							rounded-3xl
+						"
+					>
+						<img
+							src="assets/svg/topic_icons/heart-rate.svg"
+							alt="heartbeat "
+							class="w-16 h-16"
+						/>
+						<h4 class="my-auto mx-4 text-montserrat-500 text-2xl">
+							Healthcare
+						</h4>
+					</div>
+				</div>
+				<div class="slide-show-card slide-fade">
+					<div
+						id="environment"
+						class="
+							mx-auto
+							max-w-max
+							bg-white
+							flex flex-row flex-nowrap
+							justify-center
+							py-3
+							px-6
+							rounded-3xl
+						"
+					>
+						<img
+							src="assets/svg/topic_icons/herbal-spa-treatment-leaves.svg"
+							alt="leaves"
+							class="w-16 h-16"
+						/>
+						<h4 class="my-auto mx-4 text-montserrat-500 text-2xl">
+							Environment
+						</h4>
+					</div>
+				</div>
+				<div class="slide-show-card slide-fade">
+					<div
+						id="public-safety"
+						class="
+							mx-auto
+							max-w-max
+							bg-white
+							flex flex-row flex-nowrap
+							justify-center
+							py-3
+							px-6
+							rounded-3xl
+						"
+					>
+						<img
+							src="assets/svg/topic_icons/shield.svg"
+							alt="shield"
+							class="w-16 h-16"
+						/>
+						<h4 class="my-auto mx-4 text-montserrat-500 text-2xl">
+							Public Safety
+						</h4>
+					</div>
+				</div>
+				<div class="slide-show-card slide-fade">
+					<div
+						id="small-business"
+						class="
+							mx-auto
+							max-w-max
+							bg-white
+							flex flex-row flex-nowrap
+							justify-center
+							py-3
+							px-6
+							rounded-3xl
+						"
+					>
+						<img
+							src="assets/svg/topic_icons/shopping-bag.svg"
+							alt="shopping bag"
+							class="w-16 h-16"
+						/>
+						<h4 class="my-auto mx-4 text-montserrat-500 text-2xl">
+							Small Business
+						</h4>
+					</div>
+				</div>
+				<div class="slide-show-card slide-fade">
+					<div
+						id="finance"
+						class="
+							mx-auto
+							max-w-max
+							bg-white
+							flex flex-row flex-nowrap
+							justify-center
+							py-3
+							px-6
+							rounded-3xl
+						"
+					>
+						<img
+							src="assets/svg/topic_icons/money-bag.svg"
+							alt="money"
+							class="w-16 h-16"
+						/>
+						<h4 class="my-auto mx-4 text-montserrat-500 text-2xl">Finance</h4>
+					</div>
+				</div>
+				<div class="slide-show-card slide-fade">
+					<div
+						id="law-enforcement"
+						class="
+							mx-auto
+							max-w-max
+							bg-white
+							flex flex-row flex-nowrap
+							justify-center
+							py-3
+							px-6
+							rounded-3xl
+						"
+					>
+						<img
+							src="assets/svg/topic_icons/police-badge.svg"
+							alt="police badge"
+							class="w-16 h-16"
+						/>
+						<h4 class="my-auto mx-4 text-montserrat-500 text-2xl">
+							Law Enforcement
+						</h4>
+					</div>
+				</div>
+				<div class="slide-show-card slide-fade">
+					<div
+						id="education"
+						class="
+							mx-auto
+							max-w-max
+							bg-white
+							flex flex-row flex-nowrap
+							justify-center
+							py-3
+							px-6
+							rounded-3xl
+						"
+					>
+						<img
+							src="assets/svg/topic_icons/book.svg"
+							alt="book"
+							class="w-16 h-16"
+						/>
+						<h4 class="my-auto mx-4 text-montserrat-500 text-2xl">Education</h4>
+					</div>
+				</div>
+			</div>
+			<div class="text-center pb-16">
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+				<span class="dot" onclick="currentSlide(4)"></span>
+				<span class="dot" onclick="currentSlide(5)"></span>
+				<span class="dot" onclick="currentSlide(6)"></span>
+				<span class="dot" onclick="currentSlide(7)"></span>
+				<span class="dot" onclick="currentSlide(8)"></span>
+
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+		</div> -->
+
+		<!-- <div
+			class="parallax-background"
+			style="background-image: url('../assets/img/crowd_of_people.png')"
+		>
+			<div class="max-w-5xl text-center py-16 px-8 mx-auto">
+				<div class="text-center mx-auto"></div>
+				<div class="mx-auto max-w-5xl">
+					<div class="py-64">
+						<h3
+							class="
+								text-montserrat text-3xl
+								md:text-4xl
+								lg:text-5xl
+								text-white
+								font-bold
+								py-3
+							"
+						>
+							Your City Is In Your Hands
+						</h3>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<!-- SIGN UP  -->
+		<div
+			id="sign-up"
+			style="
+				background: linear-gradient(
+						180deg,
+						rgba(255, 255, 255, 0) 0%,
+						rgb(141, 0, 255, 0.8) 100%
+					),
+					linear-gradient(
+						230deg,
+						rgba(255, 255, 255, 0) 0%,
+						rgba(96, 167, 234, 1) 90%
+					),
+					linear-gradient(
+						60deg,
+						rgba(255, 255, 255, 0) 0%,
+						rgba(248, 105, 139, 1) 80%
+					);
+			"
+		>
+			<div class="max-w-5xl text-center py-16 px-8 mx-auto">
+				<div
+					class="
+						md:flex md:flex-row md:flex-nowrap
+						md:justify-center
+						md:align-middle
+					"
+				>
+					<div class="text-center my-auto max-w-2xl flex-1">
+						<h4 class="text-white text-montserrat font-bold text-3xl pb-3">
+							Sign Up For Beta
+						</h4>
+						<div class="beta-signup m-3 px-6 py-6 md:my-8 rounded-2xl">
+							<form
+								action="https://formspree.io/f/myybwloo"
+								method="POST"
+								id="sign-up-form"
+								class="black-text"
+							>
+								<div>
+									<input
+										id="form-email"
+										name="form-email"
+										class="bg-white px-2 py-2 rounded-md w-full"
+										placeholder="email"
+									/>
+
+									<button
+										type="submit"
+										class="
+											bg-white
+											text-montserrat-500 text-md text-center
+											flex-shrink-0
+											px-6
+											py-1
+											my-2
+											rounded-md
+											w-full
+										"
+									>
+										Let's&nbspGo!
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="flex-1">
+						<img src="../assets/svg/signup_section_phone_guy.svg" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--footer-->
+		<!-- <div id="footer-placeholder"></div> -->
+		<footer class="bg-black">
+			<div
+				class="
+					mx-auto
+					text-center
+					pt-8
+					pb-16
+					md:flex md:flex-row
+					md:justify-around
+					md:max-w-5xl
+					md:align-middle
+				"
+			>
+				<div>
+					<div class="">
+						<h5 class="text-white text-montserrat text-lg py-6">
+							Find Us Online
+						</h5>
+						<ul class="social-icons">
+							<li>
+								<a
+									class="facebook"
+									href="https://www.facebook.com/quaeapp"
+									target="_blank"
+									><i class="fa fa-facebook"></i
+								></a>
+							</li>
+							<li>
+								<a
+									class="linkedin"
+									href="https://www.linkedin.com/company/quae/ "
+									target="_blank"
+									><i class="fa fa-linkedin"></i
+								></a>
+							</li>
+							<li>
+								<a
+									class="twitter"
+									href="https://twitter.com/Quae_App"
+									target="_blank"
+									><i class="fa fa-twitter"></i
+								></a>
+							</li>
+							<li>
+								<a
+									class="instagram"
+									href="https://www.instagram.com/quaeapp/"
+									target="_blank"
+									><i class="fa fa-instagram"></i
+								></a>
+							</li>
+							<li>
+								<a
+									class="youtube"
+									href="https://www.youtube.com/channel/UC8Mkk0uEYtbCs0TPk1ix94g"
+									target="_blank"
+									><i class="fa fa-youtube"></i
+								></a>
+							</li>
+						</ul>
+					</div>
+					<div class="text-white text-montserrat text-sm py-4">
+						<div>Quae &copy; 2021 All Rights Reserved</div>
+					</div>
+					<div class="text-white text-montserrat text-sm">
+						<div>
+							Contact us at
+							<span class="text-blue"
+								><a href="mailto:info@quae.app">info@quae.app</a></span
+							>
+						</div>
+					</div>
+				</div>
+				<hr
+					class="mx-12 my-6 md:hidden"
+					style="height: 1px; background-color: #ccc; border: none"
+				/>
+				<div
+					class="md:flex md:flex-row md:flex-nowrap md:align-middle md:my-auto"
+				>
+					<a href="../">
+						<p class="text-white text-montserrat text-lg md:px-10">Politics</p>
+					</a>
+					<a href="./groups.html">
+						<p class="text-white text-montserrat text-lg md:px-10">
+							Private Groups
+						</p>
+					</a>
+					<a href="https://medium.com/quae-app">
+						<p class="text-white text-montserrat text-lg md:px-10">Blog</p>
+					</a>
+					<a href="./about_us.html">
+						<p class="text-white text-montserrat text-lg md:px-10">About Us</p>
+					</a>
+
+					<!-- <a href="./security.html">
+						<p class="text-white text-montserrat text-lg md:px-10">Security</p></a
+					> -->
+				</div>
+			</div>
+		</footer>
+
+		<script src="../assets/js/animations.js"></script>
+	</body>
+</html>
