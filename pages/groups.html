@@ -165,7 +165,12 @@
 			</div>
 		</header>
 
-		<button id="drawer-open-btn" class="z-100" onclick="openNav()">
+		<button
+			id="drawer-open-btn"
+			aria-label="open navigation drawer"
+			class="z-100"
+			onclick="openNav()"
+		>
 			<div
 				class="
 					fixed
@@ -182,13 +187,22 @@
 				style="border-radius: 100%"
 			>
 				<div class="flex flex-col h-full place-content-center">
-					<img src="../assets/svg/menu.svg" class="w-1/2 mx-auto" />
+					<img
+						src="../assets/svg/menu.svg"
+						class="w-1/2 mx-auto"
+						alt="menu toggle"
+					/>
 				</div>
 			</div>
 		</button>
 
 		<div class="md:hidden">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+			<a
+				href="javascript:void(0)"
+				class="closebtn"
+				aria-label="close navigation drawer button"
+				onclick="closeNav()"
+			>
 				<div class="backdrop-container" id="backdrop"></div>
 			</a>
 			<div id="mySidenav" class="sidenav-container">
@@ -382,7 +396,9 @@
 						>
 							<div
 								class="
-									md:flex md:flex-row md:flex-nowrap
+									md:flex
+									md:flex-row
+									md:flex-nowrap
 									md:justify-center
 									md:align-middle
 								"
@@ -439,7 +455,9 @@
 				<div
 					class="
 						mx-auto
-						md:flex md:flex-row md:flex-wrap
+						md:flex
+						md:flex-row
+						md:flex-wrap
 						md:align-center
 						md:justify-center
 						md:max-w-max
@@ -584,18 +602,14 @@
 				<div
 					class="
 						mx-auto
-						md:flex md:flex-row md:flex-wrap
-						md:align-center
+						md:flex md:flex-row md:flex-wrap md:align-center
 						max-w-5xl
 					"
 				>
 					<div
 						class="
 							px-4
-							md:px-12
-							md:flex md:flex-col
-							md:justify-center
-							md:flex-1
+							md:px-12 md:flex md:flex-col md:justify-center md:flex-1
 						"
 					>
 						<div class="text-center mx-auto">
@@ -693,8 +707,7 @@
 						mx-auto
 						my-8
 						p-6
-						md:flex md:flex-row md:flex-nowrap
-						md:justify-center
+						md:flex md:flex-row md:flex-nowrap md:justify-center
 						rounded-2xl
 						shadow-md
 					"
@@ -744,8 +757,7 @@
 						my-8
 						p-6
 						align-middle
-						md:flex md:flex-row-reverse md:flex-nowrap
-						md:justify-center
+						md:flex md:flex-row-reverse md:flex-nowrap md:justify-center
 						rounded-2xl
 						shadow-md
 					"
@@ -795,8 +807,7 @@
 						my-8
 						p-6
 						align-middle
-						md:flex md:flex-row md:flex-nowrap
-						md:justify-center
+						md:flex md:flex-row md:flex-nowrap md:justify-center
 						rounded-2xl
 						shadow-md
 					"
@@ -860,7 +871,9 @@
 					class="
 						mx-auto
 						px-4
-						md:flex md:flex-row md:flex-no-wrap
+						md:flex
+						md:flex-row
+						md:flex-no-wrap
 						md:align-center
 						md:justify-evenly
 						md:max-w-7xl
@@ -877,8 +890,7 @@
 							my-8
 							min-w-min
 							w-4/5
-							md:mx-1
-							md:flex-1
+							md:mx-1 md:flex-1
 						"
 					>
 						<div
@@ -913,8 +925,7 @@
 							my-8
 							min-w-min
 							w-4/5
-							md:mx-0.5
-							md:flex-1
+							md:mx-0.5 md:flex-1
 						"
 					>
 						<div
@@ -1213,9 +1224,7 @@
 			<div class="max-w-5xl text-center py-16 px-8 mx-auto">
 				<div
 					class="
-						md:flex md:flex-row md:flex-nowrap
-						md:justify-center
-						md:align-middle
+						md:flex md:flex-row md:flex-nowrap md:justify-center md:align-middle
 					"
 				>
 					<div class="text-center my-auto max-w-2xl flex-1">
@@ -1271,20 +1280,18 @@
 					text-center
 					pt-8
 					pb-16
-					md:flex md:flex-row
-					md:justify-around
-					md:max-w-5xl
-					md:align-middle
+					md:flex md:flex-row md:justify-around md:max-w-5xl md:align-middle
 				"
 			>
 				<div>
 					<div class="">
-						<h5 class="text-white text-montserrat text-lg py-6">
+						<h2 class="text-white text-montserrat text-lg py-6">
 							Find Us Online
-						</h5>
+						</h2>
 						<ul class="social-icons">
 							<li>
 								<a
+									aria-label="visit quae's facebook account"
 									class="facebook"
 									href="https://www.facebook.com/quaeapp"
 									target="_blank"
@@ -1293,6 +1300,7 @@
 							</li>
 							<li>
 								<a
+									aria-label="visit quae's linkedin account"
 									class="linkedin"
 									href="https://www.linkedin.com/company/quae/ "
 									target="_blank"
@@ -1301,6 +1309,7 @@
 							</li>
 							<li>
 								<a
+									aria-label="visit quae's twitter account"
 									class="twitter"
 									href="https://twitter.com/Quae_App"
 									target="_blank"
@@ -1309,6 +1318,7 @@
 							</li>
 							<li>
 								<a
+									aria-label="visit quae's instagram account"
 									class="instagram"
 									href="https://www.instagram.com/quaeapp/"
 									target="_blank"
@@ -1317,6 +1327,7 @@
 							</li>
 							<li>
 								<a
+									aria-label="visit quae's youtube account"
 									class="youtube"
 									href="https://www.youtube.com/channel/UC8Mkk0uEYtbCs0TPk1ix94g"
 									target="_blank"
@@ -1332,7 +1343,12 @@
 						<div>
 							Contact us at
 							<span class="text-blue"
-								><a href="mailto:info@quae.app">info@quae.app</a></span
+								><a
+									href="mailto:info@quae.app"
+									id="email-link"
+									aria-label="link to send us an email"
+									>info@quae.app</a
+								></span
 							>
 						</div>
 					</div>
