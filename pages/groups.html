@@ -16,7 +16,7 @@
 		/>
 		<meta
 			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"
+			content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, target-densityDpi=device-dpi"
 		/>
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 
@@ -129,6 +129,7 @@
 									class="mx-2 hidden md:inline"
 									target="_blank"
 									href="https://medium.com/quae-app"
+									rel="noopener"
 								>
 									<span class="text-montserrat-400 text-white text-md">
 										Blog
@@ -223,6 +224,7 @@
 					<a
 						target="_blank"
 						href="https://medium.com/quae-app"
+						rel="noopener"
 						onclick="closeNav()"
 						id="blog-drawer-link"
 						>Blog</a
@@ -378,7 +380,7 @@
 						</div>
 					</div>
 					<div class="beta-signup m-6 mb-0 px-6 pt-3 pb-6 md:my-8 rounded-2xl">
-						<h5
+						<h3
 							class="
 								text-left
 								md:text-left
@@ -387,7 +389,7 @@
 							"
 						>
 							Sign Up For Beta!
-						</h5>
+						</h3>
 						<form
 							action="https://formspree.io/f/myybwloo"
 							method="POST"
@@ -950,7 +952,7 @@
 							</ul>
 							<h3>
 								email
-								<span class="text-blue"
+								<span style="color: blue"
 									><a href="mailto:info@quae.app">info@quae.app</a></span
 								>
 								to reserve your spot
@@ -1228,9 +1230,9 @@
 					"
 				>
 					<div class="text-center my-auto max-w-2xl flex-1">
-						<h4 class="text-white text-montserrat font-bold text-3xl pb-3">
+						<h2 class="text-white text-montserrat font-bold text-3xl pb-3">
 							Sign Up For Beta
-						</h4>
+						</h2>
 						<div class="beta-signup m-3 px-6 py-6 md:my-8 rounded-2xl">
 							<form
 								action="https://formspree.io/f/myybwloo"
@@ -1240,7 +1242,7 @@
 							>
 								<div>
 									<input
-										id="form-email"
+										id="private-groups-signup-form-email"
 										name="form-email"
 										class="bg-white px-2 py-2 rounded-md w-full"
 										placeholder="email"
@@ -1304,6 +1306,7 @@
 									class="linkedin"
 									href="https://www.linkedin.com/company/quae/ "
 									target="_blank"
+									rel="noopener"
 									><i class="fa fa-linkedin"></i
 								></a>
 							</li>
@@ -1313,6 +1316,7 @@
 									class="twitter"
 									href="https://twitter.com/Quae_App"
 									target="_blank"
+									rel="noopener"
 									><i class="fa fa-twitter"></i
 								></a>
 							</li>
@@ -1322,6 +1326,7 @@
 									class="instagram"
 									href="https://www.instagram.com/quaeapp/"
 									target="_blank"
+									rel="noopener"
 									><i class="fa fa-instagram"></i
 								></a>
 							</li>
@@ -1331,6 +1336,7 @@
 									class="youtube"
 									href="https://www.youtube.com/channel/UC8Mkk0uEYtbCs0TPk1ix94g"
 									target="_blank"
+									rel="noopener"
 									><i class="fa fa-youtube"></i
 								></a>
 							</li>
@@ -1342,12 +1348,12 @@
 					<div class="text-white text-montserrat text-sm">
 						<div>
 							Contact us at
-							<span class="text-blue"
+							<span
 								><a
 									href="mailto:info@quae.app"
 									id="email-link"
 									aria-label="link to send us an email"
-									>info@quae.app</a
+									><u>info@quae.app</u></a
 								></span
 							>
 						</div>
@@ -1357,27 +1363,65 @@
 					class="mx-12 my-6 md:hidden"
 					style="height: 1px; background-color: #ccc; border: none"
 				/>
-				<div
-					class="md:flex md:flex-row md:flex-nowrap md:align-middle md:my-auto"
-				>
-					<a href="../">
-						<p class="text-white text-montserrat text-lg md:px-10">Politics</p>
-					</a>
-					<a href="./groups.html">
-						<p class="text-white text-montserrat text-lg md:px-10">
-							Private Groups
-						</p>
-					</a>
-					<a href="https://medium.com/quae-app">
-						<p class="text-white text-montserrat text-lg md:px-10">Blog</p>
-					</a>
-					<a href="./about_us.html">
-						<p class="text-white text-montserrat text-lg md:px-10">About Us</p>
-					</a>
+				<div class="flex-col flex-nowrap align-middle my-auto">
+					<div
+						class="
+							md:flex md:flex-row md:flex-nowrap md:align-middle md:my-auto
+						"
+					>
+						<a href="../">
+							<p class="text-white text-montserrat text-lg md:px-10">
+								Politics
+							</p>
+						</a>
+						<a href="./groups.html">
+							<p class="text-white text-montserrat text-lg md:px-10">
+								Private Groups
+							</p>
+						</a>
+						<a href="https://medium.com/quae-app" rel="noopener">
+							<p class="text-white text-montserrat text-lg md:px-10">Blog</p>
+						</a>
+						<a href="./about_us.html">
+							<p class="text-white text-montserrat text-lg md:px-10">
+								About Us
+							</p>
+						</a>
 
-					<!-- <a href="./security.html">
+						<!-- <a href="./security.html">
 						<p class="text-white text-montserrat text-lg md:px-10">Security</p></a
 					> -->
+					</div>
+					<hr
+						class="mx-12 my-6"
+						style="height: 1px; background-color: #ccc; border: none"
+					/>
+					<div
+						class="
+							md:flex
+							md:flex-row
+							md:flex-nowrap
+							md:align-middle
+							md:justify-center
+							md:my-auto
+							mx-auto
+						"
+					>
+						<a href="./eula.html" target="_blank">
+							<p class="text-white text-montserrat text-sm md:px-10">
+								EULA Agreement
+							</p>
+						</a>
+						<a href="./privacyAgreement.html" target="_blank">
+							<p class="text-white text-montserrat text-sm md:px-10">
+								Privacy Policy
+							</p>
+						</a>
+
+						<!-- <a href="./security.html">
+						<p class="text-white text-montserrat text-lg md:px-10">Security</p></a
+					> -->
+					</div>
 				</div>
 			</div>
 		</footer>
