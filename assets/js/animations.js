@@ -20,14 +20,12 @@ $(document).ready(function () {
 						// 	transition: translateY(window.innerHeight()),
 						// });
 					} else {
-						// $(this).html("fading in/out");
 						$(this).css({
 							transition: "opacity 0.25s linear",
 							opacity: (windowBottom - objectTop) * ratio,
 						});
 					}
 				} else {
-					// $(this).html("not visible");
 					$(this).css("opacity", 0);
 				}
 			});
