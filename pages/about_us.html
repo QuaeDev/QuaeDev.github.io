@@ -16,7 +16,7 @@
 		/>
 		<meta
 			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"
+			content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, target-densityDpi=device-dpi"
 		/>
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 
@@ -77,21 +77,23 @@
 						</a>
 						<div class="flex justify-end">
 							<div class="block">
-								<!-- <a class="mx-2 hidden md:inline" href="./security.html">
-							<span class="text-montserrat-400 text-white text-md">
-								Security
-							</span>
-						</a> -->
 								<a class="mx-2 hidden md:inline" href="../">
 									<span
-										class="text-montserrat-400 text-white text-md"
-										id="hoboken-link-nav"
+										class="
+											hoboken-link-nav
+											text-montserrat-400 text-white text-md
+										"
+										id="politics-link-nav"
 									>
 										Politics
-									</span> </a
-								><a class="mx-2 hidden md:inline" href="./groups.html">
+									</span>
+								</a>
+								<a class="mx-2 hidden md:inline" href="./groups.html">
 									<span
-										class="text-montserrat-400 text-white text-md"
+										class="
+											pricing-link-nav
+											text-montserrat-400 text-white text-md
+										"
 										id="groups-link-nav"
 									>
 										Groups
@@ -102,24 +104,31 @@
 									class="mx-2 hidden md:inline"
 									target="_blank"
 									href="https://medium.com/quae-app"
+									rel="noopener"
 								>
 									<span class="text-montserrat-400 text-white text-md">
 										Blog
 									</span>
 								</a>
+								<!-- <a class="mx-2 hidden md:inline" href="./pages/pricing.html">
+									<span
+										class="
+											pricing-link-nav
+											text-montserrat-400 text-white text-md
+										"
+									>
+										Pricing
+									</span>
+								</a> -->
 								<a class="mx-2 hidden md:inline" href="./about_us.html">
 									<span
 										id="about-us-link-nav"
-										class="
-											about-us-link-nav
-											text-montserrat-400 text-white text-md
-										"
+										class="text-montserrat-400 text-white text-md"
 									>
 										About Us
 									</span>
 								</a>
-
-								<a class="mx-2 navlink" href="#sign-up">
+								<a class="mx-2 navlink" href="../#sign-up">
 									<span
 										class="
 											bg-white
@@ -138,7 +147,12 @@
 				</div>
 			</div>
 		</header>
-		<button id="drawer-open-btn" class="z-100" onclick="openNav()">
+		<button
+			id="drawer-open-btn"
+			aria-label="open navigation drawer"
+			class="z-100"
+			onclick="openNav()"
+		>
 			<div
 				class="
 					fixed
@@ -155,37 +169,51 @@
 				style="border-radius: 100%"
 			>
 				<div class="flex flex-col h-full place-content-center">
-					<img src="../assets/svg/menu.svg" class="w-1/2 mx-auto" />
+					<img
+						src="../assets/svg/menu.svg"
+						class="w-1/2 mx-auto"
+						alt="menu toggle"
+					/>
 				</div>
 			</div>
 		</button>
 
 		<div class="md:hidden">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+			<a
+				href="javascript:void(0)"
+				class="closebtn"
+				aria-label="close navigation drawer button"
+				onclick="closeNav()"
+			>
 				<div class="backdrop-container" id="backdrop"></div>
 			</a>
 			<div id="mySidenav" class="sidenav-container">
 				<div class="side-nav-content">
-					<a href="../" onclick="closeNav()" id="hoboken-drawer-link"
+					<a href="../" onclick="closeNav()" id="politics-drawer-link"
 						>Politics</a
-					><a href="./groups.html" onclick="closeNav()" id="groups-drawer-link"
+					>
+					<a href="./groups.html" onclick="closeNav()" id="groups-drawer-link"
 						>Private&nbspGroups</a
 					>
-
-					<a
-						href="./about_us.html"
+					<!-- <a
+						href="./pages/pricing.html"
 						onclick="closeNav()"
-						id="about-us-drawer-link"
+						id="pricing-drawer-link"
+						>Pricing</a
+					> -->
+					<a href="./" onclick="closeNav()" id="about-us-drawer-link"
 						>About&nbspUs</a
 					>
 
 					<a
 						target="_blank"
 						href="https://medium.com/quae-app"
+						rel="noopener"
 						onclick="closeNav()"
 						id="blog-drawer-link"
 						>Blog</a
-					><a class="mx-2 navlink" onClick="closeNav()" href="#sign-up">
+					>
+					<a class="mx-2 navlink" onClick="closeNav()" href="../#sign-up">
 						<span
 							class="
 								bg-white
@@ -196,9 +224,14 @@
 							"
 						>
 							Sign&nbspUp
-						</span> </a
-					><span class="drawer-close-button">
-						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+						</span>
+					</a>
+					<span class="drawer-close-button">
+						<a
+							href="javascript:void(0)"
+							class="closebtn"
+							id="close navigation drawer button"
+							onclick="closeNav()"
 							>&times;</a
 						>
 					</span>
@@ -294,6 +327,7 @@
 									<img
 										class="mx-auto w-1/2"
 										src="../assets/img/launchpad.png"
+										alt="launchpad logo"
 									/>
 								</div>
 								<div class="mx-auto text-center max-w-sm">
@@ -308,6 +342,7 @@
 									<img
 										class="mx-auto w-4/5"
 										src="../assets/img/Stevens-Official-PMSColor-R.png"
+										alt="stevens institute of technology logo"
 									/>
 								</div>
 								<div class="text-center">Stevens Institute of Technology</div>
@@ -343,11 +378,13 @@
 													class="linkedin mb-2"
 													href="https://www.linkedin.com/in/brendan-probst-a951ab1a8/"
 													target="_blank"
+													aria-label="visit Brendan Probst's Linkedin account"
+													rel="noopener"
 													><i class="fa fa-linkedin"></i
 												></a>
 											</div>
 										</div>
-										<h5 class="text-montserrat-400 text-sm mr-2">Co-Founder</h5>
+										<h4 class="text-montserrat-400 text-sm mr-2">Co-Founder</h4>
 										<p>
 											Brendan leads business operations at Quae and is a full
 											stack developer. Currently a sophomore at Stevens studying
@@ -376,11 +413,13 @@
 													class="linkedin mb-2"
 													href="https://www.linkedin.com/in/samuel-schmitt-008805189/"
 													target="_blank"
+													aria-label="visit Samuel Schmitt's Linkedin account"
+													rel="noopener"
 													><i class="fa fa-linkedin"></i
 												></a>
 											</div>
 										</div>
-										<h5 class="text-montserrat-400 text-sm mr-2">Co-Founder</h5>
+										<h4 class="text-montserrat-400 text-sm mr-2">Co-Founder</h4>
 										<p>
 											Sam leads product development at Quae and is a full stack
 											developer. Currently a sophomore at Stevens studying
@@ -408,8 +447,7 @@
 											flex flex-row flex-wrap
 											align-middle
 											justify-start
-											md:flex-col md:flex-nowrap
-											md:align-middle
+											md:flex-col md:flex-nowrap md:align-middle
 										"
 									>
 										<div class="mx-3 my-4 md:my-1 w-full md:w-auto">
@@ -444,10 +482,7 @@
 													text-montserrat-700 text-white
 													rounded-lg
 													shadow-lg
-													md:my-2
-													md:w-11/12
-													md:mx-3
-													md:justify-self-center
+													md:my-2 md:w-11/12 md:mx-3 md:justify-self-center
 												"
 											>
 												Send!
@@ -497,55 +532,62 @@
 					text-center
 					pt-8
 					pb-16
-					md:flex md:flex-row
-					md:justify-around
-					md:max-w-5xl
-					md:align-middle
+					md:flex md:flex-row md:justify-around md:max-w-5xl md:align-middle
 				"
 			>
 				<div>
-					<div class="">
-						<h5 class="text-white text-montserrat text-lg py-6">
+					<div>
+						<h2 class="text-white text-montserrat text-lg py-6">
 							Find Us Online
-						</h5>
+						</h2>
 						<ul class="social-icons">
 							<li>
 								<a
+									aria-label="visit quae's facebook account"
 									class="facebook"
 									href="https://www.facebook.com/quaeapp"
 									target="_blank"
+									rel="noopener"
 									><i class="fa fa-facebook"></i
 								></a>
 							</li>
 							<li>
 								<a
+									aria-label="visit quae's linkedin account"
 									class="linkedin"
 									href="https://www.linkedin.com/company/quae/ "
 									target="_blank"
+									rel="noopener"
 									><i class="fa fa-linkedin"></i
 								></a>
 							</li>
 							<li>
 								<a
+									aria-label="visit quae's twitter account"
 									class="twitter"
 									href="https://twitter.com/Quae_App"
 									target="_blank"
+									rel="noopener"
 									><i class="fa fa-twitter"></i
 								></a>
 							</li>
 							<li>
 								<a
+									aria-label="visit quae's instagram account"
 									class="instagram"
 									href="https://www.instagram.com/quaeapp/"
 									target="_blank"
+									rel="noopener"
 									><i class="fa fa-instagram"></i
 								></a>
 							</li>
 							<li>
 								<a
+									aria-label="visit quae's youtube account"
 									class="youtube"
 									href="https://www.youtube.com/channel/UC8Mkk0uEYtbCs0TPk1ix94g"
 									target="_blank"
+									rel="noopener"
 									><i class="fa fa-youtube"></i
 								></a>
 							</li>
@@ -557,8 +599,13 @@
 					<div class="text-white text-montserrat text-sm">
 						<div>
 							Contact us at
-							<span class="text-blue"
-								><a href="mailto:info@quae.app">info@quae.app</a></span
+							<span
+								><a
+									href="mailto:info@quae.app"
+									id="email-link"
+									aria-label="link to send us an email"
+									><u>info@quae.app</u></a
+								></span
 							>
 						</div>
 					</div>
@@ -567,27 +614,65 @@
 					class="mx-12 my-6 md:hidden"
 					style="height: 1px; background-color: #ccc; border: none"
 				/>
-				<div
-					class="md:flex md:flex-row md:flex-nowrap md:align-middle md:my-auto"
-				>
-					<a href="../">
-						<p class="text-white text-montserrat text-lg md:px-10">Politics</p>
-					</a>
-					<a href="./groups.html">
-						<p class="text-white text-montserrat text-lg md:px-10">
-							Private Groups
-						</p>
-					</a>
-					<a href="https://medium.com/quae-app">
-						<p class="text-white text-montserrat text-lg md:px-10">Blog</p>
-					</a>
-					<a href="./about_us.html">
-						<p class="text-white text-montserrat text-lg md:px-10">About Us</p>
-					</a>
+				<div class="flex-col flex-nowrap align-middle my-auto">
+					<div
+						class="
+							md:flex md:flex-row md:flex-nowrap md:align-middle md:my-auto
+						"
+					>
+						<a href="../">
+							<p class="text-white text-montserrat text-lg md:px-10">
+								Politics
+							</p>
+						</a>
+						<a href="./groups.html">
+							<p class="text-white text-montserrat text-lg md:px-10">
+								Private Groups
+							</p>
+						</a>
+						<a href="https://medium.com/quae-app" rel="noopener">
+							<p class="text-white text-montserrat text-lg md:px-10">Blog</p>
+						</a>
+						<a href="./about_us.html">
+							<p class="text-white text-montserrat text-lg md:px-10">
+								About Us
+							</p>
+						</a>
 
-					<!-- <a href="./security.html">
+						<!-- <a href="./security.html">
 						<p class="text-white text-montserrat text-lg md:px-10">Security</p></a
 					> -->
+					</div>
+					<hr
+						class="mx-12 my-6"
+						style="height: 1px; background-color: #ccc; border: none"
+					/>
+					<div
+						class="
+							md:flex
+							md:flex-row
+							md:flex-nowrap
+							md:align-middle
+							md:justify-center
+							md:my-auto
+							mx-auto
+						"
+					>
+						<a href="./eula.html" target="_blank">
+							<p class="text-white text-montserrat text-sm md:px-10">
+								EULA Agreement
+							</p>
+						</a>
+						<a href="./privacyAgreement.html" target="_blank">
+							<p class="text-white text-montserrat text-sm md:px-10">
+								Privacy Policy
+							</p>
+						</a>
+
+						<!-- <a href="./security.html">
+						<p class="text-white text-montserrat text-lg md:px-10">Security</p></a
+					> -->
+					</div>
 				</div>
 			</div>
 		</footer>

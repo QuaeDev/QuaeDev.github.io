@@ -16,7 +16,7 @@
 		/>
 		<meta
 			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"
+			content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, target-densityDpi=device-dpi"
 		/>
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 
@@ -128,6 +128,7 @@
 									class="mx-2 hidden md:inline"
 									target="_blank"
 									href="https://medium.com/quae-app"
+									rel="noopener"
 								>
 									<span class="text-montserrat-400 text-white text-md">
 										Blog
@@ -172,7 +173,12 @@
 				</div>
 			</div>
 		</header>
-		<button id="drawer-open-btn" class="z-100" onclick="openNav()">
+		<button
+			id="drawer-open-btn"
+			aria-label="open navigation drawer"
+			class="z-100"
+			onclick="openNav()"
+		>
 			<div
 				class="
 					fixed
@@ -189,13 +195,22 @@
 				style="border-radius: 100%"
 			>
 				<div class="flex flex-col h-full place-content-center">
-					<img src="./assets/svg/menu.svg" class="w-1/2 mx-auto" />
+					<img
+						src="./assets/svg/menu.svg"
+						class="w-1/2 h-1/2 mx-auto"
+						alt="menu toggle"
+					/>
 				</div>
 			</div>
 		</button>
 
 		<div class="md:hidden">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+			<a
+				href="javascript:void(0)"
+				class="closebtn"
+				aria-label="close navigation drawer button"
+				onclick="closeNav()"
+			>
 				<div class="backdrop-container" id="backdrop"></div>
 			</a>
 			<div id="mySidenav" class="sidenav-container">
@@ -225,6 +240,7 @@
 					<a
 						target="_blank"
 						href="https://medium.com/quae-app"
+						rel="noopener"
 						onclick="closeNav()"
 						id="blog-drawer-link"
 						>Blog</a
@@ -243,7 +259,11 @@
 						</span>
 					</a>
 					<span class="drawer-close-button">
-						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+						<a
+							href="javascript:void(0)"
+							class="closebtn"
+							id="close navigation drawer button"
+							onclick="closeNav()"
 							>&times;</a
 						>
 					</span>
@@ -326,7 +346,7 @@
 						</h2>
 					</div>
 					<div class="beta-signup m-6 mb-0 px-6 pt-3 pb-6 md:my-8 rounded-2xl">
-						<h5
+						<h3
 							class="
 								text-left
 								md:text-left
@@ -335,7 +355,7 @@
 							"
 						>
 							Sign Up For Beta!
-						</h5>
+						</h3>
 						<form
 							action="https://formspree.io/f/myybwloo"
 							method="POST"
@@ -344,7 +364,9 @@
 						>
 							<div
 								class="
-									md:flex md:flex-row md:flex-nowrap
+									md:flex
+									md:flex-row
+									md:flex-nowrap
 									md:justify-center
 									md:align-middle
 								"
@@ -382,7 +404,7 @@
 					<img
 						src="./assets/img/iphone_home_screenV2.png"
 						alt="home screen of app"
-						class="w-4/5 mx-auto md:flex-grow-1"
+						class="w-4/5 h-auto mx-auto md:flex-grow-1"
 					/>
 				</div>
 			</div>
@@ -412,7 +434,9 @@
 				<div
 					class="
 						mx-auto
-						md:flex md:flex-row md:flex-wrap
+						md:flex
+						md:flex-row
+						md:flex-wrap
 						md:align-center
 						md:justify-center
 						md:max-w-max
@@ -422,11 +446,7 @@
 						class="
 							mx-auto
 							pt-16
-							md:my-10
-							md:flex-1
-							md:w-6/12
-							md:text-right
-							md:align-middle
+							md:my-10 md:flex-1 md:w-6/12 md:text-right md:align-middle
 						"
 					>
 						<div
@@ -494,9 +514,7 @@
 					<div
 						class="
 							p-8
-							md:flex md:flex-col
-							md:justify-center
-							md:align-items-bottom
+							md:flex md:flex-col md:justify-center md:align-items-bottom
 						"
 					>
 						<img
@@ -504,13 +522,12 @@
 							alt="Hoboken, New Jersey Logo"
 							class="
 								h-100
+								w-auto
 								mx-auto
 								my-auto
 								flex-1 flex-grow
 								justify-self-center
-								md:justify-self-start
-								md:flex-grow-0
-								md:align-middle
+								md:justify-self-start md:flex-grow-0 md:align-middle
 							"
 						/>
 					</div>
@@ -524,8 +541,7 @@
 				<div
 					class="
 						mx-auto
-						md:flex md:flex-row md:flex-nowrap
-						md:align-center
+						md:flex md:flex-row md:flex-nowrap md:align-center
 						max-w-5xl
 					"
 				>
@@ -872,8 +888,7 @@
 						mx-auto
 						my-8
 						p-6
-						md:flex md:flex-row md:flex-nowrap
-						md:justify-center
+						md:flex md:flex-row md:flex-nowrap md:justify-center
 						rounded-2xl
 						shadow-md
 					"
@@ -909,7 +924,7 @@
 						<img
 							src="./assets/img/id_cardV2.png"
 							alt="quae id card"
-							class="min-w-md w-full mx-auto m-4"
+							class="min-w-md w-full h-auto mx-auto m-4"
 							style="
 								-webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.2));
 								filter: drop-shadow(0px 5px 5px 15px rgba(34, 34, 34, 0.2));
@@ -925,8 +940,7 @@
 						my-8
 						p-6
 						align-middle
-						md:flex md:flex-row-reverse md:flex-nowrap
-						md:justify-center
+						md:flex md:flex-row-reverse md:flex-nowrap md:justify-center
 						rounded-2xl
 						shadow-md
 					"
@@ -978,8 +992,7 @@
 						my-8
 						p-6
 						align-middle
-						md:flex md:flex-row md:flex-nowrap
-						md:justify-center
+						md:flex md:flex-row md:flex-nowrap md:justify-center
 						rounded-2xl
 						shadow-md
 					"
@@ -1299,15 +1312,13 @@
 			<div class="max-w-5xl text-center py-16 px-8 mx-auto">
 				<div
 					class="
-						md:flex md:flex-row md:flex-nowrap
-						md:justify-center
-						md:align-middle
+						md:flex md:flex-row md:flex-nowrap md:justify-center md:align-middle
 					"
 				>
 					<div class="text-center my-auto max-w-2xl flex-1">
-						<h4 class="text-white text-montserrat font-bold text-3xl pb-3">
+						<h2 class="text-white text-montserrat font-bold text-3xl pb-3">
 							Sign Up For Beta
-						</h4>
+						</h2>
 						<div class="beta-signup m-3 px-6 py-6 md:my-8 rounded-2xl">
 							<form
 								action="https://formspree.io/f/myybwloo"
@@ -1317,7 +1328,7 @@
 							>
 								<div>
 									<input
-										id="form-email"
+										id="beta-signup-form-email-field"
 										name="form-email"
 										class="bg-white px-2 py-2 rounded-md w-full"
 										placeholder="email"
@@ -1357,55 +1368,62 @@
 					text-center
 					pt-8
 					pb-16
-					md:flex md:flex-row
-					md:justify-around
-					md:max-w-5xl
-					md:align-middle
+					md:flex md:flex-row md:justify-around md:max-w-5xl md:align-middle
 				"
 			>
 				<div>
 					<div class="">
-						<h5 class="text-white text-montserrat text-lg py-6">
+						<h2 class="text-white text-montserrat text-lg py-6">
 							Find Us Online
-						</h5>
+						</h2>
 						<ul class="social-icons">
 							<li>
 								<a
+									aria-label="visit quae's facebook account"
 									class="facebook"
 									href="https://www.facebook.com/quaeapp"
 									target="_blank"
+									rel="noopener"
 									><i class="fa fa-facebook"></i
 								></a>
 							</li>
 							<li>
 								<a
+									aria-label="visit quae's linkedin account"
 									class="linkedin"
 									href="https://www.linkedin.com/company/quae/ "
 									target="_blank"
+									rel="noopener"
 									><i class="fa fa-linkedin"></i
 								></a>
 							</li>
 							<li>
 								<a
+									aria-label="visit quae's twitter account"
 									class="twitter"
 									href="https://twitter.com/Quae_App"
 									target="_blank"
+									rel="noopener"
 									><i class="fa fa-twitter"></i
 								></a>
 							</li>
 							<li>
 								<a
+									aria-label="visit quae's instagram account"
 									class="instagram"
 									href="https://www.instagram.com/quaeapp/"
 									target="_blank"
+									rel="noopener"
 									><i class="fa fa-instagram"></i
 								></a>
 							</li>
 							<li>
 								<a
+									aria-label="visit quae's youtube account"
 									class="youtube"
 									href="https://www.youtube.com/channel/UC8Mkk0uEYtbCs0TPk1ix94g"
 									target="_blank"
+									rel="noopener"
 									><i class="fa fa-youtube"></i
 								></a>
 							</li>
@@ -1417,8 +1435,13 @@
 					<div class="text-white text-montserrat text-sm">
 						<div>
 							Contact us at
-							<span class="text-blue"
-								><a href="mailto:info@quae.app">info@quae.app</a></span
+							<span
+								><a
+									href="mailto:info@quae.app"
+									id="email-link"
+									aria-label="link to send us an email"
+									><u>info@quae.app</u></a
+								></span
 							>
 						</div>
 					</div>
@@ -1427,27 +1450,65 @@
 					class="mx-12 my-6 md:hidden"
 					style="height: 1px; background-color: #ccc; border: none"
 				/>
-				<div
-					class="md:flex md:flex-row md:flex-nowrap md:align-middle md:my-auto"
-				>
-					<a href="/">
-						<p class="text-white text-montserrat text-lg md:px-10">Politics</p>
-					</a>
-					<a href="./pages/groups.html">
-						<p class="text-white text-montserrat text-lg md:px-10">
-							Private Groups
-						</p>
-					</a>
-					<a href="https://medium.com/quae-app">
-						<p class="text-white text-montserrat text-lg md:px-10">Blog</p>
-					</a>
-					<a href="./pages/about_us.html">
-						<p class="text-white text-montserrat text-lg md:px-10">About Us</p>
-					</a>
+				<div class="flex-col flex-nowrap align-middle my-auto">
+					<div
+						class="
+							md:flex md:flex-row md:flex-nowrap md:align-middle md:my-auto
+						"
+					>
+						<a href="/">
+							<p class="text-white text-montserrat text-lg md:px-10">
+								Politics
+							</p>
+						</a>
+						<a href="./pages/groups.html">
+							<p class="text-white text-montserrat text-lg md:px-10">
+								Private Groups
+							</p>
+						</a>
+						<a href="https://medium.com/quae-app" rel="noopener">
+							<p class="text-white text-montserrat text-lg md:px-10">Blog</p>
+						</a>
+						<a href="./pages/about_us.html">
+							<p class="text-white text-montserrat text-lg md:px-10">
+								About Us
+							</p>
+						</a>
 
-					<!-- <a href="./security.html">
+						<!-- <a href="./security.html">
 						<p class="text-white text-montserrat text-lg md:px-10">Security</p></a
 					> -->
+					</div>
+					<hr
+						class="mx-12 my-6"
+						style="height: 1px; background-color: #ccc; border: none"
+					/>
+					<div
+						class="
+							md:flex
+							md:flex-row
+							md:flex-nowrap
+							md:align-middle
+							md:justify-center
+							md:my-auto
+							mx-auto
+						"
+					>
+						<a href="./pages/eula.html" target="_blank">
+							<p class="text-white text-montserrat text-sm md:px-10">
+								EULA Agreement
+							</p>
+						</a>
+						<a href="./pages/privacyAgreement.html" target="_blank">
+							<p class="text-white text-montserrat text-sm md:px-10">
+								Privacy Policy
+							</p>
+						</a>
+
+						<!-- <a href="./security.html">
+						<p class="text-white text-montserrat text-lg md:px-10">Security</p></a
+					> -->
+					</div>
 				</div>
 			</div>
 		</footer>
