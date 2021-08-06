@@ -6,3 +6,9 @@
 
 @import "tailwindcss/utilities";
 @import "./custom-utilities.css";
+
+@layer components {
+	.app-store-btn {
+		@apply max-h-16 max-w-sm m-2;
+	}
+}
