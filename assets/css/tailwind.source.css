@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link {
+	@apply mx-2 hidden md:inline;
+}
+.nav-link span {
+	@apply text-lg;
+}

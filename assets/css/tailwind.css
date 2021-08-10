@@ -19081,6 +19081,23 @@ video {
           animation: bounce 1s infinite;
 }
 
+.nav-link {
+  display: none;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .nav-link {
+    display: inline;
+  }
+}
+
+.nav-link span {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

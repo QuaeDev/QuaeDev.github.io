@@ -21,7 +21,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 
 		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap"
 			rel="stylesheet"
 		/>
 		<link
@@ -34,7 +34,6 @@
 		/>
 
 		<link rel="stylesheet" href="./assets/css/tailwind.css" />
-		<link rel="stylesheet" href="./assets/css/customTailwind.css" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		<link rel="stylesheet" href="./assets/css/animation.css" />
 		<script src="./assets/js/animations.js"></script>
@@ -58,7 +57,7 @@
 			gtag("config", "G-4CS6KQ279Q", { cookie_flags: "SameSite=None;Secure" });
 		</script>
 	</head>
-	<body class="bg-offwhite">
+	<body class="bg-white">
 		<!-- <div class="intro">
 			<div class="load-logo">
 				<img src="./assets/img/quae_logo_transparent.svg" class="w-16 load" />
@@ -72,91 +71,59 @@
 		<div class="nav-placeholder"></div>
 
 		<!-- VIEW 1 -->
-		<div
-			class="py-12 px-6 md:pt-24"
-			style="
-				background: linear-gradient(
-						180deg,
-						rgba(255, 255, 255, 0) 0%,
-						rgb(141, 0, 255, 0.66) 100%
-					),
-					linear-gradient(
-						230deg,
-						rgba(255, 255, 255, 0) 0%,
-						rgba(96, 167, 234, 1) 80%
-					),
-					linear-gradient(
-						60deg,
-						rgba(255, 255, 255, 0) 0%,
-						rgba(248, 105, 139, 1) 80%
-					);
-			"
-		>
+		<div class="py-12 px-6 md:pt-24">
 			<div
 				class="flex flex-row-reverse flex-wrap justify-center"
 				style="filter: none"
 			>
-				<div class="mt-10 text-left">
+				<div class="mt-10 text-left" style="width: clamp(30rem, 50%, 70rem)">
 					<div class="px-6">
-						<h1 class="mt-4 md:mt-8 text-montserrat-600 text-5xl md:text-6xl">
+						<h1
+							id="title"
+							class="mt-4 pb-4 md:mt-8 text-montserrat-900 text-5xl md:text-6xl"
+						>
 							Vote Every&nbspDay
 						</h1>
-						<h2
+						<p
 							class="
 								mb-4
 								md:mb-8
-								text-black text-montserrat-500 text-2xl
-								md:text-2xl
+								text-black text-montserrat-500 text-xl
+								md:text-xl
+								max-w-2xl
 							"
 						>
-							Exclusive To Hoboken
-						</h2>
+							Quae is a community driven voting app. Voice your concerns to your
+							city and see action today!
+						</p>
 					</div>
-					<div class="beta-signup m-6 mb-0 px-6 pt-3 pb-6 md:my-8 rounded-2xl">
+					<div class="beta-signup m-6 mb-0 p-3 md:my-8 rounded-2xl">
 						<h3
 							class="text-center text-black text-montserrat-500 text-2xl mb-2"
 						>
-							Become a beta tester!
+							Join Today!
 						</h3>
-						<div
-							class="
-								flex flex-row flex-wrap
-								justify-center
-								align-center
-								mx-auto
-							"
-						>
-							<a
-								href="https://apps.apple.com/us/app/quae/id1555653993"
-								target="_blank"
-								rel="noopener"
-								aria-label="visit the app store to download quae"
-								class="GA-app-store-link"
-							>
-								<img
-									src="./assets/img/app_store_download.png"
-									class="max-w-sm max-h-16 m-2"
-									alt="download on the app store" /></a
-							><a
-								href="https://play.google.com/store/apps/details?id=com.quae.quaeapp&hl=en_US&gl=US"
-								target="_blank"
-								rel="noopener"
-								aria-label="visit the google play store to download quae"
-								class="GA-play-store-link"
-							>
-								<img
-									src="./assets/img/google-play-badge-logo-png-transparent.png"
-									class="max-w-sm max-h-16 m-2"
-									alt="download on the google play store"
-							/></a>
-						</div>
+						<div class="app-store-container-placeholder"></div>
 					</div>
+					<h2
+						class="
+							mb-4
+							px-6
+							md:mb-8
+							text-black text-montserrat-500 text-2xl
+							md:text-2xl
+						"
+					>
+						Exclusive To Hoboken
+					</h2>
 				</div>
-				<img
-					src="./assets/img/iphone_home_screenV3.png"
-					alt="home screen of app"
-					class="w-1/4 md:flex-grow-1 p-5"
-				/>
+				<div id="phone-check-placeholder" alt="home screen of app"></div>
+			</div>
+			<div class="flex flex-col flex-nowrap justify-center align-middle">
+				<h4 class="text-montserrat-500 text-2xl text-center mt-4 opacity-60">
+					Learn More
+				</h4>
+				<span class="arrow-down mx-auto"></span>
 			</div>
 		</div>
 		<!-- VIEW 2 -->
@@ -812,157 +779,6 @@
 			</div>
 		</div>
 		<!--footer-->
-		<!-- <div id="footer-placeholder"></div> -->
-		<footer class="bg-black">
-			<div
-				class="
-					mx-auto
-					text-center
-					pt-8
-					pb-16
-					md:flex md:flex-row md:justify-around md:max-w-5xl md:align-middle
-				"
-			>
-				<div>
-					<div class="">
-						<h2 class="text-white text-montserrat text-lg py-6">
-							Find Us Online
-						</h2>
-						<ul class="social-icons">
-							<li>
-								<a
-									class="facebook"
-									href="https://www.facebook.com/quaeapp"
-									target="_blank"
-									rel="noopener"
-									aria-label="visit quae's facebook account"
-									><i class="fa fa-facebook"></i
-								></a>
-							</li>
-							<li>
-								<a
-									aria-label="visit quae's linkedin account"
-									class="linkedin"
-									href="https://www.linkedin.com/company/quae/ "
-									target="_blank"
-									rel="noopener"
-									><i class="fa fa-linkedin"></i
-								></a>
-							</li>
-							<li>
-								<a
-									aria-label="visit quae's twitter account"
-									class="twitter"
-									href="https://twitter.com/Quae_App"
-									target="_blank"
-									rel="noopener"
-									><i class="fa fa-twitter"></i
-								></a>
-							</li>
-							<li>
-								<a
-									aria-label="visit quae's instagram account"
-									class="instagram"
-									href="https://www.instagram.com/quaeapp/"
-									target="_blank"
-									rel="noopener"
-									><i class="fa fa-instagram"></i
-								></a>
-							</li>
-							<li>
-								<a
-									aria-label="visit quae's youtube account"
-									class="youtube"
-									href="https://www.youtube.com/channel/UC8Mkk0uEYtbCs0TPk1ix94g"
-									target="_blank"
-									rel="noopener"
-									><i class="fa fa-youtube"></i
-								></a>
-							</li>
-						</ul>
-					</div>
-					<div class="text-white text-montserrat text-sm py-4">
-						<div>Quae &copy; 2021 All Rights Reserved</div>
-					</div>
-					<div class="text-white text-montserrat text-sm">
-						<div>
-							Contact us at
-							<span
-								><a
-									href="mailto:info@quae.app"
-									id="email-link"
-									aria-label="link to send us an email"
-									><u>info@quae.app</u></a
-								></span
-							>
-						</div>
-					</div>
-				</div>
-				<hr
-					class="mx-12 my-6 md:hidden"
-					style="height: 1px; background-color: #ccc; border: none"
-				/>
-				<div class="flex-col flex-nowrap align-middle my-auto">
-					<div
-						class="
-							md:flex md:flex-row md:flex-nowrap md:align-middle md:my-auto
-						"
-					>
-						<a href="/">
-							<p class="text-white text-montserrat text-lg md:px-10">
-								Politics
-							</p>
-						</a>
-						<a href="./pages/groups.html">
-							<p class="text-white text-montserrat text-lg md:px-10">
-								Private Groups
-							</p>
-						</a>
-						<a href="https://medium.com/quae-app" rel="noopener">
-							<p class="text-white text-montserrat text-lg md:px-10">Blog</p>
-						</a>
-						<a href="./pages/about_us.html">
-							<p class="text-white text-montserrat text-lg md:px-10">
-								About Us
-							</p>
-						</a>
-
-						<!-- <a href="./security.html">
-						<p class="text-white text-montserrat text-lg md:px-10">Security</p></a
-					> -->
-					</div>
-					<hr
-						class="mx-12 my-6"
-						style="height: 1px; background-color: #ccc; border: none"
-					/>
-					<div
-						class="
-							md:flex
-							md:flex-row
-							md:flex-nowrap
-							md:align-middle
-							md:justify-center
-							md:my-auto
-							mx-auto
-						"
-					>
-						<a href="./pages/eula.html" target="_blank">
-							<p class="text-white text-montserrat text-sm md:px-10">
-								EULA Agreement
-							</p>
-						</a>
-						<a href="./pages/privacyAgreement.html" target="_blank">
-							<p class="text-white text-montserrat text-sm md:px-10">
-								Privacy Policy
-							</p>
-						</a>
-
-						<!-- <a href="./security.html">
-						<p class="text-white text-montserrat text-lg md:px-10">Security</p></a
-					> -->
-					</div>
-				</div>
-			</div>
-		</footer>
+		<div class="footer-placeholder"></div>
 	</body>
 </html>
