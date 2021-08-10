@@ -60,29 +60,6 @@
 	animation: hobokenEmphasize 0s infinite;
 	box-shadow: 0px 0px 25px 1px rgba(255, 255, 255, 0.5);
 }
-/* @keyframes hobokenEmphasize {
-	0% {
-		transform: translateY(0px);
-	}
-	10% {
-		transform: translateY(0px);
-	}
-	13% {
-		transform: translateY(5px);
-	}
-	16% {
-		transform: translateY(0px);
-	}
-	19% {
-		transform: translateY(5px);
-	}
-	21% {
-		transform: translateY(0px);
-	}
-	100% {
-		transform: translateY(0px);
-	}
-} */
 
 @keyframes hobokenEmphasize {
 	0% {
@@ -114,8 +91,49 @@
 		-webkit-transform: scale(1);
 	}
 }
-
-/* 
+#shapes-below-circle {
+}
+#shapes-below-square {
+}
+#shapes-inside-check-1 {
+	animation: shapes-inside-check-animation-1 10s infinite linear;
+	
+	
+}
+#shapes-inside-check-2 {
+	animation: shapes-inside-check-animation-2 10s infinite linear;
+	
+	
+}
+@keyframes shapes-inside-check-animation-1 {
+	from {
+		transform: translateX(200px);
+	}
+	to {
+		transform: translateX(-200px);
+	}
+}
+@keyframes shapes-inside-check-animation-2 {
+	from {
+		transform: translateX(-50px);
+	}
+	to {
+		transform: translateX(-350px);
+	}
+}
+/* @-moz-keyframes shapes-inside-check-animation {
+    from { -moz-transform: translateX(0deg); }
+    to { -moz-transform: translateX(100px); }
+}
+@-webkit-keyframes shapes-inside-check-animation {
+    from { -webkit-transform: translateX(0deg); }
+    to { -webkit-transform: translateX(100px); }
+}
+@keyframes shapes-inside-check-animation {
+    from {transform:translateX(0deg);}
+    to {transform:translateX(100px);}
+} */
+ 
 .auto-scroll-card {
 	animation: auto-scroll-card 10s linear infinite;
 }
