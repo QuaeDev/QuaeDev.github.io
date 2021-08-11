@@ -97,13 +97,9 @@
 }
 #shapes-inside-check-1 {
 	animation: shapes-inside-check-animation-1 10s infinite linear;
-	
-	
 }
 #shapes-inside-check-2 {
 	animation: shapes-inside-check-animation-2 10s infinite linear;
-	
-	
 }
 @keyframes shapes-inside-check-animation-1 {
 	from {
@@ -121,19 +117,25 @@
 		transform: translateX(-350px);
 	}
 }
-/* @-moz-keyframes shapes-inside-check-animation {
-    from { -moz-transform: translateX(0deg); }
-    to { -moz-transform: translateX(100px); }
+
+.fade-slide-in {
+	opacity: 0;
+
+	transition: opacity 500ms linear;
 }
-@-webkit-keyframes shapes-inside-check-animation {
-    from { -webkit-transform: translateX(0deg); }
-    to { -webkit-transform: translateX(100px); }
+.fade-slide-in.right {
+	transform: translateX(100px);
+	transition: all 750ms linear;
 }
-@keyframes shapes-inside-check-animation {
-    from {transform:translateX(0deg);}
-    to {transform:translateX(100px);}
-} */
- 
+.fade-slide-in.top {
+	transform: translateY(-100px);
+	transition: all 750ms linear;
+}
+.fade-slide-in.appear {
+	opacity: 1;
+	transform: translateX(0px) translateY(0px);
+}
+
 .auto-scroll-card {
 	animation: auto-scroll-card 10s linear infinite;
 }
@@ -148,7 +150,7 @@
 	to {
 		transform: translateX(250%);
 	}
-} */
+}
 
 /* #navbar-component {
 	animation: nav-bar 2s ease-in-out;
