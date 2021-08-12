@@ -191,6 +191,7 @@
 	</div>
 </div>
 <script>
+	// rendering the correct URL for all the links based on where they are located in the file tree
 	let URL = window.location.href;
 
 	if (URL.indexOf("pages") != -1) {
@@ -215,6 +216,7 @@
 	}
 </script>
 <script>
+	// changes the logo from color to white when scrolled 100px
 	if (URL.includes("groups") || URL.includes("about_us")) {
 		var logo = document.getElementById("logo");
 		logo.setAttribute("src", "../assets/svg/quae_logo.svg");
@@ -238,6 +240,7 @@
 	}
 </script>
 <script>
+	// changes the look of the navbar when scrolled 100px
 	$(window).scroll(function () {
 		var $height = $(window).scrollTop();
 		var navLink = document.getElementsByClassName("nav-link");
@@ -271,17 +274,13 @@
 <script>
 	function openNav() {
 		//opens side navbar by 70 percent
-
 		document.getElementById("mySidenav").style.width = "175px";
-
 		//opens overlay display
 		document.getElementById("backdrop").style.display = "block";
 	}
-
 	function closeNav() {
 		//closes side navbar totally
 		document.getElementById("mySidenav").style.width = "0";
-
 		//removes overlay display
 		document.getElementById("backdrop").style.display = "none";
 	}

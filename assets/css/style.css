@@ -29,7 +29,7 @@
 	font-family: "Montserrat", sans-serif;
 	font-weight: 900;
 }
-#title {
+.title {
 	background: #8f67ff;
 	background: -webkit-linear-gradient(to bottom, #8f67ff 0%, #6840d9 100%);
 	background: -moz-linear-gradient(to bottom, #8f67ff 0%, #6840d9 100%);

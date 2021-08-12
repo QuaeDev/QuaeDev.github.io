@@ -42,7 +42,7 @@
 		<link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
 		<link rel="stylesheet" href="../assets/css/animation.css" type="text/css" />
 
-		<script src="./assets/js/jquery-3.6.0.js" type="text/javascript"></script>
+		<script src="../assets/js/jquery-3.6.0.js" type="text/javascript"></script>
 		<script src="../assets/js/componentRendering.js" type="module"></script>
 		<script src="../assets/js/animations.mjs" type="module"></script>
 
@@ -61,7 +61,7 @@
 			gtag("config", "G-4CS6KQ279Q", { cookie_flags: "SameSite=None;Secure" });
 		</script>
 	</head>
-	<body class="bg-offwhite">
+	<body class="bg-white">
 		<!-- <div class="intro">
 			<div class="load-logo">
 				<img src="./assets/img/quae_logo_transparent.svg" class="w-16 load" />
@@ -76,51 +76,107 @@
 		<div class="nav-placeholder"></div>
 
 		<!-- VIEW 1 -->
-		<div class="py-12 px-6 md:pt-24">
+		<div class="container md:pt-12 min-h-screen">
+			<h1
+				class="
+					title
+					hidden
+					md:block
+					lg:hidden
+					text-montserrat-900 text-center text-center text-5xl
+					md:text-6xl
+					pb-2
+					mt-6
+				"
+				style="margin-bottom: -1rem"
+			>
+				Vote Every Day
+			</h1>
 			<div
-				class="flex flex-row-reverse flex-wrap justify-center"
+				class="
+					flex flex-col
+					md:flex-row-reverse
+					flex-nowrap
+					justify-start
+					md:justify-center
+					mx-auto
+					py-4
+					md:pt-0
+					lg:mt-8
+				"
 				style="filter: none"
 			>
-				<div class="mt-10 text-left" style="width: clamp(30rem, 50%, 70rem)">
-					<div class="px-6">
+				<div class="mt-10 flex-1" style="width: clamp(10rem, 100%, 70rem)">
+					<div class="md:px-6 fade-slide-in top-small">
 						<h1
-							id="title"
-							class="mt-4 pb-4 md:mt-8 text-montserrat-900 text-5xl md:text-6xl"
+							class="
+								title
+								block
+								md:hidden
+								lg:block
+								text-montserrat-900 text-center
+								lg:text-left
+								text-5xl
+								md:text-6xl
+								pb-4
+							"
 						>
-							Vote Every&nbspDay
+							Vote Every Day
 						</h1>
-						<div class="flex flex-row flex-wrap justify-start my-2 md:my-4">
-							<p class="mb-4 md:mb-8 text-black text-montserrat-500 text-2xl">
-								Democratize Your&nbsp
-							</p>
-							<p class="mb-4 md:mb-8 text-black text-montserrat-500 text-2xl">
-								<a
-									href=""
-									class="typewrite pointer-events-none cursor-default"
-									data-period="3000"
-									data-type='[ "Club", "Organization", "Union", "Business", "Company", "School" ]'
-								>
-									<span class="wrap"></span>
-								</a>
-							</p>
-						</div>
-					</div>
-					<div class="beta-signup m-3 mb-0 p-3 rounded-2xl">
-						<h3
-							class="text-center text-black text-montserrat-500 text-2xl mb-2"
+
+						<h2
+							class="
+								lg:mb-2
+								text-black text-montserrat-700 text-2xl text-center
+								md:text-3xl md:text-left
+								leading-none
+							"
 						>
-							Join Today!
-						</h3>
-						<div class="app-store-container-placeholder"></div>
+							Democratize Your <span class="typed-text"></span
+							><span class="cursor"></span>
+						</h2>
+						<p
+							class="
+								max-w-md
+								px-2
+								md:px-0 md:mb-4
+								lg:pt-4
+								text-black text-montserrat-500 text-md
+								md:text-xl md:text-left
+								max-w-2xl
+							"
+						>
+							Quae is a community voting app. Voice your concerns in your group
+							and see result today!
+						</p>
 					</div>
+					<div class="app-store-container-placeholder hidden md:block"></div>
 				</div>
-				<div id="phone-check-placeholder" alt="home screen of app"></div>
-			</div>
-			<div class="flex flex-col flex-nowrap justify-center align-middle">
-				<h4 class="text-montserrat-500 text-2xl text-center mt-4 opacity-60">
-					Learn More
-				</h4>
-				<span class="arrow-down mx-auto"></span>
+
+				<div class="flex-1 flex flex-col justify-center">
+					<div
+						id="phone-check-placeholder"
+						class="
+							fade-slide-in
+							left
+							w-full
+							flex flex-row flex-nowrap
+							my-auto
+							justify-center
+							md:justify-end
+						"
+						alt="home screen of app"
+					></div>
+					<div
+						class="
+							app-store-container-placeholder
+							block
+							md:hidden
+							fade-slide-in
+							bottom-small
+						"
+					></div>
+				</div>
 			</div>
 		</div>
 
@@ -134,57 +190,51 @@
 					Empower Your Members Like Never Before
 				</h3>
 			</div>
-			<div
-				class="
-					mx-auto
-					max-w-max
-					md:flex md:flex-row md:flex-nowrap md:align-center md:justify-center
-				"
-			>
-				<div class="mx-auto p-8 mt-8 md:mt-16 md:my-10">
-					<div
-						class="
-							flex flex-col flex-grow-0
-							justify-evenly
-							align-middle
-							max-w-max
-							mx-auto
-							h-full
-						"
-					>
-						<div class="fade-slide-in bottom-small">
-							<img
-								src="./assets/svg/community.svg"
-								class="w-16 h-16 m-4 mx-auto"
-								alt="group of people icon"
-							/>
-							<h4 class="text-montserrat-600 text-lg md:text-xl text-center">
-								Increase Communication
-							</h4>
-						</div>
-						<div class="fade-slide-in bottom-small">
-							<img
-								src="./assets/svg/speech-bubble.svg"
-								class="w-16 h-16 m-4 mx-auto"
-								alt="speech bubbles icon"
-							/>
-							<h4 class="text-montserrat-600 text-lg md:text-xl text-center">
-								Share Ideas and Concerns
-							</h4>
-						</div>
-						<div class="fade-slide-in bottom-small">
-							<img
-								src="./assets/svg/politician.svg"
-								class="w-16 h-16 m-4 mx-auto"
-								alt="politician giving a speech icon"
-							/>
-							<h4 class="text-montserrat-600 text-lg md:text-xl text-center">
-								Lead Democratically
-							</h4>
-						</div>
+			<div class="mx-auto max-w-max">
+				<!-- md:flex md:flex-row md:flex-nowrap md:align-center md:justify-center -->
+
+				<div
+					class="
+						md:flex md:flex-row md:justify-evenly
+						align-middle
+						max-w-max
+						mx-auto
+						p-8
+						mt-8
+					"
+				>
+					<div class="fade-slide-in bottom-small p-4">
+						<img
+							src="../assets/svg/community.svg"
+							class="w-16 h-16 m-4 mx-auto"
+							alt="group of people icon"
+						/>
+						<h4 class="text-montserrat-600 text-lg md:text-xl text-center">
+							Increase Communication
+						</h4>
+					</div>
+					<div class="fade-slide-in bottom-small p-4">
+						<img
+							src="../assets/svg/speech-bubble.svg"
+							class="w-16 h-16 m-4 mx-auto"
+							alt="speech bubbles icon"
+						/>
+						<h4 class="text-montserrat-600 text-lg md:text-xl text-center">
+							Share Ideas and Concerns
+						</h4>
+					</div>
+					<div class="fade-slide-in bottom-small p-4">
+						<img
+							src="../assets/svg/politician.svg"
+							class="w-16 h-16 m-4 mx-auto"
+							alt="politician giving a speech icon"
+						/>
+						<h4 class="text-montserrat-600 text-lg md:text-xl text-center">
+							Lead Democratically
+						</h4>
 					</div>
 				</div>
-				<div
+				<!-- <div
 					class="
 						p-8
 						max-w-max
@@ -229,170 +279,23 @@
 							>.
 						</p>
 					</div>
-				</div>
-			</div>
-		</div>
-		<div class="px-6 py-12 md:px-6 mx-auto">
-			<div class="bg-white rounded-2xl shadow-2xl p-8 md:p-16 mx-auto w-auto">
-				<div class="text-center mx-auto">
-					<h2 class="text-montserrat font-bold text-3xl">
-						Legendary Groups Act as One
-					</h2>
-					<h3 class="text-montserrat text-xl">
-						Empower Your Members Like Never Before
-					</h3>
-				</div>
-				<div
-					class="
-						mx-auto
-						md:flex
-						md:flex-row
-						md:flex-wrap
-						md:align-center
-						md:justify-center
-						md:max-w-max
-					"
-				>
-					<div
-						class="
-							mx-auto
-							pt-12
-							md:py-16
-							md:pr-8
-							md:my-10
-							md:flex-1
-							md:w-6/12
-							md:text-right
-							md:align-middle
-						"
-					>
-						<div
-							class="
-								flex flex-col flex-grow-0
-								justify-end
-								md:align-right
-								max-w-max
-								mx-auto
-							"
-						>
-							<div
-								class="
-									flex flex-row-reverse
-									lg:flex-row
-									flex-nowrap
-									justify-end
-									content-center
-								"
-							>
-								<h4
-									class="
-										text-montserrat-500 text-lg
-										inline
-										self-center
-										text-left
-										lg:text-right
-									"
-								>
-									Increase Communication
-								</h4>
-								<img
-									src="../assets/svg/team.svg"
-									alt="community icon"
-									class="w-16 h-16 my-6 mx-3 float-right"
-								/>
-							</div>
-							<div
-								class="
-									flex flex-row-reverse
-									lg:flex-row
-									flex-nowrap
-									justify-end
-									content-center
-								"
-							>
-								<h4
-									class="
-										text-montserrat-500 text-lg text-start
-										inline
-										self-center
-										text-left
-										lg:text-right
-									"
-								>
-									Members Share Concerns and Ideas
-								</h4>
-								<img
-									src="../assets/svg/share_ideas.svg"
-									alt="megaphone icon"
-									class="w-16 h-16 my-6 mx-3 float-right"
-								/>
-							</div>
-							<div
-								class="
-									flex flex-row-reverse
-									lg:flex-row
-									flex-nowrap
-									justify-end
-									content-center
-								"
-							>
-								<h4
-									class="
-										text-montserrat-500 text-lg text-start
-										inline
-										self-center
-										text-left
-										lg:text-right
-									"
-								>
-									Lead Democratically
-								</h4>
-								<img
-									src="../assets/svg/lead_democratically.svg"
-									alt="city hall icon"
-									class="w-16 h-16 my-6 mx-3 float-right"
-								/>
-							</div>
-						</div>
-					</div>
-					<!-- <div
-						class="
-							py-3
-							md:p-8
-							max-w-max
-							md:flex md:flex-col
-							md:justify-center
-							md:align-items-bottom
-						"
-					> -->
-					<img
-						src="../assets/img/company_meeting.jfif"
-						alt="Group meeting"
-						class="
-							w-full
-							md:w-3/5
-							min-w-32
-							md:min-w-48
-							max-w-7xl
-							rounded-md
-							md:rounded-2xl
-							mx-auto
-							my-auto
-							flex-1 flex-grow
-						"
-					/>
-					<!-- </div> -->
-				</div>
+				</div> -->
 			</div>
 		</div>
 
 		<!-- VIEW 3 -->
-		<div class="from-blue-light to-purple-light bg-gradient-to-bl">
-			<div class="max-w-5xl py-12 md:py-24 px-6 mx-auto">
+		<div
+			class="from-blue to-purple-light bg-gradient-to-bl shadow-lg z-1"
+			style="transform: skewY(10deg)"
+		>
+			<div
+				class="max-w-5xl py-12 md:py-24 my-12 md:my-36 px-6 mx-auto"
+				style="transform: skewY(-10deg)"
+			>
 				<div
 					class="
 						mx-auto
-						md:flex md:flex-row md:flex-wrap md:align-center
+						md:flex md:flex-row md:flex-nowrap md:align-center
 						max-w-5xl
 					"
 				>
@@ -487,171 +390,55 @@
 		<div class="px-6 py-12 md:px-6 md:py-24 mx-auto max-w-5xl text-center">
 			<div class="text-center mx-auto">
 				<div class="pb-6 md:pb-12">
-					<h2 class="text-montserrat font-bold text-3xl">How It Works</h2>
+					<h2 class="text-montserrat font-bold text-4xl">How It Works</h2>
 				</div>
 			</div>
 			<div class="mx-auto max-w-5xl">
-				<div
-					class="
-						bg-white
-						mx-auto
-						my-8
-						p-6
-						md:flex md:flex-row md:flex-nowrap md:justify-center
-						rounded-2xl
-						shadow-md
-					"
-				>
-					<div class="md:flex-1 my-auto">
-						<div class="inline-flex flex-row flex-nowrap justify-center">
-							<div class="text-left max-h-min">
-								<div class="inline-flex flex-row flex-nowrap justify-start">
-									<img
-										src="../assets/svg/numbers/number-one.svg"
-										alt="1"
-										class="w-12 h-12 p-3"
-									/>
-									<h3
-										class="
-											text-montserrat-500 text-left text-2xl
-											md:text-3xl
-											my-auto
-										"
-									>
-										Create Group
-									</h3>
-								</div>
-								<p class="px-6 max-w-md w-full text-left">
-									Set up a group and invite members to join.
-								</p>
-							</div>
-						</div>
+				<div class="how-it-works-card">
+					<div class="text-container fade-slide-in top">
+						<h3 class="text-montserrat-700 title">Create Group</h3>
+						<p class="subtitle">Set up a group and invite members to join.</p>
 					</div>
-					<div class="mx-auto md:flex-1">
+					<div class="img-container">
 						<img
-							src="../assets/img/create_group.png"
+							src="../assets/img/id_cardV2.png"
 							alt="quae id card"
-							class="min-w-md w-full mx-auto m-4 p-12"
-							style="
-								-webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.2));
-								filter: drop-shadow(0px 5px 5px 15px rgba(34, 34, 34, 0.2));
-								border-radius: 80px;
-							"
+							class="img fade-slide-in right"
 						/>
 					</div>
 				</div>
-				<div
-					class="
-						bg-white
-						mx-auto
-						my-8
-						p-6
-						align-middle
-						md:flex md:flex-row-reverse md:flex-nowrap md:justify-center
-						rounded-2xl
-						shadow-md
-					"
-				>
-					<div class="md:flex-1 my-auto">
-						<div class="flex flex-row flex-nowrap justify-center">
-							<div>
-								<div class="flex flex-row flex-nowrap">
-									<img
-										src="../assets/svg/numbers/number-2.svg"
-										alt="2"
-										class="w-12 h-12 p-3"
-									/>
-									<h3
-										class="
-											text-montserrat-500 text-left text-2xl
-											md:text-3xl
-											my-auto
-										"
-									>
-										Members Share Ideas
-									</h3>
-								</div>
-								<p class="px-6 max-w-md w-full text-left">
-									See what people care about
-								</p>
-							</div>
-						</div>
+				<div class="how-it-works-card reverse">
+					<div class="text-container fade-slide-in top">
+						<h3 class="text-montserrat-700 title">Members Share Ideas</h3>
+						<p class="subtitle">See what people care about</p>
 					</div>
-					<div class="mx-auto md:flex-1">
+					<div class="img-container">
 						<img
-							src="../assets/img/groups_post_example.png"
-							alt="vote confirmation"
-							style="
-								-webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.2));
-								filter: drop-shadow(0px 5px 5px 15px rgba(34, 34, 34, 0.2));
-								border-radius: 20px;
-							"
-							class="min-w-72 w-4/5 max-w-lg mx-auto p-4"
+							src="../assets/img/id_cardV2.png"
+							alt="quae id card"
+							class="img fade-slide-in left"
 						/>
 					</div>
 				</div>
-				<div
-					class="
-						bg-white
-						mx-auto
-						my-8
-						p-6
-						align-middle
-						md:flex md:flex-row md:flex-nowrap md:justify-center
-						rounded-2xl
-						shadow-md
-					"
-				>
-					<div class="md:flex-1 my-auto">
-						<div class="flex flex-row flex-nowrap justify-center">
-							<div>
-								<div class="flex flex-row flex-nowrap">
-									<img
-										src="../assets/svg/numbers/number-3.svg"
-										alt="3"
-										class="w-12 h-12 p-3"
-									/>
-									<h3
-										class="
-											text-montserrat-500 text-left text-2xl
-											md:text-3xl
-											my-auto
-										"
-									>
-										Act
-									</h3>
-								</div>
-								<p class="px-6 max-w-md w-full text-left">
-									With data showing you how your group feels, you can make
-									better decisions.
-								</p>
-							</div>
-						</div>
+				<div class="how-it-works-card">
+					<div class="text-container fade-slide-in top">
+						<h3 class="text-montserrat-700 title">Act</h3>
+						<p class="subtitle">
+							With data showing you how your group feels, you can make better
+							decisions.
+						</p>
 					</div>
-
-					<div class="mx-auto md:flex-1">
+					<div class="img-container">
 						<img
-							src="../assets/img/latest_update.png"
-							alt="sample post"
-							class="
-								min-w-72
-								w-4/5
-								max-w-lg
-								mx-auto
-								p-4
-								rounded-lg
-								border-black
-							"
-							style="
-								-webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.2));
-								filter: drop-shadow(0px 5px 5px 15px rgba(34, 34, 34, 0.2));
-								border-radius: 30px;
-							"
+							src="../assets/img/post_example_2.png"
+							alt="quae id card"
+							class="img fade-slide-in right"
 						/>
 					</div>
 				</div>
 			</div>
 		</div>
+
 		<div class="py-12 px-0 md:py-16 bg-purple-light">
 			<div class="mx-auto">
 				<h3 class="text-center text-white px-4 text-montserrat-600 text-3xl">
