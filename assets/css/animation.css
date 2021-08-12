@@ -120,7 +120,6 @@
 
 .fade-slide-in {
 	opacity: 0;
-
 	transition: opacity 500ms linear;
 }
 .fade-slide-in.right {
@@ -133,6 +132,18 @@
 }
 .fade-slide-in.top {
 	transform: translateY(-100px);
+	transition: all 750ms linear;
+}
+.fade-slide-in.top-small {
+	transform: translateY(-25px);
+	transition: all 750ms linear;
+}
+.fade-slide-in.bottom {
+	transform: translateY(100px);
+	transition: all 750ms linear;
+}
+.fade-slide-in.bottom-small {
+	transform: translateY(50px);
 	transition: all 750ms linear;
 }
 .fade-slide-in.appear {

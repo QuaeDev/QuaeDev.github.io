@@ -4,19 +4,19 @@ module.exports = {
 	theme: {
 		colors: {
 			purple: {
-				DEFAULT: "#7026ab",
-				dark: "#5B2A82",
-				light: "#915ABD",
+				DEFAULT: "#6840D9",
+				dark: "#59009F",
+				light: "#8F67FF",
 			},
 			blue: {
-				DEFAULT: "#317EC6",
-				dark: "#125A9D",
-				light: "#60A7EA",
+				DEFAULT: "#55BDDE",
+				dark: "#0085BE",
+				light: "#8ED6FF",
 			},
 			red: {
-				DEFAULT: "#DA494F",
-				dark: "#A83237",
-				light: "#F4797E",
+				DEFAULT: "#F41690",
+				dark: "#BC0063",
+				light: "#FF61C0",
 			},
 			gray: {
 				DEFAULT: "#bdbdbd",

@@ -42,8 +42,8 @@
 >
 	<div class="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6">
 		<a href="/" class="flex flex-col justify-start content-start">
-			<img src="#" class="w-8 h-8 md:m-2" alt="quae logo" id="logo" />
-			<img src="#" class="w-8 h-8 md:m-2" alt="quae logo" id="logo-white" />
+			<img src="#" class="w-8 h-8 m-2" alt="quae logo" id="logo" />
+			<img src="#" class="w-8 h-8 m-2" alt="quae logo" id="logo-white" />
 		</a>
 		<div class="block">
 			<a
@@ -98,14 +98,15 @@
 >
 	<div
 		class="
+			z-50
 			fixed
-			w-16
-			h-16
+			w-12
+			h-12
 			bottom-0
 			right-0
 			m-2
 			shadow-xl
-			bg-black
+			bg-purple
 			border-2 border-purple-light
 			md:hidden
 		"
@@ -167,8 +168,8 @@
 			>
 				<span
 					class="
-						bg-white
-						text-md text-black text-montserrat-600
+						bg-purple
+						text-md text-white text-montserrat-600
 						px-3
 						py-2
 						rounded-md
@@ -266,4 +267,22 @@
 			}
 		}
 	});
+</script>
+<script>
+	function openNav() {
+		//opens side navbar by 70 percent
+
+		document.getElementById("mySidenav").style.width = "175px";
+
+		//opens overlay display
+		document.getElementById("backdrop").style.display = "block";
+	}
+
+	function closeNav() {
+		//closes side navbar totally
+		document.getElementById("mySidenav").style.width = "0";
+
+		//removes overlay display
+		document.getElementById("backdrop").style.display = "none";
+	}
 </script>

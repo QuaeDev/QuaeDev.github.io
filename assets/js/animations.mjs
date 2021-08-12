@@ -1,7 +1,7 @@
 const fadeSlides = document.querySelectorAll(".fade-slide-in");
 $(document).ready(function () {
 	$(window).on("load", function () {
-		const appearOptions = { threshold: 1, rootMargin: "0px 0px -100px 0px" };
+		const appearOptions = { threshold: 1, rootMargin: "0px 0px -50px 0px" };
 		const appearOnScroll = new IntersectionObserver(function (
 			entries,
 			appearOnScroll
@@ -16,9 +16,11 @@ $(document).ready(function () {
 			});
 		},
 		appearOptions);
+
 		fadeSlides.forEach((fadeSlide) => {
 			appearOnScroll.observe(fadeSlide);
 		});
+
 		function openNav() {
 			//opens side navbar by 70 percent
 

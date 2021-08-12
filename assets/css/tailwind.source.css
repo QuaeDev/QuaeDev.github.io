@@ -3,31 +3,49 @@
 @tailwind utilities;
 
 .nav-link {
-	@apply mx-2 hidden md:inline;
+	@apply mx-2 hidden;
 }
 .nav-link span {
 	@apply text-lg;
 }
+.container {
+	@apply px-3 py-6 mx-auto w-full;
+}
 .how-it-works-card {
-	@apply bg-white	mx-auto	my-8 p-6 md:flex md:flex-row md:flex-nowrap md:justify-center;
+	@apply bg-white	mx-auto	my-12 py-12;
 }
 .how-it-works-card .text-container {
 	@apply my-auto pr-3;
 }
 
 .how-it-works-card .text-container .title {
-	@apply text-center text-3xl md:text-4xl;
+	@apply text-center text-3xl;
 }
 .how-it-works-card .text-container .subtitle {
 	@apply mx-auto w-full text-justify;
 }
 .how-it-works-card .img-container {
-	@apply mx-auto pl-6;
+	@apply mx-auto px-6;
 }
 .how-it-works-card .img-container img {
-	@apply w-3/5 h-auto mx-auto m-4;
+	@apply w-4/5 h-auto mx-auto m-4;
 }
-@media screen(md) {
+@screen md {
+	.nav-link {
+		@apply inline;
+	}
+	.container {
+		@apply px-6;
+	}
+	.beta-signup {
+		@apply mx-6 my-8;
+	}
+	.how-it-works-card {
+		@apply my-24 flex flex-row flex-nowrap justify-center;
+	}
+	.how-it-works-card.reverse {
+		@apply flex-row-reverse;
+	}
 	.how-it-works-card .text-container {
 		@apply flex-1;
 	}
