@@ -184,6 +184,12 @@
 	margin: auto;
 }
 
+.how-it-works-card .img-container img {
+	-webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.2));
+	filter: drop-shadow(0px 5px 5px 15px rgba(34, 34, 34, 0.2));
+	border-radius: 1.5rem;
+	min-width: min(80%, 28rem);
+}
 /* Hide the images by default */
 .slide-show-card {
 	display: none;

@@ -127,6 +127,10 @@
 	transform: translateX(100px);
 	transition: all 750ms linear;
 }
+.fade-slide-in.left {
+	transform: translateX(-100px);
+	transition: all 750ms linear;
+}
 .fade-slide-in.top {
 	transform: translateY(-100px);
 	transition: all 750ms linear;

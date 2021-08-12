@@ -12,12 +12,32 @@
 	@apply bg-white	mx-auto	my-8 p-6 md:flex md:flex-row md:flex-nowrap md:justify-center;
 }
 .how-it-works-card .text-container {
-	@apply md:flex-1 my-auto pr-3;
+	@apply my-auto pr-3;
 }
 
-.how-it-works-card .text .text-container .title {
+.how-it-works-card .text-container .title {
 	@apply text-center text-3xl md:text-4xl;
 }
-.how-it-works-card .text .text-container .subtitle {
-	@apply max-w-md mx-auto w-full text-justify;
+.how-it-works-card .text-container .subtitle {
+	@apply mx-auto w-full text-justify;
+}
+.how-it-works-card .img-container {
+	@apply mx-auto pl-6;
+}
+.how-it-works-card .img-container img {
+	@apply w-3/5 h-auto mx-auto m-4;
+}
+@media screen(md) {
+	.how-it-works-card .text-container {
+		@apply flex-1;
+	}
+	.how-it-works-card .text-container .title {
+		@apply text-4xl;
+	}
+	.how-it-works-card .img-container {
+		@apply flex-1;
+	}
+	.how-it-works-card .img-container img {
+		@apply w-full;
+	}
 }

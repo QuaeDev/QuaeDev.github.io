@@ -19123,31 +19123,57 @@ video {
   padding-right: 0.75rem;
 }
 
-@media (min-width: 768px) {
-  .how-it-works-card .text-container {
-    flex: 1 1 0%;
-  }
-}
-
-.how-it-works-card .text .text-container .title {
+.how-it-works-card .text-container .title {
   font-size: 1.875rem;
   line-height: 2.25rem;
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  .how-it-works-card .text .text-container .title {
+  .how-it-works-card .text-container .title {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
 }
 
-.how-it-works-card .text .text-container .subtitle {
+.how-it-works-card .text-container .subtitle {
   margin-left: auto;
   margin-right: auto;
-  max-width: 28rem;
   text-align: justify;
   width: 100%;
+}
+
+.how-it-works-card .img-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+}
+
+.how-it-works-card .img-container img {
+  height: auto;
+  margin: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+@media screen(md) {
+  .how-it-works-card .text-container {
+    flex: 1 1 0%;
+  }
+
+  .how-it-works-card .text-container .title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .how-it-works-card .img-container {
+    flex: 1 1 0%;
+  }
+
+  .how-it-works-card .img-container img {
+    width: 100%;
+  }
 }
 
 @media (min-width: 640px) {
