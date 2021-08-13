@@ -124,10 +124,7 @@
 		-webkit-transform: scale(1);
 	}
 }
-#shapes-below-circle {
-}
-#shapes-below-square {
-}
+
 #shapes-inside-check-1 {
 	animation: shapes-inside-check-animation-1 10s infinite linear;
 }

@@ -14,8 +14,13 @@ $(function () {
 	$(".footer-placeholder").load("../../pages/htmlComponents/footer.html");
 });
 $(function () {
-	$("#phone-check-placeholder").load(
-		"../../pages/htmlComponents/phone_check_svg.html"
+	$("#phone-check-placeholder-group").load(
+		"../../pages/htmlComponents/groups-phone-check.html"
+	);
+});
+$(function () {
+	$("#phone-check-placeholder-hoboken").load(
+		"../../pages/htmlComponents/hoboken-phone-check.html"
 	);
 });
 $(function () {

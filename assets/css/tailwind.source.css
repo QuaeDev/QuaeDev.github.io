@@ -12,7 +12,7 @@
 	@apply px-3 py-6 mx-auto w-full;
 }
 .how-it-works-card {
-	@apply bg-white	mx-auto;
+	@apply bg-white	mx-auto py-3;
 }
 .how-it-works-card .text-container {
 	@apply my-auto pr-3;
