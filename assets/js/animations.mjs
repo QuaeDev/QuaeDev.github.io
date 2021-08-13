@@ -2,7 +2,7 @@ $(document).ready(function () {
 	$(window).on("load", function () {
 		const fadeSlides = document.querySelectorAll(".fade-slide-in");
 
-		const appearOptions = { threshold: 1, rootMargin: "0px 0px -50px 0px" };
+		const appearOptions = { threshold: 0.25, rootMargin: "0px 0px -50px 0px" };
 		const appearOnScroll = new IntersectionObserver(function (
 			entries,
 			appearOnScroll
@@ -20,6 +20,31 @@ $(document).ready(function () {
 
 		fadeSlides.forEach((fadeSlide) => {
 			appearOnScroll.observe(fadeSlide);
+		});
+		const fadeSlidesNoMargin = document.querySelectorAll(
+			".fade-slide-in-no-margin"
+		);
+
+		// const appearOptionsNoMargin = {
+		// 	threshold: 1,
+		// 	rootMargin: "0px 0px 0px 0px",
+		// };
+		const appearOnScrollNoMargin = new IntersectionObserver(function (
+			entries,
+			appearOnScrollNoMargin
+		) {
+			entries.forEach((entry) => {
+				if (!entry.isIntersecting) {
+					return;
+				} else {
+					entry.target.classList.add("appear");
+					appearOnScrollNoMargin.unobserve(entry.target);
+				}
+			});
+		});
+
+		fadeSlidesNoMargin.forEach((fadeSlide) => {
+			appearOnScrollNoMargin.observe(fadeSlide);
 		});
 		const typedTextSpan = document.querySelector(".typed-text");
 		const textArray = ["Club", "Company", "Organization", "Union"];
@@ -70,60 +95,6 @@ $(document).ready(function () {
 				rect.right <=
 					(window.innerWidth || document.documentElement.clientWidth)
 			);
-		}
-
-		var slideIndex = 0;
-		showSlides();
-
-		function showSlides() {
-			var i;
-			var slides = document.getElementsByClassName("slide-show-card");
-			var dots = document.getElementsByClassName("dot");
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-			}
-			slideIndex++;
-			if (slideIndex > slides.length) {
-				slideIndex = 1;
-			}
-			for (i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace(" active", "");
-			}
-			slides[slideIndex - 1].style.display = "block";
-			dots[slideIndex - 1].className += " active";
-			setTimeout(showSlides, 5000); // Change image every 2 seconds
-		}
-
-		showSlidesManual(slideIndex);
-
-		// Next/previous controls
-		function plusSlides(n) {
-			showSlidesManual((slideIndex += n));
-		}
-
-		// Thumbnail image controls
-		function currentSlide(n) {
-			showSlidesManual((slideIndex = n));
-		}
-
-		function showSlidesManual(n) {
-			var i;
-			var slides = document.getElementsByClassName("slide-show-card");
-			var dots = document.getElementsByClassName("dot");
-			if (n > slides.length) {
-				slideIndex = 1;
-			}
-			if (n < 1) {
-				slideIndex = slides.length;
-			}
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-			}
-			for (i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace(" active", "");
-			}
-			slides[slideIndex - 1].style.display = "block";
-			dots[slideIndex - 1].className += " active";
 		}
 	});
 });
@@ -236,7 +207,6 @@ $(document).ready(function () {
 // 		var toRotate = elements[i].getAttribute("data-type");
 // 		var period = elements[i].getAttribute("data-period");
 // 		if (toRotate) {
-// 			new TxtType(elements[i], JSON.parse(toRotate), period);
 // 		}
 // 	}
 // 	// INJECT CSS
@@ -245,3 +215,5 @@ $(document).ready(function () {
 // 	css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
 // 	document.body.appendChild(css);
 // };
+
+// 1

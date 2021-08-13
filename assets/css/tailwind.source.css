@@ -12,7 +12,7 @@
 	@apply px-3 py-6 mx-auto w-full;
 }
 .how-it-works-card {
-	@apply bg-white	mx-auto	my-12 py-12;
+	@apply bg-white	mx-auto;
 }
 .how-it-works-card .text-container {
 	@apply my-auto pr-3;
@@ -41,7 +41,7 @@
 		@apply mx-6 my-8;
 	}
 	.how-it-works-card {
-		@apply my-24 flex flex-row flex-nowrap justify-center;
+		@apply my-6 flex flex-row flex-nowrap justify-center;
 	}
 	.how-it-works-card.reverse {
 		@apply flex-row-reverse;

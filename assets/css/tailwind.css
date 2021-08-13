@@ -19105,12 +19105,8 @@ video {
 .how-it-works-card {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-  margin-top: 3rem;
-  margin-bottom: 3rem;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .how-it-works-card .text-container {
@@ -19169,8 +19165,8 @@ video {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .how-it-works-card.reverse {

@@ -21,7 +21,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 
 		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap"
 			rel="stylesheet"
 		/>
 		<link
@@ -34,11 +34,7 @@
 		/>
 
 		<link rel="stylesheet" href="../assets/css/tailwind.css" type="text/css" />
-		<!-- <link
-			rel="stylesheet"
-			href="../assets/css/customTailwind.css"
-			type="text/css"
-			/> -->
+
 		<link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
 		<link rel="stylesheet" href="../assets/css/animation.css" type="text/css" />
 
@@ -106,8 +102,11 @@
 				"
 				style="filter: none"
 			>
-				<div class="mt-10 flex-1" style="width: clamp(10rem, 100%, 70rem)">
-					<div class="md:px-6 fade-slide-in top-small">
+				<div
+					class="mt-10 flex-1 h-full"
+					style="width: clamp(10rem, 100%, 70rem)"
+				>
+					<div class="md:px-6 flex flex-col justify-center content-center">
 						<h1
 							class="
 								title
@@ -149,16 +148,14 @@
 							Quae is a community voting app. Voice your concerns in your group
 							and see result today!
 						</p>
+						<div class="app-store-container-placeholder hidden md:block"></div>
 					</div>
-					<div class="app-store-container-placeholder hidden md:block"></div>
 				</div>
 
 				<div class="flex-1 flex flex-col justify-center">
 					<div
 						id="phone-check-placeholder"
 						class="
-							fade-slide-in
-							left
 							w-full
 							flex flex-row flex-nowrap
 							my-auto
@@ -178,9 +175,15 @@
 					></div>
 				</div>
 			</div>
+			<div class="flex flex-col flex-nowrap justify-center align-middle">
+				<h4 class="text-montserrat-500 text-2xl text-center mt-4 opacity-60">
+					Learn More
+				</h4>
+				<span class="arrow-down mx-auto"></span>
+			</div>
 		</div>
 
-		<!-- VIEW 2 -->
+		<!-- VIEW 2-legendary groups act as one -->
 		<div class="container">
 			<div class="text-center mx-auto">
 				<h2 class="text-montserrat font-bold text-3xl">
@@ -283,8 +286,62 @@
 			</div>
 		</div>
 
-		<!-- VIEW 3 -->
+		<!-- VIEW 3- security -->
 		<div
+			class="from-blue to-purple-light bg-gradient-to-bl shadow-lg z-1"
+			style="transform: skewY(10deg)"
+		>
+			<div
+				class="max-w-5xl py-12 md:py-24 my-12 md:my-36 px-6 mx-auto"
+				style="transform: skewY(-10deg)"
+			>
+				<div
+					class="
+						mx-auto
+						md:flex md:flex-row md:flex-nowrap md:align-center
+						max-w-5xl
+					"
+				>
+					<div class="md:px-12 md:flex md:flex-col md:justify-center md:flex-1">
+						<div class="text-center mx-auto fade-slide-in bottom-small">
+							<h2 class="text-montserrat text-3xl text-white font-bold pt-3">
+								Your Group is Secure
+							</h2>
+						</div>
+
+						<div
+							class="
+								mx-auto
+								max-w-md
+								my-6
+								bg-white
+								p-6
+								rounded-lg
+								shadow-2xl
+								fade-slide-in
+								bottom-small
+							"
+						>
+							You can be confident that everyone in your Quae group belongs
+							there. Require a specific email domain or disable auto-joining to
+							manually approve each join request. With Quae you never have to
+							worry about bots or trolls invading your group.
+							<br />
+						</div>
+					</div>
+
+					<div class="mx-auto md:flex-shrink md:flex-1 w-full">
+						<div class="mx-auto items-center w-full md:w-4/5">
+							<div
+								id="security-svg-placeholder"
+								class="fade-slide-in bottom-small"
+							></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <div
 			class="from-blue to-purple-light bg-gradient-to-bl shadow-lg z-1"
 			style="transform: skewY(10deg)"
 		>
@@ -309,9 +366,7 @@
 							<h2 class="text-montserrat text-3xl text-white font-bold pt-3">
 								Make Your Members Feel Valued
 							</h2>
-							<!-- <h3 class="text-montserrat text-xl text-white py-3">
-								All users are Quae ID verified
-							</h3> -->
+							
 						</div>
 
 						<div class="mx-auto max-w-max p-6 max-full">
@@ -385,8 +440,8 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- VIEW 4 -->
+		</div> -->
+		<!-- VIEW 4 - How it works -->
 		<div class="px-6 py-12 md:px-6 md:py-24 mx-auto max-w-5xl text-center">
 			<div class="text-center mx-auto">
 				<div class="pb-6 md:pb-12">
@@ -397,11 +452,14 @@
 				<div class="how-it-works-card">
 					<div class="text-container fade-slide-in top">
 						<h3 class="text-montserrat-700 title">Create Group</h3>
-						<p class="subtitle">Set up a group and invite members to join.</p>
+						<p class="subtitle">
+							Creating a Quae group is simple. Set up a group and invite members
+							to join.
+						</p>
 					</div>
 					<div class="img-container">
 						<img
-							src="../assets/img/id_cardV2.png"
+							src="../assets/svg/create_group.svg"
 							alt="quae id card"
 							class="img fade-slide-in right"
 						/>
@@ -410,11 +468,15 @@
 				<div class="how-it-works-card reverse">
 					<div class="text-container fade-slide-in top">
 						<h3 class="text-montserrat-700 title">Members Share Ideas</h3>
-						<p class="subtitle">See what people care about</p>
+						<p class="subtitle">
+							Members can propose solutions to problems they see and get
+							feedback from their peers. With Quae, you can see what people care
+							about.
+						</p>
 					</div>
 					<div class="img-container">
 						<img
-							src="../assets/img/id_cardV2.png"
+							src="../assets/svg/propose_idea.svg"
 							alt="quae id card"
 							class="img fade-slide-in left"
 						/>
@@ -430,7 +492,7 @@
 					</div>
 					<div class="img-container">
 						<img
-							src="../assets/img/post_example_2.png"
+							src="../assets/svg/update.svg"
 							alt="quae id card"
 							class="img fade-slide-in right"
 						/>
@@ -438,8 +500,8 @@
 				</div>
 			</div>
 		</div>
-
-		<div class="py-12 px-0 md:py-16 bg-purple-light">
+		<!-- VIEW 5- Pricing plans -->
+		<div class="py-12 pb-48 px-0 md:py-16 bg-purple-light z-10">
 			<div class="mx-auto">
 				<h3 class="text-center text-white px-4 text-montserrat-600 text-3xl">
 					Pricing Plans
@@ -468,6 +530,7 @@
 							min-w-min
 							w-4/5
 							md:mx-1 md:flex-1
+							z-30
 						"
 					>
 						<div
@@ -503,6 +566,7 @@
 							min-w-min
 							w-4/5
 							md:mx-0.5 md:flex-1
+							z-30
 						"
 					>
 						<div
@@ -537,7 +601,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- VIEW 5 -->
+		<!-- VIEW 6 - carousel -->
 		<!-- <div class="from-red-light to-purple-light bg-gradient-to-bl py-16 mx-auto">
 			<div class="text-center mx-auto py-16">
 				<h2
@@ -752,254 +816,61 @@
 				<a class="next" onclick="plusSlides(1)">&#10095;</a>
 			</div>
 		</div> -->
-
-		<!-- <div
-			class="parallax-background"
-			style="background-image: url('../assets/img/crowd_of_people.png')"
-		>
-			<div class="max-w-5xl text-center py-16 px-8 mx-auto">
-				<div class="text-center mx-auto"></div>
-				<div class="mx-auto max-w-5xl">
-					<div class="py-64">
-						<h3
-							class="
-								text-montserrat text-3xl
-								md:text-4xl
-								lg:text-5xl
-								text-white
-								font-bold
-								py-3
-							"
-						>
-							Your City Is In Your Hands
-						</h3>
-					</div>
-				</div>
-			</div>
-		</div> -->
-		<!-- SIGN UP  -->
 		<div
-			id="sign-up"
-			style="
-				background: linear-gradient(
-						180deg,
-						rgba(255, 255, 255, 0) 0%,
-						rgb(141, 0, 255, 0.8) 100%
-					),
-					linear-gradient(
-						230deg,
-						rgba(255, 255, 255, 0) 0%,
-						rgba(96, 167, 234, 1) 90%
-					),
-					linear-gradient(
-						60deg,
-						rgba(255, 255, 255, 0) 0%,
-						rgba(248, 105, 139, 1) 80%
-					);
-			"
-		>
-			<div class="max-w-5xl text-center py-16 px-8 mx-auto">
-				<div
-					class="
-						md:flex md:flex-row md:flex-nowrap md:justify-center md:align-middle
-					"
-				>
-					<div class="text-center my-auto max-w-2xl flex-1">
-						<div class="beta-signup m-3 px-6 py-6 md:my-8 rounded-2xl">
-							<h2 class="text-montserrat font-bold text-3xl pb-3">
-								Join Quae Today
-							</h2>
-							<div
-								class="
-									flex flex-row flex-wrap
-									justify-center
-									align-center
-									mx-auto
-								"
-							>
-								<a
-									href="https://apps.apple.com/us/app/quae/id1555653993"
-									target="_blank"
-									rel="noopener"
-									aria-label="visit the app store to download quae"
-									class="GA-app-store-link"
-								>
-									<img
-										src="../assets/img/app_store_download.png"
-										class="max-w-sm max-h-12 m-2"
-										alt="download on the app store" /></a
-								><a
-									href="https://play.google.com/store/apps/details?id=com.quae.quaeapp&hl=en_US&gl=US"
-									target="_blank"
-									rel="noopener"
-									aria-label="visit the google play store to download quae"
-									class="GA-play-store-link"
-								>
-									<img
-										src="../assets/img/google-play-badge-logo-png-transparent.png"
-										class="max-h-12 max-w-sm m-2"
-										alt="download on the google play store"
-								/></a>
-							</div>
-						</div>
-					</div>
-					<div class="flex-1">
-						<img src="../assets/svg/signup_section_phone_guy.svg" alt="" />
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--footer-->
-		<footer class="bg-black">
+			class="bg-purple-light h-60 w-full z-0"
+			style="transform: skewY(5deg); margin-top: -10rem"
+		></div>
+
+		<!-- SIGN UP  -->
+		<div style="overflow: hidden; padding-top: 20rem; margin-top: -20rem">
 			<div
-				class="
-					mx-auto
-					text-center
-					pt-8
-					pb-16
-					md:flex md:flex-row md:justify-around md:max-w-5xl md:align-middle
+				id="sign-up"
+				style="
+					margin-bottom: -20rem;
+					padding-bottom: 25rem;
+					transform: skewY(5deg);
+					background: linear-gradient(
+							180deg,
+							rgba(255, 255, 255, 0) 0%,
+							rgb(141, 0, 255, 0.8) 100%
+						),
+						linear-gradient(
+							230deg,
+							rgba(255, 255, 255, 0) 0%,
+							rgba(96, 167, 234, 1) 90%
+						),
+						linear-gradient(
+							60deg,
+							rgba(255, 255, 255, 0) 0%,
+							rgba(248, 105, 139, 1) 80%
+						);
 				"
 			>
-				<div>
-					<div class="">
-						<h2 class="text-white text-montserrat text-lg py-6">
-							Find Us Online
-						</h2>
-						<ul class="social-icons">
-							<li>
-								<a
-									aria-label="visit quae's facebook account"
-									class="facebook"
-									href="https://www.facebook.com/quaeapp"
-									target="_blank"
-									><i class="fa fa-facebook"></i
-								></a>
-							</li>
-							<li>
-								<a
-									aria-label="visit quae's linkedin account"
-									class="linkedin"
-									href="https://www.linkedin.com/company/quae/ "
-									target="_blank"
-									rel="noopener"
-									><i class="fa fa-linkedin"></i
-								></a>
-							</li>
-							<li>
-								<a
-									aria-label="visit quae's twitter account"
-									class="twitter"
-									href="https://twitter.com/Quae_App"
-									target="_blank"
-									rel="noopener"
-									><i class="fa fa-twitter"></i
-								></a>
-							</li>
-							<li>
-								<a
-									aria-label="visit quae's instagram account"
-									class="instagram"
-									href="https://www.instagram.com/quaeapp/"
-									target="_blank"
-									rel="noopener"
-									><i class="fa fa-instagram"></i
-								></a>
-							</li>
-							<li>
-								<a
-									aria-label="visit quae's youtube account"
-									class="youtube"
-									href="https://www.youtube.com/channel/UC8Mkk0uEYtbCs0TPk1ix94g"
-									target="_blank"
-									rel="noopener"
-									><i class="fa fa-youtube"></i
-								></a>
-							</li>
-						</ul>
-					</div>
-					<div class="text-white text-montserrat text-sm py-4">
-						<div>Quae &copy; 2021 All Rights Reserved</div>
-					</div>
-					<div class="text-white text-montserrat text-sm">
-						<div>
-							Contact us at
-							<span
-								><a
-									href="mailto:info@quae.app"
-									id="email-link"
-									aria-label="link to send us an email"
-									><u>info@quae.app</u></a
-								></span
-							>
-						</div>
-					</div>
-				</div>
-				<hr
-					class="mx-12 my-6 md:hidden"
-					style="height: 1px; background-color: #ccc; border: none"
-				/>
-				<div class="flex-col flex-nowrap align-middle my-auto">
-					<div
-						class="
-							md:flex md:flex-row md:flex-nowrap md:align-middle md:my-auto
-						"
-					>
-						<a href="../">
-							<p class="text-white text-montserrat text-lg md:px-10">
-								Politics
-							</p>
-						</a>
-						<a href="./groups.html">
-							<p class="text-white text-montserrat text-lg md:px-10">
-								Private Groups
-							</p>
-						</a>
-						<a href="https://medium.com/quae-app" rel="noopener">
-							<p class="text-white text-montserrat text-lg md:px-10">Blog</p>
-						</a>
-						<a href="./about_us.html">
-							<p class="text-white text-montserrat text-lg md:px-10">
-								About Us
-							</p>
-						</a>
-
-						<!-- <a href="./security.html">
-						<p class="text-white text-montserrat text-lg md:px-10">Security</p></a
-					> -->
-					</div>
-					<hr
-						class="mx-12 my-6"
-						style="height: 1px; background-color: #ccc; border: none"
-					/>
+				<div
+					class="max-w-5xl text-center py-16 px-8 mx-auto"
+					style="transform: skewY(-5deg)"
+				>
 					<div
 						class="
 							md:flex
 							md:flex-row
 							md:flex-nowrap
-							md:align-middle
 							md:justify-center
-							md:my-auto
-							mx-auto
+							md:align-middle
 						"
 					>
-						<a href="./eula.html" target="_blank">
-							<p class="text-white text-montserrat text-sm md:px-10">
-								EULA Agreement
-							</p>
-						</a>
-						<a href="./privacyAgreement.html" target="_blank">
-							<p class="text-white text-montserrat text-sm md:px-10">
-								Privacy Policy
-							</p>
-						</a>
-
-						<!-- <a href="./security.html">
-						<p class="text-white text-montserrat text-lg md:px-10">Security</p></a
-					> -->
+						<div class="text-center my-auto max-w-2xl flex-1">
+							<div class="app-store-container-placeholder"></div>
+						</div>
+						<div class="flex-1">
+							<img src="../assets/svg/signup_section_phone_guy.svg" alt="" />
+						</div>
 					</div>
 				</div>
 			</div>
-		</footer>
+		</div>
+		<!--footer-->
+		<div class="footer-placeholder"></div>
 
 		<script src="../assets/js/animations.js"></script>
 	</body>

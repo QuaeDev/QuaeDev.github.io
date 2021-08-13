@@ -100,7 +100,7 @@
 				style="filter: none"
 			>
 				<div class="mt-10 flex-1" style="width: clamp(10rem, 100%, 70rem)">
-					<div class="md:px-6 fade-slide-in top-small">
+					<div class="md:px-6">
 						<h1
 							class="
 								title
@@ -141,6 +141,7 @@
 							and see action today!
 						</p>
 					</div>
+
 					<div class="app-store-container-placeholder hidden md:block"></div>
 				</div>
 
@@ -148,8 +149,6 @@
 					<div
 						id="phone-check-placeholder"
 						class="
-							fade-slide-in
-							left
 							w-full
 							flex flex-row flex-nowrap
 							my-auto
@@ -158,16 +157,14 @@
 						"
 						alt="home screen of app"
 					></div>
-					<div
-						class="
-							app-store-container-placeholder
-							block
-							md:hidden
-							fade-slide-in
-							bottom-small
-						"
-					></div>
+					<div class="app-store-container-placeholder block md:hidden"></div>
 				</div>
+			</div>
+			<div class="flex flex-col flex-nowrap justify-center align-middle">
+				<h4 class="text-montserrat-500 text-2xl text-center mt-4 opacity-60">
+					Learn More
+				</h4>
+				<span class="arrow-down mx-auto"></span>
 			</div>
 		</div>
 		<!-- VIEW 2 -->
@@ -278,7 +275,6 @@
 				</div>
 			</div>
 		</div>
-
 		<!-- VIEW 3- Security -->
 		<div
 			class="from-blue to-purple-light bg-gradient-to-bl shadow-lg z-1"
@@ -339,7 +335,7 @@
 		<!-- View 4- How it works -->
 		<div class="px-6 py-12 md:px-6 md:py-24 mx-auto max-w-5xl text-center">
 			<div class="text-center mx-auto">
-				<div class="pb-6 md:pb-12">
+				<div class="pb-6 md:pb-3">
 					<h2 class="text-montserrat font-bold text-4xl">How It Works</h2>
 				</div>
 			</div>
@@ -354,7 +350,7 @@
 					</div>
 					<div class="img-container">
 						<img
-							src="./assets/img/id_cardV2.png"
+							src="./assets/svg/matha_id.svg"
 							alt="quae id card"
 							class="img fade-slide-in right"
 						/>
@@ -371,7 +367,7 @@
 					</div>
 					<div class="img-container">
 						<img
-							src="./assets/img/id_cardV2.png"
+							src="./assets/svg/new_example.svg"
 							alt="quae id card"
 							class="img fade-slide-in left"
 						/>
@@ -388,7 +384,7 @@
 					</div>
 					<div class="img-container">
 						<img
-							src="./assets/img/post_example_2.png"
+							src="./assets/svg/resolved_example.svg"
 							alt="quae id card"
 							class="img fade-slide-in right"
 						/>
@@ -396,7 +392,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- VIEW 5 -->
+		<!-- VIEW 5 - carousel -->
 		<!-- <div class="from-red-light to-purple-light bg-gradient-to-bl py-16 mx-auto">
 			<div class="text-center mx-auto py-16">
 				<h2
@@ -611,8 +607,8 @@
 				<a class="next" onclick="plusSlides(1)">&#10095;</a>
 			</div>
 		</div> -->
-
-		<div
+		<!-- YOUR CITY IS IN YOUR HANDS -->
+		<!-- <div
 			class="parallax-background"
 			style="background-image: url('./assets/img/crowd_of_people.png')"
 		>
@@ -635,76 +631,51 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- SIGN UP  -->
-		<div
-			id="sign-up"
-			style="
-				background: linear-gradient(
-						180deg,
-						rgba(255, 255, 255, 0) 0%,
-						rgb(141, 0, 255, 0.8) 100%
-					),
-					linear-gradient(
-						230deg,
-						rgba(255, 255, 255, 0) 0%,
-						rgba(96, 167, 234, 1) 90%
-					),
-					linear-gradient(
-						60deg,
-						rgba(255, 255, 255, 0) 0%,
-						rgba(248, 105, 139, 1) 80%
-					);
-			"
-			class="parallax-background"
-		>
-			<div class="max-w-5xl text-center py-16 px-8 mx-auto">
+		<div style="overflow: hidden; padding-top: 20rem; margin-top: -20rem">
+			<div
+				id="sign-up"
+				style="
+					margin-bottom: -20rem;
+					padding-bottom: 25rem;
+					transform: skewY(5deg);
+					background: linear-gradient(
+							180deg,
+							rgba(255, 255, 255, 0) 0%,
+							rgb(141, 0, 255, 0.8) 100%
+						),
+						linear-gradient(
+							230deg,
+							rgba(255, 255, 255, 0) 0%,
+							rgba(96, 167, 234, 1) 90%
+						),
+						linear-gradient(
+							60deg,
+							rgba(255, 255, 255, 0) 0%,
+							rgba(248, 105, 139, 1) 80%
+						);
+				"
+			>
 				<div
-					class="
-						md:flex md:flex-row md:flex-nowrap md:justify-center md:align-middle
-					"
+					class="max-w-5xl text-center py-16 px-8 mx-auto"
+					style="transform: skewY(-5deg)"
 				>
-					<div class="text-center my-auto max-w-2xl flex-1">
-						<div class="beta-signup m-3 px-6 py-6 md:my-8 rounded-2xl">
-							<h2 class="text-montserrat font-bold text-3xl pb-3">
-								Join Quae Today
-							</h2>
-							<div
-								class="
-									flex flex-row flex-wrap
-									justify-center
-									align-center
-									mx-auto
-								"
-							>
-								<a
-									href="https://apps.apple.com/us/app/quae/id1555653993"
-									target="_blank"
-									rel="noopener"
-									aria-label="visit the app store to download quae"
-									class="GA-app-store-link"
-								>
-									<img
-										src="./assets/img/app_store_download.png"
-										class="max-w-sm max-h-12 m-2"
-										alt="download on the app store" /></a
-								><a
-									href="https://play.google.com/store/apps/details?id=com.quae.quaeapp&hl=en_US&gl=US"
-									target="_blank"
-									rel="noopener"
-									aria-label="visit the google play store to download quae"
-									class="GA-play-store-link"
-								>
-									<img
-										src="./assets/img/google-play-badge-logo-png-transparent.png"
-										class="max-h-12 max-w-sm m-2"
-										alt="download on the google play store"
-								/></a>
-							</div>
+					<div
+						class="
+							md:flex
+							md:flex-row
+							md:flex-nowrap
+							md:justify-center
+							md:align-middle
+						"
+					>
+						<div class="text-center my-auto max-w-2xl flex-1">
+							<div class="app-store-container-placeholder"></div>
 						</div>
-					</div>
-					<div class="flex-1">
-						<img src="./assets/svg/signup_section_phone_guy.svg" alt="" />
+						<div class="flex-1">
+							<img src="./assets/svg/signup_section_phone_guy.svg" alt="" />
+						</div>
 					</div>
 				</div>
 			</div>
