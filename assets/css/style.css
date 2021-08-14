@@ -43,11 +43,11 @@ body {
 }
 .app-store-link {
 	padding: 5px;
-	width: clamp(2rem, 50%, 18rem);
+	width: clamp(200px, 50%, 18rem);
 }
 .app-store-link-sm {
 	padding: 5px;
-	width: clamp(2rem, 50%, 18rem);
+	width: min(50%, 18rem);
 }
 
 .app-store-btn {
