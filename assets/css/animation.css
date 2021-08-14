@@ -147,50 +147,51 @@
 		transform: translateX(-350px);
 	}
 }
-
-.fade-slide-in {
-	opacity: 0;
-	transition: opacity 500ms linear;
-}
-.fade-slide-in-no-margin {
-	opacity: 0;
-	transition: opacity 500ms linear;
-}
-.fade-slide-in.right {
-	transform: translateX(100px);
-	transition: all 750ms linear;
-}
-.fade-slide-in.left {
-	transform: translateX(-100px);
-	transition: all 750ms linear;
-}
-.fade-slide-in.top {
-	transform: translateY(-100px);
-	transition: all 750ms linear;
-}
-.fade-slide-in.top-small {
-	transform: translateY(-25px);
-	transition: all 750ms linear;
-}
-.fade-slide-in.bottom {
-	transform: translateY(100px);
-	transition: all 750ms linear;
-}
-.fade-slide-in-no-margin.bottom {
-	transform: translateY(100px);
-	transition: all 750ms linear;
-}
-.fade-slide-in.bottom-small {
-	transform: translateY(50px);
-	transition: all 750ms linear;
-}
-.fade-slide-in.appear {
-	opacity: 1;
-	transform: translateX(0px) translateY(0px);
-}
-.fade-slide-in-no-margin.appear {
-	opacity: 1;
-	transform: translateX(0px) translateY(0px);
+@media screen and (min-width: 768px) {
+	.fade-slide-in {
+		opacity: 0;
+		transition: opacity 500ms linear;
+	}
+	.fade-slide-in-no-margin {
+		opacity: 0;
+		transition: opacity 500ms linear;
+	}
+	.fade-slide-in.right {
+		transform: translateX(100px);
+		transition: all 750ms linear;
+	}
+	.fade-slide-in.left {
+		transform: translateX(-100px);
+		transition: all 750ms linear;
+	}
+	.fade-slide-in.top {
+		transform: translateY(-100px);
+		transition: all 750ms linear;
+	}
+	.fade-slide-in.top-small {
+		transform: translateY(-25px);
+		transition: all 750ms linear;
+	}
+	.fade-slide-in.bottom {
+		transform: translateY(100px);
+		transition: all 750ms linear;
+	}
+	.fade-slide-in-no-margin.bottom {
+		transform: translateY(100px);
+		transition: all 750ms linear;
+	}
+	.fade-slide-in.bottom-small {
+		transform: translateY(50px);
+		transition: all 750ms linear;
+	}
+	.fade-slide-in.appear {
+		opacity: 1;
+		transform: translateX(0px) translateY(0px);
+	}
+	.fade-slide-in-no-margin.appear {
+		opacity: 1;
+		transform: translateX(0px) translateY(0px);
+	}
 }
 
 .auto-scroll-card {
