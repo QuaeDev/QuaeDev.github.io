@@ -89,13 +89,11 @@
 			<div
 				class="md:flex md:flex-row md:flex-nowrap md:align-middle md:my-auto"
 			>
+				<a href="javascript:void(0)" id="groups-link-footer">
+					<p class="text-white text-montserrat text-lg md:px-10">Communities</p>
+				</a>
 				<a href="javascript:void(0)" id="politics-link-footer">
 					<p class="text-white text-montserrat text-lg md:px-10">Politics</p>
-				</a>
-				<a href="javascript:void(0)" id="groups-link-footer">
-					<p class="text-white text-montserrat text-lg md:px-10">
-						Private Groups
-					</p>
 				</a>
 				<a href="https://medium.com/quae-app" rel="noopener">
 					<p class="text-white text-montserrat text-lg md:px-10">Blog</p>
@@ -143,17 +141,18 @@
 </footer>
 <script>
 	if (URL.indexOf("pages") != -1) {
-		document.getElementById("groups-link-footer").href = "./groups.html";
+		document.getElementById("groups-link-footer").href = "../";
 		document.getElementById("about-us-link-footer").href = "./about_us.html";
-		document.getElementById("politics-link-footer").href = "../";
+		document.getElementById("politics-link-footer").href = "./politics.html";
 		document.getElementById("eula-link-footer").href = "./eula.html";
 		document.getElementById("privacy-policy-link-footer").href =
 			"./privacyAgreement.html";
 	} else {
-		document.getElementById("groups-link-footer").href = "./pages/groups.html";
+		document.getElementById("groups-link-footer").href = "./";
 		document.getElementById("about-us-link-footer").href =
 			"./pages/about_us.html";
-		document.getElementById("politics-link-footer").href = "./";
+		document.getElementById("politics-link-footer").href =
+			"./pages/politics.html";
 		document.getElementById("eula-link-footer").href = "./pages/eula.html";
 		document.getElementById("privacy-policy-link-footer").href =
 			"./pages/privacyAgreement.html";
