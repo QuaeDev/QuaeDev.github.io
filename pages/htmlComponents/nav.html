@@ -48,18 +48,18 @@
 		<div class="mx-auto block">
 			<a
 				class="nav-link nav-link-top"
-				id="politics-link-nav"
-				href="javascript:void(0)"
-			>
-				<span id="politics-link-nav-text">Politics</span>
-			</a>
-			<a
-				class="nav-link nav-link-top"
 				id="groups-link-nav"
 				href="javascript:void(0)"
 				class="nav-link"
 			>
-				<span id="groups-link-nav-text"> Groups </span>
+				<span id="groups-link-nav-text"> Communities </span>
+			</a>
+			<a
+				class="nav-link nav-link-top"
+				id="politics-link-nav"
+				href="javascript:void(0)"
+			>
+				<span id="politics-link-nav-text">Politics</span>
 			</a>
 
 			<a
@@ -133,16 +133,16 @@
 			<a
 				href="javascript:void(0)"
 				onclick="closeNav()"
-				id="politics-link-drawer"
-				class="politics-link"
-				>Politics</a
+				id="groups-link-drawer"
+				class="groups-link"
+				>Communities</a
 			>
 			<a
 				href="javascript:void(0)"
 				onclick="closeNav()"
-				id="groups-link-drawer"
-				class="groups-link"
-				>Private&nbspGroups</a
+				id="politics-link-drawer"
+				class="politics-link"
+				>Politics</a
 			>
 
 			<a
@@ -196,29 +196,34 @@
 	let URL = window.location.href;
 
 	if (URL.indexOf("pages") != -1) {
-		document.getElementById("groups-link-drawer").href = "./groups.html";
-		document.getElementById("groups-link-nav").href = "./groups.html";
 		document.getElementById("about-us-link-drawer").href = "./about_us.html";
 		document.getElementById("about-us-link-nav").href = "./about_us.html";
+		document.getElementById("politics-link-drawer").href = "./politics.html";
+		document.getElementById("politics-link-nav").href = "./politics.html";
 		document.getElementById("sign-up-link-drawer").href = "../#sign-up";
 		document.getElementById("sign-up-link-nav").href = "../#sign-up";
-		document.getElementById("politics-link-drawer").href = "../";
-		document.getElementById("politics-link-nav").href = "../";
+		document.getElementById("groups-link-drawer").href = "../";
+		document.getElementById("groups-link-nav").href = "../";
 	} else {
-		document.getElementById("groups-link-drawer").href = "./pages/groups.html";
-		document.getElementById("groups-link-nav").href = "./pages/groups.html";
+		document.getElementById("politics-link-drawer").href =
+			"./pages/politics.html";
+		document.getElementById("politics-link-nav").href = "./pages/politics.html";
 		document.getElementById("about-us-link-drawer").href =
 			"./pages/about_us.html";
 		document.getElementById("about-us-link-nav").href = "./pages/about_us.html";
-		document.getElementById("politics-link-drawer").href = "./";
-		document.getElementById("politics-link-nav").href = "./";
 		document.getElementById("sign-up-link-drawer").href = "#sign-up";
 		document.getElementById("sign-up-link-nav").href = "#sign-up";
+		document.getElementById("groups-link-drawer").href = "./";
+		document.getElementById("groups-link-nav").href = "./";
 	}
 </script>
 <script>
 	// changes the logo from color to white when scrolled 100px
-	if (URL.includes("groups") || URL.includes("about_us")) {
+	if (
+		URL.includes("groups") ||
+		URL.includes("about_us") ||
+		URL.includes("politics")
+	) {
 		var logo = document.getElementById("logo");
 		logo.setAttribute("src", "../assets/svg/quae_logo.svg");
 		var logoWhite = document.getElementById("logo-white");

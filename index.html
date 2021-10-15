@@ -58,7 +58,7 @@
 	<body class="bg-white" style="width: 100vw; overflow-x: hidden">
 		<div class="nav-placeholder"></div>
 
-		<!-- VIEW 1- landing page view -->
+		<!-- VIEW 1 -->
 		<div class="container md:pt-12 min-h-screen">
 			<h1
 				class="
@@ -89,8 +89,11 @@
 				"
 				style="filter: none"
 			>
-				<div class="mt-10 flex-1" style="width: clamp(10rem, 100%, 70rem)">
-					<div class="md:px-6">
+				<div
+					class="mt-10 flex-1 h-full"
+					style="width: clamp(10rem, 100%, 70rem)"
+				>
+					<div class="md:px-6 flex flex-col justify-center content-center">
 						<h1
 							class="
 								title
@@ -106,15 +109,17 @@
 						>
 							Vote Every Day
 						</h1>
+
 						<h2
 							class="
 								lg:mb-2
 								text-black text-montserrat-700 text-2xl text-center
 								md:text-3xl md:text-left
-								text-pruple
+								leading-none
 							"
 						>
-							Exclusive To Hoboken
+							Democratize Your <span class="typed-text"></span
+							><span class="cursor"></span>
 						</h2>
 						<p
 							class="
@@ -127,44 +132,64 @@
 								max-w-2xl
 							"
 						>
-							Quae is a community voting app. Voice your concerns to your city
-							and see action today!
+							Quae is a community voting app. Voice your concerns in your
+							community and see results today!
 						</p>
-					</div>
-
-					<div class="hidden md:block">
-						<div class="beta-signup mt-3 mb-3 p-3 md:my-2 rounded-2xl max-w-md">
-							<h3
-								class="text-center text-black text-montserrat-500 text-2xl mb-2"
+						<div class="hidden md:block">
+							<div
+								class="
+									beta-signup
+									mx-auto
+									md:mx-6
+									mt-6
+									mb-3
+									p-3
+									md:my-8
+									rounded-2xl
+									max-w-md
+								"
 							>
-								Join Today!
-							</h3>
-							<div class="flex flex-row flex-wrap justify-center align-center">
-								<a
-									href="https://apps.apple.com/us/app/quae/id1555653993"
-									target="_blank"
-									rel="noopener"
-									aria-label="visit the app store to download quae"
-									class="GA-app-store-link app-store-link"
+								<h3
+									class="
+										text-center text-black text-montserrat-500 text-2xl
+										mb-2
+									"
 								>
-									<img
-										id="app-store"
-										src="../assets/img/app_store_download.png"
-										class="app-store-btn"
-										alt="download on the app store" /></a
-								><a
-									href="https://play.google.com/store/apps/details?id=com.quae.quaeapp&hl=en_US&gl=US"
-									target="_blank"
-									rel="noopener"
-									aria-label="visit the google play store to download quae"
-									class="GA-play-store-link app-store-link"
+									Join Today!
+								</h3>
+								<div
+									class="
+										md:flex md:flex-row md:flex-wrap
+										justify-center
+										align-center
+									"
 								>
-									<img
-										id="play-store"
-										src="../assets/img/google-play-badge-logo-png-transparent.png"
-										class="app-store-btn"
-										alt="download on the google play store"
-								/></a>
+									<a
+										href="https://apps.apple.com/us/app/quae/id1555653993"
+										target="_blank"
+										rel="noopener"
+										aria-label="visit the app store to download quae"
+										class="GA-app-store-link app-store-link"
+									>
+										<img
+											id="app-store"
+											src="../assets/img/app_store_download.png"
+											class="app-store-btn"
+											alt="download on the app store" /></a
+									><a
+										href="https://play.google.com/store/apps/details?id=com.quae.quaeapp&hl=en_US&gl=US"
+										target="_blank"
+										rel="noopener"
+										aria-label="visit the google play store to download quae"
+										class="GA-play-store-link app-store-link"
+									>
+										<img
+											id="play-store"
+											src="../assets/img/google-play-badge-logo-png-transparent.png"
+											class="app-store-btn"
+											alt="download on the google play store"
+									/></a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -172,7 +197,7 @@
 
 				<div class="flex-1 flex flex-col justify-center">
 					<!-- <div
-						id="phone-check-placeholder-hoboken"
+						id="phone-check-placeholder-group"
 						class="
 							w-full
 							flex flex-row flex-nowrap
@@ -194,26 +219,22 @@
 							justify-center
 							md:justify-end
 						"
-						src="./assets/img/hoboken_check.png"
+						src="./assets/img/groups_check.png"
 						alt="home screen of app"
 					/>
-				</div>
-				<div class="block md:hidden">
-					<div
-						class="
-							beta-signup
-							mx-auto
-							md:mx-6
-							mt-6
-							mb-3
-							p-3
-							md:my-8
-							rounded-2xl
-							max-w-md
-						"
-					>
-						<h3
-							class="text-center text-black text-montserrat-500 text-2xl mb-2"
+					<div class="block md:hidden">
+						<div
+							class="
+								beta-signup
+								mx-auto
+								md:mx-6
+								mt-6
+								mb-3
+								p-3
+								md:my-8
+								rounded-2xl
+								max-w-md
+							"
 						>
 							Join Today!
 						</h3>
@@ -227,22 +248,24 @@
 							>
 								<img
 									id="app-store"
-									src="../assets/img/app_store_download.png"
+									src="./assets/img/app_store_download.png"
 									class="app-store-btn-sm"
-									alt="download on the app store" /></a
-							><a
+									alt="download on the app store" />
+							</a>
+							<a
 								href="https://play.google.com/store/apps/details?id=com.quae.quaeapp&hl=en_US&gl=US"
 								target="_blank"
 								rel="noopener"
 								aria-label="visit the google play store to download quae"
 								class="GA-play-store-link app-store-link-sm"
 							>
-								<img
-									id="play-store"
-									src="../assets/img/google-play-badge-logo-png-transparent.png"
-									class="app-store-btn-sm"
-									alt="download on the google play store"
-							/></a>
+									<img
+										id="play-store"
+										src="../assets/img/google-play-badge-logo-png-transparent.png"
+										class="app-store-btn"
+										alt="download on the google play store"
+								/></a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -254,67 +277,62 @@
 				<span class="arrow-down mx-auto"></span>
 			</div>
 		</div>
-		<!-- VIEW 2 -->
+
+		<!-- VIEW 2-legendary groups act as one -->
 		<div class="container">
 			<div class="text-center mx-auto">
 				<h2 class="text-montserrat font-bold text-3xl">
-					Quae is Exclusive to Hoboken
+					Legendary Groups Act as One
 				</h2>
 				<h3 class="text-montserrat text-xl">
-					Vote to make Hoboken a Better Place
+					Empower Your Members Like Never Before
 				</h3>
 			</div>
-			<div
-				class="
-					mx-auto
-					max-w-max
-					md:flex md:flex-row md:flex-nowrap md:align-center md:justify-center
-				"
-			>
-				<div class="mx-auto p-8 mt-8 md:mt-16 md:my-10">
-					<div
-						class="
-							flex flex-col flex-grow-0
-							justify-evenly
-							align-middle
-							max-w-max
-							mx-auto
-							h-full
-						"
-					>
-						<div class="fade-slide-in bottom-small">
-							<img
-								src="./assets/svg/community.svg"
-								class="w-16 h-16 m-4 mx-auto"
-								alt="group of people icon"
-							/>
-							<h4 class="text-montserrat-600 text-lg md:text-xl text-center">
-								Connect With Your Community
-							</h4>
-						</div>
-						<div class="fade-slide-in bottom-small">
-							<img
-								src="./assets/svg/speech-bubble.svg"
-								class="w-16 h-16 m-4 mx-auto"
-								alt="speech bubbles icon"
-							/>
-							<h4 class="text-montserrat-600 text-lg md:text-xl text-center">
-								Voice Your Concerns
-							</h4>
-						</div>
-						<div class="fade-slide-in bottom-small">
-							<img
-								src="./assets/svg/politician.svg"
-								class="w-16 h-16 m-4 mx-auto"
-								alt="politician giving a speech icon"
-							/>
-							<h4 class="text-montserrat-600 text-lg md:text-xl text-center">
-								Influence Your Government
-							</h4>
-						</div>
+			<div class="mx-auto max-w-max">
+				<!-- md:flex md:flex-row md:flex-nowrap md:align-center md:justify-center -->
+
+				<div
+					class="
+						md:flex md:flex-row md:justify-evenly
+						align-middle
+						max-w-max
+						mx-auto
+						p-8
+						mt-8
+					"
+				>
+					<div class="fade-slide-in bottom-small p-4">
+						<img
+							src="./assets/svg/community.svg"
+							class="w-16 h-16 m-4 mx-auto"
+							alt="group of people icon"
+						/>
+						<h4 class="text-montserrat-600 text-lg md:text-xl text-center">
+							Increase Communication
+						</h4>
+					</div>
+					<div class="fade-slide-in bottom-small p-4">
+						<img
+							src="./assets/svg/speech-bubble.svg"
+							class="w-16 h-16 m-4 mx-auto"
+							alt="speech bubbles icon"
+						/>
+						<h4 class="text-montserrat-600 text-lg md:text-xl text-center">
+							Share Ideas and Concerns
+						</h4>
+					</div>
+					<div class="fade-slide-in bottom-small p-4">
+						<img
+							src="./assets/svg/politician.svg"
+							class="w-16 h-16 m-4 mx-auto"
+							alt="politician giving a speech icon"
+						/>
+						<h4 class="text-montserrat-600 text-lg md:text-xl text-center">
+							Lead Democratically
+						</h4>
 					</div>
 				</div>
-				<div
+				<!-- <div
 					class="
 						p-8
 						max-w-max
@@ -322,7 +340,7 @@
 					"
 				>
 					<img
-						src="./assets/img/hoboken_city_hall.png"
+						src="../assets/img/company_meeting.jfif"
 						alt="Hoboken, New Jersey Logo"
 						class="
 							rounded-lg
@@ -359,10 +377,11 @@
 							>.
 						</p>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
-		<!-- VIEW 3- Security -->
+
+		<!-- VIEW 3- security -->
 		<div
 			class="from-blue to-purple-light bg-gradient-to-bl shadow-lg z-1"
 			style="transform: skewY(10deg)"
@@ -381,11 +400,8 @@
 					<div class="md:px-12 md:flex md:flex-col md:justify-center md:flex-1">
 						<div class="text-center mx-auto fade-slide-in bottom-small">
 							<h2 class="text-montserrat text-3xl text-white font-bold pt-3">
-								Your Vote is Secure
+								Your Group is Secure
 							</h2>
-							<h3 class="text-montserrat text-xl text-white pb-3">
-								All users are Quae ID verified
-							</h3>
 						</div>
 
 						<div
@@ -401,9 +417,10 @@
 								bottom-small
 							"
 						>
-							Security is very important to us, that’s why every user is address
-							verified. With Quae you never have to worry about bots or trolls
-							and you can be sure everyone is a real citizen in your city.
+							You can be confident that everyone in your Quae group belongs
+							there. Require a specific email domain or disable auto-joining to
+							manually approve each join request. With Quae you never have to
+							worry about bots or trolls invading your group.
 							<br />
 						</div>
 					</div>
@@ -419,25 +436,125 @@
 				</div>
 			</div>
 		</div>
-		<!-- View 4- How it works -->
+		<!-- <div
+			class="from-blue to-purple-light bg-gradient-to-bl shadow-lg z-1"
+			style="transform: skewY(10deg)"
+		>
+			<div
+				class="max-w-5xl py-12 md:py-24 my-12 md:my-36 px-6 mx-auto"
+				style="transform: skewY(-10deg)"
+			>
+				<div
+					class="
+						mx-auto
+						md:flex md:flex-row md:flex-nowrap md:align-center
+						max-w-5xl
+					"
+				>
+					<div
+						class="
+							px-4
+							md:px-12 md:flex md:flex-col md:justify-center md:flex-1
+						"
+					>
+						<div class="text-center mx-auto">
+							<h2 class="text-montserrat text-3xl text-white font-bold pt-3">
+								Make Your Members Feel Valued
+							</h2>
+							
+						</div>
+
+						<div class="mx-auto max-w-max p-6 max-full">
+							<div class="mx-auto flex-1">
+								<h3 class="text-montserrat-500 text-2xl text-white text-center">
+									Valued Members Are:
+								</h3>
+								<div
+									class="
+										flex flex-row flex-wrap
+										justify-center
+										max-w-max
+										mx-auto
+										py-12
+									"
+								>
+									<div
+										class="
+											flex flex-col flex-nowrap
+											justify-center
+											align-middle
+											mx-6
+										"
+									>
+										<h4 class="text-montserrat-700 text-white text-lg">
+											More&nbspProductive
+										</h4>
+										<img
+											src="../assets/svg/productive.svg"
+											alt="productive icon"
+											class="w-16 h-16 my-6 mx-auto"
+										/>
+									</div>
+									<div
+										class="
+											flex flex-col flex-nowrap
+											justify-center
+											align-middle
+											mx-6
+										"
+									>
+										<h4 class="text-montserrat-700 text-white text-lg">
+											More&nbspLoyal
+										</h4>
+										<img
+											src="../assets/svg/loyal.svg"
+											alt="loyalty icon"
+											class="w-16 h-16 my-6 mx-auto"
+										/>
+									</div>
+									<div
+										class="
+											flex flex-col flex-nowrap
+											justify-center
+											align-middle
+											mx-6
+										"
+									>
+										<h4 class="text-montserrat-700 text-white text-lg">
+											Happier
+										</h4>
+										<img
+											src="../assets/svg/happy.svg"
+											alt="happy icon"
+											class="w-16 h-16 my-6 mx-auto"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<!-- VIEW 4 - How it works -->
 		<div class="px-6 py-12 md:px-6 md:py-24 mx-auto max-w-5xl text-center">
 			<div class="text-center mx-auto">
-				<div class="pb-6 md:pb-3">
+				<div class="pb-6 md:pb-12">
 					<h2 class="text-montserrat font-bold text-4xl">How It Works</h2>
 				</div>
 			</div>
 			<div class="mx-auto max-w-5xl">
 				<div class="how-it-works-card">
 					<div class="text-container fade-slide-in top">
-						<h3 class="text-montserrat-700 title">Get Verified</h3>
+						<h3 class="text-montserrat-700 title">Create Group</h3>
 						<p class="subtitle">
-							We verify users so that you can use our platform with the peace of
-							mind that you're talking to real people in your community
+							Creating a Quae group is simple. Set up a group and invite members
+							to join.
 						</p>
 					</div>
 					<div class="img-container">
 						<img
-							src="./assets/svg/matha_id.svg"
+							src="../assets/svg/create_group.svg"
 							alt="quae id card"
 							class="img fade-slide-in right"
 						/>
@@ -445,16 +562,16 @@
 				</div>
 				<div class="how-it-works-card reverse">
 					<div class="text-container fade-slide-in top">
-						<h3 class="text-montserrat-700 title">Vote</h3>
+						<h3 class="text-montserrat-700 title">Members Share Ideas</h3>
 						<p class="subtitle">
-							Your opinion matters - use it. Everyday you can vote on issues
-							your city board is considering as well as proposals submitted by
-							other users.
+							Members can propose solutions to problems they see and get
+							feedback from their peers. With Quae, you can see what people care
+							about.
 						</p>
 					</div>
 					<div class="img-container">
 						<img
-							src="./assets/svg/new_example.svg"
+							src="../assets/svg/propose_idea.svg"
 							alt="quae id card"
 							class="img fade-slide-in left"
 						/>
@@ -462,16 +579,15 @@
 				</div>
 				<div class="how-it-works-card">
 					<div class="text-container fade-slide-in top">
-						<h3 class="text-montserrat-700 title">Create Change</h3>
+						<h3 class="text-montserrat-700 title">Act</h3>
 						<p class="subtitle">
-							Quae Poll's that attract enough attention will be brought to your
-							city's town hall meeting to be presented and voted on. You have
-							the power to control what your reps enact.
+							With data showing you how your group feels, you can make better
+							decisions.
 						</p>
 					</div>
 					<div class="img-container">
 						<img
-							src="./assets/svg/resolved_example.svg"
+							src="../assets/svg/update.svg"
 							alt="quae id card"
 							class="img fade-slide-in right"
 						/>
@@ -479,7 +595,6 @@
 				</div>
 			</div>
 		</div>
-
 		<!-- SIGN UP  -->
 		<div style="overflow: hidden; padding-top: 20rem; margin-top: -20rem">
 			<div
@@ -577,7 +692,7 @@
 							>
 								<h3
 									class="
-										text-center text-black text-montserrat-500 text-2xl
+										text-center text-white text-montserrat-600 text-2xl
 										mb-2
 									"
 								>
@@ -596,7 +711,7 @@
 										<img
 											id="app-store"
 											src="../assets/img/app_store_download.png"
-											class="app-store-btn-sm"
+											class="app-store-btn"
 											alt="download on the app store" /></a
 									><a
 										href="https://play.google.com/store/apps/details?id=com.quae.quaeapp&hl=en_US&gl=US"
@@ -608,14 +723,14 @@
 										<img
 											id="play-store"
 											src="../assets/img/google-play-badge-logo-png-transparent.png"
-											class="app-store-btn-sm"
+											class="app-store-btn"
 											alt="download on the google play store"
 									/></a>
 								</div>
 							</div>
 						</div>
 						<div class="flex-1">
-							<img src="./assets/svg/signup_section_phone_guy.svg" alt="" />
+							<img src="../assets/svg/signup_section_phone_guy.svg" alt="" />
 						</div>
 					</div>
 				</div>
@@ -623,5 +738,7 @@
 		</div>
 		<!--footer-->
 		<div class="footer-placeholder"></div>
+
+		<script src="../assets/js/animations.js"></script>
 	</body>
 </html>
