@@ -47,7 +47,14 @@ $(document).ready(function () {
 			appearOnScrollNoMargin.observe(fadeSlide);
 		});
 		const typedTextSpan = document.querySelector(".typed-text");
-		const textArray = ["Club", "Company", "Organization", "Union"];
+		const textArray = [
+			"School",
+			"Community",
+			"Club",
+			"Company",
+			"Organization",
+			"Union",
+		];
 		const typingDelay = 200;
 		const erasingDelay = 100;
 		const newTextDelay = 2000;
