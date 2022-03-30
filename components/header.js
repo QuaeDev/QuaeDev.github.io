@@ -22,7 +22,6 @@ const header = /*html*/ `<header id="header">
 					<a href="https://medium.com/quae-app">
 						<p>Blog</p>
 					</a>
-					
 					<a href="/about_us/">
 						<p>About Us</p>
 					</a>
@@ -42,7 +41,6 @@ const header = /*html*/ `<header id="header">
 		</header>`;
 
 function renderHeader() {
-	console.log("inside header render function");
 	const placeholder = document.querySelector("#header-placeholder");
 	placeholder.innerHTML = header;
 }

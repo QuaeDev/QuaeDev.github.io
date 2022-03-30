@@ -2,8 +2,11 @@
 @import "../mixins";
 
 .sign-up {
-	@include flex-container(row, space-evenly, center, wrap);
+	@include flex-container(row, center, center, wrap);
 	padding: 2rem;
+	.download-buttons {
+		width: min(100%, 30rem);
+	}
 	.devices {
 		width: min(100%, 30rem);
 		padding: 2rem;

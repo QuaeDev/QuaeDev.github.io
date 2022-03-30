@@ -3,33 +3,21 @@
 
 .about-us-page {
 	margin: 0 auto;
-	padding-top: 3rem;
-	.page-title {
-		align-self: center;
-		text-align: center;
-	}
+	padding-top: 6rem;
+
 	.sponsors-section,
 	.founder-section,
 	.mission {
 		max-width: 50rem;
 		margin: 0 auto;
-	}
-	.sponsors-section,
-	.founder-section {
-		min-height: 100vh;
 		justify-content: center;
 		padding: 2rem;
-	}
-	.mission {
-		padding: 2rem;
-		min-height: 80vh;
-		@include flex-container(column, center, flex-start, nowrap);
-		text-align: start;
-		h3,
-		p {
-			padding: 1rem 0;
+		h3 {
+			text-align: center;
+			padding-bottom: 1rem;
 		}
 	}
+
 	.sponsors-section {
 		.sponsors {
 			@include flex-container(row, space-evenly, flex-start, wrap);
@@ -52,6 +40,7 @@
 		}
 	}
 	.founder-section {
+		padding-bottom: 5rem;
 		.founder-wrapper {
 			margin: 0 auto;
 			@include flex-container(row, center, center, wrap);

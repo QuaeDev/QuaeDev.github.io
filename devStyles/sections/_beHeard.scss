@@ -2,9 +2,10 @@
 @import "../mixins";
 
 .be-heard {
+	min-height: 30vw;
 	margin: 5rem 0;
 	transform: skewY(10deg);
-	height: 25rem;
+	height: 15rem;
 	z-index: 2;
 	background-color: var.$primary-light;
 	.content {
