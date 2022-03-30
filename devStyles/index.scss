@@ -12,10 +12,11 @@
 }
 html {
 	margin: 0;
-	overflow: scroll;
 	padding: 0;
-	z-index: 1;
+
+	overflow: scroll;
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 body {

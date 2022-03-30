@@ -3,6 +3,7 @@
 
 .sign-up {
 	@include flex-container(row, space-evenly, center, wrap);
+	padding: 2rem;
 	.devices {
 		width: min(100%, 30rem);
 		padding: 2rem;

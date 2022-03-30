@@ -42,6 +42,10 @@
 					transition: all 100ms linear;
 				}
 			}
+			.menu {
+				color: var.$bg;
+				background-color: transparent;
+			}
 			.buttons {
 				transition: all 200ms linear;
 				.primary {

@@ -74,7 +74,9 @@ var footer = /*html*/ `
 		</a>
 	</div>
 	<div id="footer-navigation">
-		
+		<a href="/communities" class="communities">
+			<p>Communities</p>
+		</a>
 		<a href="https://medium.com/quae-app" rel="noopener" class="blog">
 			<p>Blog</p>
 		</a>

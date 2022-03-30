@@ -9,6 +9,7 @@
 	);
 	h2 {
 		color: var.$bg;
+		padding: 2rem 0.5rem;
 	}
 	.security-img {
 		width: min(100%, 25rem);
@@ -23,7 +24,7 @@
 
 @media (max-width: 768px) {
 	.security {
-		padding: 0 1rem;
+		padding: 2rem;
 		.content {
 			padding-top: 2rem;
 			.security-img {

@@ -127,10 +127,10 @@ p {
 
 html {
   margin: 0;
-  overflow: scroll;
   padding: 0;
-  z-index: 1;
+  overflow: scroll;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -688,6 +688,7 @@ a {
   z-index: 2;
   transform: skewY(-10deg);
   text-align: center;
+  padding: 2rem;
 }
 .be-heard .content * {
   color: #fcfcfc;
@@ -714,6 +715,7 @@ a {
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  padding: 2rem;
 }
 .sign-up .devices {
   width: min(100%, 30rem);
@@ -725,6 +727,7 @@ a {
 }
 .security h2 {
   color: #fcfcfc;
+  padding: 2rem 0.5rem;
 }
 .security .security-img {
   width: min(100%, 25rem);
@@ -738,7 +741,7 @@ a {
 
 @media (max-width: 768px) {
   .security {
-    padding: 0 1rem;
+    padding: 2rem;
   }
   .security .content {
     padding-top: 2rem;
@@ -770,6 +773,7 @@ a {
 }
 .about-us-page {
   margin: 0 auto;
+  padding-top: 3rem;
 }
 .about-us-page .page-title {
   align-self: center;
@@ -1026,6 +1030,10 @@ footer #footer-navigation {
   text-decoration-color: #fcfcfc;
   padding-bottom: 0.25rem;
   transition: all 100ms linear;
+}
+#header.scrolled .header-content .menu {
+  color: #fcfcfc;
+  background-color: transparent;
 }
 #header.scrolled .header-content .buttons {
   transition: all 200ms linear;
