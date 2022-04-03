@@ -174,8 +174,10 @@
 					@include flex-container(column, center, center, wrap);
 
 					.phase {
-						max-width: 25rem;
+						margin: 1rem 0;
+						max-width: 20rem;
 						width: 100%;
+						min-width: 10rem;
 						flex: 1;
 						height: 100%;
 					}
@@ -185,8 +187,6 @@
 				@include flex-container(column, flex-start, center, wrap);
 				.container {
 					flex-direction: row;
-					i {
-					}
 				}
 			}
 		}

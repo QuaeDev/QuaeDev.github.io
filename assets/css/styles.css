@@ -1013,7 +1013,7 @@ a {
   text-align: unset;
   padding: 1rem;
   flex: 0.5;
-  min-width: 40ch;
+  min-width: 25ch;
 }
 .communities-page .sub-groups .group-hierarchy-wrapper {
   border: 1px solid #eeeeee;
@@ -1256,8 +1256,10 @@ a {
     flex-wrap: wrap;
   }
   .communities-page .procedures .procedure-example-wrapper #procedure-example .phase {
-    max-width: 25rem;
+    margin: 1rem 0;
+    max-width: 20rem;
     width: 100%;
+    min-width: 10rem;
     flex: 1;
     height: 100%;
   }

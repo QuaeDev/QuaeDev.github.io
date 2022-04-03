@@ -35,7 +35,7 @@ function projectHeaderTab() {
 function learnMoreScrollGroups() {
 	console.log("here");
 	const element = document.getElementById("sub-groups");
-	element.scrollIntoView(false);
+	element.scrollIntoView(true);
 }
 //shared
 function universitySubCommunity() {
