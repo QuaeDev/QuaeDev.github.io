@@ -12,7 +12,7 @@ var footer = /*html*/ `
 					aria-label="visit quae's facebook account"
 					><i class="fa fa-facebook"></i
 				></a>
-			</li>
+			</li> 
 			<li>
 				<a
 					aria-label="visit quae's linkedin account"
@@ -54,45 +54,41 @@ var footer = /*html*/ `
 				></a>
 			</li>
 		</ul>
-		<p>
-			Contact us at
-			<span
-				><a
-					href="mailto:info@quae.app"
-					id="email-link"
-					class="link"
-					aria-label="link to send us an email"
-					>info@quae.app</a
-				></span
-			>
-		</p>
+		
 		<a href="mailto:info@quae.app" id="contact-us-button">
-			<button class="primary icon">
+			<button class="white icon">
 				<i class="material-icons">mail</i>
-				<p class="white">Send Us A Message</p>
+				<p>Send Us A Message</p>
 			</button>
 		</a>
 	</div>
 	<div id="footer-navigation">
-		<a href="/communities" class="communities">
-			<p>Communities</p>
-		</a>
-		<a href="https://medium.com/quae-app" rel="noopener" class="blog">
-			<p>Blog</p>
-		</a>
-		<a href="https://docs.quae.app/" rel="noopener" class="docs">
-			<p>Docs</p>
-		</a>
-		<a href="/about_us" class="about-us">
-			<p>About Us</p>
-		</a>
-		<a href="/eula" class="eula">
-			<p>EULA Agreement</p>
-		</a>
-		<a href="/privacy_agreement" class="privacy-policy">
-			<p>Privacy Policy</p>
-		</a>
-		<p class="copyright">Quae &copy; 2021 All Rights Reserved</p>
+		<div class="nav-links">
+			<a href="/" class = "home">
+				<p>Home</p>
+			</a>
+			<a href="https://medium.com/quae-app" rel="noopener" class="blog">
+				<p>Blog</p>
+			</a>
+			<a href="https://docs.quae.app/" rel="noopener" class="docs">
+				<p>Docs</p>
+			</a>
+			<a href="/communities" class="about-us">
+				<p>Communities</p>
+			</a>
+			<a href="/about_us" class="about-us">
+				<p>About</p>
+			</a>
+		</div>
+		<div class="footer-legal">
+			<a href="/pages/eula" class="eula">
+				<p>EULA Agreement</p>
+			</a>
+			<a href="/pages/privacy_agreement" class="privacy-policy">
+				<p>Privacy Policy</p>
+			</a>
+			<p class="copyright">Quae &copy; 2021 All Rights Reserved</p>
+		</div>
 	</div>
 </footer>
 `;

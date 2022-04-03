@@ -16,17 +16,22 @@ const header = /*html*/ `<header id="header">
 					/>
 				</a>
 				<div id="navigation-links">
+				<a href="/about_us/">
+						<p>About</p>
+					</a>
+					<a href="/communities/">
+						<p>Communities</p>
+					</a>
 					<a href="https://docs.quae.app/">
 						<p>Docs</p>
 					</a>
 					<a href="https://medium.com/quae-app">
 						<p>Blog</p>
 					</a>
-					<a href="/about_us/">
-						<p>About Us</p>
-					</a>
+					
+					
 				</div>
-				<button class="menu" id="menu-btn" onclick="showNav()">
+				<button class="menu" id="menu-btn" onclick="toggleNav()">
 					<i class="material-icons">menu</i>
 				</button>
 				<div class="buttons">
@@ -54,13 +59,19 @@ document.onscroll = function () {
 		document.querySelector("#header").classList.remove("scrolled");
 	}
 };
+var navVisible = false;
+function toggleNav() {
+	if (navVisible) {
+		closeNav();
+	} else showNav();
+}
 function showNav() {
-	console.log("clicked");
+	navVisible = true;
 	document.getElementById("navigation-links").style.display = "block";
 	document.getElementById("behind-navigation-links").style.display = "block";
 }
 function closeNav() {
-	console.log("clicked");
+	navVisible = false;
 	document.getElementById("behind-navigation-links").style.display = "none";
 	document.getElementById("navigation-links").style.display = "none";
 }

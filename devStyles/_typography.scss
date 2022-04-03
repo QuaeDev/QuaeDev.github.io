@@ -27,6 +27,7 @@ h1 {
 	font-size: var.$XXL;
 	font-weight: var.$Bold-weight;
 }
+
 h2 {
 	font-size: var.$XL;
 	font-weight: var.$Medium-weight;
@@ -51,7 +52,35 @@ p {
 	font-size: var.$default;
 	font-weight: var.$Default-weight;
 }
-
+@media (max-width: 576px) {
+	h1 {
+		font-size: var.$XL;
+	}
+	h2 {
+		font-size: var.$L;
+		font-weight: var.$Medium-weight;
+	}
+	h3 {
+		font-size: var.$M;
+		font-weight: var.$Medium-weight;
+	}
+	h4 {
+		font-size: var.$M;
+		font-weight: var.$Default-weight;
+	}
+	h5 {
+		font-size: var.$M;
+		font-weight: var.$Default-weight;
+	}
+	h6 {
+		font-size: var.$button;
+		font-weight: var.$Default-weight;
+	}
+	p {
+		font-size: var.$default;
+		font-weight: var.$Default-weight;
+	}
+}
 *.secondary {
 	color: var.$text-secondary;
 }
@@ -87,7 +116,9 @@ p {
 		}
 	}
 }
-
+*.inline {
+	@include flex-container(row, center, center, wrap);
+}
 *.underline-hover:hover {
 	text-decoration: underline;
 	cursor: pointer;

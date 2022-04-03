@@ -1,19 +1,41 @@
 @use "../var";
 @import "../mixins";
+#small-header {
+	width: 100%;
+	height: 2rem;
+	a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translate(50%, 50%);
+		padding: 1rem;
+		@include flex-container(row, flex-start, center, nowrap);
+		img {
+			height: 2rem;
+			width: 2rem;
+		}
+		h6 {
+			margin-left: 0.5rem;
+		}
+	}
+}
 #header {
 	transition: all 200ms linear;
 	left: 0;
 	top: 0;
-	z-index: 10;
+	z-index: 100;
 	width: 100%;
+	max-width: 100vw;
 	padding: 0.5rem 2rem;
 	position: fixed;
 	&.scrolled {
 		transition: all 200ms linear;
 		z-index: 20;
+		position: fixed;
 		background-color: var.$primary-default;
 		.header-content {
 			@include flex-container(row, space-between, center, nowrap);
+			width: 100%;
 			.logo-link {
 				#logo-white {
 					display: block;
@@ -28,11 +50,6 @@
 			}
 			#navigation-links {
 				a {
-					padding: 0 0.75rem;
-					p {
-						color: var.$bg;
-					}
-
 					transition: all 100ms linear;
 				}
 				a:hover {
@@ -156,6 +173,11 @@
 			#behind-navigation-links {
 				background-color: var.$bg-dark;
 			}
+		}
+	}
+	#header,
+	#header.scrolled {
+		.header-content {
 			.menu {
 				position: fixed;
 				bottom: 0;
@@ -166,6 +188,7 @@
 				background-color: var.$fg;
 				margin: 1rem;
 				margin-bottom: 2rem;
+				color: var.$text;
 				@include flex-container(column, center, center, nowrap);
 			}
 		}
@@ -185,7 +208,7 @@
 				transform: translate(-5rem, 5rem);
 				top: 0;
 				right: 0;
-				z-index: 11;
+				z-index: 10;
 				background-color: var.$bg;
 				padding: 0.5rem 1rem;
 				border-radius: 0.5rem;
@@ -219,6 +242,15 @@
 			}
 			.menu {
 				display: none;
+			}
+		}
+	}
+	#header.scrolled {
+		.header-content {
+			#navigation-links {
+				p {
+					color: var.$bg;
+				}
 			}
 		}
 	}

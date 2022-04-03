@@ -23,7 +23,7 @@ footer {
 		}
 	}
 	#footer-navigation {
-		@include flex-container(column, flex-start, flex-start, nowrap);
+		@include flex-container(row, flex-start, flex-start, wrap);
 		a {
 			color: var.$bg;
 			text-decoration: none;
@@ -35,11 +35,11 @@ footer {
 			padding-left: 0.5rem;
 			transition: all 0.25s linear;
 		}
-		.eula {
-			margin-top: 2rem;
+		.nav-links {
+			padding: 2rem;
 		}
-		.copyright {
-			padding-top: 2rem;
+		.footer-legal {
+			padding: 2rem;
 		}
 	}
 }
