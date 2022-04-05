@@ -58,24 +58,31 @@
 		height: 50vh;
 		top: 0;
 		bottom: 0;
+		position: absolute;
 		background-color: var.$fg;
-
+		background-color: green;
 		// background-color: yellow;
 		@include flex-container(column, center, center, nowrap);
 	}
 	.sticky.fixed {
-		// position: fixed;
+		position: fixed;
 		top: 0;
+		background-color: purple;
 	}
 	.sticky.top {
 		top: 0;
+		background-color: yellow;
 	}
 	.sticky.bottom {
+		position: absolute;
+		bottom: 0;
+		background-color: red;
 	}
 
 	.scrolling {
 		width: 100%;
 		padding: 1rem;
+		margin-top: 50vh;
 		@include flex-container(column, center, space-between, nowrap);
 		.scroll-section {
 			min-height: 60vh;
