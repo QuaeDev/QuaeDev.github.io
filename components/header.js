@@ -19,6 +19,9 @@ const header = /*html*/ `<header id="header">
 				<a href="/about_us/">
 						<p>About</p>
 					</a>
+				<a href="/mission/">
+						<p>Mission</p>
+					</a>
 					<a href="/communities/">
 						<p>Communities</p>
 					</a>
