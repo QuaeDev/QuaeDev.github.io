@@ -1,0 +1,25 @@
+@use "../var";
+@import "../mixins";
+
+.mission-page {
+	.landing-view {
+		min-height: 100vh;
+		.img-wrapper {
+			transform: rotate(-30deg);
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 0 5rem 30rem 20rem;
+			overflow: hidden;
+			.img-container {
+				width: 40rem;
+				height: 30rem;
+				background-image: url("../../assets/img/mission/luis-morera-H8b_rDcsNCw-unsplash.jpeg");
+				background-attachment: fixed;
+				background-size: cover;
+				background-position: center;
+				transform: rotate(30deg);
+			}
+		}
+	}
+}

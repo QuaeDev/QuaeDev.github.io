@@ -695,6 +695,13 @@ a {
     height: 4rem;
   }
 }
+.landing-page .mission img {
+  max-width: 30rem;
+  width: 90%;
+}
+.landing-page .mission a {
+  margin: 2rem 0;
+}
 .landing-page #product .sticky #phone {
   width: 10rem;
   height: 15rem;
@@ -1476,6 +1483,27 @@ a {
 .sign-up .devices {
   width: min(100%, 30rem);
   padding: 2rem;
+}
+
+.mission-page .landing-view {
+  min-height: 100vh;
+}
+.mission-page .landing-view .img-wrapper {
+  transform: rotate(-30deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 5rem 30rem 20rem;
+  overflow: hidden;
+}
+.mission-page .landing-view .img-wrapper .img-container {
+  width: 40rem;
+  height: 30rem;
+  background-image: url("../../assets/img/mission/luis-morera-H8b_rDcsNCw-unsplash.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  transform: rotate(30deg);
 }
 
 footer {
