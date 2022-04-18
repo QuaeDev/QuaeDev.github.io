@@ -1485,15 +1485,6 @@ a {
   padding: 2rem;
 }
 
-.mission-page .landing-view {
-  min-height: 100vh;
-}
-.mission-page .landing-view .img-wrapper img {
-  clip-path: polygon(82% 14%, 100% 81%, 55% 100%, 0 85%, 0 0);
-  max-height: 100vh;
-  max-width: 100vw;
-  width: 50%;
-}
 .mission-page .section.mission .content {
   display: flex;
   flex-direction: row;
@@ -1501,11 +1492,15 @@ a {
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-.mission-page .section.mission .content img {
-  max-height: 60vh;
-  max-width: 40vw;
+.mission-page .section.mission .content .left {
+  position: relative;
 }
-
+.mission-page .section.mission .content .left .our-mission {
+  position: absolute;
+}
+.mission-page .section.mission .content .left img {
+  width: 100vw;
+}
 footer {
   background-color: #555555;
   width: 100%;
