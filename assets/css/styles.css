@@ -1485,22 +1485,43 @@ a {
   padding: 2rem;
 }
 
-.mission-page .section.mission .content {
+.mission-page .section {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
 }
-.mission-page .section.mission .content .left {
-  position: relative;
-}
-.mission-page .section.mission .content .left .our-mission {
-  position: absolute;
-}
-.mission-page .section.mission .content .left img {
+.mission-page .section .mission-img {
+  z-index: 1;
   width: 100vw;
 }
+.mission-page .section .content {
+  z-index: 4;
+  padding: 2rem;
+  width: clamp(20rem, 80%, 50rem);
+}
+.mission-page .section .content h2 {
+  font-weight: 800;
+  color: #fcfcfc;
+}
+.mission-page .section .content p {
+  background-color: #fcfcfc;
+  box-shadow: 0px 4px 5px -4px rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.mission-page .section.representation {
+  background-image: url("/assets/img/mission/hands_up.jpg");
+}
+.mission-page .section.fails-online {
+  background-image: url("/assets/img/mission/fails_online.jpg");
+}
+.mission-page .section.dont-wait {
+  background-image: url("/assets/img/mission/voting_line.jpg");
+}
+
 footer {
   background-color: #555555;
   width: 100%;
