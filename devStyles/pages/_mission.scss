@@ -11,27 +11,25 @@
 		}
 		.content {
 			z-index: 4;
-			padding: 2rem;
 			width: clamp(20rem, 80%, 50rem);
-			h2 {
-				font-weight: 800;
-				color: var.$bg;
+			margin: 4rem auto;
+			.title {
+				padding: 0.5rem;
+				@include flex-container(row, flex-start, center, nowrap);
+				img {
+					height: 3rem;
+					margin: 1rem;
+				}
+				h2 {
+					font-weight: 800;
+				}
 			}
 			p {
-				background-color: var.$bg;
+				background-color: var.$fg;
 				@include standard-shadow();
 				padding: 1rem;
 				border-radius: 0.5rem;
 			}
-		}
-		&.representation {
-			background-image: url("/assets/img/mission/hands_up.jpg");
-		}
-		&.fails-online {
-			background-image: url("/assets/img/mission/fails_online.jpg");
-		}
-		&.dont-wait {
-			background-image: url("/assets/img/mission/voting_line.jpg");
 		}
 	}
 }
