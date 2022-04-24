@@ -35,10 +35,10 @@ const header = /*html*/ `<header id="header">
 					<i class="material-icons">menu</i>
 				</button>
 				<div class="buttons">
-					<a href="https://beta.quae.app/account/signup">
+					<a href="https://beta.quae.app/signup">
 						<button class="primary"><p>Sign Up</p></button>
 					</a>
-					<a href="https://beta.quae.app/account/login">
+					<a href="https://beta.quae.app/login">
 						<button class="secondary"><p>Log In</p></button>
 					</a>
 				</div>
