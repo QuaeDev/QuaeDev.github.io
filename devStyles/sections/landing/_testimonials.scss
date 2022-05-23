@@ -1,76 +1,114 @@
 @use "../../var";
 @import "../../mixins";
-#social-proof {
-	width: min(100%, 40rem);
-	padding: 0.5rem 2rem;
-
-	@include flex-container(row, space-evenly, center, nowrap);
-
-	img {
-		width: 6rem;
-		height: 6rem;
-		border-radius: 50%;
-		@include standard-shadow();
-	}
-}
 #testimonial-container {
 	padding: 1rem 5rem;
-}
-#carousel-container {
-	background-color: transparent;
-	width: min(100%, 40rem);
-	overflow: visible;
-	.carousel-switch-prev,
-	.carousel-switch-next {
-		padding: 0.25rem;
-
-		border-radius: 0.25rem;
-		@include flex-container(row, center, center, nowrap);
-		i {
-			font-size: 3rem;
-			color: var.$text-secondary;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-row: auto auto auto auto auto;
+	grid-template-rows: auto auto auto auto auto;
+	-ms-grid-column: 20% auto 20%;
+	grid-template-columns: 20% auto 20%;
+	gap: 1rem;
+	justify-content: stretch;
+	#social-proof {
+		-ms-grid-row: 1/2;
+		grid-row: 1/2;
+		-ms-grid-column: 1/4;
+		grid-column: 1/4;
+		padding: 0.5rem 2rem;
+		background-color: red;
+		@include flex-container(row, space-evenly, center, nowrap);
+		img {
+			width: 6rem;
+			height: 6rem;
+			border-radius: 50%;
+			@include standard-shadow();
 		}
-		&:hover {
-			background-color: var.$fg;
+	}
+	.title {
+		-ms-grid-row: 2/3;
+		grid-row: 2/3;
+		-ms-grid-column: 1/4;
+		grid-column: 1/4;
+		background-color: pink;
+	}
+	.votes {
+		-ms-grid-row: 3/4;
+		grid-row: 3/4;
+		-ms-grid-column: 1/4;
+		grid-column: 1/4;
+		background-color: blue;
+	}
+	.img1 {
+		position: absolute;
+
+		bottom: 0;
+		border-radius: 40vw;
+		background-color: var.$fg;
+		z-index: -1;
+	}
+
+	#carousel-container {
+		-ms-grid-row: 4/5;
+		grid-row: 4/5;
+		-ms-grid-column: 2/3;
+		grid-column: 2/3;
+		background-color: transparent;
+		width: min(100%, 40rem);
+		overflow: visible;
+		.carousel-switch-prev,
+		.carousel-switch-next {
+			padding: 0.25rem;
+
+			border-radius: 0.25rem;
+			@include flex-container(row, center, center, nowrap);
 			i {
-				color: var.$text;
+				font-size: 3rem;
+				color: var.$text-secondary;
+			}
+			&:hover {
+				background-color: var.$fg;
+				i {
+					color: var.$text;
+				}
 			}
 		}
-	}
-	.carousel-bullet {
-		border-radius: 50%;
-		&.bullet-on {
-			background-color: var.$primary-default;
+		.carousel-bullet {
+			border-radius: 50%;
+			&.bullet-on {
+				background-color: var.$primary-default;
+			}
+		}
+
+		.slide {
+			@include flex-container(row, center, center, nowrap);
 		}
 	}
 
-	.slide {
-		@include flex-container(row, center, center, nowrap);
+	.testimonial {
+		width: 70%;
+		.header {
+			@include flex-container(row, flex-start, center, nowrap);
+			.picture {
+				height: 4rem;
+				width: 4rem;
+				border-radius: 2rem;
+				background-color: var.$accent1-default;
+			}
+			.text {
+				padding-left: 1rem;
+			}
+		}
+		.body {
+			padding-top: 1rem;
+		}
+		.footer {
+			padding-top: 1rem;
+			color: var.$text-secondary;
+		}
 	}
 }
 
-.testimonial {
-	width: 70%;
-	.header {
-		@include flex-container(row, flex-start, center, nowrap);
-		.picture {
-			height: 4rem;
-			width: 4rem;
-			border-radius: 2rem;
-			background-color: var.$accent1-default;
-		}
-		.text {
-			padding-left: 1rem;
-		}
-	}
-	.body {
-		padding-top: 1rem;
-	}
-	.footer {
-		padding-top: 1rem;
-		color: var.$text-secondary;
-	}
-}
 @media (max-width: 576px) {
 	.testimonial {
 		max-width: 18rem;
