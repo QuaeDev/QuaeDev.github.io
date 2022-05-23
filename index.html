@@ -18,7 +18,10 @@
 		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0," />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
-
+		<link
+			rel="stylesheet"
+			href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css"
+		/>
 		<script src="/assets/js/jquery-3.6.0.js" type="text/javascript"></script>
 		<link rel="stylesheet" href="/assets/css/styles.css" />
 
@@ -51,15 +54,13 @@
 						src="/assets/img/landing_check.png"
 						alt="home screen of app"
 					/>
-					<h1 class="primary title">Vote Every Day</h1>
+					<h1 class="primary title">Be Heard</h1>
 					<div class="subtext">
-						<div class="typing">
-							<h2>
-								Democratize Your
-								<h2 class="typed-text"></h2>
-								<span id="cursor"></span>
-							</h2>
-						</div>
+						<h2>
+							Represent Yourself
+							<!-- <h2 class="typed-text"></h2>
+								<span id="cursor"></span> -->
+						</h2>
 						<p>
 							Quae is a community voting platform. Voice your concerns in your
 							community and see results today!
@@ -116,45 +117,22 @@
 					<i class="material-icons">keyboard_arrow_down</i>
 				</button>
 			</div>
-			<!-- <div class="section-small" id="testimonials">
-				<div class="title">
-					<h4>Everyone Needs Representation</h4>
-					<h5>Quae Makes It Easy</h5>
-				</div>
-				<div class="testimonials">
-					<div class="card testimonial">
-						<div class="header">
-							<div class="picture" alt="picture of person"></div>
 
-							<div class="text">
-								<h5 class="name">Gab Poska</h5>
-								<p class="position secondary">Student Government President</p>
-							</div>
-						</div>
-						<p class="body">
-							"Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-							eius beatae debitis corrupti sapiente ex ut minima tempore quas
-							deserunt."
-						</p>
-						<p class="footer"><i> Testing footer </i></p>
-					</div>
-					<div class="card testimonial">
-						<div class="header">
-							<div class="picture" alt="picture of person"></div>
-							<div class="text">
-								<h5 class="name">Dan Wadler</h5>
-								<p class="position secondary">Student</p>
-							</div>
-						</div>
-						<p class="body">
-							"Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-							eius beatae debitis corrupti sapiente ex ut minima tempore quas
-							deserunt."
-						</p>
-						<p class="footer"><i> Testing footer </i></p>
-					</div>
+			<div class="section-small" id="testamonial-container">
+				<div class="title">
+					<h4>Representation Is Vital For All Communities</h4>
+					<h5>Everyone Benefits When All Are Heard</h5>
 				</div>
-			</div> -->
+				<div id="social-proof"></div>
+				<div
+					id="carousel-container"
+					data-role="carousel"
+					data-control-next="<i class='material-icons'>chevron_right</i>"
+					data-control-prev="<i class='material-icons'>chevron_left</i>"
+				></div>
+
+				<script src="/assets/js/testimonial.js"></script>
+			</div>
 			<!-- LEGENDARY -->
 			<div class="legendary-groups section" id="legendary-groups">
 				<div class="title">
@@ -235,7 +213,7 @@
 				<div class="scrolling">
 					<div class="scroll-section" id="section1">
 						<div class="content">
-							<h2>Vote On the Go</h2>
+							<h2>Build Your Community</h2>
 							<p>
 								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 								Doloremque, nemo laboriosam libero sequi tempore laborum fugit,
@@ -246,7 +224,7 @@
 					</div>
 					<div class="scroll-section" id="section2">
 						<div class="content">
-							<h2>Vote On the Go</h2>
+							<h2>Share Ideas</h2>
 							<p>
 								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 								Doloremque, nemo laboriosam libero sequi tempore laborum fugit,
@@ -257,7 +235,7 @@
 					</div>
 					<div class="scroll-section" id="section3">
 						<div class="content">
-							<h2>Vote On the Go</h2>
+							<h2>Enact Change</h2>
 							<p>
 								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 								Doloremque, nemo laboriosam libero sequi tempore laborum fugit,
@@ -376,5 +354,6 @@
 			<script src="/components/footer.js"></script>
 		</div>
 		<script src="/assets/js/animations.js"></script>
+		<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
 	</body>
 </html>
