@@ -63,6 +63,7 @@ a {
 
 .section {
 	min-height: 100vh;
+
 	@include flex-container(column, center, center, nowrap);
 	margin: 0 auto;
 	scroll-snap-align: start;

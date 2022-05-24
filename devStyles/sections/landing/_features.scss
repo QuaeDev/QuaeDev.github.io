@@ -1,0 +1,62 @@
+@use "../../var";
+@import "../../mixins";
+
+#features {
+	padding-top: 15rem;
+	.features-container {
+		@include flex-container(row, center, center, wrap);
+		width: 100%;
+		.feature {
+			width: 20rem;
+			padding: 1rem;
+			border-radius: 1rem;
+			margin: 1rem;
+			.header {
+				@include flex-container(row, flex-start, center, nowrap);
+				img {
+					height: 4rem;
+					width: 4rem;
+					border-radius: 2rem;
+					&.vote {
+						background-color: var.$primary-light;
+					}
+					&.propose {
+						background-color: var.$accent1-light;
+					}
+					&.act {
+						background-color: var.$accent2-light;
+					}
+				}
+				.text {
+					padding-left: 1rem;
+				}
+			}
+			.body {
+				padding-top: 1rem;
+			}
+			.footer {
+				padding-top: 1rem;
+				color: var.$text-secondary;
+			}
+		}
+	}
+}
+#id-security,
+#procedures {
+	height: 50vh;
+	width: 100vw;
+	max-width: 90rem;
+	padding: 0;
+	@include flex-container(row, flex-start, center, nowrap);
+	.img-container {
+		height: 100%;
+		width: clamp(5rem, 50%, 50rem);
+		background-color: red;
+	}
+	.content {
+		background-color: pink;
+		flex: 1;
+		height: 100%;
+		@include flex-container(column, center, center, nowrap);
+	}
+}

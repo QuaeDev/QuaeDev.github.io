@@ -1,19 +1,15 @@
 (function () {
 	const usedBy = [
 		{
-			picture: "/assets/img/logos/stevens.png",
-			text: "Stevens SGA",
+			picture: "/assets/img/logos/stevens_circle.png",
+			text: "Stevens",
 		},
 		{
-			picture: "/assets/img/logos/stevens.png",
-			text: "Stevens SGA",
+			picture: "/assets/img/logos/hoboken_circle.png",
+			text: "City of Hoboken",
 		},
 		{
-			picture: null,
-			text: "Stevens SGA",
-		},
-		{
-			picture: null,
+			picture: "/assets/img/logos/sga_circle.png",
 			text: "Stevens SGA",
 		},
 	];
@@ -62,7 +58,7 @@
 			footer: "footer",
 		},
 	];
-	const container = document.getElementById("carousel-container");
+	const container = document.getElementById("carousel");
 	for (let testimonial of testimonials) {
 		let slide = document.createElement("div");
 		slide.className = "slide";

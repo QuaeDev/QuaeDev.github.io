@@ -1,50 +1,62 @@
 @use "../../var";
 @import "../../mixins";
-#testimonial-container {
-	padding: 1rem 5rem;
-	display: -ms-grid;
-	display: grid;
-	-ms-grid-row: auto auto auto auto auto;
-	grid-template-rows: auto auto auto auto auto;
-	-ms-grid-column: 20% auto 20%;
-	grid-template-columns: 20% auto 20%;
-	gap: 1rem;
-	justify-content: stretch;
+.social-proof-container {
+	-ms-grid-row: 1/2;
+	grid-row: 1/2;
+	-ms-grid-column: 1/4;
+	grid-column: 1/4;
+	display: flex;
 	#social-proof {
-		-ms-grid-row: 1/2;
-		grid-row: 1/2;
-		-ms-grid-column: 1/4;
-		grid-column: 1/4;
 		padding: 0.5rem 2rem;
-		background-color: red;
+		width: min(100%, 40rem);
 		@include flex-container(row, space-evenly, center, nowrap);
+		margin: 0 auto;
 		img {
-			width: 6rem;
-			height: 6rem;
+			width: 5rem;
+			height: 5rem;
 			border-radius: 50%;
 			@include standard-shadow();
 		}
 	}
+}
+#testimonial-container {
+	height: 60%;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-row: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	-ms-grid-column: 5% auto 5%;
+	grid-template-columns: 5% auto 5%;
+	justify-content: stretch;
+	align-items: stretch;
+
 	.title {
+		-ms-grid-row: 1/2;
+		grid-row: 1/2;
+		-ms-grid-column: 1/4;
+		grid-column: 1/4;
+		@include flex-container(column, center, center, nowrap);
+		h2 {
+			margin: 0;
+			padding: 0;
+		}
+	}
+	.votes {
 		-ms-grid-row: 2/3;
 		grid-row: 2/3;
 		-ms-grid-column: 1/4;
 		grid-column: 1/4;
-		background-color: pink;
-	}
-	.votes {
-		-ms-grid-row: 3/4;
-		grid-row: 3/4;
-		-ms-grid-column: 1/4;
-		grid-column: 1/4;
-		background-color: blue;
+		@include flex-container(column, center, center, nowrap);
+		.content {
+			width: min(70%, 50rem);
+		}
 	}
 	.img1 {
-		position: absolute;
-
-		bottom: 0;
-		border-radius: 40vw;
-		background-color: var.$fg;
+		-ms-grid-row: 1/5;
+		grid-row: 1/5;
+		-ms-grid-column: 2/3;
+		grid-column: 2/3;
+		background-color: var.$primary-default;
 		z-index: -1;
 	}
 
@@ -53,9 +65,15 @@
 		grid-row: 4/5;
 		-ms-grid-column: 2/3;
 		grid-column: 2/3;
-		background-color: transparent;
-		width: min(100%, 40rem);
+		transform: translateY(50%);
+
 		overflow: visible;
+		@include flex-container(row, center, center, nowrap);
+		#carousel {
+			margin: 0 auto;
+			width: min(100%, 40rem);
+			background-color: transparent;
+		}
 		.carousel-switch-prev,
 		.carousel-switch-next {
 			padding: 0.25rem;
@@ -67,7 +85,6 @@
 				color: var.$text-secondary;
 			}
 			&:hover {
-				background-color: var.$fg;
 				i {
 					color: var.$text;
 				}
@@ -75,6 +92,8 @@
 		}
 		.carousel-bullet {
 			border-radius: 50%;
+			height: 1rem;
+			width: 1rem;
 			&.bullet-on {
 				background-color: var.$primary-default;
 			}
@@ -87,6 +106,10 @@
 
 	.testimonial {
 		width: 70%;
+		background-color: var.$bg;
+		padding: 1rem;
+		border-radius: 1rem;
+		@include standard-shadow();
 		.header {
 			@include flex-container(row, flex-start, center, nowrap);
 			.picture {

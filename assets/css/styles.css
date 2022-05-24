@@ -249,7 +249,7 @@ a {
 }
 
 .card {
-  background-color: #eeeeee;
+  background-color: #f2f2f2;
   padding: 2rem;
   margin: 0.5rem;
   border-radius: 1rem;
@@ -385,7 +385,7 @@ a {
     top: 0;
     bottom: 0;
     position: absolute;
-    background-color: #eeeeee;
+    background-color: #f2f2f2;
     background-color: green;
     display: flex;
     flex-direction: column;
@@ -785,55 +785,75 @@ a {
     height: 16rem;
   }
 }
-.landing-page #testimonial-container {
-  padding: 1rem 5rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-row: auto auto auto auto auto;
-  grid-template-rows: auto auto auto auto auto;
-  -ms-grid-column: 20% auto 20%;
-  grid-template-columns: 20% auto 20%;
-  gap: 1rem;
-  justify-content: stretch;
-}
-.landing-page #testimonial-container #social-proof {
+.landing-page .social-proof-container {
   -ms-grid-row: 1/2;
   grid-row: 1/2;
   -ms-grid-column: 1/4;
   grid-column: 1/4;
+  display: flex;
+}
+.landing-page .social-proof-container #social-proof {
   padding: 0.5rem 2rem;
-  background-color: red;
+  width: min(100%, 40rem);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: nowrap;
+  margin: 0 auto;
 }
-.landing-page #testimonial-container #social-proof img {
-  width: 6rem;
-  height: 6rem;
+.landing-page .social-proof-container #social-proof img {
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   box-shadow: 0px 4px 5px -4px rgba(0, 0, 0, 0.4);
 }
+.landing-page #testimonial-container {
+  height: 60%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-column: 5% auto 5%;
+  grid-template-columns: 5% auto 5%;
+  justify-content: stretch;
+  align-items: stretch;
+}
 .landing-page #testimonial-container .title {
+  -ms-grid-row: 1/2;
+  grid-row: 1/2;
+  -ms-grid-column: 1/4;
+  grid-column: 1/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.landing-page #testimonial-container .title h2 {
+  margin: 0;
+  padding: 0;
+}
+.landing-page #testimonial-container .votes {
   -ms-grid-row: 2/3;
   grid-row: 2/3;
   -ms-grid-column: 1/4;
   grid-column: 1/4;
-  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
-.landing-page #testimonial-container .votes {
-  -ms-grid-row: 3/4;
-  grid-row: 3/4;
-  -ms-grid-column: 1/4;
-  grid-column: 1/4;
-  background-color: blue;
+.landing-page #testimonial-container .votes .content {
+  width: min(70%, 50rem);
 }
 .landing-page #testimonial-container .img1 {
-  position: absolute;
-  bottom: 0;
-  border-radius: 40vw;
-  background-color: #eeeeee;
+  -ms-grid-row: 1/5;
+  grid-row: 1/5;
+  -ms-grid-column: 2/3;
+  grid-column: 2/3;
+  background-color: #6840d9;
   z-index: -1;
 }
 .landing-page #testimonial-container #carousel-container {
@@ -841,9 +861,18 @@ a {
   grid-row: 4/5;
   -ms-grid-column: 2/3;
   grid-column: 2/3;
-  background-color: transparent;
-  width: min(100%, 40rem);
+  transform: translateY(50%);
   overflow: visible;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.landing-page #testimonial-container #carousel-container #carousel {
+  margin: 0 auto;
+  width: min(100%, 40rem);
+  background-color: transparent;
 }
 .landing-page #testimonial-container #carousel-container .carousel-switch-prev,
 .landing-page #testimonial-container #carousel-container .carousel-switch-next {
@@ -860,16 +889,14 @@ a {
   font-size: 3rem;
   color: #5f5f5f;
 }
-.landing-page #testimonial-container #carousel-container .carousel-switch-prev:hover,
-.landing-page #testimonial-container #carousel-container .carousel-switch-next:hover {
-  background-color: #eeeeee;
-}
 .landing-page #testimonial-container #carousel-container .carousel-switch-prev:hover i,
 .landing-page #testimonial-container #carousel-container .carousel-switch-next:hover i {
   color: #151515;
 }
 .landing-page #testimonial-container #carousel-container .carousel-bullet {
   border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
 }
 .landing-page #testimonial-container #carousel-container .carousel-bullet.bullet-on {
   background-color: #6840d9;
@@ -883,6 +910,10 @@ a {
 }
 .landing-page #testimonial-container .testimonial {
   width: 70%;
+  background-color: #fcfcfc;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 5px -4px rgba(0, 0, 0, 0.4);
 }
 .landing-page #testimonial-container .testimonial .header {
   display: flex;
@@ -1014,6 +1045,83 @@ a {
     max-width: 40ch;
     margin-right: 2rem;
   }
+}
+.landing-page #features {
+  padding-top: 15rem;
+}
+.landing-page #features .features-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.landing-page #features .features-container .feature {
+  width: 20rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+.landing-page #features .features-container .feature .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+.landing-page #features .features-container .feature .header img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 2rem;
+}
+.landing-page #features .features-container .feature .header img.vote {
+  background-color: #8f67ff;
+}
+.landing-page #features .features-container .feature .header img.propose {
+  background-color: #8ed6ff;
+}
+.landing-page #features .features-container .feature .header img.act {
+  background-color: #ff61c0;
+}
+.landing-page #features .features-container .feature .header .text {
+  padding-left: 1rem;
+}
+.landing-page #features .features-container .feature .body {
+  padding-top: 1rem;
+}
+.landing-page #features .features-container .feature .footer {
+  padding-top: 1rem;
+  color: #5f5f5f;
+}
+.landing-page #id-security,
+.landing-page #procedures {
+  height: 50vh;
+  width: 100vw;
+  max-width: 90rem;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+.landing-page #id-security .img-container,
+.landing-page #procedures .img-container {
+  height: 100%;
+  width: clamp(5rem, 50%, 50rem);
+  background-color: red;
+}
+.landing-page #id-security .content,
+.landing-page #procedures .content {
+  background-color: pink;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .about-us-page {
@@ -1274,7 +1382,7 @@ a {
   min-width: 25ch;
 }
 .communities-page .sub-groups .group-hierarchy-wrapper {
-  border: 1px solid #eeeeee;
+  border: 1px solid #f2f2f2;
   background-color: #fcfcfc;
   border-radius: 1rem;
   box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.1);
@@ -1313,7 +1421,7 @@ a {
   padding: 0.25rem;
   border-radius: 0.5rem;
   margin: 0.25rem 0.5rem;
-  background-color: #eeeeee;
+  background-color: #f2f2f2;
 }
 
 .communities-page .procedures {
@@ -1373,7 +1481,7 @@ a {
   height: 100%;
   position: relative;
   box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.1);
-  background-color: #eeeeee;
+  background-color: #f2f2f2;
   border-radius: 0.5rem;
 }
 .communities-page .procedures .procedure-example-wrapper #procedure-example .phase .number {
@@ -1610,7 +1718,7 @@ a {
   font-weight: 800;
 }
 .mission-page .section .content p {
-  background-color: #eeeeee;
+  background-color: #f2f2f2;
   box-shadow: 0px 4px 5px -4px rgba(0, 0, 0, 0.4);
   padding: 1rem;
   border-radius: 0.5rem;
@@ -1776,7 +1884,7 @@ footer #footer-navigation {
   color: #6840d9;
 }
 #header.scrolled .header-content .buttons .primary:hover {
-  background-color: #eeeeee;
+  background-color: #f2f2f2;
 }
 #header.scrolled .header-content .buttons .secondary {
   border-color: #b6b6b6;
@@ -1882,7 +1990,7 @@ footer #footer-navigation {
     padding: 0.5rem;
     border-radius: 50%;
     border: 1px solid #b6b6b6;
-    background-color: #eeeeee;
+    background-color: #f2f2f2;
     margin: 1rem;
     margin-bottom: 2rem;
     color: #151515;
@@ -1987,7 +2095,7 @@ button.secondary {
   border: 2px solid #5f5f5f;
 }
 button.secondary:hover {
-  background-color: #eeeeee;
+  background-color: #f2f2f2;
   color: #151515;
   border: 2px solid #151515;
 }
@@ -2000,7 +2108,7 @@ button.white p {
   color: #151515;
 }
 button.white:hover {
-  background-color: #eeeeee;
+  background-color: #f2f2f2;
 }
 
 .download-buttons {
@@ -2050,7 +2158,7 @@ button.select-group {
 
 button.select-group:hover {
   opacity: 0.8;
-  background-color: #eeeeee;
+  background-color: #f2f2f2;
   border: 1px solid transparent;
   transition: all 0.25s linear;
 }
