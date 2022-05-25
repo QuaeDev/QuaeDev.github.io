@@ -333,6 +333,7 @@ a {
 
   .sticky.fixed {
     position: fixed;
+    margin: 1rem;
     top: 0;
     left: 0;
   }
@@ -1093,34 +1094,54 @@ a {
   padding-top: 1rem;
   color: #5f5f5f;
 }
-.landing-page #id-security,
-.landing-page #procedures {
+.landing-page #advance-features {
   height: 50vh;
   width: 100vw;
   max-width: 90rem;
   padding: 0;
+}
+.landing-page #advance-features.sticky-container {
+  height: 200vh;
+  width: 100vw;
+}
+.landing-page #advance-features .sticky {
+  width: 100%;
+  padding: 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: nowrap;
 }
-.landing-page #id-security .img-container,
-.landing-page #procedures .img-container {
-  height: 100%;
-  width: clamp(5rem, 50%, 50rem);
-  background-color: red;
-}
-.landing-page #id-security .content,
-.landing-page #procedures .content {
-  background-color: pink;
-  flex: 1;
+.landing-page #advance-features .sticky .content {
+  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
+}
+.landing-page #advance-features .scrolling {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+.landing-page #advance-features .scrolling .img-container {
+  height: 50%;
+  width: 50%;
+}
+.landing-page #advance-features .scrolling .img-container.id {
+  background-color: red;
+  margin-right: auto;
+}
+.landing-page #advance-features .scrolling .img-container.procedure {
+  background-color: yellow;
+  margin-left: auto;
 }
 
 .about-us-page {

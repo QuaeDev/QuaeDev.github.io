@@ -41,22 +41,42 @@
 		}
 	}
 }
-#id-security,
-#procedures {
+#advance-features {
 	height: 50vh;
 	width: 100vw;
 	max-width: 90rem;
 	padding: 0;
-	@include flex-container(row, flex-start, center, nowrap);
-	.img-container {
-		height: 100%;
-		width: clamp(5rem, 50%, 50rem);
-		background-color: red;
+	&.sticky-container {
+		height: 200vh;
+		width: 100vw;
 	}
-	.content {
-		background-color: pink;
-		flex: 1;
+	.sticky {
+		width: 100%;
+		padding: 1rem;
+		@include flex-container(row, center, center, nowrap);
+		.content {
+			width: 50%;
+			height: 100%;
+			@include flex-container(column, center, center, nowrap);
+			// background-color: pink;
+		}
+	}
+	.scrolling {
 		height: 100%;
-		@include flex-container(column, center, center, nowrap);
+		width: 100%;
+		@include flex-container(column, flex-start, center, nowrap);
+
+		.img-container {
+			height: 50%;
+			width: 50%;
+			&.id {
+				background-color: red;
+				margin-right: auto;
+			}
+			&.procedure {
+				background-color: yellow;
+				margin-left: auto;
+			}
+		}
 	}
 }

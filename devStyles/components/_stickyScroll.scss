@@ -6,6 +6,7 @@
 		margin: 0 auto;
 		position: relative;
 		padding: 0;
+		// background-color: red;
 	}
 	.sticky {
 		height: 100vh;
@@ -13,10 +14,13 @@
 		float: left;
 		position: absolute;
 		left: 0;
+		// background-color: blue;
 		@include flex-container(column, center, center, nowrap);
 	}
 	.sticky.fixed {
 		position: fixed;
+		margin: 1rem;
+		// background-color: purple;
 		top: 0;
 		left: 0;
 	}
@@ -46,6 +50,7 @@
 }
 
 @media screen and (max-width: 576px) {
+	// mobile
 	.sticky-container {
 		min-height: 100vh;
 		margin: 0 auto;

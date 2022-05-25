@@ -63,19 +63,20 @@ function handleSticky() {
 	sticky_container_top = getDistanceTopDoc(stickyContainer);
 	sticky_height = stickyContainer.offsetHeight;
 	sticky_bottom = sticky_container_top + sticky_height;
-
-	if (sticky_container_top > scroll) {
+	// console.log(sticky_container_top, ",", scroll);
+	if (sticky_container_top < scroll) {
 		//if the top of the container is below the top of the screen
 		//set's sticky to absolute and moved it to top of container
 		sticky.classList.add("top");
 		sticky.classList.remove("bottom");
 	}
+
 	if (!fixed) {
 		//if the sticky is fixed
 		if (sticky_container_top < scroll) {
 			//and the top is at the top of the screen
 			fixed = true;
-			console.log("y00000");
+			console.log("here");
 			sticky.classList.add("fixed");
 		}
 	}
