@@ -51,9 +51,9 @@ $(document).ready(function () {
 			"Organization",
 			"Union",
 		];
-		const typingDelay = 200;
+		const typingDelay = 100;
 		const erasingDelay = 100;
-		const newTextDelay = 2000;
+		const newTextDelay = 1000;
 		let textArrayIndex = 0;
 		let charIndex = 0;
 
@@ -80,7 +80,7 @@ $(document).ready(function () {
 				if (textArrayIndex >= textArray.length) {
 					textArrayIndex = 0;
 				}
-				setTimeout(type, typingDelay + 1100);
+				setTimeout(type, typingDelay + 100);
 			}
 		}
 		document.addEventListener("DOMContentLoaded", function () {

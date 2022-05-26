@@ -3,7 +3,7 @@
 .typed-text {
 	display: inline;
 	min-width: 1px;
-	min-height: 4rem;
+	// min-height: 4rem;
 }
 #cursor {
 	display: inline-block;
@@ -25,18 +25,43 @@
 	}
 }
 .landing-view {
-	min-height: 100vh;
+	min-height: 80vh;
 	position: relative;
+	padding: 1rem;
 	padding-top: 0;
-	justify-content: center;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	@include flex-container(column, center, center, nowrap);
+	.img-container {
+		background-color: var.$primary-light;
+		height: 100%;
+		width: max(55%, 30rem);
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		border-radius: 10%;
+		transform: rotate(30deg) translate(-40%, -10%);
+		@include standard-shadow();
+	}
 	.landing-grid {
 		display: -ms-grid;
 		display: grid;
 		gap: 0.5rem;
-		padding-bottom: 3rem;
+		padding-bottom: 1rem;
+
 		.title {
 			padding-bottom: 0;
 			text-align: left;
+			width: 100%;
+			h1 {
+				font-size: calc(3rem + 2vw);
+				text-align: start;
+			}
+			h2 {
+				text-align: start;
+				display: inline;
+			}
 		}
 		.subtext {
 			margin: 0;
@@ -48,26 +73,31 @@
 				text-align: left;
 				min-height: 8rem;
 			}
-		}
-		.download-buttons {
-			margin-right: auto;
-			margin-left: 0;
-		}
-	}
-	.learn-more {
-		bottom: 0;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
-		text-align: center;
-		i {
-			font-size: var.$XL;
+			.download-buttons {
+				margin-top: 1rem;
+			}
 		}
 	}
+	// .learn-more {
+	// 	bottom: 0;
+	// 	left: 0;
+	// 	right: 0;
+	// 	margin: 0 auto;
+	// 	text-align: center;
+	// 	i {
+	// 		font-size: var.$XL;
+	// 	}
+	// }
 }
 @media (max-width: 576px) {
+	//mobile
 	.landing-view {
 		padding: 1rem;
+		.img-container {
+			width: 40rem;
+			transform: rotate(30deg) translate(-60%, -30%);
+			transition: transform 1s linear;
+		}
 		.landing-grid {
 			grid-template-rows: auto auto auto auto;
 			-ms-grid-rows: auto auto auto auto;
@@ -108,19 +138,20 @@
 	}
 }
 @media (min-width: 576px) and (max-width: 768px) {
+	//tablet
 	.landing-view {
 		.landing-grid {
-			-ms-grid-rows: auto auto auto auto;
+			-ms-grid-rows: auto auto auto;
 			-ms-grid-column: 1fr 1fr;
-			grid-template-rows: auto auto auto auto;
+			grid-template-rows: auto auto auto;
 			grid-template-columns: 1fr 1fr;
 
 			.title {
-				text-align: center;
 				-ms-grid-row: 1/2;
 				-ms-grid-column: 1/3;
 				grid-row: 1/2;
 				grid-column: 1/3;
+				padding: 1rem;
 			}
 			.phone-check {
 				-ms-grid-row: 2/3;
@@ -143,24 +174,24 @@
 				p {
 					max-width: 20rem;
 				}
-			}
-			.download-buttons {
-				-ms-grid-column: 1/3;
-				-ms-grid-row: 3/4;
-				grid-row: 3/4;
-				grid-column: 1/3;
-				align-self: center;
-				margin-left: auto;
+				.download-buttons {
+					-ms-grid-column: 1/3;
+					-ms-grid-row: 3/4;
+					grid-row: 3/4;
+					grid-column: 1/3;
+				}
 			}
 		}
 	}
 }
 @media (min-width: 768px) {
+	//desktop
 	.landing-view {
 		.landing-grid {
-			grid-template-rows: min-content min-content min-content;
+			width: min(100%, 60rem);
+			grid-template-rows: auto auto;
 			grid-template-columns: 1fr 1fr;
-			-ms-grid-rows: auto auto auto;
+			-ms-grid-rows: auto auto;
 			-ms-grid-columns: auto auto;
 
 			.title {
@@ -168,15 +199,16 @@
 				-ms-grid-row: 1/2;
 				grid-row: 1/2;
 				grid-column: 2/3;
-				align-self: flex-end;
+				align-self: center;
 				justify-content: flex-start;
 				margin-right: auto;
+				text-align: start;
 				width: 100%;
 			}
 			.phone-check {
 				-ms-grid-row: 1/3;
 				-ms-grid-column: 1/2;
-				grid-row: 1/4;
+				grid-row: 1/3;
 				grid-column: 1/2;
 				width: min(100%, 30rem);
 				justify-content: flex-end;

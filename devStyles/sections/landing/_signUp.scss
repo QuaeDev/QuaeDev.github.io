@@ -2,14 +2,24 @@
 @import "../../mixins";
 
 .sign-up {
-	@include flex-container(row, center, center, wrap);
-	padding: 2rem;
-	.download-buttons {
-		width: min(100%, 30rem);
-	}
-	.devices {
-		width: min(100%, 30rem);
-		padding: 2rem;
+	@include flex-container(column, center, center, nowrap);
+	padding: 1rem;
+	.container {
+		width: 100%;
+		@include flex-container(row-reverse, center, flex-start, wrap);
+		form {
+			max-width: 35rem;
+			flex: 1;
+			@include standard-shadow();
+		}
+		.buttons {
+			width: min(100%, 20rem);
+			height: 100%;
+			// flex: 1;
+			@include flex-container(column, center, flex-start, nowrap);
+			padding: 1rem;
+			margin: 0 2rem;
+		}
 	}
 }
 

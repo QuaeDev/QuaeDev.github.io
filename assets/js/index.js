@@ -68,13 +68,13 @@ function renderAdvanceFeatureContent() {
 		idContent.classList.remove("idVisible");
 		procedureContent.classList.remove("idVisible");
 	}
-	if (isInViewport(idPhoto, 0.2)) {
+	if (isInViewport(idPhoto, 0.5)) {
 		idContent.classList.remove("procedureVisible");
 		procedureContent.classList.remove("procedureVisible");
 		idContent.classList.add("idVisible");
 		procedureContent.classList.add("idVisible");
 	}
-	if (isInViewport(procedurePhoto, 0.8)) {
+	if (isInViewport(procedurePhoto, 0.4)) {
 		idContent.classList.add("procedureVisible");
 		procedureContent.classList.add("procedureVisible");
 		idContent.classList.remove("idVisible");
