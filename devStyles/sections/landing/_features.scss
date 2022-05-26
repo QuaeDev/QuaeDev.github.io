@@ -41,27 +41,83 @@
 		}
 	}
 }
+#id-verification-content,
+#procedure-content {
+	padding: 2rem;
+}
+#id-verification-content {
+	opacity: 0;
+	transition: all 1s ease-in-out;
+	transform: translateY(-10%);
+	@include flex-container(column, center, center, nowrap);
+
+	&.procedureVisible {
+		padding: 2rem;
+
+		opacity: 0;
+		transition: all 1s ease-in-out;
+	}
+	&.idVisible {
+		padding: 2rem;
+		transform: translateY(10%);
+		opacity: 1;
+		transform: translateY(0);
+		transition: all 1s ease-in-out;
+	}
+	&.noneVisible {
+		padding: 2rem;
+
+		opacity: 0;
+	}
+}
+#procedure-content {
+	opacity: 0;
+	transition: all 1s ease-in-out;
+	transform: translateY(-10%);
+	@include flex-container(column, center, center, nowrap);
+
+	&.procedureVisible {
+		padding: 2rem;
+
+		opacity: 1;
+		transform: translateY(0);
+
+		transition: all 1s ease-in-out;
+	}
+	&.idVisible {
+		padding: 2rem;
+		transform: translateY(10%);
+		opacity: 0;
+		transition: all 1s ease-in-out;
+	}
+	&.noneVisible {
+		padding: 2rem;
+
+		opacity: 0;
+	}
+}
+
 #advance-features {
 	height: 50vh;
 	width: 100vw;
-	max-width: 90rem;
+	// max-width: 90rem;
 	padding: 0;
 	&.sticky-container {
 		height: 200vh;
 		width: 100vw;
 	}
 	.sticky {
+		max-width: 100rem;
 		width: 100%;
-		padding: 1rem;
 		@include flex-container(row, center, center, nowrap);
 		.content {
 			width: 50%;
 			height: 100%;
-			@include flex-container(column, center, center, nowrap);
 			// background-color: pink;
 		}
 	}
 	.scrolling {
+		max-width: 100rem;
 		height: 100%;
 		width: 100%;
 		@include flex-container(column, flex-start, center, nowrap);
@@ -69,13 +125,38 @@
 		.img-container {
 			height: 50%;
 			width: 50%;
+			border-radius: 5%;
 			&.id {
 				background-color: red;
+				border-bottom-right-radius: 30%;
 				margin-right: auto;
 			}
 			&.procedure {
 				background-color: yellow;
+				border-top-left-radius: 30%;
+
 				margin-left: auto;
+			}
+		}
+	}
+}
+#small-features {
+	#small-features-container {
+		width: min(100%, 50rem);
+		display: -ms-grid;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		-ms-grid-column: 1fr 1fr 1fr;
+		grid-column: 1fr 1fr 1fr;
+		justify-content: stretch;
+		gap: 2rem;
+		.card {
+			width: 100%;
+			@include flex-container(column, center, center, nowrap);
+			img {
+				height: 3rem;
+				width: 3rem;
+				margin: 1rem;
 			}
 		}
 	}

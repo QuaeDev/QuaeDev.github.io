@@ -2,10 +2,9 @@
 @media screen and (min-width: 577px) {
 	.sticky-container {
 		min-height: 100vh;
-		@include flex-container(column, center, center, nowrap);
-		margin: 0 auto;
+		@include flex-container(column, flex-start, center, nowrap);
 		position: relative;
-		padding: 0;
+		// margin: 1rem;
 		// background-color: red;
 	}
 	.sticky {
@@ -14,13 +13,10 @@
 		float: left;
 		position: absolute;
 		left: 0;
-		// background-color: blue;
-		@include flex-container(column, center, center, nowrap);
+		right: 0;
 	}
 	.sticky.fixed {
 		position: fixed;
-		margin: 1rem;
-		// background-color: purple;
 		top: 0;
 		left: 0;
 	}
@@ -37,7 +33,6 @@
 		width: 50%;
 		margin-left: auto;
 		padding: 1rem;
-		padding-right: 4rem;
 		@include flex-container(column, center, space-between, nowrap);
 		.scroll-section {
 			min-height: 100vh;

@@ -82,11 +82,11 @@ a {
 }
 
 .card {
-	background-color: var.$fg;
-	padding: 2rem;
-	margin: 0.5rem;
-	border-radius: 1rem;
-	box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.1);
+	background-color: var.$bg;
+	padding: 1rem;
+	border-radius: 0.25rem;
+	margin: 0;
+	box-shadow: 0px 3px 2px -3px rgba(0, 0, 0, 40%);
 }
 
 @import "./components/page";

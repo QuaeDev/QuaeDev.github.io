@@ -26,29 +26,59 @@ function getDistanceTopDoc(elem) {
 function getDistanceTopWindow(element) {
 	return getDistanceTopDoc(element) - $(window).scrollTop();
 }
-function isInViewport(element) {
+
+function isInViewport(element, threshHold) {
 	let distToTopElement = getDistanceTopWindow(element);
-	if (distToTopElement < midScreen) {
+	if (distToTopElement < window_height * threshHold) {
 		return true;
 	}
 	return false;
 }
-function renderProductImages() {
-	const section1 = document.getElementById("section1");
-	const section2 = document.getElementById("section2");
-	const section3 = document.getElementById("section3");
-	const phone = document.getElementById("phone");
-	if (isInViewport(section1)) {
-		phone.classList = [];
-		phone.classList.add("section1");
+// function renderProductImages() {
+// 	const section1 = document.getElementById("section1");
+// 	const section2 = document.getElementById("section2");
+// 	const section3 = document.getElementById("section3");
+// 	const phone = document.getElementById("phone");
+// 	if (isInViewport(section1, 0.5)) {
+// 		phone.classList = [];
+// 		phone.classList.add("section1");
+// 	}
+// 	if (isInViewport(section2, 0.5)) {
+// 		phone.classList = [];
+// 		phone.classList.add("section2");
+// 	}
+// 	if (isInViewport(section3, 0.5)) {
+// 		phone.classList = [];
+// 		phone.classList.add("section3");
+// 	}
+// }
+function renderAdvanceFeatureContent() {
+	const container = document.getElementById("advance-features");
+	const idContent = document.getElementById("id-verification-content");
+	const procedureContent = document.getElementById("procedure-content");
+	const idPhoto = document.getElementById("id-verification-photo");
+	const procedurePhoto = document.getElementById("procedure-photo");
+	let distanceToTop = getDistanceTopDoc(container);
+	let height = container.offsetHeight;
+	let scrollTop = $(window).scrollTop();
+
+	if (distanceToTop + height < scrollTop) {
+		idContent.classList.remove("procedureVisible");
+		procedureContent.classList.remove("procedureVisible");
+		idContent.classList.remove("idVisible");
+		procedureContent.classList.remove("idVisible");
 	}
-	if (isInViewport(section2)) {
-		phone.classList = [];
-		phone.classList.add("section2");
+	if (isInViewport(idPhoto, 0.25)) {
+		idContent.classList.remove("procedureVisible");
+		procedureContent.classList.remove("procedureVisible");
+		idContent.classList.add("idVisible");
+		procedureContent.classList.add("idVisible");
 	}
-	if (isInViewport(section3)) {
-		phone.classList = [];
-		phone.classList.add("section3");
+	if (isInViewport(procedurePhoto, 0.6)) {
+		idContent.classList.add("procedureVisible");
+		procedureContent.classList.add("procedureVisible");
+		idContent.classList.remove("idVisible");
+		procedureContent.classList.remove("idVisible");
 	}
 }
 function handleSticky() {
@@ -63,7 +93,6 @@ function handleSticky() {
 	sticky_container_top = getDistanceTopDoc(stickyContainer);
 	sticky_height = stickyContainer.offsetHeight;
 	sticky_bottom = sticky_container_top + sticky_height;
-	// console.log(sticky_container_top, ",", scroll);
 	if (sticky_container_top < scroll) {
 		//if the top of the container is below the top of the screen
 		//set's sticky to absolute and moved it to top of container
@@ -76,7 +105,6 @@ function handleSticky() {
 		if (sticky_container_top < scroll) {
 			//and the top is at the top of the screen
 			fixed = true;
-			console.log("here");
 			sticky.classList.add("fixed");
 		}
 	}
@@ -97,4 +125,5 @@ function handleSticky() {
 
 window.addEventListener("scroll", handleSticky);
 window.addEventListener("scroll", getDistanceTopWindow);
-window.addEventListener("scroll", renderProductImages);
+// window.addEventListener("scroll", renderProductImages);
+window.addEventListener("scroll", renderAdvanceFeatureContent);

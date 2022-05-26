@@ -248,11 +248,11 @@ a {
 }
 
 .card {
-  background-color: #f2f2f2;
-  padding: 2rem;
-  margin: 0.5rem;
-  border-radius: 1rem;
-  box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.1);
+  background-color: #fcfcfc;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin: 0;
+  box-shadow: 0px 3px 2px -3px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 576px) {
@@ -311,11 +311,9 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: nowrap;
-    margin: 0 auto;
     position: relative;
-    padding: 0;
   }
 
   .sticky {
@@ -324,16 +322,11 @@ a {
     float: left;
     position: absolute;
     left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
+    right: 0;
   }
 
   .sticky.fixed {
     position: fixed;
-    margin: 1rem;
     top: 0;
     left: 0;
   }
@@ -352,7 +345,6 @@ a {
     width: 50%;
     margin-left: auto;
     padding: 1rem;
-    padding-right: 4rem;
     display: flex;
     flex-direction: column;
     align-items: space-between;
@@ -625,75 +617,12 @@ a {
     grid-row: 3/4;
   }
 }
-.landing-page .legendary-groups .title {
-  margin: 0 auto;
+.landing-page .mission {
+  background-color: #6840d9;
+  padding: 4rem 1rem;
 }
-.landing-page .legendary-groups .icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.landing-page .legendary-groups .icons .group {
-  padding: 3vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-}
-.landing-page .legendary-groups .icons .group img {
-  margin: 1rem;
-  height: 4rem;
-}
-@media (max-width: 768px) {
-  .landing-page .legendary-groups .title {
-    margin: 0 auto;
-  }
-  .landing-page .legendary-groups .icons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .landing-page .legendary-groups .icons .group {
-    padding: 3vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-  }
-  .landing-page .legendary-groups .icons .group img {
-    margin: 1rem;
-    height: 4rem;
-  }
-}
-@media (min-width: 768px) {
-  .landing-page .legendary-groups .title {
-    margin: 0 auto;
-  }
-  .landing-page .legendary-groups .icons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .landing-page .legendary-groups .icons .group {
-    padding: 3vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-  }
-  .landing-page .legendary-groups .icons .group img {
-    margin: 1rem;
-    height: 4rem;
-  }
+.landing-page .mission * {
+  color: #fcfcfc;
 }
 .landing-page .mission img {
   max-width: 30rem;
@@ -1094,10 +1023,65 @@ a {
   padding-top: 1rem;
   color: #5f5f5f;
 }
+.landing-page #id-verification-content,
+.landing-page #procedure-content {
+  padding: 2rem;
+}
+.landing-page #id-verification-content {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  transform: translateY(-10%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.landing-page #id-verification-content.procedureVisible {
+  padding: 2rem;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+.landing-page #id-verification-content.idVisible {
+  padding: 2rem;
+  transform: translateY(10%);
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s ease-in-out;
+}
+.landing-page #id-verification-content.noneVisible {
+  padding: 2rem;
+  opacity: 0;
+}
+.landing-page #procedure-content {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  transform: translateY(-10%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.landing-page #procedure-content.procedureVisible {
+  padding: 2rem;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s ease-in-out;
+}
+.landing-page #procedure-content.idVisible {
+  padding: 2rem;
+  transform: translateY(10%);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+.landing-page #procedure-content.noneVisible {
+  padding: 2rem;
+  opacity: 0;
+}
 .landing-page #advance-features {
   height: 50vh;
   width: 100vw;
-  max-width: 90rem;
   padding: 0;
 }
 .landing-page #advance-features.sticky-container {
@@ -1105,8 +1089,8 @@ a {
   width: 100vw;
 }
 .landing-page #advance-features .sticky {
+  max-width: 100rem;
   width: 100%;
-  padding: 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1116,13 +1100,9 @@ a {
 .landing-page #advance-features .sticky .content {
   width: 50%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
 }
 .landing-page #advance-features .scrolling {
+  max-width: 100rem;
   height: 100%;
   width: 100%;
   display: flex;
@@ -1134,14 +1114,40 @@ a {
 .landing-page #advance-features .scrolling .img-container {
   height: 50%;
   width: 50%;
+  border-radius: 5%;
 }
 .landing-page #advance-features .scrolling .img-container.id {
   background-color: red;
+  border-bottom-right-radius: 30%;
   margin-right: auto;
 }
 .landing-page #advance-features .scrolling .img-container.procedure {
   background-color: yellow;
+  border-top-left-radius: 30%;
   margin-left: auto;
+}
+.landing-page #small-features #small-features-container {
+  width: min(100%, 50rem);
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-column: 1fr 1fr 1fr;
+  grid-column: 1fr 1fr 1fr;
+  justify-content: stretch;
+  gap: 2rem;
+}
+.landing-page #small-features #small-features-container .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.landing-page #small-features #small-features-container .card img {
+  height: 3rem;
+  width: 3rem;
+  margin: 1rem;
 }
 
 .about-us-page {
