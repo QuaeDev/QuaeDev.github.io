@@ -285,7 +285,7 @@
 						text: "blah bah"
 					},
 				]
-				let container = document.getElementById("small-features-container")
+				let smallFeatureContainer = document.getElementById("small-features-container")
 				for (let feature of smallFeatures){
 					let card = document.createElement("div")
 					card.classList.add("card")
@@ -294,9 +294,47 @@
 					<h4>${feature.text}</h4>
 					`
 					console.log(card)
-					container.appendChild(card)
+					smallFeatureContainer.appendChild(card)
 				}
 				</script>
+			</section>
+			<section class="section" id="any-community">
+				<div id="any-community-container">
+
+				</div>
+				<script>
+					let communities = [
+						{
+							img: "/assets/img/mission/ballot.png",
+							imgAlt: "blah",
+							header: "title"
+						},
+						{
+							img: "/assets/img/mission/ballot.png",
+							imgAlt: "blah",
+							header: "title"
+						},
+						{
+							img: "/assets/img/mission/ballot.png",
+							imgAlt: "blah",
+							header: "title"
+						},
+						
+					]
+					let communityContainer = document.getElementById("any-community-container")
+					for (let community of communities){
+						let card = document.createElement("div")
+						card.classList.add("card")
+						card.innerHTML= /*html*/`
+						<div class="header">
+						<img src="${community.img}" alt="${community.imgAlt}" />
+						<h4>${community.header}</h4>
+						</div>
+						`
+						console.log(card)
+						communityContainer.appendChild(card)
+					}
+					</script>
 			</section>
 			
 			<!-- <div class="be-heard section">

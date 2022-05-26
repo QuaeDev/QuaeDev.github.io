@@ -44,10 +44,13 @@
 #id-verification-content,
 #procedure-content {
 	padding: 2rem;
+	p {
+		max-width: 50ch;
+	}
 }
 #id-verification-content {
 	opacity: 0;
-	transition: all 1s ease-in-out;
+	transition: all 0.5s ease-in-out;
 	transform: translateY(-10%);
 	@include flex-container(column, center, center, nowrap);
 
@@ -55,14 +58,14 @@
 		padding: 2rem;
 
 		opacity: 0;
-		transition: all 1s ease-in-out;
+		transition: all 0.5s ease-in-out;
 	}
 	&.idVisible {
 		padding: 2rem;
 		transform: translateY(10%);
 		opacity: 1;
 		transform: translateY(0);
-		transition: all 1s ease-in-out;
+		transition: all 0.5s ease-in-out;
 	}
 	&.noneVisible {
 		padding: 2rem;
@@ -72,7 +75,7 @@
 }
 #procedure-content {
 	opacity: 0;
-	transition: all 1s ease-in-out;
+	transition: all 0.5s ease-in-out;
 	transform: translateY(-10%);
 	@include flex-container(column, center, center, nowrap);
 
@@ -82,13 +85,13 @@
 		opacity: 1;
 		transform: translateY(0);
 
-		transition: all 1s ease-in-out;
+		transition: all 0.5s ease-in-out;
 	}
 	&.idVisible {
 		padding: 2rem;
 		transform: translateY(10%);
 		opacity: 0;
-		transition: all 1s ease-in-out;
+		transition: all 0.5s ease-in-out;
 	}
 	&.noneVisible {
 		padding: 2rem;
@@ -125,7 +128,6 @@
 		.img-container {
 			height: 50%;
 			width: 50%;
-			border-radius: 5%;
 			&.id {
 				background-color: red;
 				border-bottom-right-radius: 30%;
@@ -159,5 +161,9 @@
 				margin: 1rem;
 			}
 		}
+	}
+}
+#any-community {
+	#any-community-container {
 	}
 }

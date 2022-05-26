@@ -32,7 +32,7 @@
 		float: right;
 		width: 50%;
 		margin-left: auto;
-		padding: 1rem;
+		// padding: 1rem;
 		@include flex-container(column, center, space-between, nowrap);
 		.scroll-section {
 			min-height: 100vh;

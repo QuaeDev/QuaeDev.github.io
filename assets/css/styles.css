@@ -344,7 +344,6 @@ a {
     float: right;
     width: 50%;
     margin-left: auto;
-    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: space-between;
@@ -1027,9 +1026,13 @@ a {
 .landing-page #procedure-content {
   padding: 2rem;
 }
+.landing-page #id-verification-content p,
+.landing-page #procedure-content p {
+  max-width: 50ch;
+}
 .landing-page #id-verification-content {
   opacity: 0;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
   transform: translateY(-10%);
   display: flex;
   flex-direction: column;
@@ -1040,14 +1043,14 @@ a {
 .landing-page #id-verification-content.procedureVisible {
   padding: 2rem;
   opacity: 0;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .landing-page #id-verification-content.idVisible {
   padding: 2rem;
   transform: translateY(10%);
   opacity: 1;
   transform: translateY(0);
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .landing-page #id-verification-content.noneVisible {
   padding: 2rem;
@@ -1055,7 +1058,7 @@ a {
 }
 .landing-page #procedure-content {
   opacity: 0;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
   transform: translateY(-10%);
   display: flex;
   flex-direction: column;
@@ -1067,13 +1070,13 @@ a {
   padding: 2rem;
   opacity: 1;
   transform: translateY(0);
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .landing-page #procedure-content.idVisible {
   padding: 2rem;
   transform: translateY(10%);
   opacity: 0;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .landing-page #procedure-content.noneVisible {
   padding: 2rem;
@@ -1114,7 +1117,6 @@ a {
 .landing-page #advance-features .scrolling .img-container {
   height: 50%;
   width: 50%;
-  border-radius: 5%;
 }
 .landing-page #advance-features .scrolling .img-container.id {
   background-color: red;
@@ -1149,7 +1151,6 @@ a {
   width: 3rem;
   margin: 1rem;
 }
-
 .about-us-page {
   margin: 0 auto;
   padding-top: 6rem;
