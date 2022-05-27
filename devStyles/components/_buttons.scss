@@ -53,12 +53,16 @@ button {
 		}
 	}
 }
+#download-button-placeholder {
+	@include flex-container(column, center, center, nowrap);
+}
 .download-buttons {
 	text-align: center;
 	background: blur(15px);
 	background-color: rgba(0, 0, 0, 0.01);
 	width: min(20rem, 100%);
 	height: min-content;
+	@include flex-container(column, center, center, nowrap);
 	.app-stores {
 		margin-bottom: 5px;
 		@include flex-container(row, center, center, nowrap);

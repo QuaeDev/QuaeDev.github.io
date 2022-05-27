@@ -11,14 +11,20 @@
 			max-width: 35rem;
 			flex: 1;
 			@include standard-shadow();
+			border-radius: 0.5rem;
 		}
 		.buttons {
-			width: min(100%, 20rem);
+			@include standard-shadow();
+			border-radius: 0.5rem;
+			width: min(100%, 30rem);
 			height: 100%;
 			// flex: 1;
-			@include flex-container(column, center, flex-start, nowrap);
+			@include flex-container(column, center, center, nowrap);
 			padding: 1rem;
 			margin: 0 2rem;
+			h4 {
+				padding-bottom: 1rem;
+			}
 		}
 	}
 }

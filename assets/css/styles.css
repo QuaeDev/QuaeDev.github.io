@@ -946,17 +946,23 @@ a {
   max-width: 35rem;
   flex: 1;
   box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
 }
 .landing-page .sign-up .container .buttons {
-  width: min(100%, 20rem);
+  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  width: min(100%, 30rem);
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
   padding: 1rem;
   margin: 0 2rem;
+}
+.landing-page .sign-up .container .buttons h4 {
+  padding-bottom: 1rem;
 }
 .landing-page .security {
   background: linear-gradient(#0085be, #55bdde, #8ed6ff, transparent);
@@ -1274,29 +1280,50 @@ a {
     gap: 0.5rem;
   }
 }
+.landing-page #any-community {
+  width: min(100%, 80rem);
+}
 .landing-page #any-community #any-community-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  height: max-content;
 }
 .landing-page #any-community #any-community-container .card {
+  flex: 1;
+  height: 100%;
   margin: 0.3rem;
-  width: min(100%, 20rem);
-  border-radius: 0.5rem;
+  width: min(100%, 25rem);
+  border-radius: 0.25rem 0.25rem 0.5rem 0.5rem;
   overflow: hidden;
   padding: 0;
 }
 .landing-page #any-community #any-community-container .card .img-container {
-  height: 6rem;
+  height: 12rem;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 .landing-page #any-community #any-community-container .card .content {
+  height: 10rem;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
 }
 .landing-page #any-community #any-community-container .card .content p {
   margin: 0.5rem 0;
+  flex: 1;
+}
+.landing-page #any-community #any-community-container .card .content button {
+  margin-top: auto;
 }
 
 .about-us-page {
@@ -1864,17 +1891,23 @@ a {
   max-width: 35rem;
   flex: 1;
   box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
 }
 .sign-up .container .buttons {
-  width: min(100%, 20rem);
+  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  width: min(100%, 30rem);
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
   padding: 1rem;
   margin: 0 2rem;
+}
+.sign-up .container .buttons h4 {
+  padding-bottom: 1rem;
 }
 
 .mission-page .section {
@@ -2303,12 +2336,25 @@ button.white:hover {
   background-color: #f2f2f2;
 }
 
+#download-button-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
 .download-buttons {
   text-align: center;
   background: blur(15px);
   background-color: rgba(0, 0, 0, 0.01);
   width: min(20rem, 100%);
   height: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 .download-buttons .app-stores {
   margin-bottom: 5px;

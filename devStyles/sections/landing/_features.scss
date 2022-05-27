@@ -261,25 +261,33 @@
 	}
 }
 #any-community {
+	width: min(100%, 80rem);
 	#any-community-container {
 		@include flex-container(row, center, center, wrap);
-
+		height: max-content;
 		.card {
+			flex: 1;
+			height: 100%;
 			margin: 0.3rem;
-			width: min(100%, 20rem);
-			border-radius: 0.5rem;
+			width: min(100%, 25rem);
+			border-radius: 0.25rem 0.25rem 0.5rem 0.5rem;
 			overflow: hidden;
 			padding: 0;
 			.img-container {
-				height: 6rem;
+				height: 12rem;
 				overflow: hidden;
-				img {
-				}
+				@include flex-container(column, center, center, nowrap);
 			}
 			.content {
+				height: 10rem;
 				padding: 1rem;
+				@include flex-container(column, flex-start, flex-start, nowrap);
 				p {
 					margin: 0.5rem 0;
+					flex: 1;
+				}
+				button {
+					margin-top: auto;
 				}
 			}
 		}
