@@ -14,18 +14,8 @@
 			.header {
 				@include flex-container(row, flex-start, center, nowrap);
 				img {
-					height: 4rem;
-					width: 4rem;
-					border-radius: 2rem;
-					&.vote {
-						background-color: var.$primary-light;
-					}
-					&.propose {
-						background-color: var.$accent1-light;
-					}
-					&.act {
-						background-color: var.$accent2-light;
-					}
+					height: 5rem;
+					width: 5rem;
 				}
 				.text {
 					padding-left: 1rem;
@@ -229,11 +219,9 @@
 			width: 100%;
 			@include flex-container(column, center, center, nowrap);
 			.img-container {
-				@include standard-shadow();
-				border-radius: 50%;
 				height: 5rem;
 				width: 5rem;
-				background-color: var.$fg;
+
 				img {
 					height: 3rem;
 					width: 3rem;
@@ -241,7 +229,6 @@
 				}
 			}
 			.content {
-				padding-top: 2rem;
 			}
 		}
 	}

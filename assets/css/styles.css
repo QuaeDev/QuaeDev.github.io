@@ -1037,18 +1037,8 @@ a {
   flex-wrap: nowrap;
 }
 .landing-page #features #core-features-container .feature .header img {
-  height: 4rem;
-  width: 4rem;
-  border-radius: 2rem;
-}
-.landing-page #features #core-features-container .feature .header img.vote {
-  background-color: #8f67ff;
-}
-.landing-page #features #core-features-container .feature .header img.propose {
-  background-color: #8ed6ff;
-}
-.landing-page #features #core-features-container .feature .header img.act {
-  background-color: #ff61c0;
+  height: 5rem;
+  width: 5rem;
 }
 .landing-page #features #core-features-container .feature .header .text {
   padding-left: 1rem;
@@ -1254,19 +1244,13 @@ a {
   flex-wrap: nowrap;
 }
 .landing-page #small-features #small-features-container .card .img-container {
-  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
   height: 5rem;
   width: 5rem;
-  background-color: #f2f2f2;
 }
 .landing-page #small-features #small-features-container .card .img-container img {
   height: 3rem;
   width: 3rem;
   margin: 1rem;
-}
-.landing-page #small-features #small-features-container .card .content {
-  padding-top: 2rem;
 }
 @media screen and (max-width: 800px) {
   .landing-page #small-features #small-features-container {
