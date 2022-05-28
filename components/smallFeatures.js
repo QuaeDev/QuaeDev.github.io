@@ -2,7 +2,7 @@ let smallFeatures = [
 	{
 		img: "/assets/img/smallFeatures/security.png",
 		imgAlt: "icon of a lock",
-		text: "Secure Data",
+		text: "Secure Votes",
 	},
 	{
 		img: "/assets/img/smallFeatures/supporters.png",
