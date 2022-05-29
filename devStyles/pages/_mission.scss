@@ -2,6 +2,19 @@
 @import "../mixins";
 
 .mission-page {
+	.landing {
+		position: relative;
+		img {
+			position: absolute;
+			height: 100%;
+			z-index: -1;
+		}
+		.title {
+			* {
+				// color: var.$light;
+			}
+		}
+	}
 	.section {
 		position: relative;
 		@include flex-container(row, center, center, wrap);
@@ -25,11 +38,11 @@
 				}
 			}
 			p {
-				background-color: var.$fg;
 				@include standard-shadow();
 				padding: 1rem;
 				border-radius: 0.5rem;
 			}
 		}
 	}
+	@import "../sections/landing/signUp";
 }

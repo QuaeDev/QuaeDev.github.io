@@ -2,7 +2,12 @@ let smallFeatures = [
 	{
 		img: "/assets/img/smallFeatures/security.png",
 		imgAlt: "icon of a lock",
-		text: "Secure Votes",
+		text: "Secure",
+	},
+	{
+		img: "/assets/img/smallFeatures/accessible.png",
+		imgAlt: "icon of computer, tablet, and phone",
+		text: "Accessible",
 	},
 	{
 		img: "/assets/img/smallFeatures/supporters.png",
@@ -19,11 +24,7 @@ let smallFeatures = [
 		imgAlt: "icon of email",
 		text: "Email Domains",
 	},
-	{
-		img: "/assets/img/smallFeatures/accessible.png",
-		imgAlt: "icon of computer, tablet, and phone",
-		text: "Accessible",
-	},
+
 	{
 		img: "/assets/img/smallFeatures/storage.png",
 		imgAlt: "icon of folder",

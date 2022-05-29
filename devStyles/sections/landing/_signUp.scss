@@ -4,6 +4,7 @@
 .sign-up {
 	@include flex-container(column, center, center, nowrap);
 	padding: 1rem;
+	width: 100%;
 	.container {
 		width: 100%;
 		@include flex-container(row-reverse, center, flex-start, wrap);
@@ -16,21 +17,38 @@
 		.download {
 			@include flex-container(column, center, flex-start, nowrap);
 			width: min(100%, 25rem);
+
 			margin: 0 1rem;
 			.buttons {
 				@include standard-shadow();
 				border-radius: 0.5rem;
-				// flex: 1;
+				width: min(100%, 25rem);
 				@include flex-container(column, center, center, nowrap);
 				padding: 1rem;
-
 				h4 {
 					padding-bottom: 1rem;
 				}
 			}
 			.check {
-				max-width: 80%;
+				max-width: min(80%, 15rem);
 				margin: 0 auto;
+			}
+		}
+	}
+	&.no-form {
+		.container {
+			.download {
+				@include flex-container(row, center, center, wrap);
+				width: 100%;
+				.buttons {
+					flex: 1;
+					max-width: 25rem;
+				}
+				.check {
+					flex: 1;
+					max-width: 20rem;
+					margin: 1rem;
+				}
 			}
 		}
 	}
@@ -40,6 +58,8 @@
 	.sign-up {
 		.container {
 			.download {
+				@include flex-container(column, center, center, wrap);
+
 				width: 100%;
 				margin-top: 1rem;
 				margin: 1rem auto;

@@ -6,7 +6,7 @@ let coreFeatures = [
 		title: "Propose",
 		body: "Get involved in the democratic process and write a proposal to address an issue you see.",
 		buttonText: "See More",
-		buttonHandler: "proposeHandler()",
+		link: "https://dev.quae.app/post/629112d290661d001669d8b5",
 	},
 	{
 		img: "/assets/img/coreFeatures/vote.png",
@@ -15,7 +15,7 @@ let coreFeatures = [
 		title: "Vote",
 		body: "Represent your beliefs by voting on proposals in your community",
 		buttonText: "See More",
-		buttonHandler: "voteHandler()",
+		link: "https://dev.quae.app/post/629112d290661d001669d8b5",
 	},
 	{
 		img: "/assets/img/coreFeatures/act.png",
@@ -24,23 +24,10 @@ let coreFeatures = [
 		title: "Act",
 		body: "Verified voters give Quae proposals real power",
 		buttonText: "See More",
-		buttonHandler: "actHandler()",
+		link: "https://thestute.com/2021/11/12/student-initiative-to-extend-library-hours-comes-to-fruition-after-quae-poll/",
 	},
 ];
-function voteHandler() {
-	// console.log("wow, i pressed a button");
-}
-function proposeHandler() {
-	// console.log("wow, i pressed a button");
-	window.open("https://dev.quae.app/post/629112d290661d001669d8b5", "_blank");
-}
-function actHandler() {
-	window.open(
-		"https://thestute.com/2021/11/12/student-initiative-to-extend-library-hours-comes-to-fruition-after-quae-poll/",
-		"_blank"
-	);
-	// console.log("wow, i pressed a button");
-}
+
 let coreFeatureContainer = document.getElementById("core-features-container");
 for (let feature of coreFeatures) {
 	let card = document.createElement("div");
@@ -58,10 +45,8 @@ for (let feature of coreFeatures) {
         ${feature.body}
     </div>
     <div class="footer">
-        <button class="primary"
-        onClick=${feature.buttonHandler}
-        >
-        ${feature.buttonText}</button>
+		<a href="${feature.link}" target="_blank">${feature.buttonText}</a>
+       
     </div>  
     `;
 	coreFeatureContainer.appendChild(card);

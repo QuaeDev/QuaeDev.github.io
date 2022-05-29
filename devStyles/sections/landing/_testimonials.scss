@@ -83,31 +83,14 @@
 	.background-img {
 		position: absolute;
 		overflow: hidden;
-		width: 100vw;
+		width: clamp(20rem, 100%, 100rem);
 		left: 0;
-		height: 100%;
-		// border-radius: 50% 50% 5% 5%;
 		z-index: -1;
 		background-image: url("/assets/img/fancy_erase2.jpeg");
 		background-size: cover;
 		background-position: center;
+		resize: both;
 		background-repeat: no-repeat;
-		.actual-img {
-			height: 100%;
-			width: 100%;
-		}
-		// .img-cover {
-		// 	height: 100%;
-		// 	width: 100%;
-		// 	position: absolute;
-		// 	top: 0;
-
-		// 	background: linear-gradient(
-		// 		180deg,
-		// 		rgba(0, 0, 0, 0.3) 70%,
-		// 		rgba(256, 256, 256, 1)
-		// 	);
-		// }
 	}
 }
 #carousel-container {

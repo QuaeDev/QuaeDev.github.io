@@ -394,12 +394,32 @@
 			.img-container {
 				height: 12rem;
 				overflow: hidden;
+				img {
+					position: absolute;
+					z-index: 1;
+				}
+				.title-container {
+					z-index: 2;
+					top: 0;
+					position: absolute;
+					right: 0;
+					background-color: rgba(0, 0, 0, 0.7);
+					padding: 0.5rem 2rem 0.5rem 1rem;
+					margin-right: -1rem;
+					transform: skew(-20deg);
+					border-bottom-left-radius: 10px;
+					h4 {
+						transform: skew(20deg);
+						font-weight: 700;
+						color: var.$light;
+					}
+				}
 				@include flex-container(column, center, center, nowrap);
 			}
 			.content {
-				height: 10rem;
 				padding: 1rem;
-				@include flex-container(column, flex-start, flex-start, nowrap);
+				@include flex-container(column, space-between, flex-start, nowrap);
+				height: 10rem;
 				p {
 					margin: 0.5rem 0;
 					flex: 1;

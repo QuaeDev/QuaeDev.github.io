@@ -23,7 +23,6 @@
 	</head>
 	<body>
 		<div id="header-placeholder"></div>
-		<script src="/components/header.js"></script>
 		<div class="page communities-page">
 			<div class="landing-view">
 				<div class="title">
@@ -200,56 +199,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="section sign-up">
-				<div class="download-buttons">
-					<h3>Join Today And Be Heard</h3>
-					<div class="app-stores">
-						<a
-							href="https://apps.apple.com/us/app/quae/id1555653993"
-							target="_blank"
-							rel="noopener noreferrer"
-							aria-label="visit the app store to download quae"
-							class="GA-app-store-link app-store-link"
-						>
-							<img
-								src="/assets/img/download/appStore.png"
-								class="app-store-btn"
-								alt="download on the app store"
-							/>
-						</a>
-						<a
-							href="https://play.google.com/store/apps/details?id=com.quae.quaeapp&hl=en_US&gl=US"
-							target="_blank"
-							rel="noopener noreferrer"
-							aria-label="visit the google play store to download quae"
-							class="GA-play-store-link app-store-link"
-						>
-							<img
-								src="/assets/img/download/googlePlay.png"
-								class="app-store-btn"
-								alt="download on the google play store"
-							/>
-						</a>
-					</div>
-					<button
-						class="primary icon web-app-link"
-						href="https://beta.quae.app"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="visit the google play store to download quae"
-					>
-						<img src="/assets/img/quae_logo_white.png" alt="quae-logo" />
-						<p class="white">Try The Web App</p>
-						<i class="material-icons">chevron_right</i>
-					</button>
-				</div>
-				<img
-					src="/assets/img/download/quae_devices.png"
-					alt="picture of phone and computer with quae logo"
-					class="devices"
-				/>
-			</div>
+			<div class="section sign-up" id="sign-up-section"></div>
 			<div id="footer-placeholder"></div>
+			<!-- scripts -->
+			<script src="/components/header.js"></script>
+			<script src="/components/signUp.js"></script>
+			<script src="/components/downloadButtons.js"></script>
 			<script src="/components/footer.js"></script>
 			<script src="/assets/js/groups.js"></script>
 		</div>

@@ -50,15 +50,15 @@
 				<div class="img-container" ></div>
 				<div class="landing-grid">
 					<img
-						id="phone-check-hoboken"
-						class="phone-check"
+						id="landing-section-product"
+						class="product"
 						src="/assets/img/webapp2.png"
 						alt="home screen of app"
 					/>
 					<div class="title">
 						<h1 class="primary">Vote Every Day</h1>
 						<h2>
-							Represent Yourself In Your
+							To Be Represented In Your
 							<h2 class="typed-text"></h2>
 								<span id="cursor"></span>
 						</h2>
@@ -137,7 +137,6 @@
 							</li>
 						</ul>
 					</div>
-
 					</div>
 					<div class="content id" id="id-verification-content">
 						<div class="content-wrapper">
@@ -161,21 +160,18 @@
 							<li>
 								<div class="icon">
 									<img src="/assets/img/smallFeatures/security.png" alt="img-alt">
-
 								</div>
 								<h5>Lorem ipsum dolor, sit amet</h5>
 							</li>
 							<li>
 								<div class="icon">
 									<img src="/assets/img/smallFeatures/security.png" alt="img-alt">
-
 								</div>
 								<h5>Lorem ipsum dolor, sit amet</h5>
 							</li>
 						</ul>
 					</div>
 				</div>
-
 				</div>
 				<div class="scrolling">
 					<div class="img-container id" id="id-verification-photo"></div>
@@ -184,130 +180,31 @@
 			</section>
 			<section class="section" id="small-features">
 				<div id="small-features-container"></div>
-
 			</section>
 			<section class="section" id="any-community">
 				<div class="title">
 					<h2 class="center">Revolutionize Representation in Any Community</h2>
 				</div>
 				<div id="any-community-container">
-
 				</div>
-				<script>
-					let communities = [
-						{
-							img: "/assets/img/city2.jpeg",
-							imgAlt: "blah",
-							header: "Cities",
-							description: 'cities have people that need representation'
-						},
-						{
-							img: "/assets/img/communities/college.jpeg",
-							imgAlt: "blah",
-							header: "Universities",
-							description: 'Universities have people that need representation'
-						},
-						{
-							img: "/assets/img/communities/company.jpeg",
-							imgAlt: "blah",
-							header: "Companies",
-							description: 'companies have people that need representation'
-						},
-						
-					]
-					let communityContainer = document.getElementById("any-community-container")
-					for (let community of communities){
-						let card = document.createElement("div")
-						card.classList.add("card")
-						card.innerHTML= /*html*/`
-						<div class="img-container">
-						<img src="${community.img}" alt="${community.imgAlt}" />
-						</div>
-						<div class="content">
-
-						<h4>${community.header}</h4>
-						<p>${community.description}</p>
-						<button class="primary">
-							Learn More
-							</button>
-							</div>
-						`
-						communityContainer.appendChild(card)
-					}
-					</script>
 			</section>
 			
 			<!-- SIGN UP -->
-			<div class="section sign-up">
-				<div class="container">
-					
-					
-					
-					<div class="download">
-						<div class="buttons">
-							<h4>Join For Free Today</h4>
-							<div id="download-button-placeholder"></div>
-						</div>
-						<img src="/assets/img/landing_check.png" alt="homepage of app" class="check">
-					</div>
-					<form id="my-form" action="https://formspree.io/f/mqknnbky" method="POST">
-						<div class="form-title">
-							<h4>Looking to democratize your community?</h4>
-							<h6>Get in touch, We'd love to help</h6>
-						</div>
-						<label for="email">Email</label>
-						<input type="email`" title="email" name="email" placeholder="johndoe@gmail.com" />
-						<label for="community-type">Where are you looking to use Quae?</label>
-						<input type="text" title="community-type"name="community" placeholder="My Town"/>
-						<label for="message">Anything you'd like us to know</label>
-						<textarea rows="5" cols="60" name="message" title="message"placeholder="We have a huge problem with the way out schools are managed">
-
-						</textarea>
-						<!-- <input type="text" title="message" name="message" > -->
-						<button class="primary" id="my-form-button" type="">Submit</button>
-						<p id="my-form-status"></p>
-					</form>
-				</div>
+			<div class="section sign-up" id="sign-up-section">
+				
 			</div>
 			<div id="footer-placeholder"></div>
 		</div>
 		<script src="/components/footer.js"></script>
+		<script src="/components/signUp.js"></script>
 		<script src="/components/downloadButtons.js"></script>
 		<script src="/components/smallFeatures.js"></script>
 		<script src="/components/coreFeatures.js"></script>
+		<script src="/components/anyCommunity.js"></script>
 		<script src="/assets/js/animations.js"></script>
 		<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
 		<script>
-			var form = document.getElementById("my-form");
-			
-			async function handleSubmit(event) {
-			  event.preventDefault();
-			  var status = document.getElementById("my-form-status");
-			  var data = new FormData(event.target);
-			  fetch(event.target.action, {
-				method: form.method,
-				body: data,
-				headers: {
-					'Accept': 'application/json'
-				}
-			  }).then(response => {
-				if (response.ok) {
-				  status.innerHTML = "Thanks for your submission!";
-				  form.reset()
-				} else {
-				  response.json().then(data => {
-					if (Object.hasOwn(data, 'errors')) {
-					  status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-					} else {
-					  status.innerHTML = "Oops! There was a problem submitting your form"
-					}
-				  })
-				}
-			  }).catch(error => {
-				status.innerHTML = "Oops! There was a problem submitting your form"
-			  });
-			}
-			form.addEventListener("submit", handleSubmit)
+		
 		</script>
 	</body>
 </html>
