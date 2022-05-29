@@ -7,7 +7,8 @@
 		@include flex-container(row, center, center, wrap);
 		width: 100%;
 		.feature {
-			width: 20rem;
+			@include flex-container(column, flex-start, flex-start, nowrap);
+			width: min(100%, 20rem);
 			padding: 1rem;
 			border-radius: 1rem;
 			margin: 1rem;
@@ -179,7 +180,8 @@
 					}
 				}
 				&#procedure-content {
-					@include flex-container(column, center, flex-end, nowrap);
+					padding-bottom: 5rem;
+					@include flex-container(column, flex-end, flex-end, nowrap);
 					.title {
 						margin-right: 0;
 						* {
@@ -201,7 +203,8 @@
 					}
 				}
 				&#id-verification-content {
-					@include flex-container(column, center, flex-start, nowrap);
+					padding-top: 5rem;
+					@include flex-container(column, flex-start, flex-start, nowrap);
 					.title {
 						margin-left: 0;
 						* {
@@ -212,6 +215,9 @@
 						text-align: start;
 					}
 				}
+			}
+			&.bottom {
+				padding-bottom: 1rem;
 			}
 		}
 		.scrolling {
@@ -225,10 +231,12 @@
 				width: 50%;
 				&.id {
 					border-bottom-right-radius: 30%;
+					border-top-right-radius: 5%;
 					margin-right: auto;
 				}
 				&.procedure {
 					border-top-left-radius: 30%;
+					border-bottom-left-radius: 5%;
 
 					margin-left: auto;
 				}

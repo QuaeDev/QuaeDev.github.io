@@ -67,7 +67,7 @@
 				transition: all 200ms linear;
 				.primary {
 					background-color: var.$bg;
-					border-color: var.$border;
+					border-color: var.$bg;
 					p {
 						color: var.$primary-default;
 					}
@@ -76,7 +76,7 @@
 					}
 				}
 				.secondary {
-					border-color: var.$border;
+					border-color: var.$bg;
 					p {
 						color: var.$bg;
 					}

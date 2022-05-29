@@ -331,7 +331,7 @@ a {
   width: 100%;
 }
 .landing-page .landing-view .landing-grid .title h1 {
-  font-size: calc(3rem + 2vw);
+  font-size: calc(3rem + 1vw);
   text-align: start;
 }
 .landing-page .landing-view .landing-grid .title h2 {
@@ -618,26 +618,40 @@ a {
   justify-content: center;
   flex-wrap: nowrap;
 }
-.landing-page #testimonial-container .title {
+.landing-page #testimonial-container .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
 }
-.landing-page #testimonial-container .title h2,
-.landing-page #testimonial-container .title h5 {
+.landing-page #testimonial-container .content h2,
+.landing-page #testimonial-container .content h5 {
   color: #fcfcfc;
 }
-.landing-page #testimonial-container .title h2 {
+.landing-page #testimonial-container .content h2 {
   font-weight: 800;
   margin: 0;
   padding: 0;
+  font-size: calc(3rem + 1vw);
 }
-.landing-page #testimonial-container .title h5 {
-  margin-top: 0.5rem;
+.landing-page #testimonial-container .content h5 {
+  font-weight: 500;
+  margin: 0.5rem 0;
 }
-.landing-page #testimonial-container .img1 {
+.landing-page #testimonial-container .content button {
+  width: 100%;
+  text-align: center;
+  padding: 0.25rem 1rem;
+  font-size: 1.5rem;
+  border-color: #fcfcfc;
+  color: #fcfcfc;
+}
+.landing-page #testimonial-container .content button:hover {
+  border-color: #b6b6b6;
+  color: #151515;
+}
+.landing-page #testimonial-container .background-img {
   position: absolute;
   overflow: hidden;
   width: 100vw;
@@ -649,7 +663,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
 }
-.landing-page #testimonial-container .img1 .actual-img {
+.landing-page #testimonial-container .background-img .actual-img {
   height: 100%;
   width: 100%;
 }
@@ -891,7 +905,12 @@ a {
   width: 100%;
 }
 .landing-page #features #core-features-container .feature {
-  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  width: min(100%, 20rem);
   padding: 1rem;
   border-radius: 1rem;
   margin: 1rem;
@@ -1069,10 +1088,11 @@ a {
     padding-bottom: 1rem;
   }
   .landing-page #advance-features .sticky .content#procedure-content {
+    padding-bottom: 5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: flex-end;
     flex-wrap: nowrap;
   }
   .landing-page #advance-features .sticky .content#procedure-content .title {
@@ -1093,10 +1113,11 @@ a {
     margin-right: 0;
   }
   .landing-page #advance-features .sticky .content#id-verification-content {
+    padding-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: nowrap;
   }
   .landing-page #advance-features .sticky .content#id-verification-content .title {
@@ -1107,6 +1128,9 @@ a {
   }
   .landing-page #advance-features .sticky .content#id-verification-content p {
     text-align: start;
+  }
+  .landing-page #advance-features .sticky.bottom {
+    padding-bottom: 1rem;
   }
   .landing-page #advance-features .scrolling {
     max-width: 100rem;
@@ -1124,10 +1148,12 @@ a {
   }
   .landing-page #advance-features .scrolling .img-container.id {
     border-bottom-right-radius: 30%;
+    border-top-right-radius: 5%;
     margin-right: auto;
   }
   .landing-page #advance-features .scrolling .img-container.procedure {
     border-top-left-radius: 30%;
+    border-bottom-left-radius: 5%;
     margin-left: auto;
   }
 }
@@ -1729,7 +1755,7 @@ footer #footer-navigation {
 }
 #header.scrolled .header-content .buttons .primary {
   background-color: #fcfcfc;
-  border-color: #b6b6b6;
+  border-color: #fcfcfc;
 }
 #header.scrolled .header-content .buttons .primary p {
   color: #6840d9;
@@ -1738,7 +1764,7 @@ footer #footer-navigation {
   background-color: #f2f2f2;
 }
 #header.scrolled .header-content .buttons .secondary {
-  border-color: #b6b6b6;
+  border-color: #fcfcfc;
 }
 #header.scrolled .header-content .buttons .secondary p {
   color: #fcfcfc;
