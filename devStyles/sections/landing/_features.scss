@@ -26,7 +26,6 @@
 				padding-top: 1rem;
 			}
 			.footer {
-				padding-top: 1rem;
 				color: var.$text-secondary;
 			}
 		}
@@ -92,20 +91,23 @@
 }
 
 #advance-features {
-	height: 50vh;
+	height: 100vh;
 	width: 100vw;
 	padding: 0;
 	&.sticky-container {
 		height: 200vh;
 		width: 100vw;
 		position: relative;
+		align-items: flex-start;
+		justify-content: flex-start;
 	}
 	.sticky {
+		z-index: 2;
 		max-width: 100rem;
 		width: 100%;
 		height: 100vh;
 		position: absolute;
-		@include flex-container(row, center, center, nowrap);
+		@include flex-container(row, center, flex-start, nowrap);
 		.content {
 			.content-wrapper {
 				.bullets {
@@ -129,6 +131,7 @@
 		}
 		&.top {
 			top: 0;
+			bottom: auto;
 		}
 		&.bottom {
 			bottom: 0;
@@ -136,6 +139,7 @@
 		}
 	}
 	.scrolling {
+		z-index: 1;
 		padding: 0;
 		max-width: 100rem;
 		height: 100%;
@@ -143,6 +147,7 @@
 		@include flex-container(column, flex-start, center, nowrap);
 
 		.img-container {
+			z-index: 4;
 			height: 50%;
 			width: 100%;
 			background-position: center;
@@ -185,19 +190,19 @@
 					.title {
 						margin-right: 0;
 						* {
-							text-align: end;
+							text-align: start;
 						}
 					}
 					p {
-						text-align: end;
+						text-align: start;
 						margin-right: 0;
 					}
 					.bullets {
 						li {
-							flex-direction: row-reverse;
+							flex-direction: row;
 							.icon {
-								margin-left: 0.5rem;
-								margin-right: 0;
+								margin-right: 0.5rem;
+								margin-left: 0;
 							}
 						}
 					}
@@ -337,8 +342,17 @@
 }
 
 #small-features {
+	margin-top: 2rem;
+	margin-bottom: -2rem;
+	padding: 5rem 1rem;
+	@include flex-container(column, center, center, nowrap);
+
+	background-color: var.$primary-light;
+	.title {
+		padding-bottom: 2rem;
+	}
 	#small-features-container {
-		width: min(100%, 50rem);
+		width: min(100%, 60rem);
 		display: -ms-grid;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
@@ -348,23 +362,26 @@
 		gap: 1rem;
 		.card {
 			width: 100%;
-			@include flex-container(column, center, center, nowrap);
-			.img-container {
-				height: 5rem;
-				width: 5rem;
-
+			@include flex-container(column, flex-start, center, nowrap);
+			.header {
+				width: 100%;
+				@include flex-container(row, flex-start, center, nowrap);
 				img {
 					height: 3rem;
 					width: 3rem;
-					margin: 1rem;
+					margin-right: 0.5rem;
 				}
 			}
 			.content {
+				p,
+				h4 {
+					text-align: left;
+				}
 			}
 		}
 	}
 }
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 1200px) {
 	#small-features {
 		#small-features-container {
 			width: min(100%, 50rem);
@@ -378,23 +395,41 @@
 		}
 	}
 }
+@media screen and (max-width: 600px) {
+	#small-features {
+		#small-features-container {
+			width: min(100%, 50rem);
+			display: -ms-grid;
+			display: grid;
+			grid-template-columns: 1fr;
+			-ms-grid-column: 1fr;
+			grid-column: 1fr;
+			justify-content: stretch;
+			gap: 0.5rem;
+		}
+	}
+}
 #any-community {
 	width: min(100%, 80rem);
 	#any-community-container {
-		@include flex-container(row, center, center, wrap);
-		height: max-content;
+		display: -ms-grid;
+		display: grid;
+		width: 100%;
+		grid-template-columns: 1fr 1fr 1fr;
+		-ms-grid-column: 1fr 1fr 1fr;
+		grid-column: 1fr 1f 1fr;
 		.card {
 			flex: 1;
-			height: 100%;
 			margin: 0.3rem;
-			width: min(100%, 25rem);
+			width: 35rem;
 			border-radius: 0.25rem 0.25rem 0.5rem 0.5rem;
 			overflow: hidden;
 			padding: 0;
+			background-color: red;
 			.img-container {
 				height: 12rem;
-				overflow: hidden;
 				img {
+					height: 100%;
 					position: absolute;
 					z-index: 1;
 				}
@@ -410,7 +445,8 @@
 					border-bottom-left-radius: 10px;
 					h4 {
 						transform: skew(20deg);
-						font-weight: 700;
+						font-weight: 600;
+						font-size: 2rem;
 						color: var.$light;
 					}
 				}
@@ -419,7 +455,6 @@
 			.content {
 				padding: 1rem;
 				@include flex-container(column, space-between, flex-start, nowrap);
-				height: 10rem;
 				p {
 					margin: 0.5rem 0;
 					flex: 1;
@@ -443,7 +478,6 @@
 				margin: 0.3rem auto;
 				width: 100%;
 				border-radius: 0.25rem 0.25rem 0.5rem 0.5rem;
-				overflow: hidden;
 				padding: 0;
 				.img-container {
 					height: 12rem;

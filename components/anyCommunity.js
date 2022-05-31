@@ -1,21 +1,24 @@
 let communities = [
 	{
 		img: "/assets/img/city2.jpeg",
-		imgAlt: "blah",
+		imgAlt: "busy city street",
 		header: "Your City",
-		description: "cities have people that need representation",
+		description:
+			"Verify your ID and revolutionize the way you interact with city politics.",
 	},
 	{
 		img: "/assets/img/communities/college.jpeg",
-		imgAlt: "blah",
+		imgAlt: "college campus",
 		header: "Your University",
-		description: "Universities have people that need representation",
+		description:
+			"Add your school's email domain so students can participate to make your university a better place.",
 	},
 	{
 		img: "/assets/img/communities/company.jpeg",
-		imgAlt: "blah",
+		imgAlt: "office space",
 		header: "Your Company",
-		description: "companies have people that need representation",
+		description:
+			"Employees of any institution can propose novel ideas and solutions to their corporate leaders",
 	},
 ];
 let communityContainer = document.getElementById("any-community-container");

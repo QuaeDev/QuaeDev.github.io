@@ -16,11 +16,9 @@ const view = /*html*/ `
             <label for="email">Email</label>
             <input type="email" title="email" name="email" placeholder="johndoe@gmail.com" />
             <label for="community-type">Where are you looking to use Quae?</label>
-            <input type="text" title="community-type"name="community" placeholder="My Town"/>
+            <input type="text" title="community-type"name="community" placeholder="My town, company, university"/>
             <label for="message">Anything you'd like us to know</label>
-            <textarea rows="5" cols="60" name="message" title="message"placeholder="We have a huge problem with the way out schools are managed">
-
-            </textarea>
+            <textarea rows="5" cols="60" name="message" title="message"placeholder="We have a huge problem with the way out schools are managed"></textarea>
             <button class="primary" id="my-form-button" type="">Submit</button>
             <p id="my-form-status"></p>
         </form>

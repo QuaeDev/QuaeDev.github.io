@@ -31,17 +31,15 @@ const header = /*html*/ `<header id="header">
 					<a href="https://medium.com/quae-app">
 						<p>Blog</p>
 					</a>
-					
-					
 				</div>
 				<button class="menu" id="menu-btn" onclick="toggleNav()">
 					<i class="material-icons">menu</i>
 				</button>
 				<div class="buttons">
-					<a href="https://beta.quae.app/account/signup">
+					<a href="https://dev.quae.app/auth/signup">
 						<button class="primary"><p>Sign Up</p></button>
 					</a>
-					<a href="https://beta.quae.app/account/login">
+					<a href="https://dev.quae.app/auth/login">
 						<button class="secondary"><p>Log In</p></button>
 					</a>
 				</div>

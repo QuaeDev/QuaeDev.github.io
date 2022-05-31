@@ -4,16 +4,26 @@
 .mission-page {
 	.landing {
 		position: relative;
-		img {
-			position: absolute;
-			height: 100%;
-			z-index: -1;
-		}
+		background-image: url("/assets/img/mission/mission2.jpg");
+		background-repeat: no-repeat;
+		background-position: top;
+		background-size: cover;
+		min-height: 90vh;
+		padding: 2rem;
+		@include flex-container(row, center, flex-start, nowrap);
+		// img {
+		// 	position: absolute;
+		// 	height: 100%;
+		// 	z-index: -1;
+		// }
 		.title {
 			* {
-				// color: var.$light;
+				text-align: left;
 			}
 		}
+		// .background-image {
+		// 	right: 0;
+		// }
 	}
 	.section {
 		position: relative;
@@ -21,6 +31,9 @@
 		.mission-img {
 			z-index: 1;
 			width: 100vw;
+		}
+		&.representation {
+			@include flex-container(column, flex-start, center, nowrap);
 		}
 		.content {
 			z-index: 4;
@@ -35,6 +48,7 @@
 				}
 				h2 {
 					font-weight: 800;
+					text-align: left;
 				}
 			}
 			p {

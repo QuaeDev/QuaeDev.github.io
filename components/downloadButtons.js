@@ -30,7 +30,7 @@ var buttons = /*html*/ `
 					</div>
 					<button
 						class="primary icon web-app-link"
-						href="https://beta.quae.app"
+						href="https://dev.quae.app"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="visit the google play store to download quae"
