@@ -391,6 +391,9 @@ a {
   gap: 0.5rem;
   padding-bottom: 1rem;
 }
+.landing-page .landing-view .landing-grid .product {
+  padding: 2rem;
+}
 .landing-page .landing-view .landing-grid .title {
   padding-bottom: 0;
   text-align: left;
@@ -442,9 +445,10 @@ a {
   .landing-page .landing-view .landing-grid .product {
     -ms-grid-row: 2/3;
     grid-row: 2/3;
-    width: 100%;
     margin: 0 auto;
     padding: 0 0.5rem;
+    height: 35rem;
+    width: auto;
   }
   .landing-page .landing-view .landing-grid .subtext {
     -ms-grid-row: 3/4;
@@ -517,11 +521,11 @@ a {
 }
 @media (min-width: 768px) {
   .landing-page .landing-view .landing-grid {
-    width: min(100%, 80rem);
+    width: min(100%, 60rem);
     grid-template-rows: auto auto;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     -ms-grid-rows: auto auto;
-    -ms-grid-columns: 2fr auto;
+    -ms-grid-columns: 1fr auto;
   }
   .landing-page .landing-view .landing-grid .title {
     -ms-grid-column: 2/3;
@@ -884,9 +888,8 @@ a {
   margin: 0 1rem;
 }
 .landing-page .sign-up .container .download .buttons {
-  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
-  width: min(100%, 25rem);
+  max-width: 35rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -900,23 +903,6 @@ a {
 .landing-page .sign-up .container .download .check {
   max-width: min(80%, 15rem);
   margin: 0 auto;
-}
-.landing-page .sign-up.no-form .container .download {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.landing-page .sign-up.no-form .container .download .buttons {
-  flex: 1;
-  max-width: 25rem;
-}
-.landing-page .sign-up.no-form .container .download .check {
-  flex: 1;
-  max-width: 20rem;
-  margin: 1rem;
 }
 @media (max-width: 800px) {
   .landing-page .sign-up .container .download {
@@ -1098,6 +1084,9 @@ a {
   width: 100%;
   height: 100vh;
   position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -1108,7 +1097,7 @@ a {
   margin: 1rem 0;
 }
 .landing-page #advance-features .sticky .content .content-wrapper .bullets li {
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1116,14 +1105,23 @@ a {
   flex-wrap: nowrap;
 }
 .landing-page #advance-features .sticky .content .content-wrapper .bullets li .icon {
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
   margin-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.landing-page #advance-features .sticky .content .content-wrapper .bullets li h6 {
+  vertical-align: baseline;
 }
 .landing-page #advance-features .sticky.fixed {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
 }
 .landing-page #advance-features .sticky.top {
   top: 0;
@@ -1137,6 +1135,7 @@ a {
   z-index: 1;
   padding: 0;
   max-width: 100rem;
+  margin: 0 auto;
   height: 100%;
   width: 100%;
   display: flex;
@@ -1152,6 +1151,7 @@ a {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 1%;
 }
 .landing-page #advance-features .scrolling .img-container.id {
   background-image: url("/assets/img/id.jpg");
@@ -1346,8 +1346,6 @@ a {
   }
 }
 .landing-page #small-features {
-  margin-top: 2rem;
-  margin-bottom: -2rem;
   padding: 5rem 1rem;
   display: flex;
   flex-direction: column;
@@ -1418,25 +1416,18 @@ a {
     gap: 0.5rem;
   }
 }
-.landing-page #any-community {
-  width: min(100%, 80rem);
-}
 .landing-page #any-community #any-community-container {
-  display: -ms-grid;
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-column: 1fr 1fr 1fr;
-  grid-column: 1fr 1f 1fr;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 .landing-page #any-community #any-community-container .card {
-  flex: 1;
   margin: 0.3rem;
-  width: 35rem;
   border-radius: 0.25rem 0.25rem 0.5rem 0.5rem;
   overflow: hidden;
   padding: 0;
-  background-color: red;
 }
 .landing-page #any-community #any-community-container .card .img-container {
   height: 12rem;
@@ -1493,13 +1484,11 @@ a {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    height: max-content;
   }
   .landing-page #any-community #any-community-container .card {
+    width: clamp(10rem, 100%, 35rem);
     flex: 1;
-    height: 100%;
     margin: 0.3rem auto;
-    width: 100%;
     border-radius: 0.25rem 0.25rem 0.5rem 0.5rem;
     padding: 0;
   }
@@ -1969,9 +1958,8 @@ a {
   margin: 0 1rem;
 }
 .communities-page .sign-up .container .download .buttons {
-  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
-  width: min(100%, 25rem);
+  max-width: 35rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1985,23 +1973,6 @@ a {
 .communities-page .sign-up .container .download .check {
   max-width: min(80%, 15rem);
   margin: 0 auto;
-}
-.communities-page .sign-up.no-form .container .download {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.communities-page .sign-up.no-form .container .download .buttons {
-  flex: 1;
-  max-width: 25rem;
-}
-.communities-page .sign-up.no-form .container .download .check {
-  flex: 1;
-  max-width: 20rem;
-  margin: 1rem;
 }
 @media (max-width: 800px) {
   .communities-page .sign-up .container .download {
@@ -2141,23 +2112,6 @@ a {
     flex-wrap: wrap;
   }
 }
-.mission-page .landing {
-  position: relative;
-  background-image: url("/assets/img/mission/mission2.jpg");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  min-height: 90vh;
-  padding: 2rem;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: nowrap;
-}
-.mission-page .landing .title * {
-  text-align: left;
-}
 .mission-page .section {
   position: relative;
   display: flex;
@@ -2165,6 +2119,12 @@ a {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+.mission-page .section .title {
+  width: clamp(20rem, 80%, 50rem);
+}
+.mission-page .section .title * {
+  text-align: left;
 }
 .mission-page .section .mission-img {
   z-index: 1;
@@ -2236,9 +2196,8 @@ a {
   margin: 0 1rem;
 }
 .mission-page .sign-up .container .download .buttons {
-  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
-  width: min(100%, 25rem);
+  max-width: 35rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2252,23 +2211,6 @@ a {
 .mission-page .sign-up .container .download .check {
   max-width: min(80%, 15rem);
   margin: 0 auto;
-}
-.mission-page .sign-up.no-form .container .download {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.mission-page .sign-up.no-form .container .download .buttons {
-  flex: 1;
-  max-width: 25rem;
-}
-.mission-page .sign-up.no-form .container .download .check {
-  flex: 1;
-  max-width: 20rem;
-  margin: 1rem;
 }
 @media (max-width: 800px) {
   .mission-page .sign-up .container .download {
@@ -2665,7 +2607,8 @@ footer #footer-navigation {
     color: #fcfcfc;
   }
 }
-button {
+button,
+a.button {
   background: none;
   color: inherit;
   border: none;
@@ -2675,49 +2618,62 @@ button {
   text-align: inherit;
   padding: 0;
 }
-button.icon {
+button.icon,
+a.button.icon {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
 }
-button.icon i {
+button.icon i,
+a.button.icon i {
   padding-right: 0.5rem;
 }
-button.primary, button.secondary, button.white {
+button.primary, button.secondary, button.white,
+a.button.primary,
+a.button.secondary,
+a.button.white {
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
 }
-button.primary {
+button.primary,
+a.button.primary {
   color: #fcfcfc;
   background-color: #6840d9;
   border: 2px solid #6840d9;
 }
-button.primary p {
+button.primary p,
+a.button.primary p {
   color: #fcfcfc;
 }
-button.primary:hover {
+button.primary:hover,
+a.button.primary:hover {
   background-color: #3c009f;
 }
-button.secondary {
+button.secondary,
+a.button.secondary {
   color: #5f5f5f;
   border: 2px solid #5f5f5f;
 }
-button.secondary:hover {
+button.secondary:hover,
+a.button.secondary:hover {
   background-color: #f2f2f2;
   color: #151515;
   border: 2px solid #151515;
 }
-button.white {
+button.white,
+a.button.white {
   background-color: #fcfcfc;
   color: #151515;
   border: 2px solid #5f5f5f;
 }
-button.white p {
+button.white p,
+a.button.white p {
   color: #151515;
 }
-button.white:hover {
+button.white:hover,
+a.button.white:hover {
   background-color: #f2f2f2;
 }
 

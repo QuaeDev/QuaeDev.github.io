@@ -1,6 +1,7 @@
 @use "../var";
 @import "../mixins";
-button {
+button,
+a.button {
 	background: none;
 	color: inherit;
 	border: none;

@@ -89,19 +89,16 @@
 	.img-container {
 		&.primary {
 			background-color: var.$primary-light;
-			// transform: rotate(30deg) translate(-40%, -10%);
 			z-index: 3;
 			animation: bob1 5s infinite ease-in-out;
 		}
 		&.blue {
 			background-color: var.$accent1-default;
-			// transform: rotate(22deg) translate(-43%, -8%);
 			animation: bob2 6s infinite ease-in-out;
 			z-index: 2;
 		}
 		&.pink {
 			background-color: var.$accent2-default;
-			// transform: rotate(36deg) translate(-37%, -13%);
 			animation: bob3 7s infinite ease-in-out;
 			z-index: 1;
 		}
@@ -122,7 +119,9 @@
 		display: grid;
 		gap: 0.5rem;
 		padding-bottom: 1rem;
-
+		.product {
+			padding: 2rem;
+		}
 		.title {
 			padding-bottom: 0;
 			text-align: left;
@@ -175,9 +174,10 @@
 			.product {
 				-ms-grid-row: 2/3;
 				grid-row: 2/3;
-				width: 100%;
 				margin: 0 auto;
 				padding: 0 0.5rem;
+				height: 35rem;
+				width: auto;
 			}
 			.subtext {
 				-ms-grid-row: 3/4;
@@ -257,11 +257,11 @@
 	//desktop
 	.landing-view {
 		.landing-grid {
-			width: min(100%, 80rem);
+			width: min(100%, 60rem);
 			grid-template-rows: auto auto;
-			grid-template-columns: 2fr 1fr;
+			grid-template-columns: 1fr 1fr;
 			-ms-grid-rows: auto auto;
-			-ms-grid-columns: 2fr auto;
+			-ms-grid-columns: 1fr auto;
 
 			.title {
 				-ms-grid-column: 2/3;

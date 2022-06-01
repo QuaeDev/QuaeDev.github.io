@@ -4,7 +4,8 @@ let communities = [
 		imgAlt: "busy city street",
 		header: "Your City",
 		description:
-			"Verify your ID and revolutionize the way you interact with city politics.",
+			"Verify your ID and revolutionize the way you interact with city politics, vote on important issues in your neighborhood.",
+		href: "/communities",
 	},
 	{
 		img: "/assets/img/communities/college.jpeg",
@@ -12,6 +13,7 @@ let communities = [
 		header: "Your University",
 		description:
 			"Add your school's email domain so students can participate to make your university a better place.",
+		href: "/communities",
 	},
 	{
 		img: "/assets/img/communities/company.jpeg",
@@ -19,6 +21,7 @@ let communities = [
 		header: "Your Company",
 		description:
 			"Employees of any institution can propose novel ideas and solutions to their corporate leaders",
+		href: "/communities",
 	},
 ];
 let communityContainer = document.getElementById("any-community-container");
@@ -34,9 +37,9 @@ for (let community of communities) {
     </div>
     <div class="content">
     <p>${community.description}</p>
-    <button class="primary">
-    Learn More
-    </button>
+    <a class="primary button" href="${community.href}">
+    	Learn More
+    </a>
     </div>
     `;
 	communityContainer.appendChild(card);

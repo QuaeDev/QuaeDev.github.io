@@ -2,30 +2,13 @@
 @import "../mixins";
 
 .mission-page {
-	.landing {
-		position: relative;
-		background-image: url("/assets/img/mission/mission2.jpg");
-		background-repeat: no-repeat;
-		background-position: top;
-		background-size: cover;
-		min-height: 90vh;
-		padding: 2rem;
-		@include flex-container(row, center, flex-start, nowrap);
-		// img {
-		// 	position: absolute;
-		// 	height: 100%;
-		// 	z-index: -1;
-		// }
+	.section {
 		.title {
+			width: clamp(20rem, 80%, 50rem);
 			* {
 				text-align: left;
 			}
 		}
-		// .background-image {
-		// 	right: 0;
-		// }
-	}
-	.section {
 		position: relative;
 		@include flex-container(row, center, center, wrap);
 		.mission-img {

@@ -20,9 +20,9 @@
 
 			margin: 0 1rem;
 			.buttons {
-				@include standard-shadow();
+				// @include standard-shadow();
 				border-radius: 0.5rem;
-				width: min(100%, 25rem);
+				max-width: 35rem;
 				@include flex-container(column, center, center, nowrap);
 				padding: 1rem;
 				h4 {
@@ -32,23 +32,6 @@
 			.check {
 				max-width: min(80%, 15rem);
 				margin: 0 auto;
-			}
-		}
-	}
-	&.no-form {
-		.container {
-			.download {
-				@include flex-container(row, center, center, wrap);
-				width: 100%;
-				.buttons {
-					flex: 1;
-					max-width: 25rem;
-				}
-				.check {
-					flex: 1;
-					max-width: 20rem;
-					margin: 1rem;
-				}
 			}
 		}
 	}

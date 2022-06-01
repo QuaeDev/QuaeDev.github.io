@@ -93,6 +93,7 @@
 #advance-features {
 	height: 100vh;
 	width: 100vw;
+
 	padding: 0;
 	&.sticky-container {
 		height: 200vh;
@@ -107,18 +108,25 @@
 		width: 100%;
 		height: 100vh;
 		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
 		@include flex-container(row, center, flex-start, nowrap);
 		.content {
 			.content-wrapper {
 				.bullets {
 					margin: 1rem 0;
 					li {
-						margin: 0.5rem 0;
+						margin: 1rem 0;
 						@include flex-container(row, flex-start, center, nowrap);
 						.icon {
-							height: 3rem;
-							width: 3rem;
+							height: 2.5rem;
+							width: 2.5rem;
 							margin-right: 0.5rem;
+							@include flex-container(column, center, center, nowrap);
+						}
+						h6 {
+							vertical-align: baseline;
 						}
 					}
 				}
@@ -128,6 +136,7 @@
 			position: fixed;
 			top: 0;
 			left: 0;
+			right: 0;
 		}
 		&.top {
 			top: 0;
@@ -142,6 +151,7 @@
 		z-index: 1;
 		padding: 0;
 		max-width: 100rem;
+		margin: 0 auto;
 		height: 100%;
 		width: 100%;
 		@include flex-container(column, flex-start, center, nowrap);
@@ -153,6 +163,7 @@
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
+			border-radius: 1%;
 			&.id {
 				background-image: url("/assets/img/id.jpg");
 				border-bottom-right-radius: 30%;
@@ -342,8 +353,6 @@
 }
 
 #small-features {
-	margin-top: 2rem;
-	margin-bottom: -2rem;
 	padding: 5rem 1rem;
 	@include flex-container(column, center, center, nowrap);
 
@@ -410,22 +419,13 @@
 	}
 }
 #any-community {
-	width: min(100%, 80rem);
 	#any-community-container {
-		display: -ms-grid;
-		display: grid;
-		width: 100%;
-		grid-template-columns: 1fr 1fr 1fr;
-		-ms-grid-column: 1fr 1fr 1fr;
-		grid-column: 1fr 1f 1fr;
+		@include flex-container(row, center, center, nowrap);
 		.card {
-			flex: 1;
 			margin: 0.3rem;
-			width: 35rem;
 			border-radius: 0.25rem 0.25rem 0.5rem 0.5rem;
 			overflow: hidden;
 			padding: 0;
-			background-color: red;
 			.img-container {
 				height: 12rem;
 				img {
@@ -471,12 +471,10 @@
 		width: min(100%, 80rem);
 		#any-community-container {
 			@include flex-container(column, center, center, wrap);
-			height: max-content;
 			.card {
+				width: clamp(10rem, 100%, 35rem);
 				flex: 1;
-				height: 100%;
 				margin: 0.3rem auto;
-				width: 100%;
 				border-radius: 0.25rem 0.25rem 0.5rem 0.5rem;
 				padding: 0;
 				.img-container {

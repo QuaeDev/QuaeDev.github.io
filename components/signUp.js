@@ -6,7 +6,7 @@ const view = /*html*/ `
                 <h4>Join For Free Today</h4>
                 <div id="download-button-placeholder"></div>
             </div>
-            <img src="/assets/img/landing_check.png" alt="homepage of app" class="check">
+          
         </div>
         <form id="my-form" action="https://formspree.io/f/mqknnbky" method="POST">
             <div class="form-title">
