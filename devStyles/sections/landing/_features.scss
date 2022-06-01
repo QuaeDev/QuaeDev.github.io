@@ -421,6 +421,7 @@
 #any-community {
 	#any-community-container {
 		@include flex-container(row, center, center, nowrap);
+		max-width: 60rem;
 		.card {
 			margin: 0.3rem;
 			border-radius: 0.25rem 0.25rem 0.5rem 0.5rem;

@@ -1422,6 +1422,7 @@ a {
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
+  max-width: 60rem;
 }
 .landing-page #any-community #any-community-container .card {
   margin: 0.3rem;
