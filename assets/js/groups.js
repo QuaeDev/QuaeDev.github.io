@@ -21,7 +21,6 @@ function fixCommunityHeader() {
 }
 function universityHeaderTab() {
 	universitySubCommunity();
-	console.log("here now");
 	learnMoreScrollGroups();
 }
 function companyHeaderTab() {
@@ -33,7 +32,6 @@ function projectHeaderTab() {
 	learnMoreScrollGroups();
 }
 function learnMoreScrollGroups() {
-	console.log("here");
 	const element = document.getElementById("sub-groups");
 	element.scrollIntoView(true);
 }
@@ -66,7 +64,7 @@ function projectSubCommunity() {
 
 	renderTree(groupContainer, projectGroup);
 	groupSubText.innerHTML = projectSubText;
-	procedureTypeText.innerHTML = "Movement";
+	procedureTypeText.innerHTML = "City";
 
 	procedureExampleTitle.innerHTML = projectProcedureName;
 	procedureExampleDescription.innerHTML = projectProcedureDescription;
@@ -224,7 +222,7 @@ function renderProcedure(container, procedure) {
 	}
 }
 const universitySubText =
-	"Universities operate with just as much complexity as a city. Give students, faculty, and campus organizations a way to speak up.";
+	"Universities operate with just as much complexity as a city. Sub-Communities give students, faculty, and campus organizations a way to speak up.";
 const universityGroup = {
 	name: "University",
 	class: ["root"],
@@ -304,38 +302,38 @@ const companyGroup = {
 	],
 };
 const projectSubText =
-	"Movements are hard to organize with no real leadership. Let everyone lead - together - by democratizing your movement. ";
+	"Cities have many different groups of citizens. Sub-Communities ensure that all citizens have an place to where their needs and concerns are listened to.";
 const projectGroup = {
-	name: "Movement",
+	name: "City",
 	class: ["root"],
 	children: [
 		{
-			name: "Organizers",
+			name: "Municipal Government",
 			class: ["sub"],
 			children: [
 				{
-					name: "Social Media",
+					name: "City Council",
 					class: ["sub"],
 					children: [],
 				},
 				{
-					name: "Logistics",
+					name: "Mayor",
 					class: ["sub", "small"],
 					children: [],
 				},
 			],
 		},
 		{
-			name: "Attendees",
+			name: "Citizens",
 			class: ["sub", "subB"],
 			children: [
 				{
-					name: "Demonstrators",
+					name: "Citizen SUB GROUP",
 					class: ["sub"],
 					children: [],
 				},
 				{
-					name: "Picketers",
+					name: "Citizen SUB GROUP",
 					class: ["sub"],
 					children: [],
 				},
@@ -410,24 +408,23 @@ const companyProcedureDescription = `"Choose a place and exercise"`;
 const projectProcedure = [
 	{
 		class: ["phase", "complete"],
-		voters: "Attendees",
+		voters: "Citizens",
 		turnout: ["60%", "51%"],
 		consensus: ["80%", "67%"],
 	},
 	{
 		class: ["phase", "active"],
-		voters: "Organizers",
+		voters: "City Council",
 		turnout: ["20%", "51%"],
 		consensus: ["70%", "67%"],
 	},
 	{
 		class: ["phase", "locked"],
-		voters: "Administration",
+		voters: "Mayor",
 		turnout: ["0%", "51%"],
 		consensus: ["0%", "67%"],
 	},
 ];
-const projectProcedureName = "Plan a Demonstration";
-const projectProcedureDescription = `"Decide on what best sends the message"`;
-// procedureExplained(procedureContainer, procedure1);
+const projectProcedureName = "New Law";
+const projectProcedureDescription = `"Suggest a policy that solves a problem"`;
 selectGroup();

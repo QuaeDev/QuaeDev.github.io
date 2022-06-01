@@ -1,0 +1,45 @@
+@use "../var";
+@import "../mixins";
+
+.mission-page {
+	.section {
+		.title {
+			width: clamp(20rem, 80%, 50rem);
+			* {
+				text-align: left;
+			}
+		}
+		position: relative;
+		@include flex-container(row, center, center, wrap);
+		.mission-img {
+			z-index: 1;
+			width: 100vw;
+		}
+		&.representation {
+			@include flex-container(column, flex-start, center, nowrap);
+		}
+		.content {
+			z-index: 4;
+			width: clamp(20rem, 80%, 50rem);
+			margin: 4rem auto;
+			.title {
+				padding: 0.5rem;
+				@include flex-container(row, flex-start, center, nowrap);
+				img {
+					height: 3rem;
+					margin: 1rem;
+				}
+				h2 {
+					font-weight: 800;
+					text-align: left;
+				}
+			}
+			p {
+				@include standard-shadow();
+				padding: 1rem;
+				border-radius: 0.5rem;
+			}
+		}
+	}
+	@import "../sections/landing/signUp";
+}

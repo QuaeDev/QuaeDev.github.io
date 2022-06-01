@@ -1,6 +1,7 @@
 @use "../var";
 @import "../mixins";
-button {
+button,
+a.button {
 	background: none;
 	color: inherit;
 	border: none;
@@ -53,21 +54,28 @@ button {
 		}
 	}
 }
+#download-button-placeholder {
+	@include flex-container(column, center, center, nowrap);
+}
 .download-buttons {
 	text-align: center;
 	background: blur(15px);
 	background-color: rgba(0, 0, 0, 0.01);
-	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-	border-radius: 0.5rem;
-	padding: 1rem;
-	width: min(25rem, 100%);
+	width: min(20rem, 100%);
 	height: min-content;
+	@include flex-container(column, center, center, nowrap);
 	.app-stores {
+		margin-bottom: 5px;
 		@include flex-container(row, center, center, nowrap);
+		:nth-child(1) {
+			margin-right: 2.5px;
+		}
+		:nth-child(2) {
+			margin-left: 2.5px;
+		}
 	}
 	.app-store-link {
 		width: 50%;
-		margin: 0.25rem;
 		.app-store-btn {
 			max-width: 100%;
 			flex: 1;
@@ -75,9 +83,9 @@ button {
 	}
 	.web-app-link {
 		width: 100%;
-		padding: 1rem 2rem;
+		padding: 0.5rem;
 		img {
-			max-height: 1.75rem;
+			max-height: 1.5rem;
 			padding-right: 1rem;
 		}
 		i {

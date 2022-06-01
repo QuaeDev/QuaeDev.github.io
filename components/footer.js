@@ -73,11 +73,14 @@ var footer = /*html*/ `
 			<a href="https://docs.quae.app/" rel="noopener" class="docs">
 				<p>Docs</p>
 			</a>
-			<a href="/communities" class="about-us">
+			<a href="/communities" class="communities">
 				<p>Communities</p>
 			</a>
-			<a href="/about_us" class="about-us">
+			<a href="/about_us/" class="about-us">
 				<p>About</p>
+			</a>
+			<a href="/mission/" class="mission">
+				<p>Mission</p>
 			</a>
 		</div>
 		<div class="footer-legal">
