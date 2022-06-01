@@ -28,8 +28,8 @@ var buttons = /*html*/ `
 							/>
 						</a>
 					</div>
-					<button
-						class="primary icon web-app-link"
+					<a
+						class="primary button icon web-app-link"
 						href="https://dev.quae.app"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -38,7 +38,7 @@ var buttons = /*html*/ `
 						<img src="/assets/img/quae_logo_white.png" alt="quae-logo" />
 						<p class="white">Try The Web App</p>
 						<i class="material-icons">chevron_right</i>
-					</button>
+					</a>
 				</div>`;
 //
 

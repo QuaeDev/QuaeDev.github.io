@@ -523,9 +523,9 @@ a {
   .landing-page .landing-view .landing-grid {
     width: min(100%, 60rem);
     grid-template-rows: auto auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
     -ms-grid-rows: auto auto;
-    -ms-grid-columns: 1fr auto;
+    -ms-grid-columns: auto auto;
   }
   .landing-page .landing-view .landing-grid .title {
     -ms-grid-column: 2/3;
