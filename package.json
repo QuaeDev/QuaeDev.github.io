@@ -28,6 +28,7 @@
 		"uglifyjs": "^2.4.11"
 	},
 	"dependencies": {
+		"@rive-app/canvas": "^1.0.64",
 		"ajax": "^0.0.4"
 	}
 }
