@@ -54,7 +54,7 @@ for (let feature of smallFeatures) {
 		<h5>${feature.text}</h5>
     </div>
     <div class="content">
-		<p>${feature.subText}</p>
+		<p class='secondary'>${feature.subText}</p>
     </div>
     `;
 	smallFeatureContainer.appendChild(card);

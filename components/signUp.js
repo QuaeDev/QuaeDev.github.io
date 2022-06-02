@@ -1,6 +1,7 @@
 const view = /*html*/ `
     <div class="section sign-up">
     <div class="container">
+	
         <div class="download">
             <div class="buttons">
                 <h4>Join For Free Today</h4>

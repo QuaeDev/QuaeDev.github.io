@@ -22,6 +22,8 @@
 			href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css"
 		/>
 		<script src="/assets/js/jquery-3.6.0.js" type="text/javascript"></script>
+		<script src="https://unpkg.com/@rive-app/canvas@1.0.47"></script>
+
 		<link rel="stylesheet" href="/assets/css/styles.css" />
 		<script src="/assets/js/index.js"></script>
 		<!-- Google Analytics -->
@@ -47,22 +49,22 @@
 				<div class="img-container pink" ></div>
 
 				<div class="landing-grid">
-					<canvas id="rive-canvas" class="product" width="500" height="500"></canvas>
+					<canvas id="canvas" class="animation"></canvas>
 					<div class="title">
 						<h1 class="primary">Vote Every Day</h1>
-						<h2>
+						<h2 class="typed-text-container">
 							Represent Your
-							<h2 class="typed-text"></h2>
+							<span class="typed-text-wrapper">
+								<h2 class="typed-text"></h2>
 								<span id="cursor"></span>
+							</span>
 						</h2>
+						<div id="download-button-placeholder1" class="download"></div>
 					</div>
-					<div class="subtext">	
-						<p>
-							Quae is a community voting platform. Voice your concerns in your
-							community and see results today!
-						</p>
-						<div id="download-button-placeholder1"></div>
-					</div>
+					<p class="subtext">
+						Quae is a community voting platform. Voice your concerns in your
+						community and see results today!
+					</p>
 				</div>
 			</div>
 			<div class="social-proof-container">
@@ -178,7 +180,7 @@
 			</div>
 			<div id="footer-placeholder"></div>
 		</div>
-		<script src="/assets/js/rive.js"></script>
+		<!-- <script src="/assets/js/rive.mjs"></script> -->
 		<script src="/components/header.js"></script>
 		<script src="/components/footer.js"></script>
 		<script src="/assets/js/testimonial.js"></script>
@@ -188,7 +190,14 @@
 		<script src="/components/coreFeatures.js"></script>
 		<script src="/components/anyCommunity.js"></script>
 		<script src="/assets/js/animations.js"></script>
-		<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+		<!-- <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script> -->
+   	 	<script>
+			new rive.Rive({
+				src: './assets/animations/city.riv',
+				canvas: document.getElementById("canvas"),
+				autoplay: true
+			});
+   		 </script>
 	</body>
 </html>
 <!-- <section class="section-small mission-section">

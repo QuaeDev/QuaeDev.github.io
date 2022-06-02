@@ -29,6 +29,7 @@
 	},
 	"dependencies": {
 		"@rive-app/canvas": "^1.0.64",
-		"ajax": "^0.0.4"
+		"ajax": "^0.0.4",
+		"rive-js": "^0.7.33"
 	}
 }

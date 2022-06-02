@@ -165,12 +165,12 @@
 			background-repeat: no-repeat;
 			border-radius: 1%;
 			&.id {
-				background-image: url("/assets/img/id.jpg");
+				background-image: url("/assets/img/advanceFeatures/id.jpg");
 				border-bottom-right-radius: 30%;
 				margin-right: auto;
 			}
 			&.procedure {
-				background-image: url("/assets/img/teamwork.jpg");
+				background-image: url("/assets/img/advanceFeatures/teamwork.jpg");
 				border-top-left-radius: 30%;
 
 				margin-left: auto;
@@ -420,19 +420,27 @@
 }
 #any-community {
 	#any-community-container {
-		@include flex-container(row, center, center, nowrap);
-		max-width: 60rem;
+		@include flex-container(row, center, center, wrap);
+
 		.card {
 			margin: 0.3rem;
+			width: min(100%, 25rem);
 			border-radius: 0.25rem 0.25rem 0.5rem 0.5rem;
 			overflow: hidden;
 			padding: 0;
 			.img-container {
-				height: 12rem;
-				img {
-					height: 100%;
-					position: absolute;
-					z-index: 1;
+				height: 15rem;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				&.city {
+					background-image: url("/assets/img/communities/city.jpeg");
+				}
+				&.school {
+					background-image: url("/assets/img/communities/college.jpeg");
+				}
+				&.company {
+					background-image: url("/assets/img/communities/company.jpeg");
 				}
 				.title-container {
 					z-index: 2;

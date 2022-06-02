@@ -52,6 +52,7 @@ p {
 	font-size: var.$default;
 	font-weight: var.$Default-weight;
 }
+
 @media (max-width: 576px) {
 	h1 {
 		font-size: var.$XL;
