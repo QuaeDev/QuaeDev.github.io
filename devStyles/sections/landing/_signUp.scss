@@ -5,6 +5,18 @@
 	@include flex-container(column, center, center, nowrap);
 	padding: 1rem;
 	width: 100%;
+	position: relative;
+	.pattern {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		height: 50rem;
+		width: 50rem;
+		background-image: url("/assets/img/mission/ballot.png");
+		background-size: 50px;
+
+		z-index: -1;
+	}
 	.container {
 		width: 100%;
 		@include flex-container(row-reverse, center, flex-start, wrap);

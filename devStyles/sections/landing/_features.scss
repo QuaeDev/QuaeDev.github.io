@@ -289,25 +289,15 @@
 					padding: 1.5rem;
 					border-radius: 0.5rem;
 					@include standard-shadow();
-					.title {
-						padding-bottom: 1rem;
-					}
 				}
 				&#procedure-content {
 					@include flex-container(column, center, flex-end, nowrap);
-					.title {
-						margin-right: 0;
-						* {
-							text-align: end;
-						}
-					}
-					p {
-						text-align: end;
-						margin-right: 0;
+
+					.text {
+						margin: 1rem;
 					}
 					.bullets {
 						li {
-							flex-direction: row-reverse;
 							.icon {
 								margin-left: 0.5rem;
 								margin-right: 0;
@@ -340,11 +330,10 @@
 				height: 50%;
 				width: 100%;
 				&.id {
-					background-color: red;
 					border-bottom-right-radius: 0;
 				}
+
 				&.procedure {
-					background-color: yellow;
 					border-top-left-radius: 0;
 				}
 			}

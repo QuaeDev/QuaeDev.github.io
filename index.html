@@ -42,12 +42,11 @@
 	</head>
 	<body>
 		<div class="page landing-page">
-		<div id="header-placeholder"></div>
+			<div id="header-placeholder"></div>
+			<div class="fancy-floating-shape primary top"></div>
+			<div class="fancy-floating-shape blue top"></div>
+			<div class="fancy-floating-shape pink top"></div>
 			<div class="landing-view">
-				<div class="img-container primary" ></div>
-				<div class="img-container blue" ></div>
-				<div class="img-container pink" ></div>
-
 				<div class="landing-grid">
 					<canvas id="canvas" class="animation"></canvas>
 					<div class="title">
@@ -76,7 +75,11 @@
 					<h5>Take Action on the Issues You Care About</h5>
 					<!-- <button class="secondary">How?</button> -->
 				</div>
-				<img src="/assets/img/beheard_cloudy.jpg" alt="person with megaphone" class="background-img">
+				<img
+					src="/assets/img/beheard_cloudy.jpg"
+					alt="person with megaphone"
+					class="background-img"
+				/>
 			</section>
 			<!-- <div id="carousel-container">
 				<div
@@ -92,70 +95,27 @@
 				</div>
 				<div id="core-features-container"></div>
 			</section>
-			
+
 			<section id="advance-features" class="section sticky-container">
 				<div class="sticky">
 					<div class="content" id="procedure-content">
 						<div class="content-wrapper">
-
-						<div class="title">
-							<h2>Automate Complex Voting</h2>
-							<h5>Enact Change In One Simple Step</h5>
+							<div class="title">
+								<h2>Automate Complex Voting</h2>
+								<h5>Enact Change In One Simple Step</h5>
+							</div>
+							<ul class="bullets" id="procedure-bullets"></ul>
 						</div>
-						<ul class="bullets">
-							<li>
-								<div class="icon">
-									<img src="/assets/img/advanceFeatures/start.png" alt="security badge">
-								</div>
-								<h6>Start a procedure to request specific change in your community</h6>
-							</li>
-							<li>
-								<div class="icon">
-									<img src="/assets/img/advanceFeatures/people.png" alt="id card">
-
-								</div>
-								<h6>Quae will coordinate with the necessary government officials and citizens</h6>
-							</li>
-							<li>
-								<div class="icon">
-									<img src="/assets/img/advanceFeatures/city.png" alt="img-alt">
-								</div>
-								<h6>Your procedure will create change, once the required votes are received</h6>
-							</li>
-						</ul>
-					</div>
 					</div>
 					<div class="content id" id="id-verification-content">
 						<div class="content-wrapper">
-
-						<div class="title">
-							<h2>Real Voices Create Change</h2>
-							<h5>Your Vote Matters</h5>
+							<div class="title">
+								<h2>Real Voices Create Change</h2>
+								<h5>Your Vote Matters</h5>
+							</div>
+							<ul class="bullets" id="id-bullets"></ul>
 						</div>
-					
-						<ul class="bullets">
-							<li>
-								<div class="icon">
-									<img src="/assets/img/advanceFeatures/secure.png" alt="security badge">
-								</div>
-								<h6>ID Verification authenticates votes and protects results. </h6>
-							</li>
-							<li>
-								<div class="icon">
-									<img src="/assets/img/advanceFeatures/id.png" alt="id card">
-
-								</div>
-								<h6>Get Verified with any ID to join your city’s Quae Community</h6>
-							</li>
-							<li>
-								<div class="icon">
-									<img src="/assets/img/advanceFeatures/noBots.png" alt="robot with an red x on top">
-								</div>
-								<h6>Never worry about bots or trolls interfering with your community</h6>
-							</li>
-						</ul>
 					</div>
-				</div>
 				</div>
 				<div class="scrolling">
 					<div class="img-container id" id="id-verification-photo"></div>
@@ -167,200 +127,37 @@
 				<div id="small-features-container"></div>
 			</section>
 			<section class="section" id="any-community">
-				<div class="title">
-					<h2 class="center">Revolutionize Representation In Your Community</h2>
-				</div>
-				<div id="any-community-container">
-				</div>
+				<h2 class="center title">
+					Revolutionize Representation In Your Community
+				</h2>
+				<div id="any-community-container"></div>
 			</section>
-			
+
 			<!-- SIGN UP -->
-			<div class="section sign-up" id="sign-up-section">
-				
+			<div class="section sign-up">
+				<div id="sign-up-section"></div>
+				<div class="fancy-floating-shape primary bottom"></div>
+				<div class="fancy-floating-shape blue bottom"></div>
+				<div class="fancy-floating-shape pink bottom"></div>
 			</div>
 			<div id="footer-placeholder"></div>
 		</div>
-		<!-- <script src="/assets/js/rive.mjs"></script> -->
 		<script src="/components/header.js"></script>
 		<script src="/components/footer.js"></script>
 		<script src="/assets/js/testimonial.js"></script>
-		<script src="/components/signUp.js"></script>
-		<script src="/components/downloadButtons.js"></script>
-		<script src="/components/smallFeatures.js"></script>
 		<script src="/components/coreFeatures.js"></script>
+		<script src="/components/advanceFeatures.js"></script>
+		<script src="/components/smallFeatures.js"></script>
 		<script src="/components/anyCommunity.js"></script>
+		<script src="/components/signUp.js"></script>
 		<script src="/assets/js/animations.js"></script>
-		<!-- <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script> -->
-   	 	<script>
+		<script src="/components/downloadButtons.js"></script>
+		<script>
 			new rive.Rive({
-				src: './assets/animations/city.riv',
+				src: "./assets/animations/city.riv",
 				canvas: document.getElementById("canvas"),
-				autoplay: true
+				autoplay: true,
 			});
-   		 </script>
+		</script>
 	</body>
 </html>
-<!-- <section class="section-small mission-section">
-				<div class="title">
-					<h2>Be Heard</h2>
-					<h4>Communities Thrive When Everyone Is Represented</h4>
-				</div>
-				<img src="/assets/img/mission.png" alt="icon of everyone being heard" />
-				<a href="/mission/" aria-label="link to mission">
-					<p>Learn More About What We Stand For</p>
-				</a>
-			</section> -->
-	<!-- <div class="be-heard section">
-				<div class="content">
-					<h1>Be Heard</h1>
-					<h4>Don't Wait For Change To Happen</h4>
-					<h4>Take Action Today</h4>
-				</div>
-			</div> -->
-<!-- LEGENDARY -->
-<!-- <div class="legendary-groups section" id="legendary-groups">
-				<div class="title">
-					<h3>Legendary Groups Act as One</h3>
-					<h5>Empower Your Members Like Never Before</h5>
-				</div>
-				<div class="icons">
-					<div class="group communication">
-						<img
-							alt="people talking"
-							src="/assets/img/community.svg"
-							class="icon"
-						/>
-						<p>Increase Communication</p>
-					</div>
-
-					<div class="group ideas">
-						<img
-							alt="speech bubble"
-							src="/assets/img/speech-bubble.svg"
-							class="icon ideas"
-						/>
-						<p>Share Ideas</p>
-					</div>
-					<div class="group lead">
-						<img
-							alt="leader"
-							src="/assets/img/politician.svg"
-							class="icon lead"
-						/>
-						<p>Lead Democratically</p>
-					</div>
-				</div>
-				<a
-					href="/communities/"
-					aria-label="go to community page"
-					class="center inline"
-				>
-					<h5 class="underline-hover">
-						Learn How You Can Democratize Your Organization
-					</h5>
-					<span class="material-icons large text">chevron_right</span>
-				</a>
-			</div> -->
-<!-- <section id="product" class="section sticky-container">
-				<div class="sticky">
-					<div id="phone"></div>
-				</div>
-				<div class="scrolling">
-					<div class="scroll-section" id="section1">
-						<div class="content">
-							<h2>Build Your Community</h2>
-							<p>
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-								Doloremque, nemo laboriosam libero sequi tempore laborum fugit,
-								alias ex quae ipsum nostrum quidem nam numquam ipsa eaque
-								delectus, ducimus aliquid! Maiores.
-							</p>
-						</div>
-					</div>
-					<div class="scroll-section" id="section2">
-						<div class="content">
-							<h2>Share Ideas</h2>
-							<p>
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-								Doloremque, nemo laboriosam libero sequi tempore laborum fugit,
-								alias ex quae ipsum nostrum quidem nam numquam ipsa eaque
-								delectus, ducimus aliquid! Maiores.
-							</p>
-						</div>
-					</div>
-					<div class="scroll-section" id="section3">
-						<div class="content">
-							<h2>Enact Change</h2>
-							<p>
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-								Doloremque, nemo laboriosam libero sequi tempore laborum fugit,
-								alias ex quae ipsum nostrum quidem nam numquam ipsa eaque
-								delectus, ducimus aliquid! Maiores.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<div class="section security">
-				<div class="title">
-					<h2>Your Community Is Secure</h2>
-					<div class="content">
-						<p>
-							You can be confident that everyone in your Quae group belongs
-							there. Require a specific email domain or disable auto-joining to
-							manually approve each join request. With Quae you never have to
-							worry about bots or trolls invading your group.
-						</p>
-						<img
-							src="/assets/img/security.png"
-							alt="man with phone with a lock to signify security"
-							class="security-img"
-						/>
-					</div>
-				</div>
-			</div> -->
-	<!-- <div class="how-it-works section">
-				<div class="title">
-					<h2>How It Works</h2>
-				</div>
-				<div class="steps">
-					<div class="step">
-						<img
-							src="/assets/img/howItWorks/createGroup.png"
-							alt="Create Your Group"
-						/>
-						<div class="text">
-							<h2>Build Your Community</h2>
-							<p>
-								Creating a Quae group is simple. Set up a group and invite
-								members to join.
-							</p>
-						</div>
-					</div>
-					<div class="step">
-						<img
-							src="/assets/img/howItWorks/shareIdeas.png"
-							alt="Share Ideas"
-						/>
-						<div class="text">
-							<h2>Share Ideas</h2>
-							<p>
-								Members can propose solutions to problems they see and get
-								feedback from their peers. With Quae, you can see what people
-								care about.
-							</p>
-						</div>
-					</div>
-
-					<div class="step">
-						<img src="/assets/img/howItWorks/act.png" alt="Enact change" />
-						<div class="text">
-							<h2>Enact Change</h2>
-							<p>
-								With data showing you how your group feels, you can make better
-								decisions.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>

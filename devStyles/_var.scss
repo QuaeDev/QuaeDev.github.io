@@ -22,16 +22,26 @@ $accent2-default: #f41690;
 $accent2-light: #ff61c0;
 $accent2-dark: #bc0063;
 
-$yellow: #c7be55;
+$danger: hsl(354, 100%, 50%);
+$urgent: hsl(0, 100%, 74%);
+$success: hsl(133, 68%, 46%);
+$primary-default: hsl(256, 67%, 55%);
+$primary-light: hsl(256, 100%, 70%);
+$primary-dark: hsl(263, 100%, 31%);
+$primary-LO: hsl(256, 100%, 70%, 0.5);
+// Blue
+$accent1-default: hsl(194, 67%, 60%);
+$accent1-light: hsl(202, 100%, 78%);
+$accent1-dark: hsl(198, 100%, 37%);
+$accent1-LO: hsl(202, 100%, 78%, 0.5);
+// PINK
+$accent2-default: hsl(327, 91%, 52%);
+$accent2-light: hsl(324, 100%, 69%);
+$accent2-dark: hsl(328, 100%, 37%);
+$accent2-LO: hsl(324, 100%, 69%, 0.5);
+$yellow: hsl(55, 50%, 56%);
 
-$yellow-LO: #fff70770;
-$success-LO: #3bed6b70;
-$primary-light-LO: #8f67ff70;
-$accent2-light-LO: #ff61c070;
-$accent1-light-LO: #8ed6ff70;
-$primary-light-ULO: #8f67ff20;
-$accent2-light-ULO: #ff61c020;
-$accent1-light-ULO: #8ed6ff20;
+$yellow: #c7be55;
 
 $light: #fcfcfc;
 $dark: #151515;

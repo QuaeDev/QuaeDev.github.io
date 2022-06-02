@@ -16,68 +16,6 @@
 	}
 }
 
-@keyframes blink {
-	0% {
-		opacity: 1;
-	}
-	50% {
-		opacity: 0;
-	}
-}
-@keyframes bob1 {
-	0% {
-		transform: rotate(30deg) translate(-40%, -10%);
-	}
-	25% {
-		transform: rotate(30deg) translate(-35%, -18%);
-	}
-	50% {
-		transform: rotate(30deg) translate(-42%, -15%);
-	}
-	75% {
-		transform: rotate(30deg) translate(-45%, -6%);
-	}
-
-	100% {
-		transform: rotate(30deg) translate(-40%, -10%);
-	}
-}
-@keyframes bob2 {
-	0% {
-		transform: rotate(32deg) translate(-43%, -13%);
-	}
-	25% {
-		transform: rotate(32deg) translate(-32%, -4%);
-	}
-	50% {
-		transform: rotate(32deg) translate(-48%, -7%);
-	}
-	75% {
-		transform: rotate(32deg) translate(-38%, -15%);
-	}
-
-	100% {
-		transform: rotate(32deg) translate(-43%, -13%);
-	}
-}
-@keyframes bob3 {
-	0% {
-		transform: rotate(27deg) translate(-37%, -8%);
-	}
-	25% {
-		transform: rotate(27deg) translate(-30%, -14%);
-	}
-	50% {
-		transform: rotate(27deg) translate(-32%, -16%);
-	}
-	75% {
-		transform: rotate(27deg) translate(-42%, -6%);
-	}
-
-	100% {
-		transform: rotate(27deg) translate(-37%, -8%);
-	}
-}
 .landing-view {
 	min-height: 80vh;
 	position: relative;
@@ -86,33 +24,7 @@
 	padding-bottom: 0;
 	margin-bottom: 0;
 	@include flex-container(column, center, center, nowrap);
-	.img-container {
-		&.primary {
-			background-color: var.$primary-light;
-			z-index: 3;
-			animation: bob1 5s infinite ease-in-out;
-		}
-		&.blue {
-			background-color: var.$accent1-default;
-			animation: bob2 6s infinite ease-in-out;
-			z-index: 2;
-		}
-		&.pink {
-			background-color: var.$accent2-default;
-			animation: bob3 7s infinite ease-in-out;
-			z-index: 1;
-		}
-		opacity: 0.5;
-		height: 100%;
-		width: max(55%, 30rem);
-		position: absolute;
-		left: 0;
-		top: 0;
-		z-index: -1;
-		border-radius: 10%;
-		// transform: rotate(30deg) translate(-40%, -10%);
-		@include standard-shadow();
-	}
+
 	.landing-grid {
 		z-index: 4;
 		display: -ms-grid;
@@ -139,9 +51,7 @@
 		}
 		.subtext {
 			margin: 0;
-			p {
-				text-align: left;
-			}
+			text-align: unset;
 		}
 
 		.typing {
@@ -203,8 +113,10 @@
 				grid-row: 3/4;
 				-ms-grid-column: 1/2;
 				grid-column: 1/2;
-				text-align: center;
 				width: 100%;
+				max-width: 20rem;
+				margin: 0 auto;
+				padding-top: 1rem;
 				h2 {
 					font-size: var.$L;
 				}
@@ -260,8 +172,9 @@
 				-ms-grid-column: 1/2;
 				grid-row: 2/3;
 				grid-column: 1/2;
-				max-width: 40ch;
-				margin: 0 auto;
+				justify-self: center;
+				max-width: 100%;
+				padding: 1rem 4rem;
 			}
 		}
 	}

@@ -3,6 +3,9 @@
 
 form {
 	padding: 1rem;
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+
 	.form-title {
 		margin: 1rem 0;
 	}
