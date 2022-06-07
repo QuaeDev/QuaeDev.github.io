@@ -11,7 +11,7 @@ let communities = [
 		img: "/assets/img/communities/college.jpeg",
 		imgAlt: "college campus",
 		header: "Your University",
-		description: "Use a .edu email to secure your University's Community.",
+		description: `Use a ".edu" email to secure your University's Community.`,
 		href: "/communities",
 		class: "school",
 	},
