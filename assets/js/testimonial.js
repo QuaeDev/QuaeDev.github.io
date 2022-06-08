@@ -9,8 +9,8 @@
 			text: "City of Hoboken",
 		},
 		{
-			picture: "/assets/img/logos/sga_circle.png",
-			text: "Stevens SGA",
+			picture: "/assets/img/logos/newJersey.png",
+			text: "State Of New Jersey",
 		},
 	];
 	let usedByContainer = document.getElementById("social-proof");

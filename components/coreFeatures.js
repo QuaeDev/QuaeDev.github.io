@@ -6,7 +6,7 @@ let coreFeatures = [
 		title: "Propose",
 		body: "Get involved in the democratic process and write a proposal to address an issue you see.",
 		buttonText: "See More",
-		link: "https://wev.quae.app/post/629112d290661d001669d8b5",
+		link: "https://web.quae.app/post/629112d290661d001669d8b5",
 	},
 	{
 		img: "/assets/img/coreFeatures/vote.png",
