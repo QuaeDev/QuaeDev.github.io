@@ -9,7 +9,7 @@ let procedureBullets = [
 		img: "/assets/img/advanceFeatures/people.png",
 		imgAlt: "group of people icons",
 		title: "Coordinate",
-		body: "Start a procedure to request specific change in your community",
+		body: "Quae will poll the people and leaders in your community.",
 	},
 	{
 		img: "/assets/img/advanceFeatures/city.png",
