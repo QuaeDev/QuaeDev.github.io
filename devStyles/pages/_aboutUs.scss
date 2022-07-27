@@ -6,7 +6,7 @@
 	padding-top: 6rem;
 
 	.sponsors-section,
-	.founder-section,
+	.team-section,
 	.mission {
 		max-width: 50rem;
 		margin: 0 auto;
@@ -39,22 +39,25 @@
 			}
 		}
 	}
-	.founder-section {
+	.team-section {
 		padding-bottom: 5rem;
-		.founder-wrapper {
+		max-width: unset;
+		width: 100%;
+		.team-wrapper {
+			max-width: 80rem;
 			margin: 0 auto;
-			@include flex-container(row, center, center, wrap);
-			.founder-card {
+			@include flex-container(row, center, flex-start, wrap);
+			.team-card {
 				margin: 0.5rem auto;
 				flex: 1;
 				max-width: 30rem;
-				min-width: 15rem;
+				min-width: 20rem;
 				padding: 1rem;
 				.header {
 					flex: 1;
 					@include flex-container(column, flex-start, flex-start, wrap);
 					padding: 0.5rem 1rem;
-					.founder-img {
+					.team-img {
 						height: 6rem;
 						border-radius: 3rem;
 						margin: 1rem 0;
@@ -96,8 +99,8 @@
 					}
 				}
 			}
-			.founder-section {
-				.founder-wrapper {
+			.team-section {
+				.team-wrapper {
 					@include flex-container(column, space-evenly, center, wrap);
 				}
 			}

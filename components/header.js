@@ -17,20 +17,33 @@ const header = /*html*/ `<header id="header">
 				</a>
 				<div id="navigation-links">
 				<a href="/about_us/">
-						<p>About</p>
-					</a>
+					<p>About</p>
+				</a>
 				<a href="/mission/">
-						<p>Mission</p>
-					</a>
+					<p>Mission</p>
+				</a>
+				<div class="dropdown-container" onmouseenter="onHover('communities-drop-down', 'enter')" onmouseleave="onHover('communities-drop-down', 'leave')"> 
 					<a href="/communities/">
-						<p>Communities</p>
+						<p>Communities </p>
 					</a>
-					<a href="https://docs.quae.app/">
-						<p>Docs</p>
-					</a>
-					<a href="https://medium.com/quae-app">
-						<p>Blog</p>
-					</a>
+					<div class="drop-down-content" id="communities-drop-down">
+						<a href="/communities/">	
+							<p>Communities</p>
+						</a>
+						<a href="/communities/stevens">
+							<p>Stevens</p>	
+						</a>
+						<a href="/communities/hoboken">
+							<p>Hoboken</p>
+						</a>
+					</div>
+				</div>
+				<a href="https://docs.quae.app/">
+					<p>Docs</p>
+				</a>
+				<a href="https://medium.com/quae-app">
+					<p>Blog</p>
+				</a>
 				</div>
 				<button class="menu" id="menu-btn" onclick="toggleNav()">
 					<i class="material-icons">menu</i>
@@ -60,6 +73,16 @@ document.onscroll = function () {
 		document.querySelector("#header").classList.remove("scrolled");
 	}
 };
+function onHover(contentId, state) {
+	let element = document.getElementById(contentId);
+	if (state === "enter") {
+		// element.classList.remove("hidden");
+		element.classList.add("visible");
+	} else {
+		element.classList.remove("visible");
+		// element.classList.add("hidden");
+	}
+}
 var navVisible = false;
 function toggleNav() {
 	if (navVisible) {

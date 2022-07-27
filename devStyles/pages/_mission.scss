@@ -5,9 +5,6 @@
 	.section {
 		.title {
 			width: clamp(20rem, 80%, 50rem);
-			* {
-				text-align: left;
-			}
 		}
 		position: relative;
 		@include flex-container(row, center, center, wrap);
@@ -20,24 +17,22 @@
 		}
 		.content {
 			z-index: 4;
-			width: clamp(20rem, 80%, 50rem);
+			width: clamp(20rem, 80%, 40rem);
 			margin: 4rem auto;
 			.title {
+				width: 100%;
 				padding: 0.5rem;
+				padding-left: 0;
 				@include flex-container(row, flex-start, center, nowrap);
 				img {
 					height: 3rem;
 					margin: 1rem;
+					margin-left: 0;
 				}
 				h2 {
 					font-weight: 800;
 					text-align: left;
 				}
-			}
-			p {
-				@include standard-shadow();
-				padding: 1rem;
-				border-radius: 0.5rem;
 			}
 		}
 	}

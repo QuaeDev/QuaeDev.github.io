@@ -119,12 +119,52 @@
 			a {
 				padding: 0 0.75rem;
 				transition: all 100ms linear;
+				@include flex-container(row, center, center, nowrap);
 			}
 			a:hover {
 				color: var.$text;
 				text-decoration: underline;
 				padding-bottom: 0.25rem;
 				transition: all 100ms linear;
+				i {
+					text-decoration: none;
+				}
+			}
+			.dropdown-container {
+				position: relative;
+				.drop-down-content {
+					position: absolute;
+					left: 0;
+					right: 0;
+					@include standard-shadow();
+					background-color: var.$bg;
+					border-radius: 0.25rem;
+					opacity: 0;
+					height: 0;
+					display: none;
+					transition: all 1s linear;
+
+					a {
+						color: var.$text;
+						text-align: left;
+						padding: 0.5rem;
+						p {
+							text-align: left;
+							width: 100%;
+							color: var.$text;
+						}
+						&:hover {
+							text-decoration: none;
+							background-color: var.$fg;
+						}
+					}
+				}
+				.drop-down-content.visible {
+					display: block;
+					opacity: 1;
+					height: max-content;
+					transition: all 1s linear;
+				}
 			}
 		}
 		#behind-navigation-links {

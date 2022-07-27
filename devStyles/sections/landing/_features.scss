@@ -41,51 +41,37 @@
 #id-verification-content {
 	opacity: 0;
 	transition: all 0.5s linear;
-	transform: translateY(-10%);
 	@include flex-container(column, center, center, nowrap);
 
+	padding: 2rem;
 	&.procedureVisible {
-		padding: 2rem;
-
 		opacity: 0;
 		transition: all 0.5s linear;
 	}
 	&.idVisible {
-		padding: 2rem;
-		transform: translateY(10%);
 		opacity: 1;
-		transform: translateY(0);
 		transition: all 0.5s linear;
 	}
 	&.noneVisible {
-		padding: 2rem;
-
 		opacity: 0;
 	}
 }
 #procedure-content {
 	opacity: 0;
 	transition: all 0.5s linear;
-	transform: translateY(-10%);
 	@include flex-container(column, center, center, nowrap);
 
+	padding: 2rem;
 	&.procedureVisible {
-		padding: 2rem;
-
 		opacity: 1;
-		transform: translateY(0);
 
 		transition: all 0.5s linear;
 	}
 	&.idVisible {
-		padding: 2rem;
-		transform: translateY(10%);
 		opacity: 0;
 		transition: all 0.5s linear;
 	}
 	&.noneVisible {
-		padding: 2rem;
-
 		opacity: 0;
 	}
 }
@@ -263,39 +249,53 @@
 @media screen and (max-width: 800px) {
 	// mobile
 	#advance-features {
-		height: 100vh;
+		height: 200vh !important;
 		width: 100vw;
-		&.sticky-container {
-			width: 100vw;
-			height: 200vh;
-			position: relative;
-			padding: 0;
-		}
+		// &.sticky-container {
+		// 	width: 100vw;
+		// 	height: 200vh;
+		// 	position: relative;
+		// 	padding: 0;
+		// }
 
 		.sticky {
 			z-index: 2;
 			width: 100%;
-			position: absolute;
+			height: 200vh !important;
 			&.fixed {
-				top: 0;
-				left: 0;
-				right: 0;
-			}
-			.content {
 				position: absolute;
+			}
+			// position: absolute;
+			// &.fixed {
+			// 	top: 0;
+			// 	left: 0;
+			// 	right: 0;
+			// }
+			@include flex-container(
+				column-reverse,
+				space-between,
+				flex-start,
+				nowrap
+			);
+			.content {
 				width: 100%;
-				height: 100%;
 				.content-wrapper {
 					background-color: rgba(256, 256, 256, 0.7);
 					padding: 1.5rem;
 					border-radius: 0.5rem;
 					@include standard-shadow();
 				}
+				.text {
+					margin: 1rem;
+				}
 				&#procedure-content {
+					opacity: 1 !important;
 					@include flex-container(column, center, flex-end, nowrap);
-
-					.text {
-						margin: 1rem;
+					.title {
+						margin-right: 0;
+						* {
+							text-align: start;
+						}
 					}
 					.bullets {
 						li {
@@ -307,6 +307,9 @@
 					}
 				}
 				&#id-verification-content {
+					opacity: 1 !important;
+					bottom: 0;
+					left: 0;
 					@include flex-container(column, center, flex-start, nowrap);
 					.title {
 						margin-left: 0;
@@ -330,13 +333,7 @@
 			.img-container {
 				height: 50%;
 				width: 100%;
-				&.id {
-					border-bottom-right-radius: 0;
-				}
-
-				&.procedure {
-					border-top-left-radius: 0;
-				}
+				border-radius: 0 !important;
 			}
 		}
 	}
@@ -346,9 +343,13 @@
 	padding: 5rem 1rem;
 	@include flex-container(column, center, center, nowrap);
 
-	background-color: var.$primary-light;
+	background-color: var.$primary-LO;
 	.title {
 		padding-bottom: 2rem;
+		width: 100%;
+		max-width: 60rem;
+		@include flex-container(row, flex-start, center, nowrap);
+		text-align: left;
 	}
 	#small-features-container {
 		width: min(100%, 60rem);

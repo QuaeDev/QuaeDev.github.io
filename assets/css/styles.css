@@ -929,53 +929,43 @@ a {
 .landing-page #id-verification-content {
   opacity: 0;
   transition: all 0.5s linear;
-  transform: translateY(-10%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
+  padding: 2rem;
 }
 .landing-page #id-verification-content.procedureVisible {
-  padding: 2rem;
   opacity: 0;
   transition: all 0.5s linear;
 }
 .landing-page #id-verification-content.idVisible {
-  padding: 2rem;
-  transform: translateY(10%);
   opacity: 1;
-  transform: translateY(0);
   transition: all 0.5s linear;
 }
 .landing-page #id-verification-content.noneVisible {
-  padding: 2rem;
   opacity: 0;
 }
 .landing-page #procedure-content {
   opacity: 0;
   transition: all 0.5s linear;
-  transform: translateY(-10%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
+  padding: 2rem;
 }
 .landing-page #procedure-content.procedureVisible {
-  padding: 2rem;
   opacity: 1;
-  transform: translateY(0);
   transition: all 0.5s linear;
 }
 .landing-page #procedure-content.idVisible {
-  padding: 2rem;
-  transform: translateY(10%);
   opacity: 0;
   transition: all 0.5s linear;
 }
 .landing-page #procedure-content.noneVisible {
-  padding: 2rem;
   opacity: 0;
 }
 .landing-page #advance-features {
@@ -1161,29 +1151,24 @@ a {
 }
 @media screen and (max-width: 800px) {
   .landing-page #advance-features {
-    height: 100vh;
+    height: 200vh !important;
     width: 100vw;
-  }
-  .landing-page #advance-features.sticky-container {
-    width: 100vw;
-    height: 200vh;
-    position: relative;
-    padding: 0;
   }
   .landing-page #advance-features .sticky {
     z-index: 2;
     width: 100%;
-    position: absolute;
+    height: 200vh !important;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
   }
   .landing-page #advance-features .sticky.fixed {
-    top: 0;
-    left: 0;
-    right: 0;
+    position: absolute;
   }
   .landing-page #advance-features .sticky .content {
-    position: absolute;
     width: 100%;
-    height: 100%;
   }
   .landing-page #advance-features .sticky .content .content-wrapper {
     background-color: rgba(255, 255, 255, 0.7);
@@ -1191,21 +1176,31 @@ a {
     border-radius: 0.5rem;
     box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
   }
+  .landing-page #advance-features .sticky .content .text {
+    margin: 1rem;
+  }
   .landing-page #advance-features .sticky .content#procedure-content {
+    opacity: 1 !important;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
     flex-wrap: nowrap;
   }
-  .landing-page #advance-features .sticky .content#procedure-content .text {
-    margin: 1rem;
+  .landing-page #advance-features .sticky .content#procedure-content .title {
+    margin-right: 0;
+  }
+  .landing-page #advance-features .sticky .content#procedure-content .title * {
+    text-align: start;
   }
   .landing-page #advance-features .sticky .content#procedure-content .bullets li .icon {
     margin-left: 0.5rem;
     margin-right: 0;
   }
   .landing-page #advance-features .sticky .content#id-verification-content {
+    opacity: 1 !important;
+    bottom: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1235,12 +1230,7 @@ a {
   .landing-page #advance-features .scrolling .img-container {
     height: 50%;
     width: 100%;
-  }
-  .landing-page #advance-features .scrolling .img-container.id {
-    border-bottom-right-radius: 0;
-  }
-  .landing-page #advance-features .scrolling .img-container.procedure {
-    border-top-left-radius: 0;
+    border-radius: 0 !important;
   }
 }
 .landing-page #small-features {
@@ -1250,10 +1240,18 @@ a {
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
-  background-color: #8f66ff;
+  background-color: rgba(143, 102, 255, 0.5);
 }
 .landing-page #small-features .title {
   padding-bottom: 2rem;
+  width: 100%;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  text-align: left;
 }
 .landing-page #small-features #small-features-container {
   width: min(100%, 60rem);
@@ -2069,7 +2067,7 @@ a {
   padding-top: 6rem;
 }
 .about-us-page .sponsors-section,
-.about-us-page .founder-section,
+.about-us-page .team-section,
 .about-us-page .mission {
   max-width: 50rem;
   margin: 0 auto;
@@ -2077,7 +2075,7 @@ a {
   padding: 2rem;
 }
 .about-us-page .sponsors-section h3,
-.about-us-page .founder-section h3,
+.about-us-page .team-section h3,
 .about-us-page .mission h3 {
   text-align: center;
   padding-bottom: 1rem;
@@ -2109,25 +2107,28 @@ a {
   width: 70%;
   padding: 2rem 0;
 }
-.about-us-page .founder-section {
+.about-us-page .team-section {
   padding-bottom: 5rem;
+  max-width: unset;
+  width: 100%;
 }
-.about-us-page .founder-section .founder-wrapper {
+.about-us-page .team-section .team-wrapper {
+  max-width: 80rem;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
 }
-.about-us-page .founder-section .founder-wrapper .founder-card {
+.about-us-page .team-section .team-wrapper .team-card {
   margin: 0.5rem auto;
   flex: 1;
   max-width: 30rem;
-  min-width: 15rem;
+  min-width: 20rem;
   padding: 1rem;
 }
-.about-us-page .founder-section .founder-wrapper .founder-card .header {
+.about-us-page .team-section .team-wrapper .team-card .header {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -2136,28 +2137,28 @@ a {
   flex-wrap: wrap;
   padding: 0.5rem 1rem;
 }
-.about-us-page .founder-section .founder-wrapper .founder-card .header .founder-img {
+.about-us-page .team-section .team-wrapper .team-card .header .team-img {
   height: 6rem;
   border-radius: 3rem;
   margin: 1rem 0;
   box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.5);
 }
-.about-us-page .founder-section .founder-wrapper .founder-card .header .top {
+.about-us-page .team-section .team-wrapper .team-card .header .top {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-.about-us-page .founder-section .founder-wrapper .founder-card .header h5,
-.about-us-page .founder-section .founder-wrapper .founder-card .header a {
+.about-us-page .team-section .team-wrapper .team-card .header h5,
+.about-us-page .team-section .team-wrapper .team-card .header a {
   display: inline;
 }
-.about-us-page .founder-section .founder-wrapper .founder-card .header i {
+.about-us-page .team-section .team-wrapper .team-card .header i {
   margin: auto 0.5rem;
   font-size: 1rem;
 }
-.about-us-page .founder-section .founder-wrapper .founder-card p {
+.about-us-page .team-section .team-wrapper .team-card p {
   padding: 1rem;
 }
 
@@ -2181,7 +2182,7 @@ a {
   .about-us-page .section .sponsor-section .sponsors .sponsor img {
     width: 10rem;
   }
-  .about-us-page .section .founder-section .founder-wrapper {
+  .about-us-page .section .team-section .team-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2200,9 +2201,6 @@ a {
 .mission-page .section .title {
   width: clamp(20rem, 80%, 50rem);
 }
-.mission-page .section .title * {
-  text-align: left;
-}
 .mission-page .section .mission-img {
   z-index: 1;
   width: 100vw;
@@ -2216,11 +2214,13 @@ a {
 }
 .mission-page .section .content {
   z-index: 4;
-  width: clamp(20rem, 80%, 50rem);
+  width: clamp(20rem, 80%, 40rem);
   margin: 4rem auto;
 }
 .mission-page .section .content .title {
+  width: 100%;
   padding: 0.5rem;
+  padding-left: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2230,15 +2230,11 @@ a {
 .mission-page .section .content .title img {
   height: 3rem;
   margin: 1rem;
+  margin-left: 0;
 }
 .mission-page .section .content .title h2 {
   font-weight: 800;
   text-align: left;
-}
-.mission-page .section .content p {
-  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  border-radius: 0.5rem;
 }
 .mission-page .sign-up {
   display: flex;
@@ -2572,12 +2568,55 @@ footer #footer-navigation {
 #header .header-content #navigation-links a {
   padding: 0 0.75rem;
   transition: all 100ms linear;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 #header .header-content #navigation-links a:hover {
   color: #151515;
   text-decoration: underline;
   padding-bottom: 0.25rem;
   transition: all 100ms linear;
+}
+#header .header-content #navigation-links a:hover i {
+  text-decoration: none;
+}
+#header .header-content #navigation-links .dropdown-container {
+  position: relative;
+}
+#header .header-content #navigation-links .dropdown-container .drop-down-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
+  background-color: #fcfcfc;
+  border-radius: 0.25rem;
+  opacity: 0;
+  height: 0;
+  display: none;
+  transition: all 1s linear;
+}
+#header .header-content #navigation-links .dropdown-container .drop-down-content a {
+  color: #151515;
+  text-align: left;
+  padding: 0.5rem;
+}
+#header .header-content #navigation-links .dropdown-container .drop-down-content a p {
+  text-align: left;
+  width: 100%;
+  color: #151515;
+}
+#header .header-content #navigation-links .dropdown-container .drop-down-content a:hover {
+  text-decoration: none;
+  background-color: #f2f2f2;
+}
+#header .header-content #navigation-links .dropdown-container .drop-down-content.visible {
+  display: block;
+  opacity: 1;
+  height: max-content;
+  transition: all 1s linear;
 }
 #header .header-content #behind-navigation-links {
   opacity: 0.3;
