@@ -59,6 +59,30 @@ a {
 			text-align: center;
 		}
 	}
+	.title-left {
+		display: flex;
+		align-items: flex-start;
+		padding: 0 2rem;
+		width: 100%;
+		max-width: 70rem;
+		margin: 0 auto;
+		* {
+			text-align: left;
+		}
+	}
+	.content {
+		&.left {
+			padding: 1rem 2rem;
+			width: 100%;
+			max-width: 70rem;
+			display: flex;
+			align-items: flex-start;
+			margin: 0 auto;
+		}
+	}
+	.footer {
+		padding: 1rem 2rem;
+	}
 }
 @media screen and (max-width: 800px) {
 	.page,
@@ -103,9 +127,13 @@ a {
 	border: none;
 	@include standard-shadow();
 }
+.w-full {
+	width: 100%;
+}
 
 @import "./pages/landing";
 @import "./pages/communities";
+@import "./pages/subCommunity";
 @import "./pages/aboutUs";
 @import "./pages/mission";
 @import "./components/page";
@@ -115,6 +143,9 @@ a {
 @import "./components/icons";
 @import "./components/legal";
 @import "./components/forms";
+@import "./components/cards";
+@import "./components/metro";
+
 // @use "../var";
 // @import "../mixins";
 // @media (max-width: 576px) {

@@ -22,10 +22,8 @@ const header = /*html*/ `<header id="header">
 				<a href="/mission/">
 					<p>Mission</p>
 				</a>
-				<div class="dropdown-container" onmouseenter="onHover('communities-drop-down', 'enter')" onmouseleave="onHover('communities-drop-down', 'leave')"> 
-					<a href="/communities/">
+				<div class="dropdown-container" onmouseenter="onHover('communities-drop-down', 'enter')" onmouseleave="onHover('communities-drop-down', 'leave')" onClick="onHover('communities-drop-down', 'enter')"> 
 						<p>Communities </p>
-					</a>
 					<div class="drop-down-content" id="communities-drop-down">
 						<a href="/communities/">	
 							<p>Communities</p>
@@ -74,12 +72,15 @@ document.onscroll = function () {
 	}
 };
 function onHover(contentId, state) {
+	let navLinks = document.getElementById("navigation-links");
 	let element = document.getElementById(contentId);
 	if (state === "enter") {
 		// element.classList.remove("hidden");
 		element.classList.add("visible");
+		navLinks.classList.add("drop-down-visible");
 	} else {
 		element.classList.remove("visible");
+		navLinks.classList.remove("drop-down-visible");
 		// element.classList.add("hidden");
 	}
 }

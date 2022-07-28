@@ -20,7 +20,8 @@ h5,
 h6 {
 	font-family: "Red Hat Display", sans-serif;
 }
-p {
+p,
+a {
 	font-family: "Poppins", sans-serif;
 }
 h1 {
@@ -105,6 +106,9 @@ p {
 }
 *.danger {
 	color: var.$danger;
+}
+*.success {
+	color: var.$success;
 }
 
 *.link {

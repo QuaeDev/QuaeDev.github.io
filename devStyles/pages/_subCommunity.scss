@@ -1,0 +1,129 @@
+@use "../var";
+@import "../mixins";
+
+.sub-community {
+	.landing {
+		display: grid;
+		min-height: 100vh;
+	}
+	.card {
+		margin: 1rem 0;
+		.content {
+			@include flex-container(row, flex-start, center, nowrap);
+			img {
+				height: 6rem;
+				margin-right: 0.5rem;
+			}
+			.text {
+				height: max-content;
+			}
+		}
+	}
+}
+@media screen and (max-width: 799px) {
+	.sub-community {
+		.landing {
+			height: calc(100vh - 8rem);
+			width: 100%;
+			-ms-grid-column: 1fr;
+			grid-template-columns: 1fr;
+			-ms-grid-row: auto auto auto;
+			grid-template-rows: auto auto auto;
+			justify-content: stretch;
+			align-items: center;
+
+			.img-wrapper {
+				-ms-grid-column: 1/2;
+				grid-column: 1/2;
+				-ms-grid-row: 1/3;
+				grid-row: 1/3;
+			}
+			.content {
+				padding: 1rem;
+				-ms-grid-column: 1/2;
+				grid-column: 1/2;
+				-ms-grid-row: 2/4;
+				grid-row: 2/4;
+				width: 100%;
+				max-width: 100vw;
+			}
+		}
+	}
+}
+@media screen and (min-width: 800px) {
+	.sub-community {
+		.landing {
+			height: calc(100vh - 8rem);
+			width: 100%;
+			-ms-grid-column: 1fr 1fr;
+			grid-template-columns: 1fr 1fr;
+			-ms-grid-row: auto;
+			grid-template-rows: auto;
+			justify-content: stretch;
+			align-items: center;
+			.img-wrapper {
+				-ms-grid-column: 1/2;
+				grid-column: 1/2;
+				-ms-grid-row: 1/2;
+				grid-row: 1/2;
+				overflow: hidden;
+			}
+
+			.content {
+				padding: 1rem;
+				-ms-grid-column: 2/3;
+				grid-column: 2/3;
+				-ms-grid-row: 1/2;
+				grid-row: 1/2;
+				width: 100%;
+				max-width: 100vw;
+				max-width: 40rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 799px) {
+	.proposals {
+		.proposal-card {
+			margin-bottom: 2rem;
+		}
+	}
+}
+@media screen and (min-width: 800px) {
+	.proposals {
+		@include flex-container(row, center, center, nowrap);
+		.proposal-card {
+			margin-right: 2rem;
+		}
+		.testimonials {
+			@include flex-container(column, space-between, flex-start, nowrap);
+		}
+	}
+}
+.section {
+	@include flex-container(column, center, flex-start, nowrap);
+	#carousel-container {
+		width: 100%;
+		max-width: 50rem;
+		max-height: 40rem;
+
+		margin: 0 auto;
+		#carousel {
+			width: 100%;
+			max-height: 40rem;
+
+			.slides {
+				height: 100%;
+				max-height: 40rem;
+
+				.slide {
+					height: 100%;
+					max-height: 40rem;
+					background-color: #fff;
+					@include flex-container(column, center, center, nowrap);
+				}
+			}
+		}
+	}
+}

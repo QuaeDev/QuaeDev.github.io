@@ -10,6 +10,7 @@ a.button {
 	outline: inherit;
 	text-align: inherit;
 	padding: 0;
+	@include flex-container(row, center, center, nowrap);
 	&.icon {
 		@include flex-container(row, center, center, nowrap);
 		i {
@@ -52,6 +53,10 @@ a.button {
 		&:hover {
 			background-color: var.$fg;
 		}
+	}
+	&.lg {
+		width: 100%;
+		font-size: 20px;
 	}
 }
 #download-button-placeholder {

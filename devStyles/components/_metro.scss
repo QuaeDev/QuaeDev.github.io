@@ -1,0 +1,38 @@
+@use "../var";
+@use "../mixins";
+
+#carousel-container {
+	@include flex-container(row, center, center, nowrap);
+}
+
+#carousel {
+	margin: 0 auto;
+	width: min(100%, 40rem);
+	background-color: transparent;
+}
+.carousel-switch-prev,
+.carousel-switch-next {
+	padding: 0.25rem;
+	@include flex-container(row, center, center, nowrap);
+	i {
+		font-size: 3rem;
+		color: var.$text-secondary;
+	}
+	&:hover {
+		i {
+			color: var.$text;
+		}
+	}
+}
+.carousel-bullet {
+	border-radius: 50%;
+	height: 1rem;
+	width: 1rem;
+	&.bullet-on {
+		background-color: var.$primary-default;
+	}
+}
+.slide {
+	@include flex-container(row, center, center, nowrap);
+	padding: 3rem;
+}
