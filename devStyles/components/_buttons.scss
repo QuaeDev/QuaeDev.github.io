@@ -66,7 +66,7 @@ a.button {
 	text-align: center;
 	background: blur(15px);
 	background-color: rgba(0, 0, 0, 0.01);
-	width: min(20rem, 100%);
+	width: min(25rem, 100%);
 	height: min-content;
 	@include flex-container(column, center, center, nowrap);
 	.app-stores {

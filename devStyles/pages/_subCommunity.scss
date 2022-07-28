@@ -101,28 +101,69 @@
 		}
 	}
 }
-.section {
+.section-small.vote {
 	@include flex-container(column, center, flex-start, nowrap);
+	background-color: var.$primary-LO;
 	#carousel-container {
 		width: 100%;
 		max-width: 50rem;
-		max-height: 40rem;
+		max-height: 350px;
 
 		margin: 0 auto;
 		#carousel {
 			width: 100%;
-			max-height: 40rem;
+			max-height: 350px;
 
 			.slides {
 				height: 100%;
-				max-height: 40rem;
+				max-height: 350px;
 
 				.slide {
 					height: 100%;
-					max-height: 40rem;
-					background-color: #fff;
+					padding: 0;
+					max-height: 350px;
 					@include flex-container(column, center, center, nowrap);
+					.proposal-link {
+						height: 300px;
+						&:hover {
+							text-decoration: none;
+							.proposal-card {
+								background-color: var.$fg;
+							}
+						}
+						.proposal-card {
+							margin: 0 auto;
+							background-color: var.$bg;
+						}
+					}
 				}
+			}
+		}
+	}
+}
+.sub-community {
+	.sign-up {
+		@include flex-container(row-reverse, center, center, wrap);
+		max-width: 50rem;
+		margin: 0 auto;
+		.img-wrapper {
+			width: clamp(15rem, 50%, 30rem);
+
+			#devices {
+				width: 100%;
+				height: unset;
+			}
+		}
+		.buttons {
+			@include flex-container(column, center, center, nowrap);
+			min-width: 20rem;
+			flex: 1;
+			h2 {
+				padding-bottom: 1rem;
+				margin: 0 auto;
+			}
+			#download-button-placeholder {
+				flex: 1;
 			}
 		}
 	}

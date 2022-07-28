@@ -113,9 +113,10 @@ a {
 }
 .section-small {
 	min-height: 50vh;
+	padding: 1rem 2rem;
 	@include flex-container(column, center, center, nowrap);
 	.title {
-		padding-bottom: 2rem;
+		padding-bottom: 1rem;
 	}
 }
 

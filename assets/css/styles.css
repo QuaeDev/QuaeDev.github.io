@@ -43,7 +43,7 @@ h3 {
 }
 
 h4 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
@@ -79,7 +79,7 @@ p {
 
   h4 {
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   h5 {
@@ -288,6 +288,7 @@ a {
 
 .section-small {
   min-height: 50vh;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -295,7 +296,7 @@ a {
   flex-wrap: nowrap;
 }
 .section-small .title {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .card {
@@ -2155,36 +2156,83 @@ a {
     flex-wrap: nowrap;
   }
 }
-.section {
+.section-small.vote {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   flex-wrap: nowrap;
+  background-color: rgba(143, 102, 255, 0.5);
 }
-.section #carousel-container {
+.section-small.vote #carousel-container {
   width: 100%;
   max-width: 50rem;
-  max-height: 40rem;
+  max-height: 350px;
   margin: 0 auto;
 }
-.section #carousel-container #carousel {
+.section-small.vote #carousel-container #carousel {
   width: 100%;
-  max-height: 40rem;
+  max-height: 350px;
 }
-.section #carousel-container #carousel .slides {
+.section-small.vote #carousel-container #carousel .slides {
   height: 100%;
-  max-height: 40rem;
+  max-height: 350px;
 }
-.section #carousel-container #carousel .slides .slide {
+.section-small.vote #carousel-container #carousel .slides .slide {
   height: 100%;
-  max-height: 40rem;
-  background-color: #fff;
+  padding: 0;
+  max-height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
+}
+.section-small.vote #carousel-container #carousel .slides .slide .proposal-link {
+  height: 300px;
+}
+.section-small.vote #carousel-container #carousel .slides .slide .proposal-link:hover {
+  text-decoration: none;
+}
+.section-small.vote #carousel-container #carousel .slides .slide .proposal-link:hover .proposal-card {
+  background-color: #f2f2f2;
+}
+.section-small.vote #carousel-container #carousel .slides .slide .proposal-link .proposal-card {
+  margin: 0 auto;
+  background-color: #fcfcfc;
+}
+
+.sub-community .sign-up {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+.sub-community .sign-up .img-wrapper {
+  width: clamp(15rem, 50%, 30rem);
+}
+.sub-community .sign-up .img-wrapper #devices {
+  width: 100%;
+  height: unset;
+}
+.sub-community .sign-up .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  min-width: 20rem;
+  flex: 1;
+}
+.sub-community .sign-up .buttons h2 {
+  padding-bottom: 1rem;
+  margin: 0 auto;
+}
+.sub-community .sign-up .buttons #download-button-placeholder {
+  flex: 1;
 }
 
 .about-us-page {
@@ -2976,7 +3024,7 @@ a.button.lg {
   text-align: center;
   background: blur(15px);
   background-color: rgba(0, 0, 0, 0.01);
-  width: min(20rem, 100%);
+  width: min(25rem, 100%);
   height: min-content;
   display: flex;
   flex-direction: column;
@@ -3210,9 +3258,10 @@ form button {
 .proposal-card .header {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: nowrap;
+  margin-bottom: 0;
 }
 .proposal-card .header .user {
   display: flex;
@@ -3237,12 +3286,35 @@ form button {
   color: #3b974e;
 }
 .proposal-card .body {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 .proposal-card .body * {
   text-align: start;
   padding: 0 0.25rem;
 }
+.proposal-card .poll .option-container {
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  margin: 0.25rem;
+  border: 2px solid #b6b6b6;
+  overflow: hidden;
+}
+.proposal-card .poll .option-container .result {
+  height: 10rem;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+.proposal-card .poll .option-container .result#library-yes {
+  width: 97%;
+  background-color: rgba(143, 102, 255, 0.5);
+}
+.proposal-card .poll .option-container .result#library-no {
+  background-color: #f2f2f2;
+  width: 3%;
+}
+
 .testimonial-card {
   max-width: 30rem;
   margin: 0.5rem 0;
@@ -3308,13 +3380,19 @@ form button {
   color: #151515;
 }
 
+.slides {
+  overflow-y: visible !important;
+  overflow-x: hidden;
+}
+
 .carousel-bullet {
-  border-radius: 50%;
-  height: 1rem;
-  width: 1rem;
+  margin-top: 1rem !important;
+  border-radius: 50% !important;
+  height: 1rem !important;
+  width: 1rem !important;
 }
 .carousel-bullet.bullet-on {
-  background-color: #683fd9;
+  background-color: #683fd9 !important;
 }
 
 .slide {

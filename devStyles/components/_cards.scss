@@ -8,8 +8,8 @@
 	padding: 0.5rem;
 	width: min(100%, 40rem);
 	.header {
-		@include flex-container(row, space-between, center, nowrap);
-
+		@include flex-container(row, space-between, flex-start, nowrap);
+		margin-bottom: 0;
 		.user {
 			@include flex-container(row, flex-start, center, nowrap);
 			img {
@@ -26,7 +26,7 @@
 		}
 	}
 	.body {
-		padding: 1rem 0;
+		padding: 0.5rem 0;
 		* {
 			text-align: start;
 			padding: 0 0.25rem;
@@ -36,6 +36,27 @@
 		.title {
 		}
 		.option-container {
+			border-radius: 0.25rem;
+			padding: 0.25rem;
+			margin: 0.25rem;
+			border: 2px solid var.$border;
+			overflow: hidden;
+			.result {
+				height: 10rem;
+				top: 0;
+				left: 0;
+
+				position: absolute;
+				z-index: -1;
+				&#library-yes {
+					width: 97%;
+					background-color: var.$primary-LO;
+				}
+				&#library-no {
+					background-color: var.$fg;
+					width: 3%;
+				}
+			}
 		}
 	}
 }
