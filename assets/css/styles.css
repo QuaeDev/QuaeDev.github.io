@@ -247,6 +247,12 @@ a {
 .section-small .title-left * {
   text-align: left;
 }
+.page .content.small,
+.section .content.small,
+.section-small .content.small {
+  max-width: 50rem;
+  margin: 0 auto;
+}
 .page .content.left,
 .section .content.left,
 .section-small .content.left {
@@ -1004,17 +1010,19 @@ a {
   flex-wrap: nowrap;
 }
 .landing-page #advance-features .sticky .content .content-wrapper .bullets li .icon {
-  height: 2.5rem;
-  width: 2.5rem;
-  margin-right: 0.5rem;
+  height: 5rem;
+  width: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
 }
-.landing-page #advance-features .sticky .content .content-wrapper .bullets li h6 {
-  vertical-align: baseline;
+.landing-page #advance-features .sticky .content .content-wrapper .bullets li .icon img {
+  width: 100%;
+}
+.landing-page #advance-features .sticky .content .content-wrapper .bullets li .text {
+  margin-left: 1rem;
 }
 .landing-page #advance-features .sticky.fixed {
   position: fixed;
@@ -1328,6 +1336,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1417,6 +1426,31 @@ a {
   }
   .landing-page #any-community #any-community-container .card .content button {
     margin-top: auto;
+  }
+}
+.landing-page #faq-container {
+  display: grid;
+  gap: 1.5rem;
+}
+.landing-page #faq-container .faq-card .answer {
+  text-align: justify;
+}
+@media screen and (max-width: 799px) {
+  .landing-page #faq-container {
+    -ms-grid-column: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 800px) {
+  .landing-page #faq-container {
+    -ms-grid-column: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .landing-page #faq-container .faq-card.odd {
+    grid-column: 1/2;
+  }
+  .landing-page #faq-container .faq-card.even {
+    grid-column: 2/3;
   }
 }
 .landing-page .fancy-floating-shape {
@@ -3461,6 +3495,15 @@ form button {
   justify-content: center;
   flex-wrap: nowrap;
   padding: 3rem;
+}
+
+.background-graphic {
+  position: absolute;
+  z-index: -1;
+}
+
+#faq .background-graphic {
+  height: 30rem;
 }
 
 .pt {

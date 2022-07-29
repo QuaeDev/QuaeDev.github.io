@@ -72,6 +72,10 @@ a {
 		}
 	}
 	.content {
+		&.small {
+			max-width: 50rem;
+			margin: 0 auto;
+		}
 		&.left {
 			// padding: 1rem 2rem;
 			width: 100%;
@@ -147,6 +151,7 @@ a {
 @import "./components/forms";
 @import "./components/cards";
 @import "./components/metro";
+@import "./components/graphics";
 @import "./utility";
 // @use "../var";
 // @import "../mixins";

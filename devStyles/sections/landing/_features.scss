@@ -106,13 +106,15 @@
 						margin: 1rem 0;
 						@include flex-container(row, flex-start, center, nowrap);
 						.icon {
-							height: 2.5rem;
-							width: 2.5rem;
-							margin-right: 0.5rem;
+							height: 5rem;
+							width: 5rem;
 							@include flex-container(column, center, center, nowrap);
+							img {
+								width: 100%;
+							}
 						}
-						h6 {
-							vertical-align: baseline;
+						.text {
+							margin-left: 1rem;
 						}
 					}
 				}
@@ -424,6 +426,7 @@
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
+				position: relative;
 				&.city {
 					background-image: url("/assets/img/communities/city.jpeg");
 				}
@@ -494,6 +497,40 @@
 						margin-top: auto;
 					}
 				}
+			}
+		}
+	}
+}
+
+// FAQ's
+
+#faq-container {
+	display: grid;
+	gap: 1.5rem;
+	.faq-card {
+		.question {
+		}
+		.answer {
+			text-align: justify;
+		}
+	}
+}
+@media screen and (max-width: 799px) {
+	#faq-container {
+		-ms-grid-column: 1fr;
+		grid-template-columns: 1fr;
+	}
+}
+@media screen and (min-width: 800px) {
+	#faq-container {
+		-ms-grid-column: 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+		.faq-card {
+			&.odd {
+				grid-column: 1/2;
+			}
+			&.even {
+				grid-column: 2/3;
 			}
 		}
 	}

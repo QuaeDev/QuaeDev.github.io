@@ -1,0 +1,11 @@
+@use "../var";
+
+.background-graphic {
+	position: absolute;
+	z-index: -1;
+}
+#faq {
+	.background-graphic {
+		height: 30rem;
+	}
+}
