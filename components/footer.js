@@ -58,7 +58,7 @@ var footer = /*html*/ `
 		<a href="mailto:info@quae.app" id="contact-us-button">
 			<button class="white icon">
 				<i class="material-icons">mail</i>
-				<p>Send Us A Message</p>
+				Send Us A Message
 			</button>
 		</a>
 	</div>
@@ -75,6 +75,12 @@ var footer = /*html*/ `
 			</a>
 			<a href="/communities" class="communities">
 				<p>Communities</p>
+			</a>
+			<a href="/communities/hoboken" class="communities sub">
+				<p>Hoboken</p>
+			</a>
+			<a href="/communities/stevens" class="communities sub">
+				<p>Stevens</p>
 			</a>
 			<a href="/about_us/" class="about-us">
 				<p>About</p>

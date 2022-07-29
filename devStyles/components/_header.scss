@@ -69,18 +69,14 @@
 				.primary {
 					background-color: var.$bg;
 					border-color: var.$bg;
-					p {
-						color: var.$primary-default;
-					}
+					color: var.$primary-default;
 					&:hover {
 						background-color: var.$fg;
 					}
 				}
 				.secondary {
 					border-color: var.$bg;
-					p {
-						color: var.$bg;
-					}
+					color: var.$bg;
 					&:hover {
 						background-color: var.$primary-light;
 					}

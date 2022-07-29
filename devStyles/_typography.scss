@@ -38,8 +38,8 @@ h3 {
 	font-weight: var.$Medium-weight;
 }
 h4 {
-	font-size: 1.5rem;
-	font-weight: var.$Default-weight;
+	font-size: 1.7rem;
+	font-weight: 500;
 }
 h5 {
 	font-size: var.$M;
@@ -109,6 +109,11 @@ p {
 }
 *.success {
 	color: var.$success;
+}
+*.water-mark {
+	font-size: calc(2.5rem + 3.5vw);
+	font-weight: 700;
+	opacity: 0.05;
 }
 
 *.link {

@@ -11,52 +11,50 @@ a.button {
 	text-align: inherit;
 	padding: 0;
 	@include flex-container(row, center, center, nowrap);
+	font-size: 18px;
+	padding: 0.5rem 1rem;
+	border-radius: 0.25rem;
+	&.lg {
+		width: 100%;
+		font-size: 22px;
+	}
+	&.sm {
+		padding: 0.5rem;
+		font-size: 14px;
+	}
 	&.icon {
 		@include flex-container(row, center, center, nowrap);
 		i {
 			padding-right: 0.5rem;
 		}
 	}
-	&.primary,
-	&.secondary,
-	&.white {
-		padding: 0.25rem 0.5rem;
-		border-radius: 0.25rem;
-	}
+
 	&.primary {
 		color: var.$bg;
 		background-color: var.$primary-default;
-		border: 2px solid var.$primary-default;
-		p {
-			color: var.$bg;
-		}
+		border: 1px solid var.$primary-default;
+		color: var.$bg;
 		&:hover {
 			background-color: var.$primary-dark;
 		}
 	}
 	&.secondary {
 		color: var.$text-secondary;
-		border: 2px solid var.$text-secondary;
+		border: 1px solid var.$text-secondary;
 		&:hover {
 			background-color: var.$fg;
 			color: var.$text;
-			border: 2px solid var.$text;
+			border: 1px solid var.$text;
 		}
 	}
 	&.white {
 		background-color: var.$bg;
 		color: var.$text;
-		border: 2px solid var.$text-secondary;
-		p {
-			color: var.$text;
-		}
+		border: 1px solid var.$text-secondary;
+		color: var.$text;
 		&:hover {
 			background-color: var.$fg;
 		}
-	}
-	&.lg {
-		width: 100%;
-		font-size: 20px;
 	}
 }
 #download-button-placeholder {

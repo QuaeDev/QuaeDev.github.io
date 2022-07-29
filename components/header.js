@@ -48,10 +48,10 @@ const header = /*html*/ `<header id="header">
 				</button>
 				<div class="buttons">
 					<a href="https://web.quae.app/auth/signup">
-						<button class="primary"><p>Sign Up</p></button>
+						<button class="primary sm">Sign Up</button>
 					</a>
 					<a href="https://web.quae.app/auth">
-						<button class="secondary"><p>Log In</p></button>
+						<button class="secondary sm">Log In</button>
 					</a>
 				</div>
 			</div>

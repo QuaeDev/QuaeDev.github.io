@@ -23,7 +23,7 @@ html {
 }
 @media screen and (max-width: 800px) {
 	html {
-		font-size: 12px;
+		font-size: 13px;
 	}
 }
 body {
@@ -62,7 +62,8 @@ a {
 	.title-left {
 		display: flex;
 		align-items: flex-start;
-		padding: 0 2rem;
+		// padding: 0 1rem;
+		padding-bottom: 1rem;
 		width: 100%;
 		max-width: 70rem;
 		margin: 0 auto;
@@ -72,7 +73,7 @@ a {
 	}
 	.content {
 		&.left {
-			padding: 1rem 2rem;
+			// padding: 1rem 2rem;
 			width: 100%;
 			max-width: 70rem;
 			display: flex;
@@ -112,7 +113,7 @@ a {
 	}
 }
 .section-small {
-	min-height: 50vh;
+	min-height: 30vh;
 	padding: 1rem 2rem;
 	@include flex-container(column, center, center, nowrap);
 	.title {
@@ -146,7 +147,7 @@ a {
 @import "./components/forms";
 @import "./components/cards";
 @import "./components/metro";
-
+@import "./utility";
 // @use "../var";
 // @import "../mixins";
 // @media (max-width: 576px) {

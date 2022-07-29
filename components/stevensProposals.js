@@ -19,7 +19,7 @@ const proposals = [
 		profilePic: "/assets/img/people/noProfilePic.png",
 		name: "Jon Melamed",
 		username: "@jon",
-		title: "Officially Allow Overnight Parking for Commuters",
+		title: "n",
 		options: ["yes", "no"],
 	},
 ];

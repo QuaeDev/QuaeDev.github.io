@@ -3,20 +3,24 @@
 
 .sub-community {
 	.landing {
+		overflow: hidden;
 		display: grid;
 		min-height: 100vh;
+		// .content {
+		// 	background: linear-gradient(180deg, var.$bg, transparent);
+		// }
 	}
-	.card {
+	.card.sga,
+	.card.city-council {
 		margin: 1rem 0;
-		.content {
-			@include flex-container(row, flex-start, center, nowrap);
-			img {
-				height: 6rem;
-				margin-right: 0.5rem;
-			}
-			.text {
-				height: max-content;
-			}
+		@include flex-container(row, center, center, wrap);
+		img {
+			height: 5rem;
+			margin: 0.5rem;
+		}
+		.text {
+			min-width: 5ch;
+			height: max-content;
 		}
 	}
 }
@@ -37,6 +41,21 @@
 				grid-column: 1/2;
 				-ms-grid-row: 1/3;
 				grid-row: 1/3;
+				overflow: hidden;
+				align-self: flex-start;
+				img {
+					width: 100%;
+					-webkit-mask-image: linear-gradient(
+						to top,
+						rgba(0, 0, 0, 0),
+						rgba(0, 0, 0, 1)
+					);
+					mask-image: linear-gradient(
+						to top,
+						rgba(0, 0, 0, 0),
+						rgba(0, 0, 0, 1)
+					);
+				}
 			}
 			.content {
 				padding: 1rem;
@@ -66,7 +85,12 @@
 				grid-column: 1/2;
 				-ms-grid-row: 1/2;
 				grid-row: 1/2;
+
+				justify-self: stretch;
 				overflow: hidden;
+				img {
+					width: 100%;
+				}
 			}
 
 			.content {
@@ -78,6 +102,36 @@
 				width: 100%;
 				max-width: 100vw;
 				max-width: 40rem;
+			}
+		}
+	}
+}
+// how to join
+.how-to-join {
+	.water-mark {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+	.content.flex-row {
+		flex-wrap: wrap;
+		.img-wrapper {
+			margin: 0 1rem 1rem 1rem;
+			max-width: 30rem;
+			width: 100%;
+			height: 29rem;
+			overflow: hidden;
+		}
+		.verify {
+			.social-icons {
+				a {
+					width: 30px;
+					height: 30px;
+				}
+				.social {
+					font-size: 1rem;
+					margin-right: 0.5rem;
+				}
 			}
 		}
 	}
@@ -104,27 +158,43 @@
 .section-small.vote {
 	@include flex-container(column, center, flex-start, nowrap);
 	background-color: var.$primary-LO;
+	padding: 1rem 0;
 	#carousel-container {
 		width: 100%;
 		max-width: 50rem;
-		max-height: 350px;
 
 		margin: 0 auto;
 		#carousel {
 			width: 100%;
 			max-height: 350px;
-
+			z-index: 50;
+			.carousel-switch-next,
+			.carousel-switch-prev {
+				bottom: 0 !important;
+				top: auto;
+				margin-top: 0;
+				padding: 1rem;
+				z-index: 100;
+			}
+			.carousel-bullets {
+				z-index: 70;
+				align-items: center;
+				.carousel-bullet {
+					margin-top: 0 !important;
+					margin-bottom: 0.15rem;
+				}
+			}
 			.slides {
-				height: 100%;
-				max-height: 350px;
+				height: 300px;
 
 				.slide {
-					height: 100%;
+					height: 300px;
 					padding: 0;
-					max-height: 350px;
 					@include flex-container(column, center, center, nowrap);
 					.proposal-link {
+						margin: 0 0.5rem;
 						height: 300px;
+						@include flex-container(column, center, center, nowrap);
 						&:hover {
 							text-decoration: none;
 							.proposal-card {
@@ -143,6 +213,7 @@
 }
 .sub-community {
 	.sign-up {
+		padding: 5rem 0;
 		@include flex-container(row-reverse, center, center, wrap);
 		max-width: 50rem;
 		margin: 0 auto;
