@@ -36,6 +36,7 @@ a.button {
 		color: var.$bg;
 		&:hover {
 			background-color: var.$primary-dark;
+			color: var.$fg;
 		}
 	}
 	&.secondary {

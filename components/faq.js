@@ -1,10 +1,5 @@
 const faqs = [
 	{
-		question: "What does voting on Quae do?",
-		answer: "Voting on Quae. ",
-		footer: "",
-	},
-	{
 		question: "How Are ID's Verified?",
 		answer:
 			"Quae verifies ID's in two ways: online and in person. For online verification we use a trusted 3rd party provider. In person, a member of the Quae team will manually verify your id.",
@@ -17,32 +12,16 @@ const faqs = [
 		footer: "",
 	},
 	{
-		question:
-			"What's the difference between Quae and something like Change.org?",
-		answer: "Change.org sucks",
-		footer: "",
+		question: "How are votes recorded?",
+		answer:
+			"Quae uses a unique process to anonymize votes, while still verifying that each vote came from a real person in that community.",
+		footer: `<a href="https://docs.quae.app">Learn More Here</a>`,
 	},
 	{
 		question: "How do I start a new Quae community?",
 		answer:
 			"Send us an email and we're happy to help! Our mission is to improve representation in all communities.",
 		footer: `<a href="mailto:info@quae.app">Get In Touch</a>`,
-	},
-	{
-		question: "What is Quae?",
-		answer: "",
-		footer: "",
-	},
-
-	{
-		question: "",
-		answer: "",
-		footer: "",
-	},
-	{
-		question: "",
-		answer: "",
-		footer: "",
 	},
 ];
 

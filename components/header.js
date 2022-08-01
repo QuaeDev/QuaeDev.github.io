@@ -26,7 +26,9 @@ const header = /*html*/ `<header id="header">
 						<p>Communities </p>
 					<div class="drop-down-content" id="communities-drop-down">
 						<a href="/communities/">	
-							<p>Communities</p>
+							<p>
+							Communities
+							</p>
 						</a>
 						<a href="/communities/stevens">
 							<p>Stevens</p>	

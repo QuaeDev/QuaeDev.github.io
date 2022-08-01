@@ -33,8 +33,11 @@
 	border-radius: 50% !important;
 	height: 1rem !important;
 	width: 1rem !important;
+	border: none !important;
+	background-color: var.$primary-light !important;
+
 	&.bullet-on {
-		background-color: var.$primary-default !important;
+		background-color: var.$primary-dark !important;
 	}
 }
 .slide {

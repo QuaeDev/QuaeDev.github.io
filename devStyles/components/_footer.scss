@@ -14,7 +14,7 @@ footer {
 			text-align: center;
 		}
 		ul {
-			@include flex-container(row, flex-start, center, wrap);
+			@include flex-container(row, center, center, wrap);
 			padding: 0.5rem 0;
 		}
 		button {
@@ -50,13 +50,13 @@ footer {
 }
 @media (max-width: 768px) {
 	footer {
-		padding: 2rem;
+		padding: 1rem;
 		#footer-contact,
 		#footer-navigation {
 			padding-bottom: 3rem;
 		}
 		#footer-contact {
-			align-items: center;
+			align-items: flex-start;
 			ul {
 				margin: 0 auto;
 				justify-content: center;

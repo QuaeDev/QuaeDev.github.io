@@ -130,6 +130,7 @@
 			}
 			.dropdown-container {
 				position: relative;
+				cursor: pointer;
 				.drop-down-content {
 					position: absolute;
 					left: 0;
@@ -149,14 +150,19 @@
 						color: var.$text;
 						text-align: left;
 						padding: 0.5rem;
+						// width: 40px;
 						p {
 							text-align: left;
 							width: 100%;
 							color: var.$text;
+							background-color: transparent;
 						}
 						&:hover {
 							text-decoration: none;
 							background-color: var.$fg;
+							p {
+								background-color: var.$fg;
+							}
 						}
 					}
 				}
@@ -269,20 +275,19 @@
 	#header {
 		.header-content {
 			#navigation-links {
-				&.drop-down-visible {
-					a {
-						opacity: 0.5;
-					}
-				}
 				.dropdown-container {
 					.drop-down-content.visible {
 						max-height: 20em;
 						overflow: scroll;
 						top: 0;
 						margin-top: -0.5rem;
-						margin-left: -0.5rem;
 						padding: 0 0.5rem;
 						transform: translateX(-100%);
+						width: 12rem;
+						@include flex-container(column, flex-start, flex-start, center);
+						a {
+							width: 100%;
+						}
 					}
 				}
 			}
