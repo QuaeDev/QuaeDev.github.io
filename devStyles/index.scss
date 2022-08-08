@@ -20,6 +20,7 @@ html {
 	width: 100vw;
 	height: 100vh;
 	font-size: 16px;
+	// background-color: var.$bg;
 }
 @media screen and (max-width: 800px) {
 	html {
@@ -32,9 +33,9 @@ body {
 	overflow-x: hidden;
 }
 .page {
+	min-height: 100vh;
 	height: 100%;
 	margin: 0 auto;
-	z-index: 1;
 }
 *::-webkit-scrollbar {
 	width: 0;
@@ -142,6 +143,7 @@ a {
 @import "./pages/subCommunity";
 @import "./pages/aboutUs";
 @import "./pages/mission";
+@import "./pages/faq";
 @import "./components/page";
 @import "./components/footer";
 @import "./components/header";

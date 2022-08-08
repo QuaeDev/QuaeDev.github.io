@@ -63,13 +63,11 @@ a.button {
 }
 .download-buttons {
 	text-align: center;
-	background: blur(15px);
-	background-color: rgba(0, 0, 0, 0.01);
-	width: min(25rem, 100%);
+	width: 100%;
+	max-width: 20rem;
 	height: min-content;
 	@include flex-container(column, center, center, nowrap);
 	.app-stores {
-		margin-bottom: 5px;
 		@include flex-container(row, center, center, nowrap);
 		:nth-child(1) {
 			margin-right: 2.5px;
@@ -79,15 +77,18 @@ a.button {
 		}
 	}
 	.app-store-link {
-		width: 50%;
+		width: 45%;
 		.app-store-btn {
 			max-width: 100%;
 			flex: 1;
 		}
 	}
 	.web-app-link {
+		margin: 1rem 0;
 		width: 100%;
-		padding: 0.5rem;
+		max-width: 18rem;
+		padding: 1rem;
+		border-radius: 10rem;
 		img {
 			max-height: 1.5rem;
 			padding-right: 1rem;

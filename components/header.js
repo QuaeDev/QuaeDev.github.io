@@ -1,6 +1,5 @@
 const header = /*html*/ `<header id="header">
 			<div class="header-content">
-				<div onclick="closeNav()" id="behind-navigation-links"></div>
 				<a href="/" class="logo-link">
 					<img
 						src="/assets/img/quae_logo_color_transparent.png"
@@ -44,6 +43,9 @@ const header = /*html*/ `<header id="header">
 				<a href="https://medium.com/quae-app">
 					<p>Blog</p>
 				</a>
+				<a href="/pages/faq">
+					<p>FAQ's</p>
+				</a>
 				</div>
 				<button class="menu" id="menu-btn" onclick="toggleNav()">
 					<i class="material-icons">menu</i>
@@ -64,15 +66,15 @@ function renderHeader() {
 	placeholder.innerHTML = header;
 }
 renderHeader();
-document.onscroll = function () {
-	let scroll = window.scrollY;
-	if (scroll > 40) {
-		document.querySelector("#header").classList.add("scrolled");
-	}
-	if (scroll < 40) {
-		document.querySelector("#header").classList.remove("scrolled");
-	}
-};
+// document.onscroll = function () {
+// 	let scroll = window.scrollY;
+// 	if (scroll > 40) {
+// 		document.querySelector("#header").classList.add("scrolled");
+// 	}
+// 	if (scroll < 40) {
+// 		document.querySelector("#header").classList.remove("scrolled");
+// 	}
+// };
 function onHover(contentId, state) {
 	let navLinks = document.getElementById("navigation-links");
 	let element = document.getElementById(contentId);

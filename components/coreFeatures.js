@@ -42,7 +42,9 @@ for (let feature of coreFeatures) {
         <h3 class="text">${feature.title}</h3>
     </div>
     <div class="body">
-        ${feature.body}
+	<p>
+	${feature.body}
+	</p>
     </div>
     <div class="mt-S">
 		<a href="${feature.link}" target="_blank">${feature.buttonText}</a>

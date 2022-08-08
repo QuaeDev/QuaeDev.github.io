@@ -7,7 +7,6 @@
 	grid-column: 1/4;
 	display: flex;
 	#social-proof {
-		// background-color: red;
 		padding: 0.5rem 2rem;
 		width: min(100%, 40rem);
 		@include flex-container(row, space-evenly, center, nowrap);
@@ -89,7 +88,7 @@
 		right: 0;
 		margin: 0 auto;
 		z-index: -1;
-		background-image: url("/assets/img/fancy_erase2.jpeg");
+		// background-image: url("/assets/img/beheard_cloudy.jpg");
 		background-size: contain;
 		background-position: center;
 		resize: both;

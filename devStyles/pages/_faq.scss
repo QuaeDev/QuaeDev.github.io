@@ -1,0 +1,33 @@
+// FAQ's
+
+#faq-container {
+	display: grid;
+	gap: 1.5rem;
+	.faq-card {
+		.question {
+		}
+		.answer {
+			text-align: justify;
+		}
+	}
+}
+@media screen and (max-width: 799px) {
+	#faq-container {
+		-ms-grid-column: 1fr;
+		grid-template-columns: 1fr;
+	}
+}
+@media screen and (min-width: 800px) {
+	#faq-container {
+		-ms-grid-column: 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+		.faq-card {
+			&.odd {
+				grid-column: 1/2;
+			}
+			&.even {
+				grid-column: 2/3;
+			}
+		}
+	}
+}
