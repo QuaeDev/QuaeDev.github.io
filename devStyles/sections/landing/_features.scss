@@ -177,6 +177,7 @@
 			.content {
 				width: 50%;
 				height: 100%;
+				@include flex-container(column, center, center, nowrap);
 				.content-wrapper {
 					.title {
 						padding-bottom: 1rem;
@@ -184,7 +185,7 @@
 				}
 				&#procedure-content {
 					padding-bottom: 5rem;
-					@include flex-container(column, flex-end, flex-end, nowrap);
+					// @include flex-container(column, flex-end, flex-end, nowrap);
 					.title {
 						margin-right: 0;
 						* {
@@ -207,7 +208,7 @@
 				}
 				&#id-verification-content {
 					padding-top: 5rem;
-					@include flex-container(column, flex-start, flex-start, nowrap);
+					// @include flex-container(column, flex-start, flex-start, nowrap);
 					.title {
 						margin-left: 0;
 						* {

@@ -327,13 +327,12 @@ a {
   z-index: 1;
 }
 .landing-page section.landing {
-  min-height: 90vh;
+  min-height: 80vh;
   position: relative;
   padding: 1rem;
   padding-top: 0;
   padding-bottom: 0;
   margin-bottom: 0;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -345,20 +344,26 @@ a {
   font-size: calc(5rem + 1.5vw);
   font-weight: 700 !important;
   text-align: start;
+  color: #fcfcfc;
+}
+.landing-page section.landing h4 {
+  color: #fcfcfc;
 }
 .landing-page section.landing .mockup,
 .landing-page section.landing .ballot {
   z-index: -1;
-  position: absolute;
 }
 .landing-page section.landing .mockup {
   height: 100%;
   border-right-width: 0;
 }
 .landing-page section.landing .ballot {
+  position: absolute;
   z-index: -2;
   width: 100%;
-  right: 0;
+  top: 0;
+  margin: 0 auto;
+  min-width: 100rem;
 }
 .landing-page .mission-section {
   background-color: #683fd9;
@@ -921,17 +926,17 @@ a {
   .landing-page #advance-features .sticky .content {
     width: 50%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
   }
   .landing-page #advance-features .sticky .content .content-wrapper .title {
     padding-bottom: 1rem;
   }
   .landing-page #advance-features .sticky .content#procedure-content {
     padding-bottom: 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
   }
   .landing-page #advance-features .sticky .content#procedure-content .title {
     margin-right: 0;
@@ -952,11 +957,6 @@ a {
   }
   .landing-page #advance-features .sticky .content#id-verification-content {
     padding-top: 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
   }
   .landing-page #advance-features .sticky .content#id-verification-content .title {
     margin-left: 0;
@@ -1444,7 +1444,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: nowrap;
 }
 .communities-page .landing-view .title {
@@ -2533,7 +2533,7 @@ a {
 }
 footer {
   margin-top: 5rem;
-  background-color: #fcfcfc;
+  background-color: #f2f2f2;
   width: 100%;
   box-shadow: 0px -4px 5px -4px rgba(0, 0, 0, 0.4);
 }
@@ -2576,7 +2576,7 @@ footer .footer-content #footer-navigation .footer-legal {
   padding: 2rem;
 }
 footer .sub-footer {
-  background-color: #fcfcfc;
+  background-color: #f2f2f2;
   padding: 0.5rem 1rem;
 }
 footer .sub-footer .content {
@@ -2933,7 +2933,7 @@ a.button.white:hover {
 .download-buttons {
   text-align: center;
   width: 100%;
-  max-width: 20rem;
+  max-width: 25rem;
   height: min-content;
   display: flex;
   flex-direction: column;

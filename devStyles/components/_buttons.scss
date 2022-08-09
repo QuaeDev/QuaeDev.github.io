@@ -64,7 +64,7 @@ a.button {
 .download-buttons {
 	text-align: center;
 	width: 100%;
-	max-width: 20rem;
+	max-width: 25rem;
 	height: min-content;
 	@include flex-container(column, center, center, nowrap);
 	.app-stores {

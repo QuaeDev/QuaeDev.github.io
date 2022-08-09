@@ -2,7 +2,7 @@
 @import "../mixins";
 footer {
 	margin-top: 5rem;
-	background-color: var.$bg;
+	background-color: var.$fg;
 	width: 100%;
 	@include standard-shadow-top();
 	.footer-content {
@@ -42,7 +42,7 @@ footer {
 		}
 	}
 	.sub-footer {
-		background-color: var.$bg;
+		background-color: var.$fg;
 		padding: 0.5rem 1rem;
 		.content {
 			margin: 0 auto;

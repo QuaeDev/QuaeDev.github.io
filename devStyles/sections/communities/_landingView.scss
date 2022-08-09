@@ -11,7 +11,7 @@
 .landing-view {
 	min-height: 100vh;
 	z-index: 1;
-	@include flex-container(column, center, center, nowrap);
+	@include flex-container(column, space-evenly, center, nowrap);
 	.title {
 		padding: 2rem 0;
 		margin: 0 auto;
