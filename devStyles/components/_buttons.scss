@@ -14,6 +14,14 @@ a.button {
 	font-size: 18px;
 	padding: 0.5rem 1rem;
 	border-radius: 0.25rem;
+	&.min-width {
+		width: min-content;
+	}
+	&.med-width {
+		width: min-content;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
 	&.lg {
 		width: 100%;
 		font-size: 22px;

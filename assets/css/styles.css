@@ -743,8 +743,6 @@ a {
 }
 .landing-page #features {
   padding: 5rem 1rem;
-  background-color: hsl(263deg, 100%, 31%);
-  color: #f2f2f2;
 }
 .landing-page #features #core-features-container {
   display: flex;
@@ -1111,8 +1109,7 @@ a {
 }
 .landing-page #small-features .title {
   padding-bottom: 2rem;
-  width: 100%;
-  max-width: 60rem;
+  width: min(100%, 60rem);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1156,6 +1153,9 @@ a {
   text-align: left;
 }
 @media screen and (min-width: 600px) and (max-width: 1200px) {
+  .landing-page #small-features .title {
+    max-width: 50rem;
+  }
   .landing-page #small-features #small-features-container {
     width: min(100%, 50rem);
     display: -ms-grid;
@@ -1168,6 +1168,9 @@ a {
   }
 }
 @media screen and (max-width: 600px) {
+  .landing-page #small-features .title {
+    max-width: 50rem;
+  }
   .landing-page #small-features #small-features-container {
     width: min(100%, 50rem);
     display: -ms-grid;
@@ -2657,67 +2660,7 @@ footer .footer-content #footer-navigation {
   margin-left: 0.5rem;
 }
 
-.landing #header.scrolled {
-  transition: all 200ms linear;
-  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
-  background-color: #fcfcfc;
-}
-.landing #header.scrolled .header-content {
-  width: 100%;
-}
-.landing #header.scrolled .header-content .logo-link {
-  margin-right: auto;
-}
-.landing #header.scrolled .header-content .logo-link #logo-white {
-  display: none;
-  opacity: 0;
-  transition: all 200ms linear;
-}
-.landing #header.scrolled .header-content .logo-link #logo-color {
-  display: block;
-  opacity: 1;
-  transition: all 200ms linear;
-}
-.landing #header.scrolled .header-content #navigation-links a,
-.landing #header.scrolled .header-content #navigation-links .dropdown-container {
-  transition: all 100ms linear;
-}
-.landing #header.scrolled .header-content #navigation-links a p,
-.landing #header.scrolled .header-content #navigation-links a div > p,
-.landing #header.scrolled .header-content #navigation-links .dropdown-container p,
-.landing #header.scrolled .header-content #navigation-links .dropdown-container div > p {
-  color: #151515;
-}
-.landing #header.scrolled .header-content #navigation-links a:hover {
-  text-decoration: underline;
-  transition: all 100ms linear;
-}
-.landing #header.scrolled .header-content .menu {
-  color: #151515;
-  background-color: transparent;
-}
-.landing #header.scrolled .header-content .buttons {
-  transition: all 200ms linear;
-}
-.landing #header.scrolled .header-content .buttons .primary {
-  background-color: hsl(256deg, 67%, 55%);
-  border-color: hsl(256deg, 67%, 55%);
-  color: #fcfcfc;
-}
-.landing #header.scrolled .header-content .buttons .primary:hover {
-  background-color: #f2f2f2;
-}
-.landing #header.scrolled .header-content .buttons .secondary {
-  border-color: rgb(182, 182, 182);
-  color: #5f5f5f;
-}
-.landing #header.scrolled .header-content .buttons .secondary:hover {
-  background-color: #f2f2f2;
-  color: #151515;
-}
-
 #header {
-  transition: all 200ms linear;
   left: 0;
   top: 0;
   z-index: 100;
@@ -2725,7 +2668,8 @@ footer .footer-content #footer-navigation {
   max-width: 100vw;
   padding: 0.5rem 2rem;
   position: fixed;
-  background-color: #3d3d3d;
+  background-color: #fcfcfc;
+  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
 }
 #header .header-content {
   max-width: 80rem;
@@ -2735,6 +2679,7 @@ footer .footer-content #footer-navigation {
   align-items: center;
   justify-content: flex-end;
   flex-wrap: nowrap;
+  width: 100%;
 }
 #header .header-content .logo-link {
   margin-right: auto;
@@ -2750,17 +2695,22 @@ footer .footer-content #footer-navigation {
   position: absolute;
 }
 #header .header-content .logo-link #logo-white {
-  display: block;
-  opacity: 1;
-  transition: all 200ms linear;
-}
-#header .header-content .logo-link #logo-color {
   display: none;
   opacity: 0;
   transition: all 200ms linear;
 }
+#header .header-content .logo-link #logo-color {
+  display: block;
+  opacity: 1;
+  transition: all 200ms linear;
+}
 #header .header-content #navigation-links {
   z-index: 11;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
 }
 #header .header-content #navigation-links a,
 #header .header-content #navigation-links .dropdown-container {
@@ -2772,18 +2722,16 @@ footer .footer-content #footer-navigation {
 #header .header-content #navigation-links .dropdown-container p,
 #header .header-content #navigation-links .dropdown-container div > p {
   opacity: 0.8;
-  color: #f2f2f2;
-}
-#header .header-content #navigation-links p {
+  color: #151515;
   font-size: 16px !important;
 }
 #header .header-content #navigation-links a:hover {
-  text-decoration: underline;
   transition: all 100ms linear;
 }
 #header .header-content #navigation-links a:hover p {
   opacity: 1;
-  color: #fcfcfc;
+  color: #151515;
+  text-decoration: underline;
 }
 #header .header-content #navigation-links a:hover i {
   text-decoration: none;
@@ -2791,6 +2739,10 @@ footer .footer-content #footer-navigation {
 #header .header-content #navigation-links .dropdown-container {
   position: relative;
   cursor: pointer;
+  padding-left: 0;
+}
+#header .header-content #navigation-links .dropdown-container p {
+  width: 100%;
 }
 #header .header-content #navigation-links .dropdown-container .drop-down-content {
   position: absolute;
@@ -2823,25 +2775,12 @@ footer .footer-content #footer-navigation {
   text-decoration: none;
   background-color: #f2f2f2;
 }
-#header .header-content #navigation-links .dropdown-container .drop-down-content.visible a:hover p {
-  background-color: #f2f2f2;
-}
-#header .header-content #behind-navigation-links {
-  opacity: 0.3;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 10;
-  display: none;
-}
 #header .header-content .logo-link:hover {
   padding-bottom: 0;
   text-decoration: none;
 }
 #header .header-content .menu {
-  color: #fcfcfc;
+  color: #151515;
   z-index: 13;
 }
 #header .header-content .buttons {
@@ -2860,8 +2799,8 @@ footer .footer-content #footer-navigation {
   z-index: 13;
 }
 #header .header-content .buttons .secondary {
-  border-color: #f2f2f2;
-  color: #fcfcfc;
+  border-color: rgb(182, 182, 182);
+  color: #5f5f5f;
 }
 #header .header-content .buttons .secondary:hover {
   background-color: #f2f2f2;
@@ -2939,10 +2878,98 @@ footer .footer-content #footer-navigation {
   #header .header-content .menu {
     display: none;
   }
-  #header.scrolled .header-content #navigation-links p {
-    color: #fcfcfc;
-  }
 }
+.landing #header {
+  background-color: #3d3d3d;
+  box-shadow: none;
+}
+.landing #header .header-content .logo-link #logo-white {
+  display: block;
+  opacity: 1;
+  transition: all 200ms linear;
+}
+.landing #header .header-content .logo-link #logo-color {
+  display: none;
+  opacity: 0;
+  transition: all 200ms linear;
+}
+.landing #header .header-content .menu {
+  color: #fcfcfc;
+}
+.landing #header .header-content .buttons .secondary {
+  border-color: #f2f2f2;
+  color: #fcfcfc;
+}
+.landing #header .header-content .buttons .secondary:hover {
+  background-color: #f2f2f2;
+  color: #151515;
+}
+.landing #header .header-content #navigation-links a p,
+.landing #header .header-content #navigation-links a div > p,
+.landing #header .header-content #navigation-links .dropdown-container p,
+.landing #header .header-content #navigation-links .dropdown-container div > p {
+  opacity: 0.8;
+  color: #fcfcfc;
+}
+.landing #header .header-content #navigation-links a:hover p,
+.landing #header .header-content #navigation-links a:hover div > p,
+.landing #header .header-content #navigation-links .dropdown-container:hover p,
+.landing #header .header-content #navigation-links .dropdown-container:hover div > p {
+  opacity: 1;
+  color: #fcfcfc;
+}
+.landing #header .header-content #navigation-links .dropdown-container .drop-down-content.visible {
+  background-color: #fcfcfc;
+}
+.landing #header .header-content #navigation-links .dropdown-container .drop-down-content.visible a {
+  color: #151515;
+}
+.landing #header .header-content #navigation-links .dropdown-container .drop-down-content.visible a p {
+  color: #151515;
+}
+.landing #header .header-content #navigation-links .dropdown-container .drop-down-content.visible a:hover {
+  background-color: #f2f2f2;
+}
+.landing #header.scrolled {
+  box-shadow: transparent;
+  background-color: #fcfcfc;
+}
+.landing #header.scrolled .header-content .logo-link #logo-white {
+  display: none;
+  opacity: 0;
+  transition: all 200ms linear;
+}
+.landing #header.scrolled .header-content .logo-link #logo-color {
+  display: block;
+  opacity: 1;
+  transition: all 200ms linear;
+}
+.landing #header.scrolled .header-content #navigation-links a p,
+.landing #header.scrolled .header-content #navigation-links a div > p,
+.landing #header.scrolled .header-content #navigation-links .dropdown-container p,
+.landing #header.scrolled .header-content #navigation-links .dropdown-container div > p {
+  color: #151515;
+}
+.landing #header.scrolled .header-content .menu {
+  color: #151515;
+}
+.landing #header.scrolled .header-content .buttons .primary {
+  background-color: hsl(256deg, 67%, 55%);
+  border-color: hsl(256deg, 67%, 55%);
+  color: #fcfcfc;
+}
+.landing #header.scrolled .header-content .buttons .primary:hover {
+  background-color: #f2f2f2;
+}
+.landing #header.scrolled .header-content .buttons .secondary {
+  border-color: rgb(182, 182, 182);
+  color: #5f5f5f;
+}
+.landing #header.scrolled .header-content .buttons .secondary:hover {
+  background-color: #f2f2f2;
+  color: #151515;
+}
+
 button,
 a.button {
   background: none;
@@ -2961,6 +2988,16 @@ a.button {
   font-size: 18px;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
+}
+button.min-width,
+a.button.min-width {
+  width: min-content;
+}
+button.med-width,
+a.button.med-width {
+  width: min-content;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 button.lg,
 a.button.lg {

@@ -3,8 +3,8 @@
 
 #features {
 	padding: 5rem 1rem;
-	background-color: var.$primary-dark;
-	color: var.$fg;
+	// background-color: var.$primary-dark;
+	// color: var.$fg;
 	#core-features-container {
 		@include flex-container(row, center, center, wrap);
 		width: 100%;
@@ -353,8 +353,8 @@
 	background-color: var.$primary-LO;
 	.title {
 		padding-bottom: 2rem;
-		width: 100%;
-		max-width: 60rem;
+		width: min(100%, 60rem);
+
 		@include flex-container(row, flex-start, center, nowrap);
 		text-align: left;
 	}
@@ -390,6 +390,9 @@
 }
 @media screen and (min-width: 600px) and (max-width: 1200px) {
 	#small-features {
+		.title {
+			max-width: 50rem;
+		}
 		#small-features-container {
 			width: min(100%, 50rem);
 			display: -ms-grid;
@@ -404,6 +407,9 @@
 }
 @media screen and (max-width: 600px) {
 	#small-features {
+		.title {
+			max-width: 50rem;
+		}
 		#small-features-container {
 			width: min(100%, 50rem);
 			display: -ms-grid;

@@ -22,7 +22,7 @@ const header = /*html*/ `<header id="header">
 					<p>Mission</p>
 				</a>
 				<div class="dropdown-container" onmouseenter="onHover('communities-drop-down', 'enter')" onmouseleave="onHover('communities-drop-down', 'leave')" onClick="onHover('communities-drop-down', 'enter')"> 
-						<p>Communities </p>
+					<p>Communities </p>
 					<div class="drop-down-content" id="communities-drop-down">
 						<a href="/communities/">	
 							<p>
