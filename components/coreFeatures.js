@@ -38,6 +38,7 @@ for (let feature of coreFeatures) {
             src=${feature.img}
             alt=${feature.imgAlt}
             class=${feature.imgClass}
+			loading="lazy"
         />
         <h3 class="text">${feature.title}</h3>
     </div>

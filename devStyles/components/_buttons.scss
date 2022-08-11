@@ -81,6 +81,8 @@ a.button {
 		.app-store-btn {
 			max-width: 100%;
 			flex: 1;
+			border: 1px solid var.$border;
+			border-radius: 0.5rem;
 		}
 	}
 	.web-app-link {
@@ -95,6 +97,19 @@ a.button {
 		}
 		i {
 			font-size: 1.75rem;
+		}
+	}
+}
+@media screen and (max-width: 700px) {
+	.download-buttons {
+		.app-stores {
+			flex-wrap: wrap;
+			.app-store-link {
+				min-width: 150px;
+				.app-store-btn {
+					width: 100%;
+				}
+			}
 		}
 	}
 }

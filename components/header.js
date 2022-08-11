@@ -66,15 +66,15 @@ function renderHeader() {
 	placeholder.innerHTML = header;
 }
 renderHeader();
-// document.onscroll = function () {
-// 	let scroll = window.scrollY;
-// 	if (scroll > 40) {
-// 		document.querySelector("#header").classList.add("scrolled");
-// 	}
-// 	if (scroll < 40) {
-// 		document.querySelector("#header").classList.remove("scrolled");
-// 	}
-// };
+document.onscroll = function () {
+	let scroll = window.scrollY;
+	if (scroll > 490) {
+		document.querySelector("#header").classList.add("scrolled");
+	}
+	if (scroll < 490) {
+		document.querySelector("#header").classList.remove("scrolled");
+	}
+};
 function onHover(contentId, state) {
 	let navLinks = document.getElementById("navigation-links");
 	let element = document.getElementById(contentId);

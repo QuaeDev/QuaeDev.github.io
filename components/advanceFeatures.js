@@ -45,6 +45,7 @@ function renderBullet(card, feature) {
         <img
         src=${feature.img}
         alt=${feature.imgAlt}
+		loading="lazy"
         />
 </div>
 <div class="text">

@@ -50,7 +50,7 @@ for (let feature of smallFeatures) {
 	card.classList.add("small-feature");
 	card.innerHTML = /*html*/ `
     <div class="header">
-        <img src="${feature.img}" alt="${feature.imgAlt}" />
+        <img src="${feature.img}" alt="${feature.imgAlt}" loading="lazy"/>
 		<h5>${feature.text}</h5>
     </div>
     <div class="content">
