@@ -19,6 +19,68 @@
 		}
 	}
 }
+.landing {
+	#header {
+		&.scrolled {
+			transition: all 200ms linear;
+			@include standard-shadow();
+			background-color: var.$bg;
+			.header-content {
+				width: 100%;
+				.logo-link {
+					margin-right: auto;
+					#logo-white {
+						display: none;
+						opacity: 0;
+						transition: all 200ms linear;
+					}
+					#logo-color {
+						display: block;
+						opacity: 1;
+						transition: all 200ms linear;
+					}
+				}
+				#navigation-links {
+					a,
+					.dropdown-container {
+						transition: all 100ms linear;
+						p,
+						div > p {
+							color: var.$text;
+						}
+					}
+					a:hover {
+						text-decoration: underline;
+						transition: all 100ms linear;
+					}
+				}
+				.menu {
+					color: var.$text;
+					background-color: transparent;
+				}
+				.buttons {
+					transition: all 200ms linear;
+					.primary {
+						background-color: var.$primary-default;
+						border-color: var.$primary-default;
+						color: var.$bg;
+						&:hover {
+							background-color: var.$fg;
+						}
+					}
+					.secondary {
+						border-color: var.$border;
+						color: var.$text-secondary;
+						&:hover {
+							background-color: var.$fg;
+							color: var.$text;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 #header {
 	transition: all 200ms linear;
 	left: 0;
@@ -29,64 +91,7 @@
 	padding: 0.5rem 2rem;
 	position: fixed;
 	background-color: #3d3d3d;
-	&.scrolled {
-		transition: all 200ms linear;
-		@include standard-shadow();
-		background-color: var.$bg;
-		.header-content {
-			width: 100%;
-			.logo-link {
-				margin-right: auto;
-				#logo-white {
-					display: none;
-					opacity: 0;
-					transition: all 200ms linear;
-				}
-				#logo-color {
-					display: block;
-					opacity: 1;
-					transition: all 200ms linear;
-				}
-			}
-			#navigation-links {
-				a,
-				.dropdown-container {
-					transition: all 100ms linear;
-					p,
-					div > p {
-						color: var.$text;
-					}
-				}
-				a:hover {
-					text-decoration: underline;
-					transition: all 100ms linear;
-				}
-			}
-			.menu {
-				color: var.$text;
-				background-color: transparent;
-			}
-			.buttons {
-				transition: all 200ms linear;
-				.primary {
-					background-color: var.$primary-default;
-					border-color: var.$primary-default;
-					color: var.$bg;
-					&:hover {
-						background-color: var.$fg;
-					}
-				}
-				.secondary {
-					border-color: var.$border;
-					color: var.$text-secondary;
-					&:hover {
-						background-color: var.$fg;
-						color: var.$text;
-					}
-				}
-			}
-		}
-	}
+
 	.header-content {
 		max-width: 80rem;
 		margin: 0 auto;
