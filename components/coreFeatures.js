@@ -1,6 +1,6 @@
 let coreFeatures = [
 	{
-		img: "/assets/img/coreFeatures/propose.png",
+		img: "/assets/img/coreFeatures/propose.jpg",
 		imgAlt: "icon of a proposal",
 		imgClass: "propose",
 		title: "Propose",
@@ -9,7 +9,7 @@ let coreFeatures = [
 		link: "https://web.quae.app/post/629112d290661d001669d8b5",
 	},
 	{
-		img: "/assets/img/coreFeatures/vote.png",
+		img: "/assets/img/coreFeatures/vote.jpg",
 		imgAlt: "icon of someone voting",
 		imgClass: "vote",
 		title: "Vote",
@@ -18,7 +18,7 @@ let coreFeatures = [
 		link: "https://web.quae.app/post/629112d290661d001669d8b5",
 	},
 	{
-		img: "/assets/img/coreFeatures/act.png",
+		img: "/assets/img/coreFeatures/act.jpg",
 		imgAlt: "icon of city",
 		imgClass: "act",
 		title: "Act",
@@ -33,23 +33,20 @@ for (let feature of coreFeatures) {
 	let card = document.createElement("div");
 	card.classList.add("feature");
 	card.innerHTML = /*html*/ `
-    <div class="header">
+    <div class="img-wrapper">
         <img
             src=${feature.img}
             alt=${feature.imgAlt}
             class=${feature.imgClass}
 			loading="lazy"
         />
-        <h3 class="text">${feature.title}</h3>
-    </div>
-    <div class="body">
-	<p>
-	${feature.body}
-	</p>
-    </div>
-    <div class="mt-S">
+	</div>
+	<div class="body">
+		<h3>${feature.title}</h3>
+		<p>
+			${feature.body}
+		</p>
 		<a href="${feature.link}" target="_blank">${feature.buttonText}</a>
-       
     </div>  
     `;
 	coreFeatureContainer.appendChild(card);

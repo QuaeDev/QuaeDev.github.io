@@ -2,33 +2,119 @@
 @import "../../mixins";
 
 #features {
-	padding: 5rem 1rem;
+	// padding: 5rem 1rem;
 	// background-color: var.$primary-dark;
 	// color: var.$fg;
+	background-color: #222;
+	color: var.$bg;
+	.title {
+		padding: 5rem 0;
+	}
 	#core-features-container {
-		@include flex-container(row, center, center, wrap);
 		width: 100%;
 		.feature {
-			@include flex-container(column, flex-start, flex-start, nowrap);
-			width: min(100%, 20rem);
-			padding: 1rem;
-			border-radius: 1rem;
-			margin: 1rem;
-			.header {
-				@include flex-container(row, flex-start, center, nowrap);
-				img {
-					height: 5rem;
-					width: 5rem;
-				}
-				.text {
-					padding-left: 1rem;
-				}
-			}
+			flex: 1;
 			.body {
-				padding-top: 1rem;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				h3 {
+					padding-bottom: 0.5rem;
+				}
+				a {
+					margin-top: auto;
+					padding-top: 1rem;
+					color: var.$fg;
+					opacity: 0.6;
+					transition: all 0.25s linear;
+					&:hover {
+						color: var.$bg;
+						opacity: 1;
+						transition: all 0.25s linear;
+					}
+				}
 			}
-			.footer {
-				color: var.$text-secondary;
+		}
+	}
+}
+@media screen and (max-width: 999px) {
+	#features {
+		#core-features-container {
+			.feature {
+				display: grid;
+				-ms-grid-template-column: 3fr 1fr 3fr;
+				grid-template-columns: 5fr 1fr 3fr;
+				-ms-grid-template-row: 2fr 1fr;
+				grid-template-rows: 2fr 1fr;
+				width: 100%;
+				overflow: hidden;
+				.img-wrapper {
+					-ms-grid-column: 1/3;
+					grid-column: 1/3;
+					-ms-grid-row: 1/3;
+					grid-row: 1/3;
+					z-index: 1;
+					-webkit-mask-image: linear-gradient(
+						to right,
+						rgba(0, 0, 0, 1),
+						rgba(0, 0, 0, 0)
+					);
+					mask-image: linear-gradient(
+						to right,
+						rgba(0, 0, 0, 1),
+						rgba(0, 0, 0, 0)
+					);
+					img {
+						width: 100%;
+					}
+				}
+				.body {
+					padding: 1rem;
+					border-radius: 0.5rem;
+					// background-color: #d3d3d330;
+					background: linear-gradient(70deg, #eeeeee30, #d3d3d330, #eeeeee30);
+					-ms-grid-column: 2/4;
+					grid-column: 2/4;
+					-ms-grid-row: 1/2;
+					grid-row: 1/2;
+					z-index: 2;
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 1000px) {
+	#features {
+		#core-features-container {
+			display: grid;
+			-ms-grid-template-column: 1fr 1fr 1fr;
+			grid-template-columns: 1fr 1fr 1fr;
+			justify-content: stretch;
+			align-items: stretch;
+			max-width: 110rem;
+			.feature {
+				height: 100%;
+				@include flex-container(column, flex-start, flex-start, nowrap);
+				.img-wrapper {
+					-webkit-mask-image: linear-gradient(
+						to right,
+						rgba(0, 0, 0, 1),
+						rgba(0, 0, 0, 0)
+					);
+					mask-image: linear-gradient(
+						to right,
+						rgba(0, 0, 0, 1),
+						rgba(0, 0, 0, 0)
+					);
+				}
+				img {
+					width: 100%;
+				}
+				.body {
+					h3 {
+						padding-top: 1rem;
+					}
+				}
 			}
 		}
 	}
