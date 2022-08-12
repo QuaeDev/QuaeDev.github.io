@@ -179,8 +179,8 @@ html {
   scroll-snap-type: y proximity;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  width: 100vw;
-  height: 100vh;
+  width: 100lvw;
+  height: 100lvh;
   font-size: 16px;
 }
 
@@ -277,7 +277,7 @@ a {
   }
 }
 .section {
-  min-height: 100vh;
+  min-height: 100lvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -292,7 +292,7 @@ a {
 }
 
 .section-small {
-  min-height: 30vh;
+  min-height: 30lvh;
   padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
@@ -321,7 +321,7 @@ a {
   z-index: 1;
 }
 .landing-page section.landing {
-  min-height: 80vh;
+  height: 80vh;
   position: relative;
   padding: 1rem;
   padding-top: 0;
@@ -1393,7 +1393,7 @@ a {
 .landing-page .fancy-floating-shape {
   opacity: 0.5;
   z-index: -1;
-  height: 100vh;
+  height: 100lvh;
   position: absolute;
   width: max(55%, 30rem);
   z-index: -1;
@@ -2033,7 +2033,7 @@ a {
 .sub-community .landing {
   overflow: hidden;
   display: grid;
-  min-height: 100vh;
+  min-height: 100lvh;
 }
 .sub-community .card.sga,
 .sub-community .card.city-council {
@@ -2091,7 +2091,7 @@ a {
 }
 @media screen and (min-width: 800px) {
   .sub-community .landing {
-    height: calc(100vh - 8rem);
+    height: calc(100svh - 8rem);
     width: 100%;
     -ms-grid-column: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -2858,6 +2858,17 @@ footer .footer-content .footer-navigation {
   opacity: 1;
   transition: all 200ms linear;
 }
+#header .header-content #behind-navigation-links {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  display: none;
+  z-index: 2;
+  position: fixed;
+  padding: 0;
+}
 #header .header-content #navigation-links {
   z-index: 11;
   display: flex;
@@ -2928,6 +2939,9 @@ footer .footer-content .footer-navigation {
 #header .header-content #navigation-links .dropdown-container .drop-down-content.visible a:hover {
   text-decoration: none;
   background-color: #f2f2f2;
+}
+#header .header-content #navigation-links .dropdown-container .drop-down-content.visible a:hover p {
+  color: #151515 !important;
 }
 #header .header-content .logo-link:hover {
   padding-bottom: 0;
@@ -3058,31 +3072,36 @@ footer .footer-content .footer-navigation {
   background-color: #f2f2f2;
   color: #151515;
 }
-.landing #header .header-content #navigation-links a p,
-.landing #header .header-content #navigation-links a div > p,
-.landing #header .header-content #navigation-links .dropdown-container p,
-.landing #header .header-content #navigation-links .dropdown-container div > p {
+.landing #header .header-content #navigation-links {
+  background-color: #3d3d3d;
+}
+.landing #header .header-content #navigation-links .dropdown-container p {
   opacity: 0.8;
   color: #fcfcfc;
 }
-.landing #header .header-content #navigation-links a:hover p,
-.landing #header .header-content #navigation-links a:hover div > p,
-.landing #header .header-content #navigation-links .dropdown-container:hover p,
-.landing #header .header-content #navigation-links .dropdown-container:hover div > p {
+.landing #header .header-content #navigation-links .dropdown-container:hover {
   opacity: 1;
+}
+.landing #header .header-content #navigation-links a p {
+  opacity: 0.8;
   color: #fcfcfc;
 }
-.landing #header .header-content #navigation-links .dropdown-container .drop-down-content.visible {
-  background-color: #fcfcfc;
+.landing #header .header-content #navigation-links a:hover p {
+  opacity: 1;
 }
-.landing #header .header-content #navigation-links .dropdown-container .drop-down-content.visible a {
-  color: #151515;
+.landing #header .header-content #navigation-links .dropdown-container .drop-down-content {
+  background-color: #3d3d3d;
 }
-.landing #header .header-content #navigation-links .dropdown-container .drop-down-content.visible a p {
-  color: #151515;
+.landing #header .header-content #navigation-links .dropdown-container .drop-down-content a p {
+  opacity: 0.8;
+  color: #fcfcfc;
 }
-.landing #header .header-content #navigation-links .dropdown-container .drop-down-content.visible a:hover {
-  background-color: #f2f2f2;
+.landing #header .header-content #navigation-links .dropdown-container .drop-down-content a:hover {
+  background-color: #444444;
+}
+.landing #header .header-content #navigation-links .dropdown-container .drop-down-content a:hover p {
+  opacity: 1;
+  color: #fcfcfc !important;
 }
 .landing #header.scrolled {
   box-shadow: transparent;
@@ -3098,10 +3117,25 @@ footer .footer-content .footer-navigation {
   opacity: 1;
   transition: all 200ms linear;
 }
-.landing #header.scrolled .header-content #navigation-links a p,
-.landing #header.scrolled .header-content #navigation-links a div > p,
-.landing #header.scrolled .header-content #navigation-links .dropdown-container p,
-.landing #header.scrolled .header-content #navigation-links .dropdown-container div > p {
+.landing #header.scrolled .header-content #navigation-links {
+  background-color: #fcfcfc;
+}
+.landing #header.scrolled .header-content #navigation-links a p {
+  color: #151515;
+}
+.landing #header.scrolled .header-content #navigation-links .dropdown-container .drop-down-content {
+  background-color: #fcfcfc;
+}
+.landing #header.scrolled .header-content #navigation-links .dropdown-container .drop-down-content a p {
+  color: #151515;
+}
+.landing #header.scrolled .header-content #navigation-links .dropdown-container .drop-down-content a:hover {
+  background-color: #f2f2f2 !important;
+}
+.landing #header.scrolled .header-content #navigation-links .dropdown-container .drop-down-content a:hover p {
+  color: #151515 !important;
+}
+.landing #header.scrolled .header-content #navigation-links .dropdown-container p {
   color: #151515;
 }
 .landing #header.scrolled .header-content .menu {

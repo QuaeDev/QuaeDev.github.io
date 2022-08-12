@@ -1,5 +1,6 @@
 const header = /*html*/ `<header id="header">
 			<div class="header-content">
+				<div id="behind-navigation-links" onclick="toggleNav()"></div>
 				<a href="/" class="logo-link">
 					<img
 						src="/assets/img/quae_logo_color_transparent.png"

@@ -2,7 +2,7 @@
 @import "../../mixins";
 
 section.landing {
-	min-height: 80vh;
+	height: 80vh;
 	position: relative;
 	padding: 1rem;
 	padding-top: 0;
@@ -10,7 +10,6 @@ section.landing {
 	margin-bottom: 0;
 	overflow: hidden;
 
-	// overflow: hidden;
 	@include flex-container(column, space-evenly, center, nowrap);
 	padding-bottom: 5%;
 	.title {

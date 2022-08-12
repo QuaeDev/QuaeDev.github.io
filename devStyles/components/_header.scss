@@ -57,7 +57,17 @@
 				transition: all 200ms linear;
 			}
 		}
-
+		#behind-navigation-links {
+			width: 100vw;
+			height: 100vh;
+			top: 0;
+			left: 0;
+			opacity: 1;
+			display: none;
+			z-index: 2;
+			position: fixed;
+			padding: 0;
+		}
 		#navigation-links {
 			z-index: 11;
 			@include flex-container(row, flex-end, center, nowrap);
@@ -120,9 +130,9 @@
 						&:hover {
 							text-decoration: none;
 							background-color: var.$fg;
-							// p {
-							// 	background-color: var.$fg;
-							// }
+							p {
+								color: var.$text !important;
+							}
 						}
 					}
 				}
@@ -258,36 +268,60 @@
 				}
 			}
 			#navigation-links {
-				a,
+				background-color: #3d3d3d;
 				.dropdown-container {
-					p,
-					div > p {
+					p {
 						opacity: 0.8;
 						color: var.$bg;
 					}
 					&:hover {
-						p,
-						div > p {
+						opacity: 1;
+					}
+				}
+				a {
+					p {
+						opacity: 0.8;
+						color: var.$bg;
+					}
+					&:hover {
+						p {
 							opacity: 1;
-							color: var.$bg;
+						}
+					}
+				}
+				.dropdown-container {
+					.drop-down-content {
+						background-color: #3d3d3d;
+						a {
+							p {
+								opacity: 0.8;
+								color: var.$bg;
+							}
+						}
+						a:hover {
+							background-color: #444444;
+							p {
+								opacity: 1;
+								color: var.$bg !important;
+							}
 						}
 					}
 				}
 
-				.dropdown-container {
-					.drop-down-content.visible {
-						background-color: var.$bg;
-						a {
-							color: var.$text;
-							p {
-								color: var.$text;
-							}
-							&:hover {
-								background-color: var.$fg;
-							}
-						}
-					}
-				}
+				// .dropdown-container {
+				// 	.drop-down-content.visible {
+				// 		background-color: var.$bg;
+				// 		a {
+				// 			color: var.$text;
+				// 			p {
+				// 				color: var.$text;
+				// 			}
+				// 			&:hover {
+				// 				background-color: var.$fg;
+				// 			}
+				// 		}
+				// 	}
+				// }
 			}
 		}
 		&.scrolled {
@@ -307,10 +341,28 @@
 					}
 				}
 				#navigation-links {
-					a,
+					background-color: var.$bg;
+					a {
+						p {
+							color: var.$text;
+						}
+					}
 					.dropdown-container {
-						p,
-						div > p {
+						.drop-down-content {
+							background-color: var.$bg;
+							a {
+								p {
+									color: var.$text;
+								}
+								&:hover {
+									background-color: var.$fg !important;
+									p {
+										color: var.$text !important;
+									}
+								}
+							}
+						}
+						p {
 							color: var.$text;
 						}
 					}
