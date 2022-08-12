@@ -41,8 +41,9 @@ for (let feature of coreFeatures) {
 			loading="lazy"
         />
 	</div>
+	<h3>${feature.title}</h3>
+
 	<div class="body">
-		<h3>${feature.title}</h3>
 		<p>
 			${feature.body}
 		</p>

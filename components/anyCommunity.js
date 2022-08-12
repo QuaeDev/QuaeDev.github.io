@@ -38,7 +38,7 @@ for (let community of communities) {
     </div>
     <div class="content">
     <p>${community.description}</p>
-    <a class="primary button" href="${community.href}">
+    <a class="" href="${community.href}">
     	Learn More
     </a>
     </div>

@@ -63,7 +63,7 @@ var footer = /*html*/ `
 				</button>
 			</a>
 		</div>
-		<div id="footer-navigation">
+		<div class="footer-navigation">
 			<div class="nav-links">
 				<a href="/" class = "home">
 					<p>Home</p>
@@ -89,8 +89,18 @@ var footer = /*html*/ `
 				<a href="/mission/" class="mission">
 					<p>Mission</p>
 				</a>
+				<a href="/pages/faq" class="mission">
+					<p>FAQ</p>
+				</a>
 			</div>
-			<div class="footer-legal">
+			
+		</div>
+	</div>
+	<div class="sub-footer">
+		<div class="content">
+			<p class="copyright">Quae &copy; 2021 All Rights Reserved</p>
+		</div>
+		<div class="footer-legal footer-navigation">
 				<a href="/pages/eula" class="eula">
 					<p>EULA Agreement</p>
 				</a>
@@ -99,12 +109,6 @@ var footer = /*html*/ `
 				</a>
 				
 			</div>
-		</div>
-	</div>
-	<div class="sub-footer">
-		<div class="content">
-			<p class="copyright">Quae &copy; 2021 All Rights Reserved</p>
-		</div>
 	</div>
 </footer>
 `;

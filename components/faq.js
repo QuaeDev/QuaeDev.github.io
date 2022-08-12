@@ -2,7 +2,7 @@ const faqs = [
 	{
 		question: "How Are ID's Verified?",
 		answer:
-			"Quae verifies ID's in two ways: online and in person. For online verification we use a trusted 3rd party provider. In person, a member of the Quae team will manually verify your id.",
+			"Quae verifies ID's in two ways: online and in person. For online verification we use a trusted 3rd party provider. In person, a member of the Quae team will manually verify your ID.",
 		footer: "",
 	},
 	{
@@ -15,7 +15,7 @@ const faqs = [
 		question: "How are votes recorded?",
 		answer:
 			"Quae uses a unique process to anonymize votes, while still verifying that each vote came from a real person in that community.",
-		footer: `<a href="https://docs.quae.app">Learn More Here</a>`,
+		footer: ``,
 	},
 	{
 		question: "How do I start a new Quae community?",

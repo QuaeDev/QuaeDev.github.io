@@ -44,7 +44,7 @@ const header = /*html*/ `<header id="header">
 					<p>Blog</p>
 				</a>
 				<a href="/pages/faq">
-					<p>FAQ's</p>
+					<p>FAQ</p>
 				</a>
 				</div>
 				<button class="menu" id="menu-btn" onclick="toggleNav()">

@@ -1,13 +1,27 @@
 // FAQ's
-
+.page.faq {
+	.title {
+		padding: 3rem 0;
+	}
+}
 #faq-container {
 	display: grid;
-	gap: 1.5rem;
+	gap: 1rem;
 	.faq-card {
+		@include card();
+
+		padding-bottom: 2rem;
 		.question {
+			padding-bottom: 1rem;
+			// &::before {
+			// 	content: "";
+			// 	display: block;
+			// 	height: 0.35rem;
+			// 	width: 4rem;
+			// 	background-color: var.$text-secondary;
+			// }
 		}
 		.answer {
-			text-align: justify;
 		}
 	}
 }

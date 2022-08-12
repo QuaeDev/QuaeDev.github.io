@@ -4,7 +4,11 @@
 .mission-page {
 	.section {
 		.title {
-			width: clamp(20rem, 80%, 50rem);
+			width: clamp(20rem, 80%, 40rem);
+			@include flex-container(column, flex-start, flex-start, nowrap);
+			* {
+				text-align: left !important;
+			}
 		}
 		position: relative;
 		@include flex-container(row, center, center, wrap);
@@ -18,7 +22,10 @@
 		.content {
 			z-index: 4;
 			width: clamp(20rem, 80%, 40rem);
-			margin: 4rem auto;
+			@include standard-shadow();
+			padding: 0.75rem;
+			border-radius: 0.5rem;
+			margin: 2rem auto;
 			.title {
 				width: 100%;
 				padding: 0.5rem;
