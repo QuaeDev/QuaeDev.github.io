@@ -60,7 +60,8 @@ const header = /*html*/ `<header id="header">
 					</a>
 				</div>
 			</div>
-		</header>`;
+		</header>
+		`;
 
 function renderHeader() {
 	const placeholder = document.querySelector("#header-placeholder");

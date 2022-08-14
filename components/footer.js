@@ -1,5 +1,6 @@
 var footer = /*html*/ `
-<footer>
+
+<footer id="footer">
 	<div class="footer-content">
 		<div id="footer-contact">
 			<h6>Find Us Online</h6>
@@ -111,10 +112,31 @@ var footer = /*html*/ `
 			</div>
 	</div>
 </footer>
+<a href="mailto:info@quae.app" aria-label="get in touch with the quae team" >
+	<button id="contact-us">
+		<i class="material-icons">mail</i>
+		<p>
+			Get In Touch
+		</p>
+	</button>
+</a>
 `;
 
 function renderFooter() {
 	const placeholder = document.querySelector("#footer-placeholder");
 	placeholder.innerHTML = footer;
 }
+document.onscroll = function () {
+	let contact = document.getElementById("contact-us");
+	let footer = document.getElementById("footer");
+	let footerHeight = footer.clientHeight;
+	let docHeight = document.body.clientHeight;
+	let windowHeight = window.innerHeight;
+	let scroll = window.scrollY;
+	if (docHeight - footerHeight < windowHeight + scroll) {
+		contact.className = "hidden";
+	} else {
+		contact.className = "";
+	}
+};
 renderFooter();
