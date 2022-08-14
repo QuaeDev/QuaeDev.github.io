@@ -5,9 +5,10 @@
 	// padding: 5rem 1rem;
 	// background-color: var.$primary-dark;
 	// color: var.$fg;
-	background-color: #222;
+	background-color: var.$bg-dark;
 	color: var.$bg;
 	padding: 5rem 1rem;
+	@include standard-shadow();
 	#core-features-container {
 		width: 100%;
 		.feature {
@@ -491,14 +492,11 @@
 #small-features {
 	padding: 5rem 1rem;
 	@include flex-container(column, center, center, nowrap);
-
-	background-color: var.$primary-LO;
+	background-color: var.$bg-dark;
+	color: var.$text-dark;
 	.title {
 		padding-bottom: 2rem;
 		width: min(100%, 60rem);
-
-		@include flex-container(row, flex-start, center, nowrap);
-		text-align: left;
 	}
 	#small-features-container {
 		width: min(100%, 60rem);
@@ -509,45 +507,9 @@
 		grid-column: 1fr 1fr 1fr;
 		justify-content: stretch;
 		gap: 1rem;
-		.card {
-			width: 100%;
-			@include flex-container(column, flex-start, center, nowrap);
-			.header {
-				width: 100%;
-				@include flex-container(row, flex-start, center, nowrap);
-				img {
-					height: 3rem;
-					width: 3rem;
-					margin-right: 0.5rem;
-				}
-			}
-			.content {
-				p,
-				h4 {
-					text-align: left;
-				}
-			}
-		}
 	}
 }
-@media screen and (min-width: 600px) and (max-width: 1200px) {
-	#small-features {
-		.title {
-			max-width: 50rem;
-		}
-		#small-features-container {
-			width: min(100%, 50rem);
-			display: -ms-grid;
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			-ms-grid-column: 1fr 1fr;
-			grid-column: 1fr 1fr;
-			justify-content: stretch;
-			gap: 0.5rem;
-		}
-	}
-}
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 599px) {
 	#small-features {
 		.title {
 			max-width: 50rem;
@@ -561,9 +523,61 @@
 			grid-column: 1fr;
 			justify-content: stretch;
 			gap: 0.5rem;
+			.small-feature {
+				@include flex-container(row, flex-start, flex-start, nowrap);
+				margin-bottom: 3.5rem;
+				img {
+					width: 30%;
+					padding: 0 1.5rem;
+				}
+				.content {
+					p {
+						padding-right: 2ch;
+					}
+				}
+			}
 		}
 	}
 }
+@media screen and (min-width: 600px) {
+	#small-features {
+		.title {
+			max-width: 50rem;
+		}
+		#small-features-container {
+			width: min(100%, 50rem);
+			display: -ms-grid;
+			display: grid;
+			gap: 0.5rem;
+			grid-template-columns: 1fr 1fr;
+			-ms-grid-column: 1fr 1fr;
+			grid-column: 1fr 1fr;
+			justify-content: stretch;
+			gap: 0.5rem;
+			.small-feature {
+				width: 100%;
+				@include flex-container(column, flex-start, center, nowrap);
+				padding: 0 0.75rem;
+				img {
+					height: 3rem;
+					width: 3rem;
+					margin-right: 0.5rem;
+				}
+				.header {
+					width: 100%;
+					@include flex-container(row, flex-start, center, nowrap);
+				}
+				.content {
+					p,
+					h4 {
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+}
+
 #any-community {
 	#any-community-container {
 		@include flex-container(row, center, center, wrap);
