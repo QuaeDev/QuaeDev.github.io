@@ -2562,6 +2562,12 @@ a {
     max-width: 50ch;
   }
 }
+#get-verified {
+  position: fixed;
+  bottom: 10rem;
+  right: 0;
+}
+
 #contact-us {
   position: fixed;
   bottom: 0;

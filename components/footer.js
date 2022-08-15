@@ -112,6 +112,9 @@ var footer = /*html*/ `
 			</div>
 	</div>
 </footer>
+<a href="/pages/join_verification" id="get-verified">
+<p>Get Verified</p>
+</a>
 <a href="mailto:info@quae.app" aria-label="get in touch with the quae team" >
 	<button id="contact-us">
 		<i class="material-icons">mail</i>
