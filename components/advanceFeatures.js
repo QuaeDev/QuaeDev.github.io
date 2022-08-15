@@ -41,18 +41,18 @@ let idBullets = [
 ];
 function renderBullet(card, feature) {
 	card.innerHTML = /*html*/ `
-<div class="icon">
-        <img
-        src=${feature.img}
-        alt=${feature.imgAlt}
-		loading="lazy"
-        />
-</div>
-<div class="text">
-    <h3>${feature.title}</h3>
-    <p>${feature.body}</p>
-</div>
-`;
+		<div class="icon">
+				<img
+				src=${feature.img}
+				alt=${feature.imgAlt}
+				loading="lazy"
+				/>
+		</div>
+		<div class="text">
+			<h3>${feature.title}</h3>
+			<p>${feature.body}</p>
+		</div>
+		`;
 }
 
 let procedureContainer = document.getElementById("procedure-bullets");

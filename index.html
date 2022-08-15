@@ -87,45 +87,141 @@
 
 			<section class="section-small" id="features">
 				<div id="core-features-container"></div>
+				<script>
+					let coreFeatures = [
+						{
+							img: "/assets/img/coreFeatures/propose.jpg",
+							imgAlt: "icon of a proposal",
+							imgClass: "propose",
+							title: "Propose",
+							body: "Get involved in the democratic process and write a proposal to address an issue you see.",
+							buttonText: "See More",
+							link: "https://web.quae.app/post/629112d290661d001669d8b5",
+						},
+						{
+							img: "/assets/img/coreFeatures/vote.jpg",
+							imgAlt: "icon of someone voting",
+							imgClass: "vote",
+							title: "Vote",
+							body: "Vote every day on the most pressing matters in your community. Make your voice heard where it counts.",
+							buttonText: "See More",
+							link: "https://web.quae.app/post/629112d290661d001669d8b5",
+						},
+						{
+							img: "/assets/img/coreFeatures/act.jpg",
+							imgAlt: "icon of city",
+							imgClass: "act",
+							title: "Act",
+							body: "With Quae, you can create real change when it matters. No more waiting 4 years to make a difference.",
+							buttonText: "See More",
+							link: "https://thestute.com/2021/11/12/student-initiative-to-extend-library-hours-comes-to-fruition-after-quae-poll/",
+						},
+					];
+
+					let coreFeatureContainer = document.getElementById(
+						"core-features-container"
+					);
+					for (let feature of coreFeatures) {
+						let card = document.createElement("div");
+						card.classList.add("feature");
+						card.innerHTML = /*html*/ `
+						<div class="img-wrapper">
+							<img
+								src=${feature.img}
+								alt=${feature.imgAlt}
+								class=${feature.imgClass}
+								loading="lazy"
+							/>
+						</div>
+						<h3>${feature.title}</h3>
+
+						<div class="body">
+							<p>
+								${feature.body}
+							</p>
+							<a href="${feature.link}" target="_blank">${feature.buttonText}</a>
+						</div>`;
+						coreFeatureContainer.appendChild(card);
+					}
+				</script>
 			</section>
 
 			<section id="advance-features" class="section sticky-container">
-				<div class="sticky">
-					<div class="content" id="procedure-content">
-						<div class="content-wrapper">
-							<div class="title">
-								<h2>Automate Complex Voting</h2>
-								<h5>Enact Change In One Simple Step</h5>
-							</div>
-							<ul class="bullets" id="procedure-bullets"></ul>
-						</div>
+				<div class="content id" id="id-verification-content">
+					<div class="title">
+						<h1>Real Voices Create Change</h1>
+						<h3>Your Vote Matters</h3>
 					</div>
-					<div class="content id" id="id-verification-content">
-						<div class="content-wrapper">
-							<div class="title">
-								<h2>Real Voices Create Change</h2>
-								<h5>Your Vote Matters</h5>
-							</div>
-							<ul class="bullets" id="id-bullets"></ul>
-						</div>
+					<div class="scroll-block">
+						<ul class="bullets" id="id-bullets"></ul>
+					</div>
+					<div class="img-container id">
+						<div class="img" id="id-verification-photo"></div>
 					</div>
 				</div>
-				<div class="scrolling">
-					<div class="img-container id" id="id-verification-photo"></div>
-					<div class="img-container procedure" id="procedure-photo"></div>
+				<div class="content" id="procedure-content">
+					<div class="title">
+						<h1>Automate Complex Voting</h1>
+						<h3>Enact Change In One Simple Step</h3>
+					</div>
+					<div class="scroll-block">
+						<ul class="bullets" id="procedure-bullets"></ul>
+					</div>
+					<div class="img-container procedure">
+						<div class="img" id="procedure-photo"></div>
+					</div>
 				</div>
 			</section>
 			<section class="section-small" id="small-features">
 				<div class="title">
-					<h2>Do More With Quae</h2>
+					<h2>A New Way To Poll</h2>
+					<h6>Engage with your community like never before</h6>
 				</div>
 				<div id="small-features-container"></div>
 			</section>
+			<script>
+				let smallFeatures = [
+					{
+						img: "/assets/img/smallFeatures/security.svg",
+						imgAlt: "icon of a lock",
+						text: "Secure",
+						subText:
+							"Verified users produce trustworthy results. You can be sure that every vote is from a real person in your community",
+					},
+					{
+						img: "/assets/img/smallFeatures/devices.svg",
+						imgAlt: "icon of computer, tablet, and phone",
+						text: "Accessible",
+						subText:
+							"Voting on proposals or answering polls has never been easier. With a mobile and browser app, vote on the go or from your computer.",
+					},
+					{
+						img: "/assets/img/smallFeatures/chat-group.svg",
+						imgAlt: "icon of computer, tablet, and phone",
+						text: "Authentic",
+						subText:
+							"Community members can drive the conversation on Quae. Anyone can propose an ideas or ask a question.",
+					},
+				];
+				let smallFeatureContainer = document.getElementById(
+					"small-features-container"
+				);
+				for (let feature of smallFeatures) {
+					let card = document.createElement("div");
+					card.classList.add("small-feature");
+					card.innerHTML = /*html*/ `
+						<img src="${feature.img}" alt="${feature.imgAlt}" loading="lazy"/>
+						<div class="content">
+							<h4>${feature.text}</h4>
+							<p>${feature.subText}</p>
+						</div>`;
+					smallFeatureContainer.appendChild(card);
+				}
+			</script>
 			<section class="section" id="any-community">
 				<h2 class="center title">
 					Revolutionize Representation In Your Community
 				</h2>
-
 				<div id="any-community-container"></div>
 			</section>
 
@@ -140,7 +236,6 @@
 		<script src="/assets/js/testimonial.js"></script>
 		<script src="/components/coreFeatures.js"></script>
 		<script src="/components/advanceFeatures.js"></script>
-		<script src="/components/smallFeatures.js"></script>
 		<script src="/components/anyCommunity.js"></script>
 		<script src="/components/faq.js"></script>
 		<script src="/components/signUp.js"></script>

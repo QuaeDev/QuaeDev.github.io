@@ -883,316 +883,159 @@ a {
     padding-top: 1rem;
   }
 }
-.landing-page #id-verification-content,
-.landing-page #procedure-content {
-  padding: 1rem;
+.landing-page #advance-features-2 {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
 }
-.landing-page #id-verification-content p,
-.landing-page #procedure-content p {
-  max-width: 50ch;
-}
+.landing-page #procedure-content,
 .landing-page #id-verification-content {
-  opacity: 0;
-  transition: all 0.5s linear;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  padding: 2rem;
-}
-.landing-page #id-verification-content.procedureVisible {
-  opacity: 0;
-  transition: all 0.5s linear;
-}
-.landing-page #id-verification-content.idVisible {
-  opacity: 1;
-  transition: all 0.5s linear;
-}
-.landing-page #id-verification-content.noneVisible {
-  opacity: 0;
-}
-.landing-page #procedure-content {
-  opacity: 0;
-  transition: all 0.5s linear;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  padding: 2rem;
-}
-.landing-page #procedure-content.procedureVisible {
-  opacity: 1;
-  transition: all 0.5s linear;
-}
-.landing-page #procedure-content.idVisible {
-  opacity: 0;
-  transition: all 0.5s linear;
-}
-.landing-page #procedure-content.noneVisible {
-  opacity: 0;
-}
-.landing-page #advance-features {
+  clip-path: inset(0);
+  width: 100vw;
   height: 100vh;
-  width: 100vw;
-  padding: 0;
-}
-.landing-page #advance-features.sticky-container {
-  height: 200vh;
-  width: 100vw;
   position: relative;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.landing-page #advance-features .sticky {
-  z-index: 1;
-  max-width: 100rem;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: nowrap;
-}
-.landing-page #advance-features .sticky .content .content-wrapper .bullets {
-  padding-left: 0;
-}
-.landing-page #advance-features .sticky .content .content-wrapper .bullets li {
-  margin: 1rem 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-}
-.landing-page #advance-features .sticky .content .content-wrapper .bullets li .icon {
-  height: 5rem;
-  width: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   flex-wrap: nowrap;
 }
-.landing-page #advance-features .sticky .content .content-wrapper .bullets li .icon img {
-  width: 100%;
+.landing-page #procedure-content .title,
+.landing-page #id-verification-content .title {
+  color: #eeeeee;
 }
-.landing-page #advance-features .sticky .content .content-wrapper .bullets li .text {
-  margin-left: 1rem;
-}
-.landing-page #advance-features .sticky.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-.landing-page #advance-features .sticky.top {
-  top: 0;
-  bottom: auto;
-}
-.landing-page #advance-features .sticky.bottom {
+.landing-page #procedure-content .scroll-block,
+.landing-page #id-verification-content .scroll-block {
+  margin: 0;
   bottom: 0;
-  top: auto;
-}
-.landing-page #advance-features .scrolling {
-  z-index: 2;
-  padding: 0;
-  max-width: 100rem;
-  margin: 0 auto;
-  height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
+  background-color: #f2f2f2;
+  box-shadow: 0px -4px 5px -4px rgba(0, 0, 0, 0.4);
 }
-.landing-page #advance-features .scrolling .img-container {
-  z-index: 4;
-  height: 50%;
-  width: 100%;
+.landing-page #procedure-content .scroll-block .bullets,
+.landing-page #id-verification-content .scroll-block .bullets {
+  display: -ms-grid;
+  display: grid;
+}
+.landing-page #procedure-content .img-container,
+.landing-page #id-verification-content .img-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+.landing-page #procedure-content .img-container.id,
+.landing-page #id-verification-content .img-container.id {
+  background: linear-gradient(to bottom, hsl(202deg, 100%, 78%), hsl(256deg, 100%, 70%));
+}
+.landing-page #procedure-content .img-container.procedure,
+.landing-page #id-verification-content .img-container.procedure {
+  background: linear-gradient(to bottom, hsl(324deg, 100%, 69%), hsl(256deg, 100%, 70%));
+}
+.landing-page #procedure-content .img-container .img,
+.landing-page #id-verification-content .img-container .img {
+  box-shadow: 0px 0px 40px -10px black;
+  z-index: -1;
+  left: -500%;
+  right: -500%;
+  top: 0;
+  bottom: 0;
+  margin: auto auto;
+  position: absolute;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.landing-page #advance-features .scrolling .img-container.id {
+.landing-page #procedure-content .img-container #id-verification-photo,
+.landing-page #id-verification-content .img-container #id-verification-photo {
   background-image: url("/assets/img/advanceFeatures/id.jpg");
-  border-bottom-right-radius: 30%;
-  margin-right: auto;
 }
-.landing-page #advance-features .scrolling .img-container.procedure {
+.landing-page #procedure-content .img-container #procedure-photo,
+.landing-page #id-verification-content .img-container #procedure-photo {
   background-image: url("/assets/img/advanceFeatures/teamwork.jpg");
-  border-top-left-radius: 30%;
-  margin-left: auto;
 }
-@media screen and (min-width: 800px) {
-  .landing-page #advance-features.sticky-container {
-    position: relative;
+@media screen and (max-width: 799px) {
+  .landing-page #advance-features .title {
+    padding: 0 0.5rem 5rem;
   }
-  .landing-page #advance-features .sticky {
-    position: absolute;
+  .landing-page #advance-features .bullets {
+    -ms-grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 3rem 1rem;
+    width: max-content;
+    margin: 0 auto;
   }
-  .landing-page #advance-features .sticky .content {
-    width: 50%;
-    height: 100%;
+  .landing-page #advance-features .bullets li {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-  }
-  .landing-page #advance-features .sticky .content .content-wrapper .title {
-    padding-bottom: 1rem;
-  }
-  .landing-page #advance-features .sticky .content#procedure-content {
-    padding-bottom: 5rem;
-  }
-  .landing-page #advance-features .sticky .content#procedure-content .title {
-    margin-right: 0;
-  }
-  .landing-page #advance-features .sticky .content#procedure-content .title * {
-    text-align: start;
-  }
-  .landing-page #advance-features .sticky .content#procedure-content p {
-    text-align: start;
-    margin-right: 0;
-  }
-  .landing-page #advance-features .sticky .content#procedure-content .bullets {
-    margin: 1rem 0;
-  }
-  .landing-page #advance-features .sticky .content#procedure-content .bullets li {
     flex-direction: row;
-  }
-  .landing-page #advance-features .sticky .content#procedure-content .bullets li .icon {
-    margin-right: 0.5rem;
-    margin-left: 0;
-  }
-  .landing-page #advance-features .sticky .content#id-verification-content {
-    padding-top: 5rem;
-  }
-  .landing-page #advance-features .sticky .content#id-verification-content .title {
-    margin-left: 0;
-  }
-  .landing-page #advance-features .sticky .content#id-verification-content .title * {
-    text-align: start;
-  }
-  .landing-page #advance-features .sticky .content#id-verification-content p {
-    text-align: start;
-  }
-  .landing-page #advance-features .sticky.bottom {
-    padding-bottom: 1rem;
-  }
-  .landing-page #advance-features .scrolling {
-    max-width: 100rem;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     flex-wrap: nowrap;
   }
-  .landing-page #advance-features .scrolling .img-container {
-    height: 50%;
-    width: 50%;
-  }
-  .landing-page #advance-features .scrolling .img-container.id {
-    border-bottom-right-radius: 30%;
-    margin-right: auto;
-  }
-  .landing-page #advance-features .scrolling .img-container.procedure {
-    border-top-left-radius: 30%;
-    margin-left: auto;
-  }
-}
-@media screen and (max-width: 800px) {
-  .landing-page #advance-features {
-    height: 200vh !important;
-    width: 100vw;
-  }
-  .landing-page #advance-features .sticky {
-    z-index: 2;
-    width: 100%;
-    height: 200vh !important;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-  }
-  .landing-page #advance-features .sticky.fixed {
-    position: absolute;
-  }
-  .landing-page #advance-features .sticky .content {
-    width: 100%;
-  }
-  .landing-page #advance-features .sticky .content .content-wrapper {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
-  }
-  .landing-page #advance-features .sticky .content .text {
-    margin: 1rem;
-  }
-  .landing-page #advance-features .sticky .content#procedure-content {
-    opacity: 1 !important;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    flex-wrap: nowrap;
-  }
-  .landing-page #advance-features .sticky .content#procedure-content .title {
-    margin-right: 0;
-  }
-  .landing-page #advance-features .sticky .content#procedure-content .title * {
-    text-align: start;
-  }
-  .landing-page #advance-features .sticky .content#procedure-content .bullets li .icon {
-    margin-left: 0.5rem;
-    margin-right: 0;
-  }
-  .landing-page #advance-features .sticky .content#id-verification-content {
-    opacity: 1 !important;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: nowrap;
-  }
-  .landing-page #advance-features .sticky .content#id-verification-content .title {
-    margin-left: 0;
-  }
-  .landing-page #advance-features .sticky .content#id-verification-content .title * {
-    text-align: start;
-  }
-  .landing-page #advance-features .sticky .content#id-verification-content p {
-    text-align: start;
-  }
-  .landing-page #advance-features .scrolling {
-    z-index: -1;
-    max-width: 100rem;
-    width: 100%;
-    height: 200vh;
+  .landing-page #advance-features .bullets li .icon {
+    height: 4rem;
+    width: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
   }
-  .landing-page #advance-features .scrolling .img-container {
-    height: 50%;
+  .landing-page #advance-features .bullets li .icon img {
     width: 100%;
-    border-radius: 0 !important;
+  }
+  .landing-page #advance-features .bullets li .text {
+    margin-left: 1rem;
+  }
+  .landing-page #advance-features .bullets li .text p {
+    max-width: 30ch;
+  }
+  .landing-page #advance-features .img-container {
+    top: 0;
+  }
+  .landing-page #advance-features .img-container .img {
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .landing-page #advance-features .content .title {
+    padding-bottom: 10rem;
+  }
+  .landing-page #advance-features .scroll-block {
+    padding: 4rem 0;
+  }
+  .landing-page #advance-features .scroll-block .bullets {
+    margin: 0 auto;
+    max-width: 80rem;
+    -ms-grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-template-rows: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .landing-page #advance-features .scroll-block .bullets li {
+    max-width: 60ch;
+  }
+  .landing-page #advance-features .scroll-block .bullets li img {
+    height: 5rem;
+  }
+  .landing-page #advance-features .scroll-block .bullets li .text {
+    padding-right: 2rem;
+  }
+  .landing-page #advance-features .img-container .img {
+    min-width: 1000px;
+    min-height: 1000px;
+    height: 100vmin;
+    width: 100vmin;
+    border-radius: 50%;
   }
 }
 .landing-page #small-features {
@@ -1219,18 +1062,21 @@ a {
   justify-content: stretch;
   gap: 1rem;
 }
-@media screen and (max-width: 599px) {
+.landing-page #small-features #small-features-container .small-feature img {
+  opacity: 0.6;
+}
+@media screen and (max-width: 799px) {
   .landing-page #small-features .title {
     max-width: 50rem;
   }
   .landing-page #small-features #small-features-container {
-    width: min(100%, 50rem);
+    width: min(100%, 70rem);
     display: -ms-grid;
     display: grid;
     grid-template-columns: 1fr;
     -ms-grid-column: 1fr;
     grid-column: 1fr;
-    justify-content: stretch;
+    justify-content: center;
     gap: 0.5rem;
   }
   .landing-page #small-features #small-features-container .small-feature {
@@ -1239,44 +1085,45 @@ a {
     align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    margin-bottom: 3.5rem;
+    max-width: 60ch;
+    margin: 1.5rem auto;
   }
   .landing-page #small-features #small-features-container .small-feature img {
     width: 30%;
-    padding: 0 1.5rem;
+    max-width: 5rem;
+    margin-right: 1.5rem;
   }
   .landing-page #small-features #small-features-container .small-feature .content p {
     padding-right: 2ch;
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .landing-page #small-features .title {
-    max-width: 50rem;
+    padding-bottom: 5rem;
   }
   .landing-page #small-features #small-features-container {
-    width: min(100%, 50rem);
+    width: min(100%, 70rem);
     display: -ms-grid;
     display: grid;
     gap: 0.5rem;
-    grid-template-columns: 1fr 1fr;
-    -ms-grid-column: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-column: 1fr 1fr 1fr;
     grid-column: 1fr 1fr;
     justify-content: stretch;
     gap: 0.5rem;
   }
   .landing-page #small-features #small-features-container .small-feature {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: nowrap;
     padding: 0 0.75rem;
   }
   .landing-page #small-features #small-features-container .small-feature img {
-    height: 3rem;
-    width: 3rem;
-    margin-right: 0.5rem;
+    height: 4rem;
+    width: 4rem;
+    margin-bottom: 1.5rem;
   }
   .landing-page #small-features #small-features-container .small-feature .header {
     width: 100%;
