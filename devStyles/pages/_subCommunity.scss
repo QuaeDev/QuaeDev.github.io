@@ -13,7 +13,7 @@
 	.card.sga,
 	.card.city-council {
 		margin: 1rem 0;
-		@include flex-container(row, center, center, wrap);
+		@include flex-container(row, center, center, nowrap);
 		img {
 			height: 5rem;
 			margin: 0.5rem;

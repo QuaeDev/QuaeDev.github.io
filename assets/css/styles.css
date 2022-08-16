@@ -124,7 +124,7 @@ p {
 }
 
 *.success {
-  color: hsl(133deg, 44%, 41%);
+  color: #3b974e;
 }
 
 *.water-mark {
@@ -277,7 +277,7 @@ a {
   }
 }
 .section {
-  min-height: 100lvh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -292,7 +292,7 @@ a {
 }
 
 .section-small {
-  min-height: 30lvh;
+  min-height: 30vh;
   padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
@@ -621,78 +621,6 @@ a {
 .landing-page .be-heard::before {
   box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.2);
 }
-.landing-page .sign-up {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  padding: 1rem;
-  width: 100%;
-  position: relative;
-}
-.landing-page .sign-up .pattern {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 50rem;
-  width: 50rem;
-  background-image: url("/assets/img/mission/ballot.png");
-  background-size: 50px;
-  z-index: -1;
-}
-.landing-page .sign-up .container {
-  width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.landing-page .sign-up .container form {
-  max-width: 35rem;
-  flex: 1;
-  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
-  border-radius: 0.5rem;
-}
-.landing-page .sign-up .container .download {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: nowrap;
-  width: min(100%, 25rem);
-  margin: 0 1rem;
-}
-.landing-page .sign-up .container .download .buttons {
-  border-radius: 0.5rem;
-  max-width: 35rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  padding: 1rem;
-}
-.landing-page .sign-up .container .download .buttons h4 {
-  padding-bottom: 1rem;
-}
-.landing-page .sign-up .container .download .check {
-  max-width: min(80%, 15rem);
-  margin: 0 auto;
-}
-@media (max-width: 800px) {
-  .landing-page .sign-up .container .download {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: 1rem;
-    margin: 1rem auto;
-  }
-}
 .landing-page .security {
   background: linear-gradient(hsl(198deg, 100%, 37%), hsl(194deg, 67%, 60%), hsl(202deg, 100%, 78%), transparent);
 }
@@ -883,11 +811,6 @@ a {
     padding-top: 1rem;
   }
 }
-.landing-page #advance-features-2 {
-  height: 100vh;
-  width: 100vw;
-  padding: 0;
-}
 .landing-page #procedure-content,
 .landing-page #id-verification-content {
   clip-path: inset(0);
@@ -972,27 +895,19 @@ a {
     width: max-content;
     margin: 0 auto;
   }
-  .landing-page #advance-features .bullets li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
+  .landing-page #advance-features .bullets li .header {
+    position: relative;
   }
-  .landing-page #advance-features .bullets li .icon {
-    height: 4rem;
-    width: 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
+  .landing-page #advance-features .bullets li .header img {
+    height: 4.5rem;
+    width: 4.5rem;
+    position: absolute;
+    right: 0;
+    opacity: 0.3;
+    top: 0;
   }
-  .landing-page #advance-features .bullets li .icon img {
-    width: 100%;
-  }
-  .landing-page #advance-features .bullets li .text {
-    margin-left: 1rem;
+  .landing-page #advance-features .bullets li .header h3 {
+    font-size: 2.5rem;
   }
   .landing-page #advance-features .bullets li .text p {
     max-width: 30ch;
@@ -1015,20 +930,29 @@ a {
   }
   .landing-page #advance-features .scroll-block .bullets {
     margin: 0 auto;
-    max-width: 80rem;
+    max-width: 70rem;
+    gap: 0.5rem;
     -ms-grid-template-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     -ms-grid-template-rows: 1fr;
     grid-template-rows: 1fr;
   }
-  .landing-page #advance-features .scroll-block .bullets li {
-    max-width: 60ch;
+  .landing-page #advance-features .scroll-block .bullets li .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
   }
-  .landing-page #advance-features .scroll-block .bullets li img {
-    height: 5rem;
+  .landing-page #advance-features .scroll-block .bullets li .header img {
+    height: 2.5rem;
+  }
+  .landing-page #advance-features .scroll-block .bullets li .header h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
   }
   .landing-page #advance-features .scroll-block .bullets li .text {
-    padding-right: 2rem;
+    width: min(80%, 35ch);
   }
   .landing-page #advance-features .img-container .img {
     min-width: 1000px;
@@ -1138,16 +1062,28 @@ a {
     text-align: left;
   }
 }
+@media screen and (max-width: 799px) {
+  .landing-page #any-community #any-community-container {
+    -ms-grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 800px) {
+  .landing-page #any-community #any-community-container {
+    -ms-grid-template-rows: 1fr;
+    grid-template-rows: 1fr;
+    -ms-grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 .landing-page #any-community #any-community-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 0.5rem;
 }
 .landing-page #any-community #any-community-container .card {
   margin: 0.3rem;
-  width: min(100%, 25rem);
   border-radius: 0.25rem 0.25rem 0.5rem 0.5rem;
   overflow: hidden;
   padding: 0;
@@ -1708,10 +1644,10 @@ a {
   text-align: end;
 }
 .communities-page .procedures .procedure-example-wrapper #procedure-example .phase.complete {
-  border-top: 1rem solid hsl(133deg, 44%, 41%);
+  border-top: 1rem solid #3b974e;
 }
 .communities-page .procedures .procedure-example-wrapper #procedure-example .phase.complete .phase-voters i {
-  color: hsl(133deg, 44%, 41%);
+  color: #3b974e;
 }
 .communities-page .procedures .procedure-example-wrapper #procedure-example .phase.active {
   border-top: 1rem solid hsl(256deg, 100%, 70%);
@@ -1817,78 +1753,6 @@ a {
   max-width: 20rem;
   margin: 4rem;
 }
-.communities-page .sign-up {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  padding: 1rem;
-  width: 100%;
-  position: relative;
-}
-.communities-page .sign-up .pattern {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 50rem;
-  width: 50rem;
-  background-image: url("/assets/img/mission/ballot.png");
-  background-size: 50px;
-  z-index: -1;
-}
-.communities-page .sign-up .container {
-  width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.communities-page .sign-up .container form {
-  max-width: 35rem;
-  flex: 1;
-  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
-  border-radius: 0.5rem;
-}
-.communities-page .sign-up .container .download {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: nowrap;
-  width: min(100%, 25rem);
-  margin: 0 1rem;
-}
-.communities-page .sign-up .container .download .buttons {
-  border-radius: 0.5rem;
-  max-width: 35rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  padding: 1rem;
-}
-.communities-page .sign-up .container .download .buttons h4 {
-  padding-bottom: 1rem;
-}
-.communities-page .sign-up .container .download .check {
-  max-width: min(80%, 15rem);
-  margin: 0 auto;
-}
-@media (max-width: 800px) {
-  .communities-page .sign-up .container .download {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: 1rem;
-    margin: 1rem auto;
-  }
-}
 
 .sub-community .landing {
   overflow: hidden;
@@ -1902,7 +1766,7 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .sub-community .card.sga img,
 .sub-community .card.city-council img {
@@ -2407,78 +2271,6 @@ a {
   font-weight: 800;
   text-align: left;
 }
-.mission-page .sign-up {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  padding: 1rem;
-  width: 100%;
-  position: relative;
-}
-.mission-page .sign-up .pattern {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 50rem;
-  width: 50rem;
-  background-image: url("/assets/img/mission/ballot.png");
-  background-size: 50px;
-  z-index: -1;
-}
-.mission-page .sign-up .container {
-  width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.mission-page .sign-up .container form {
-  max-width: 35rem;
-  flex: 1;
-  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
-  border-radius: 0.5rem;
-}
-.mission-page .sign-up .container .download {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: nowrap;
-  width: min(100%, 25rem);
-  margin: 0 1rem;
-}
-.mission-page .sign-up .container .download .buttons {
-  border-radius: 0.5rem;
-  max-width: 35rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  padding: 1rem;
-}
-.mission-page .sign-up .container .download .buttons h4 {
-  padding-bottom: 1rem;
-}
-.mission-page .sign-up .container .download .check {
-  max-width: min(80%, 15rem);
-  margin: 0 auto;
-}
-@media (max-width: 800px) {
-  .mission-page .sign-up .container .download {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: 1rem;
-    margin: 1rem auto;
-  }
-}
 
 .page.faq .title {
   padding: 3rem 0;
@@ -2562,16 +2354,16 @@ a {
     max-width: 50ch;
   }
 }
-#get-verified {
-  position: fixed;
-  bottom: 10rem;
-  right: 0;
-}
-
-#contact-us {
+#floating-buttons {
   position: fixed;
   bottom: 0;
   right: 0;
+}
+#floating-buttons.hidden {
+  display: none;
+}
+
+.floating-button {
   padding: 0.5rem 1rem;
   margin: 1rem;
   border-radius: 3rem;
@@ -2585,25 +2377,16 @@ a {
   justify-content: center;
   flex-wrap: nowrap;
 }
-#contact-us p {
+.floating-button p {
   margin-left: 0.5ch;
 }
-#contact-us:hover {
+.floating-button:hover {
   background-color: #f2f2f2;
   outline: 1px solid rgb(182, 182, 182);
-}
-#contact-us.hidden {
-  display: none;
+  text-decoration: none;
+  color: hsl(256deg, 67%, 55%);
 }
 
-@media screen and (max-width: 600px) {
-  #contact-us {
-    padding: 0.5rem;
-  }
-  #contact-us p {
-    display: none;
-  }
-}
 footer {
   margin-top: 4rem;
   background-color: #f2f2f2;
@@ -2739,8 +2522,8 @@ footer .footer-content .footer-navigation {
 }
 #header .header-content .logo-link {
   margin-right: auto;
-  width: 2rem;
-  height: 2rem;
+  width: 1rem;
+  height: 1rem;
   z-index: 14;
   position: relative;
 }
@@ -3190,8 +2973,8 @@ a.button.white:hover {
 .download-buttons .web-app-link {
   margin: 1rem 0;
   width: 100%;
-  max-width: 18rem;
-  padding: 1rem;
+  max-width: 22rem;
+  padding: 1rem !important;
   border-radius: 10rem;
 }
 .download-buttons .web-app-link img {
@@ -3243,7 +3026,7 @@ button.select-group:active {
   color: hsl(327deg, 91%, 52%);
 }
 .material-icons.success {
-  color: hsl(133deg, 44%, 41%);
+  color: #3b974e;
 }
 .material-icons.small {
   font-size: 1.25rem;
@@ -3396,6 +3179,16 @@ form button {
   font-size: 20px;
 }
 
+.flodesk-form {
+  background-color: #f2f2f2;
+}
+.flodesk-form form {
+  background-color: #f2f2f2;
+}
+.flodesk-form form input {
+  background-color: #fcfcfc !important;
+}
+
 .proposal-card {
   box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
@@ -3432,7 +3225,7 @@ form button {
   flex-wrap: nowrap;
 }
 .proposal-card .header .header-right.check {
-  color: hsl(133deg, 44%, 41%);
+  color: #3b974e;
 }
 .proposal-card .body {
   padding: 0.5rem 0;
@@ -3508,6 +3301,7 @@ form button {
   }
 }
 #carousel-container {
+  z-index: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -3516,6 +3310,7 @@ form button {
 }
 
 #carousel {
+  z-index: 1;
   margin: 0 auto;
   width: min(100%, 40rem);
   background-color: transparent;
@@ -3575,6 +3370,73 @@ form button {
   height: 30rem;
 }
 
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 1rem;
+  width: 100%;
+}
+.sign-up .container {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.sign-up .container .form-wrapper {
+  flex: 1;
+}
+.sign-up .container .form-wrapper form {
+  margin: 0 auto;
+  max-width: 35rem;
+  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+.sign-up .container .download {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: min(100%, 25rem);
+  margin: 0 1rem;
+}
+.sign-up .container .download .buttons {
+  border-radius: 0.5rem;
+  max-width: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 1rem;
+}
+.sign-up .container .download .buttons h4 {
+  padding-bottom: 1rem;
+}
+.sign-up .container .download .buttons .web-app-link {
+  padding: 1rem !important;
+}
+.sign-up .container .devices {
+  max-width: min(80%, 25rem);
+}
+
+@media (max-width: 800px) {
+  .sign-up .container .download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 1rem;
+    margin: 1rem auto;
+  }
+}
 .pt {
   padding-top: 1rem;
 }
@@ -3749,6 +3611,30 @@ form button {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.h-100 {
+  min-height: 100vh;
+}
+
+.h-80 {
+  min-height: 80vh;
+}
+
+.h-60 {
+  min-height: 60vh;
+}
+
+.h-50 {
+  min-height: 50vh;
+}
+
+.h-40 {
+  min-height: 40vh;
+}
+
+.h-20 {
+  min-height: 20vh;
 }
 
 /*# sourceMappingURL=styles.css.map */

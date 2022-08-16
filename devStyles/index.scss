@@ -106,7 +106,7 @@ a {
 }
 
 .section {
-	min-height: 100lvh;
+	min-height: 100vh;
 
 	@include flex-container(column, center, center, nowrap);
 	margin: 0 auto;
@@ -118,7 +118,7 @@ a {
 	}
 }
 .section-small {
-	min-height: 30lvh;
+	min-height: 30vh;
 	padding: 1rem 2rem;
 	@include flex-container(column, center, center, nowrap);
 	.title {
@@ -154,6 +154,7 @@ a {
 @import "./components/cards";
 @import "./components/metro";
 @import "./components/graphics";
+@import "./components/signUp";
 @import "./utility";
 // @use "../var";
 // @import "../mixins";

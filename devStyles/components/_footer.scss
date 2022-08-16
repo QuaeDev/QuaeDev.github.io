@@ -1,14 +1,14 @@
 @use "../var";
 @import "../mixins";
-#get-verified {
-	position: fixed;
-	bottom: 10rem;
-	right: 0;
-}
-#contact-us {
+#floating-buttons {
 	position: fixed;
 	bottom: 0;
 	right: 0;
+	&.hidden {
+		display: none;
+	}
+}
+.floating-button {
 	padding: 0.5rem 1rem;
 	margin: 1rem;
 	border-radius: 3rem;
@@ -23,19 +23,11 @@
 	&:hover {
 		background-color: var.$fg;
 		outline: 1px solid var.$border;
-	}
-	&.hidden {
-		display: none;
-	}
-}
-@media screen and (max-width: 600px) {
-	#contact-us {
-		padding: 0.5rem;
-		p {
-			display: none;
-		}
+		text-decoration: none;
+		color: var.$primary-default;
 	}
 }
+
 footer {
 	margin-top: 4rem;
 	background-color: var.$fg;

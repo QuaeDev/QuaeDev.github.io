@@ -1,38 +1,30 @@
-@use "../../var";
-@import "../../mixins";
+@use "../var";
+@import "../mixins";
 
 .sign-up {
 	@include flex-container(column, center, center, nowrap);
 	padding: 1rem;
 	width: 100%;
-	position: relative;
-	.pattern {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		height: 50rem;
-		width: 50rem;
-		background-image: url("/assets/img/mission/ballot.png");
-		background-size: 50px;
 
-		z-index: -1;
-	}
 	.container {
 		width: 100%;
-		@include flex-container(row-reverse, center, flex-start, wrap);
-		form {
-			max-width: 35rem;
+		@include flex-container(row-reverse, center, flex-start, nowrap);
+		.form-wrapper {
 			flex: 1;
-			@include standard-shadow();
-			border-radius: 0.5rem;
+			form {
+				margin: 0 auto;
+				max-width: 35rem;
+				@include standard-shadow();
+				border-radius: 0.5rem;
+			}
 		}
 		.download {
 			@include flex-container(column, center, flex-start, nowrap);
 			width: min(100%, 25rem);
 
 			margin: 0 1rem;
+			// flex: 1;
 			.buttons {
-				// @include standard-shadow();
 				border-radius: 0.5rem;
 				max-width: 35rem;
 				@include flex-container(column, center, center, nowrap);
@@ -40,11 +32,14 @@
 				h4 {
 					padding-bottom: 1rem;
 				}
+				.web-app-link {
+					padding: 1rem !important;
+				}
 			}
-			.check {
-				max-width: min(80%, 15rem);
-				margin: 0 auto;
-			}
+		}
+		.devices {
+			// flex: 1;
+			max-width: min(80%, 25rem);
 		}
 	}
 }

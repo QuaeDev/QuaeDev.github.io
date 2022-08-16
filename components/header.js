@@ -16,6 +16,9 @@ const header = /*html*/ `<header id="header">
 					/>
 				</a>
 				<div id="navigation-links">
+				<a href="/pages/join_verification">
+					<p>Get Verified</p>
+				</a>
 				<a href="/about_us/">
 					<p>About</p>
 				</a>

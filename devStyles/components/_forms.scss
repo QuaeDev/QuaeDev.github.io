@@ -28,3 +28,12 @@ form {
 		font-size: 20px;
 	}
 }
+.flodesk-form {
+	background-color: var.$fg;
+	form {
+		background-color: var.$fg;
+		input {
+			background-color: var.$bg !important;
+		}
+	}
+}

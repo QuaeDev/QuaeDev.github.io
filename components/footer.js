@@ -112,17 +112,16 @@ var footer = /*html*/ `
 			</div>
 	</div>
 </footer>
-<a href="/pages/join_verification" id="get-verified">
-<p>Get Verified</p>
-</a>
-<a href="mailto:info@quae.app" aria-label="get in touch with the quae team" >
-	<button id="contact-us">
+<div id="floating-buttons">
+	<a href="/pages/join_verification" id="get-verified" class="floating-button">
+		<i class="material-icons">verified</i>
+		<p>Get Verified</p>
+	</a>
+	<a href="mailto:info@quae.app" id="contact-us"  class="floating-button"  aria-label="get in touch with the quae team" >
 		<i class="material-icons">mail</i>
-		<p>
-			Get In Touch
-		</p>
-	</button>
-</a>
+		<p>Get In Touch</p>
+	</a>
+</div>
 `;
 
 function renderFooter() {
@@ -130,7 +129,7 @@ function renderFooter() {
 	placeholder.innerHTML = footer;
 }
 document.onscroll = function () {
-	let contact = document.getElementById("contact-us");
+	let contact = document.getElementById("floating-buttons");
 	let footer = document.getElementById("footer");
 	let footerHeight = footer.clientHeight;
 	let docHeight = document.body.clientHeight;
