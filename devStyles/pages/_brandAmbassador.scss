@@ -16,10 +16,11 @@
 	.landing {
 		-ms-grid-template-columns: 1fr;
 		grid-template-columns: 1fr;
-		-ms-grid-template-rows: 1fr 2fr;
-		grid-template-rows: 2fr 1fr 2fr;
+		-ms-grid-template-rows: 2fr 1fr auto;
+		grid-template-rows: 2fr 1fr auto;
 		img {
 			width: 100vw;
+			min-width: 45rem;
 			-ms-grid-column: 1/2;
 			grid-column: 1/2;
 			-ms-grid-row: 1/3;
@@ -49,10 +50,14 @@
 	.landing {
 		-ms-grid-template-rows: 1fr;
 		grid-template-rows: 1fr;
-		-ms-grid-template-columns: 1fr 2fr;
-		grid-template-columns: 2fr 1fr 2fr;
+		-ms-grid-template-columns: 1fr 2fr 2fr;
+		grid-template-columns: 1fr 2fr 2fr;
+		align-items: center;
+		max-width: 130rem;
+		margin-right: auto;
 		img {
 			width: 100%;
+			min-width: 50rem;
 			-ms-grid-row: 1/2;
 			grid-row: 1/2;
 			-ms-grid-column: 1/3;
@@ -65,6 +70,7 @@
 			mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 		}
 		.content {
+			justify-self: flex-end;
 			-ms-grid-row: 1/2;
 			grid-row: 1/2;
 			-ms-grid-column: 2/4;
@@ -94,11 +100,9 @@
 		z-index: 2;
 		padding: 2rem 1rem;
 		.block {
-			h2 {
-				ul {
-					li {
-						list-style-type: disc !important;
-					}
+			ul {
+				li {
+					list-style-type: circle !important;
 				}
 			}
 		}
@@ -183,5 +187,23 @@
 	}
 }
 #apply {
-	padding: 15rem 0;
+	background-image: url("../../assets/img/background/bg1.png");
+	background-position: cover;
+	background-size: auto;
+	background-repeat: no-repeat;
+	width: 100vw;
+	padding: 35vh 2rem;
+	// height: 30vh;
+
+	.content {
+		@include card();
+		background-color: var.$bg;
+		padding: 15rem 0;
+		max-width: 50rem;
+		margin: auto;
+		padding: 2rem 3rem;
+	}
+}
+footer {
+	margin-top: 0;
 }
