@@ -17,10 +17,11 @@ a.button {
 	&.min-width {
 		width: min-content;
 	}
-	&.med-width {
+	&.md-width {
 		width: min-content;
-		padding-left: 2rem;
-		padding-right: 2rem;
+		padding-left: 4rem;
+		padding-right: 4rem;
+		white-space: nowrap;
 	}
 	&.lg {
 		width: 100%;

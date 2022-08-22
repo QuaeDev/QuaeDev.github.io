@@ -16,9 +16,7 @@ const header = /*html*/ `<header id="header">
 					/>
 				</a>
 				<div id="navigation-links">
-				<a href="/pages/join_verification">
-					<p>Get Verified</p>
-				</a>
+				
 				<a href="/about_us/">
 					<p>About</p>
 				</a>
@@ -41,15 +39,25 @@ const header = /*html*/ `<header id="header">
 						</a>
 					</div>
 				</div>
+				
+				<a href="/pages/faq">
+					<p>FAQ</p>
+				</a>
+				<div class="dropdown-container" onmouseenter="onHover('more-dropdown', 'enter')" onmouseleave="onHover('more-dropdown', 'leave')" onClick="onHover('more-dropdown', 'enter')">
+				<p>More</p>
+				<div class="drop-down-content" id="more-dropdown">
 				<a href="https://docs.quae.app/">
 					<p>Docs</p>
 				</a>
 				<a href="https://medium.com/quae-app">
 					<p>Blog</p>
 				</a>
-				<a href="/pages/faq">
-					<p>FAQ</p>
+				<a href="/pages/join_verification">
+					<p>Get Verified</p>
 				</a>
+				<a href="/pages/brand_ambassador"><p>Become A Brand Ambassador</p></a>
+				</div>
+				</div>
 				</div>
 				<button class="menu" id="menu-btn" onclick="toggleNav()">
 					<i class="material-icons">menu</i>
