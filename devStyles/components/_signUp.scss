@@ -1,14 +1,35 @@
 @use "../var";
 @import "../mixins";
 
+@media screen and (max-width: 799px) {
+	.sign-up {
+		.container {
+			@include flex-container(column, center, center, nowrap);
+			.download {
+				@include flex-container(column, center, center, wrap);
+
+				width: 100%;
+				margin-top: 1rem;
+				margin: 1rem auto;
+			}
+		}
+	}
+}
+@media screen and (min-width: 800px) {
+	.sign-up {
+		.container {
+			@include flex-container(row-reverse, center, flex-start, nowrap);
+		}
+	}
+}
+
 .sign-up {
-	@include flex-container(column, center, center, nowrap);
 	padding: 1rem;
 	width: 100%;
+	@include flex-container(column, center, center, nowrap);
 
 	.container {
 		width: 100%;
-		@include flex-container(row-reverse, center, flex-start, nowrap);
 		.form-wrapper {
 			flex: 1;
 			form {
@@ -43,21 +64,3 @@
 		}
 	}
 }
-
-@media (max-width: 800px) {
-	.sign-up {
-		.container {
-			.download {
-				@include flex-container(column, center, center, wrap);
-
-				width: 100%;
-				margin-top: 1rem;
-				margin: 1rem auto;
-			}
-		}
-	}
-}
-// @media (min-width: 576px) and (max-width: 768px) {
-// }
-// @media (min-width: 768px) {
-// }

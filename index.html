@@ -190,7 +190,7 @@
 							img: "/assets/img/coreFeatures/act.jpg",
 							imgAlt: "icon of city",
 							imgClass: "act",
-							title: "Act",
+							title: "Impact",
 							body: "With Quae, you can create real change when it matters. No more waiting 4 years to make a difference.",
 							buttonText: "See More",
 							link: "https://thestute.com/2021/11/12/student-initiative-to-extend-library-hours-comes-to-fruition-after-quae-poll/",
@@ -209,7 +209,6 @@
 								src=${feature.img}
 								alt=${feature.imgAlt}
 								class=${feature.imgClass}
-								loading="lazy"
 							/>
 						</div>
 						<h3>${feature.title}</h3>
@@ -290,7 +289,7 @@
 					let card = document.createElement("div");
 					card.classList.add("small-feature");
 					card.innerHTML = /*html*/ `
-						<img src="${feature.img}" alt="${feature.imgAlt}" loading="lazy"/>
+						<img src="${feature.img}" alt="${feature.imgAlt}" />
 						<div class="content">
 							<h4>${feature.text}</h4>
 							<p>${feature.subText}</p>

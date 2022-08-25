@@ -46,7 +46,6 @@
 // }
 section {
 	position: relative;
-
 	.content {
 		max-width: 100rem;
 		margin: 0 auto;
@@ -99,6 +98,7 @@ section {
 	}
 }
 .be-heard {
+	z-index: 0;
 	padding: 1rem;
 	background-color: #000;
 	color: var.$light;
@@ -119,31 +119,9 @@ section {
 		}
 	}
 }
-.representation-matters {
-	color: var.$light;
-
-	background-image: url("/assets/img/mission/hands.jpg");
-
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	padding: 3rem 2rem;
-	.content {
-		width: 100%;
-		max-width: 80rem;
-		margin-left: auto;
-		margin-right: 0;
-		height: 100%;
-		@include flex-container(column, flex-start, flex-end, nowrap);
-		p {
-			max-width: 50ch;
-			text-align: end;
-		}
-	}
-}
 .arent-heard {
 	color: var.$light;
-	height: 100vh;
+	height: 70vh;
 	background-image: url("/assets/img/mission/protest.jpg");
 	background-size: cover;
 	background-position: center;
@@ -152,6 +130,7 @@ section {
 
 	.content {
 		height: 60vh;
+		padding: 1rem;
 		@include flex-container(column, space-between, center, nowrap);
 		.title {
 			h1,
@@ -160,15 +139,32 @@ section {
 				text-align: left;
 			}
 		}
-		p {
-			max-width: 60ch;
+		.text {
+			width: 100%;
+			p {
+				margin-left: 0;
+				max-width: 60ch;
+			}
 		}
 	}
+}
+.mission-block {
+	color: var.$light;
+	background-color: var.$primary-default;
+	padding: 10rem 1rem;
+	@include flex-container(column, center, center, nowrap);
+	text-align: center;
 }
 .dont-wait {
 	color: var.$light;
 
-	background-image: url("/assets/img/mission/voting_line.jpg");
+	background-image: linear-gradient(
+			to top left,
+			#000 15%,
+			#00000060,
+			transparent
+		),
+		url("/assets/img/mission/voting_line.jpg");
 
 	background-size: cover;
 	background-position: center;
@@ -193,10 +189,37 @@ section {
 			text-align: end;
 			width: 100%;
 			max-width: 50ch;
-			color: var.$text;
 		}
 	}
 }
+.representation-matters {
+	color: var.$light;
+	background-image: linear-gradient(
+			to bottom left,
+			#000 15%,
+			#00000060,
+			#000 90%
+		),
+		url("/assets/img/mission/hands.jpg");
+
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 3rem 2rem;
+	.content {
+		width: 100%;
+		max-width: 80rem;
+		margin-left: auto;
+		margin-right: 0;
+		height: 100%;
+		@include flex-container(column, flex-start, flex-end, nowrap);
+		p {
+			max-width: 50ch;
+			text-align: end;
+		}
+	}
+}
+
 .future {
 	color: var.$light;
 	height: 80vh;
@@ -206,7 +229,10 @@ section {
 	background-size: cover;
 	background-position: top;
 	background-repeat: no-repeat;
+	@include flex-container(column, flex-start, flex-start, nowrap);
 	.content {
+		width: 100%;
+		margin-right: auto;
 		.title {
 			flex: 0.5;
 		}
@@ -215,6 +241,25 @@ section {
 			flex: 1;
 			max-width: 60ch;
 			text-align: left;
+		}
+	}
+	.quae {
+		margin-top: auto;
+		width: 100%;
+		padding-bottom: 5rem;
+		padding-top: 2rem;
+		opacity: 0.75;
+		@include flex-container(column, center, center, nowrap);
+
+		.logo {
+			@include flex-container(row, flex-start, center, nowrap);
+			h1 {
+				font-weight: 500;
+			}
+		}
+		img {
+			height: 3.5rem;
+			margin-right: 1rem;
 		}
 	}
 }
