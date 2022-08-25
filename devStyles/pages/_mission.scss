@@ -1,46 +1,223 @@
 @use "../var";
 @import "../mixins";
 
-.mission-page {
-	.section {
-		.title {
-			width: clamp(20rem, 80%, 40rem);
-			@include flex-container(column, flex-start, flex-start, nowrap);
-			* {
-				text-align: left !important;
-			}
+// .mission-page {
+// 	.section {
+// 		.title {
+// 			width: clamp(20rem, 80%, 40rem);
+// 			@include flex-container(column, flex-start, flex-start, nowrap);
+// 			* {
+// 				text-align: left !important;
+// 			}
+// 		}
+// 		position: relative;
+// 		@include flex-container(row, center, center, wrap);
+// 		.mission-img {
+// 			z-index: 1;
+// 			width: 100vw;
+// 		}
+// 		&.representation {
+// 			@include flex-container(column, flex-start, center, nowrap);
+// 		}
+// 		.content {
+// 			z-index: 4;
+// 			width: clamp(20rem, 80%, 40rem);
+// 			@include standard-shadow();
+// 			padding: 0.75rem;
+// 			border-radius: 0.5rem;
+// 			margin: 2rem auto;
+// 			.title {
+// 				width: 100%;
+// 				padding: 0.5rem;
+// 				padding-left: 0;
+// 				@include flex-container(row, flex-start, center, nowrap);
+// 				img {
+// 					height: 3rem;
+// 					margin: 1rem;
+// 					margin-left: 0;
+// 				}
+// 				h2 {
+// 					font-weight: 800;
+// 					text-align: left;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+section {
+	position: relative;
+
+	.content {
+		max-width: 100rem;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 750px) {
+	.landing {
+		z-index: 500;
+	}
+}
+.landing {
+	color: var.$light;
+	background-image: url("/assets/img/mission/crowd_of_people.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	h1,
+	h3 {
+		text-align: left;
+		width: 100%;
+		max-width: 50rem;
+		margin: 0 auto;
+	}
+	.footer {
+		position: absolute;
+		bottom: 0;
+		margin: 2rem auto;
+		max-width: 50rem;
+
+		@include flex-container(row, flex-start, center, nowrap);
+		i {
+			font-size: 3rem;
 		}
-		position: relative;
-		@include flex-container(row, center, center, wrap);
-		.mission-img {
-			z-index: 1;
-			width: 100vw;
-		}
-		&.representation {
-			@include flex-container(column, flex-start, center, nowrap);
-		}
+	}
+}
+@media screen and (max-width: 900px) {
+	.be-heard {
+		height: 40rem;
 		.content {
-			z-index: 4;
-			width: clamp(20rem, 80%, 40rem);
-			@include standard-shadow();
-			padding: 0.75rem;
-			border-radius: 0.5rem;
-			margin: 2rem auto;
-			.title {
-				width: 100%;
-				padding: 0.5rem;
-				padding-left: 0;
-				@include flex-container(row, flex-start, center, nowrap);
-				img {
-					height: 3rem;
-					margin: 1rem;
-					margin-left: 0;
-				}
-				h2 {
-					font-weight: 800;
-					text-align: left;
-				}
+			.text {
+				z-index: 2;
+			}
+			img {
+				position: absolute;
+				right: 0;
+				height: 36rem;
+				opacity: 0.5;
 			}
 		}
 	}
+}
+.be-heard {
+	padding: 1rem;
+	background-color: #000;
+	color: var.$light;
+	.content {
+		max-width: 80rem;
+		margin: 0 auto;
+		@include flex-container(row, space-between, flex-start, nowrap);
+		.text {
+			min-width: 20rem;
+			padding: 5rem 1rem;
+			p {
+				max-width: 60ch;
+			}
+		}
+		img {
+			outline: 5px solid #000;
+			outline-offset: -2.5px;
+		}
+	}
+}
+.representation-matters {
+	color: var.$light;
+
+	background-image: url("/assets/img/mission/hands.jpg");
+
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 3rem 2rem;
+	.content {
+		width: 100%;
+		max-width: 80rem;
+		margin-left: auto;
+		margin-right: 0;
+		height: 100%;
+		@include flex-container(column, flex-start, flex-end, nowrap);
+		p {
+			max-width: 50ch;
+			text-align: end;
+		}
+	}
+}
+.arent-heard {
+	color: var.$light;
+	height: 100vh;
+	background-image: url("/assets/img/mission/protest.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	@include flex-container(column, center, center, nowrap);
+
+	.content {
+		height: 60vh;
+		@include flex-container(column, space-between, center, nowrap);
+		.title {
+			h1,
+			h5 {
+				width: 100%;
+				text-align: left;
+			}
+		}
+		p {
+			max-width: 60ch;
+		}
+	}
+}
+.dont-wait {
+	color: var.$light;
+
+	background-image: url("/assets/img/mission/voting_line.jpg");
+
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	padding: 3rem 2rem;
+	.content {
+		height: 100%;
+		min-height: 50vh;
+		@include flex-container(column, space-between, flex-end, nowrap);
+		.title {
+			margin-left: auto;
+			width: 100%;
+			max-width: 50rem;
+			text-align: end;
+			h2,
+			h5 {
+				width: 100%;
+			}
+		}
+		p {
+			text-align: end;
+			width: 100%;
+			max-width: 50ch;
+			color: var.$text;
+		}
+	}
+}
+.future {
+	color: var.$light;
+	height: 80vh;
+	padding: 3rem 1rem;
+	background-image: url("/assets/img/mission/earth_at_night.jpg");
+
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	.content {
+		.title {
+			flex: 0.5;
+		}
+		p {
+			margin-top: 1rem;
+			flex: 1;
+			max-width: 60ch;
+			text-align: left;
+		}
+	}
+}
+footer {
+	margin-top: 0;
 }

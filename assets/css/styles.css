@@ -2226,62 +2226,192 @@ section.small .title {
     flex-wrap: wrap;
   }
 }
-.mission-page .section {
+.mission-page section {
   position: relative;
+}
+.mission-page section .content {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+@media screen and (max-width: 750px) {
+  .mission-page .landing {
+    z-index: 500;
+  }
+}
+.mission-page .landing {
+  color: #fcfcfc;
+  background-image: url("/assets/img/mission/crowd_of_people.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.mission-page .landing h1,
+.mission-page .landing h3 {
+  text-align: left;
+  width: 100%;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+.mission-page .landing .footer {
+  position: absolute;
+  bottom: 0;
+  margin: 2rem auto;
+  max-width: 50rem;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+.mission-page .landing .footer i {
+  font-size: 3rem;
+}
+@media screen and (max-width: 900px) {
+  .mission-page .be-heard {
+    height: 40rem;
+  }
+  .mission-page .be-heard .content .text {
+    z-index: 2;
+  }
+  .mission-page .be-heard .content img {
+    position: absolute;
+    right: 0;
+    height: 36rem;
+    opacity: 0.5;
+  }
+}
+.mission-page .be-heard {
+  padding: 1rem;
+  background-color: #000;
+  color: #fcfcfc;
+}
+.mission-page .be-heard .content {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.mission-page .be-heard .content .text {
+  min-width: 20rem;
+  padding: 5rem 1rem;
+}
+.mission-page .be-heard .content .text p {
+  max-width: 60ch;
+}
+.mission-page .be-heard .content img {
+  outline: 5px solid #000;
+  outline-offset: -2.5px;
+}
+.mission-page .representation-matters {
+  color: #fcfcfc;
+  background-image: url("/assets/img/mission/hands.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem 2rem;
+}
+.mission-page .representation-matters .content {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+.mission-page .representation-matters .content p {
+  max-width: 50ch;
+  text-align: end;
+}
+.mission-page .arent-heard {
+  color: #fcfcfc;
+  height: 100vh;
+  background-image: url("/assets/img/mission/protest.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-}
-.mission-page .section .title {
-  width: clamp(20rem, 80%, 40rem);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
   flex-wrap: nowrap;
 }
-.mission-page .section .title * {
-  text-align: left !important;
-}
-.mission-page .section .mission-img {
-  z-index: 1;
-  width: 100vw;
-}
-.mission-page .section.representation {
+.mission-page .arent-heard .content {
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-wrap: nowrap;
 }
-.mission-page .section .content {
-  z-index: 4;
-  width: clamp(20rem, 80%, 40rem);
-  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.2);
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  margin: 2rem auto;
-}
-.mission-page .section .content .title {
+.mission-page .arent-heard .content .title h1,
+.mission-page .arent-heard .content .title h5 {
   width: 100%;
-  padding: 0.5rem;
-  padding-left: 0;
+  text-align: left;
+}
+.mission-page .arent-heard .content p {
+  max-width: 60ch;
+}
+.mission-page .dont-wait {
+  color: #fcfcfc;
+  background-image: url("/assets/img/mission/voting_line.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 3rem 2rem;
+}
+.mission-page .dont-wait .content {
+  height: 100%;
+  min-height: 50vh;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
   flex-wrap: nowrap;
 }
-.mission-page .section .content .title img {
-  height: 3rem;
-  margin: 1rem;
-  margin-left: 0;
+.mission-page .dont-wait .content .title {
+  margin-left: auto;
+  width: 100%;
+  max-width: 50rem;
+  text-align: end;
 }
-.mission-page .section .content .title h2 {
-  font-weight: 800;
+.mission-page .dont-wait .content .title h2,
+.mission-page .dont-wait .content .title h5 {
+  width: 100%;
+}
+.mission-page .dont-wait .content p {
+  text-align: end;
+  width: 100%;
+  max-width: 50ch;
+  color: #151515;
+}
+.mission-page .future {
+  color: #fcfcfc;
+  height: 80vh;
+  padding: 3rem 1rem;
+  background-image: url("/assets/img/mission/earth_at_night.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.mission-page .future .content .title {
+  flex: 0.5;
+}
+.mission-page .future .content p {
+  margin-top: 1rem;
+  flex: 1;
+  max-width: 60ch;
   text-align: left;
+}
+.mission-page footer {
+  margin-top: 0;
 }
 
 .faq .page.faq .title {
