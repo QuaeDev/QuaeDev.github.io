@@ -3,10 +3,12 @@
 		{
 			picture: "/assets/img/logos/stevens_circle.png",
 			text: "Stevens",
+			link: "/communities/stevens",
 		},
 		{
 			picture: "/assets/img/logos/hoboken_circle.png",
 			text: "City of Hoboken",
+			link: "/communities/hoboken",
 		},
 	];
 	let usedByContainer = document.getElementById("social-proof");
@@ -15,7 +17,10 @@
 		card.innerHTML =
 			/*html*/
 			`
+			<a href="${item.link}">
             <img src="${item.picture}" alt="${item.text}" />
+			</a>
+
         `;
 		if (item.picture !== null) {
 			usedByContainer.appendChild(card);

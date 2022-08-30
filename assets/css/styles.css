@@ -3307,11 +3307,18 @@ a.button.white:hover {
 .download-buttons .app-stores :nth-child(2) {
   margin-left: 2.5px;
 }
+.download-buttons.community {
+  max-width: 20rem;
+}
+.download-buttons.community .app-stores {
+  justify-content: flex-start;
+}
 .download-buttons .app-store-link {
-  width: 45%;
+  width: 50%;
+  max-width: 10rem;
 }
 .download-buttons .app-store-link .app-store-btn {
-  max-width: 100%;
+  width: 100%;
   flex: 1;
   border: 1px solid rgb(182, 182, 182);
   border-radius: 0.5rem;
@@ -3329,6 +3336,10 @@ a.button.white:hover {
 }
 .download-buttons .web-app-link i {
   font-size: 1.75rem;
+}
+.download-buttons .join-link {
+  padding: 1.5rem 1rem;
+  margin-bottom: 0.5rem;
 }
 
 @media screen and (max-width: 700px) {
