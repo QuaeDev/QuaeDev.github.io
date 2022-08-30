@@ -1,9 +1,11 @@
 // brand ambassador page
 @use "../var";
 @import "../mixins";
+
 .landing {
 	display: grid;
-	// height: 100vh;
+	z-index: 101;
+	background-color: var.$bg;
 	.content {
 		padding: 1rem;
 		z-index: 2;
@@ -16,8 +18,8 @@
 	.landing {
 		-ms-grid-template-columns: 1fr;
 		grid-template-columns: 1fr;
-		-ms-grid-template-rows: 2fr 1fr auto;
-		grid-template-rows: 2fr 1fr auto;
+		-ms-grid-template-rows: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
 		img {
 			width: 100vw;
 			min-width: 45rem;
@@ -43,6 +45,7 @@
 			grid-column: 1/2;
 			-ms-grid-row: 2/4;
 			grid-row: 2/4;
+			align-self: center;
 		}
 	}
 }
